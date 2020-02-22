@@ -22,7 +22,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# exclude everything
+/data_processing/raw_data/*
 
+# exception to the rule
+!/data_processing/raw_data/oscars-demographics.csv
+.idea/
 .cache
 
 dist
