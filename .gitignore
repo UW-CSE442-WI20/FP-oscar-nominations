@@ -27,7 +27,7 @@ yarn-error.log*
 
 # exception to the rule
 !/data_processing/raw_data/oscars-demographics.csv
-!/data_processing/raw_data/oscar_demographic_movieID.csv
+!/data_processing/raw_data/oscar_demographic_movieID.tsv
 .idea/
 .cache
 
