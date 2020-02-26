@@ -12,6 +12,9 @@
 		// }, ...
 	// }, ...
 // }
+// copy the result into a JSON pretty print tool:
+//     https://jsonformatter.org/json-pretty-print
+// then store the final result in a JSON file
 var categoriesToIgnore = ["special award", "honorary award"]
 var res = {}; // result json
 // get all year divs
