@@ -36,6 +36,8 @@ for (row in 1:nrow(merged)) {
   h <- merged[row, "revenue"]
   i <- merged[row, "release_date"]
   j <- merged[row, "title"]
+  k <- merged[row, "year"]
+  l <- merged[row, "is_winner"]
   # read JSON
   b <- gsub("'", "\"", b)
   b <- fromJSON(b)
@@ -50,7 +52,9 @@ for (row in 1:nrow(merged)) {
                           "popularity" = g,
                           "revenue" = h,
                           "release_date" = i,
-                          "title" = j)
+                          "title" = j,
+                          "year" = k,
+                          "is_winner" = l)
     final <- rbind(final, new_row)
   }
 }
