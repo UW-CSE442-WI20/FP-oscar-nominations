@@ -56,4 +56,4 @@ for (row in 1:nrow(merged)) {
 }
 
 # no data on 1974, 1975, 1990, 2014, and 2017
-write.csv(merged, "best-picture.csv")
+write.csv(final, "best-picture.csv")
