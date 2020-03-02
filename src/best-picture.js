@@ -11,15 +11,13 @@ d3.csv(csv)
     .then((data) => {
 // Define the div for the tooltip
         var tooltip = d3.select("body").append("div")
-            .attr("id", "tooltip")
+             .attr("id", "best-picture-tooltip")
             .style("opacity", 0);
 
         // tree diagram: modified from https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
         // convert data to JSON...
         var treeData = {"name": "Genres", "children": [], "class": "root"};
         var genreArr = [];
-        var maxBudget = 0;
-        var maxRevenue = 0;
         data.filter(function(d) {
             var genre = d["genre"];
             if (!genreArr.includes(genre)) {
