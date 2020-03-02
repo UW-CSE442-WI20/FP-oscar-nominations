@@ -1,10 +1,16 @@
 const d3 = require("d3");
 const csv = require("./oscar_demos_mod.csv")
-const circleColors = {
-    "base": "blue"
+const palette = {
+    "countryLink": "gray",
+    "countryCircle": "lightsteelblue",
+    "ageLink": "gray",
+    "ageCircle": "orange"
 }
-var countryCirclePos = {};
-
+const textToCircleDist = -40; // for the ageBin and Country need to be < 0
+const ageBinBase = 20
+const ageBinSize = 20;
+const minCircleSize = 10;
+const ageBinNames = ["one", "two", "three", "four", "five"]
 // parse csv
 d3.csv(csv)
     .then((data) => {
@@ -17,6 +23,7 @@ d3.csv(csv)
         var actress = {"name": "persons", "children": [], "class": "root"};
         var actressArr = [];
         var countryArr = [];
+        var ageBinArr = [];
         data.filter(function(d) {
             if (d["Award"] == "Best Actress" && d["Country of birth"].length > 3) {
                 var country = d["Country of birth"];
@@ -25,6 +32,9 @@ d3.csv(csv)
                 }
                 var code = country.replace(/\s/g, '');
                 if (!actressArr.includes(d["Person"])) {
+                    var ageBin = ageBinNames[parseInt((d["Age When Award"] - ageBinBase) / ageBinSize)];
+                    if (!ageBinArr.includes(ageBin))
+                        ageBinArr.push(ageBin);
                     actressArr.push(d["Person"]);
                     actress["children"].push(
                         {
@@ -33,16 +43,23 @@ d3.csv(csv)
                             "movie": d["Movie"],
                             "imdb_bio": d["Bio IMDb"],
                             "date_of_birth": d["Date of birth"],
+                            "country_of_birth": d["Country of birth"],
                             "class": "person",
-                            "code": code
+                            "code": code,
+                            "ageBin": ageBin
                         }
                     )
                 }
             }
         });
 
+        // sort country names
+        countryArr.sort();
+        // sort ageBin
+        ageBinArr = ageBinNames.filter(x => ageBinArr.includes(x));
+
         // Set the dimensions and margins of the diagram
-        var margin = {top: 20, right: 90, bottom: 30, left: 100},
+        var margin = {top: 20, right: 90, bottom: 30, left: 200},
             width = 1300 - margin.left - margin.right,
             height = 1000 - margin.top - margin.bottom;
 
@@ -93,20 +110,19 @@ d3.csv(csv)
             // Enter any new modes at the parent's previous position.
             var nodeEnter = node.enter().append('g')
                 .attr('class', function(d) {
-                    return `node ${d.data.code}`;
+                    return `node ${d.data.code} ${d.data.ageBin}`;
                 })
                 .attr("transform", function(d) {
                     return "translate(" + source.y0 + "," + source.x0 + ")";
                 })
-                .on("click", selectThisCode);
 
-            // Add Circle for the nodes
-            nodeEnter.append('circle')
-                .attr('class', 'node')
-                .attr('r', 1e-6)
-                .style("fill", function(d) {
-                    return d._children ? "lightsteelblue" : "#fff";
-                });
+            // // Add Circle for the nodes
+            // nodeEnter.append('circle')
+            //     .attr('class', 'node')
+            //     .attr('r', 1e-6)
+            //     .style("fill", function(d) {
+            //         return d._children ? "lightsteelblue" : "#fff";
+            //     });
 
             // Add labels for the nodes
             nodeEnter.append('text')
@@ -137,6 +153,7 @@ d3.csv(csv)
                         .style("opacity", .9);
                         tooltip.html(`${d.data.name}<br>
                                       ${d.data.date_of_birth}<br>
+                                      ${d.data.country_of_birth}<br>
                                       ${d.data.movie}`)
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
@@ -153,31 +170,42 @@ d3.csv(csv)
             // UPDATE
             var nodeUpdate = nodeEnter.merge(node);
 
+            // store node position for drawing lines
+            var personPos = {}
             // Transition to the proper position for the node
             nodeUpdate.transition()
                 .duration(duration)
                 .attr("transform", function(d) {
+                    if (d.data.class == "person") {
+                        personPos[d.data.name] = {
+                            "x": d.y,
+                            "y": d.x,
+                            "code": d.data.code,
+                            "ageBin": d.data.ageBin
+                        };
+                    }
                     return "translate(" + d.y + "," + d.x + ")";
                 });
 
-                var totalHeight = 0
+            var totalHeight = 0
             var betweenHeight = 5;
+            // *************** Draw in coutry circles *****************
             var countryRadius = [];
             for (let j = 0; j < countryArr.length; j++) {
                 var country = countryArr[j]
                 var code = country.replace(/\s/g, '');
-                countryRadius.push(document.querySelectorAll(`.${code}`).length + 10);
+                countryRadius.push(document.querySelectorAll(`.${code}`).length + minCircleSize);
             }
-            // *************** Draw in coutry circles *****************
+            var countryCirclePos = {};
             for (let j = 0; j < countryArr.length; j++) {
                 var country = countryArr[j]
                 var code = country.replace(/\s/g, '');
                 var node = svg.append("g")
                     .attr("class", `node ${code} countries`)
                     .attr("transform", function() {
-                        var x = margin.left;
+                        var x = margin.left - 150;
                         var y = margin.top + totalHeight + betweenHeight * j + countryRadius[j];
-                        countryCirclePos[code] = {"x": x, "y": y};
+                        countryCirclePos[code] = {"x": x, "y": y, "connector": [x + 80, y]};
                         return "translate(" + x + "," + y + ")";
                     })
                     .on("click", selectThisCode)
@@ -187,12 +215,12 @@ d3.csv(csv)
                         totalHeight += 2 * r;
                         return r;
                     })
-                    .style("fill", "blue")
+                    .style("fill", palette["countryCircle"])
                 d3.select(`g.countries.${code}`)
                     .append('text')
                         .attr("dy", ".35em")
                         .attr("x", function() {
-                            return -35;
+                            return textToCircleDist;
                         })
                         .attr("text-anchor", function(d) {
                             return "end";
@@ -200,71 +228,158 @@ d3.csv(csv)
                         .text(countryArr[j]);
             }
 
-            // ****************** links section ***************************
-
-            // // Update the links...
-            // var link = svg.selectAll('path.link')
-            //     .data(links, function(d) { return d.id; });
-
-                
-
-            // // Enter any new links at the parent's previous position.
-            // var linkEnter = link.enter().insert('path', "g")
-            //     .attr("class", function(d) {
-            //         if (d.data.class == "person")
-            //             return `link ${d.data.code}`
-            //         return `link`;
-            //     })
-            //     .attr('d', function(d){
-            //         var o = {x: d.x, y: d.y};
-            //         if (d.data.class == "person") {
-            //             var p = countryCirclePos[d.data.code];
-            //             d3.linkHorizontal()
-            //         }
-            //         return ""
-            //     })
-            //     .attr("fill", "none")
-            //     .attr("stroke", "gray")
-            //     .attr("opacity", function(d) {
-            //         return "50%";
-            //     });
-
-            // // Creates a curved (diagonal) path from parent to the child nodes
-            // function diagonal(s, d) {
-            //     path = `M ${s.y} ${s.x}
-            //             L ${(s.y + d.y) / 2} ${s.x},
-            //             L  ${(s.y + d.y) / 2} ${d.x},
-            //             L ${d.y} ${d.x}
-            //             `
-            //     // debugger;
-            //     return path
-            // }
-
-            // Toggle children on click.
-            function selectThisCode(d) {
-                console.log(d)
-            }
-        }
-    
-        for (var code in countryCirclePos) {
-            debugger;
-            var groups = document.querySelectorAll(`.${code}`)
-            for (let k = 0; k < groups.length - 1; k++) {
-                var x, y;
-                [x, y] = groups[k].getAttribute("transform").split(",");
-                x = parseFloat(x.replace(/[^\d]/g, ''));
-                y = parseFloat(y.replace(/[^\d]/g, ''));
-                console.log(`x: ${x}, y: ${y}`)
+            // draw person to country connector lines
+            for (var person in personPos) {
+                person = personPos[person];
+                var code = person.code;
                 var link = d3.linkHorizontal()({
-                    source: [x, y],
-                    target: [countryCirclePos[code]["x"], countryCirclePos[code]["y"]]
+                    source: [person["x"], person["y"]],
+                    // target: [countryCirclePos[code]["x"], countryCirclePos[code]["y"]]
+                    target: countryCirclePos[code]["connector"]
                 });
                 svg
                     .append('path')
                     .attr('d', link)
-                    .attr('stroke', 'black')
-                    .attr('fill', 'none');
+                    .attr('stroke', palette["countryLink"])
+                    .attr('fill', 'none')
+                    .attr("opacity", "50%")
+                    .attr("class", `link ${code}`)
+            }
+            // draw country to country connector lines
+            for (var code in countryCirclePos) {
+                var link = d3.linkHorizontal()({
+                    source: [countryCirclePos[code]["x"], countryCirclePos[code]["y"]],
+                    target: countryCirclePos[code]["connector"]
+                });
+                svg
+                    .append('path')
+                    .attr('d', link)
+                    .attr('stroke',  palette["countryLink"])
+                    .attr('fill', 'none')
+                    .attr("opacity", "50%")
+                    .attr("class", `link ${code}`)
+            }
+
+            // move country circles to the top
+            var countries = document.querySelectorAll(".countries");
+            var countryContainer = countries[0].parentNode;
+            countries.forEach(e => {
+                e.remove();
+                countryContainer.append(e);
+            });
+
+            // *************** Draw in age circles *****************
+            totalHeight += 100 // Distance between age circles and country circles
+            var ageBinRadius = [];
+            for (let j = 0; j < ageBinArr.length; j++) {
+                var ageBin = ageBinArr[j]
+                ageBinRadius.push(document.querySelectorAll(`.${ageBin}`).length + minCircleSize);
+            }
+            var ageCirclePos = {};
+            for (let j = 0; j < ageBinArr.length; j++) {
+                var ageBin = ageBinArr[j]
+                var node = svg.append("g")
+                    .attr("class", `node ${ageBin} ageBins`)
+                    .attr("transform", function() {
+                        var x = margin.left - 150;
+                        var y = margin.top + totalHeight + betweenHeight * j + ageBinRadius[j];
+                        ageCirclePos[ageBin] = {"x": x, "y": y, "connector": [x + 80, y]};
+                        return "translate(" + x + "," + y + ")";
+                    })
+                    .on("click", selectThisAge)
+                .append('circle')
+                    .attr("r", function() {
+                        var r = ageBinRadius[j];
+                        totalHeight += 2 * r;
+                        return r;
+                    })
+                    .style("fill", palette["ageCircle"])
+                d3.select(`g.ageBins.${ageBin}`)
+                    .append('text')
+                        .attr("dy", ".35em")
+                        .attr("x", function() {
+                            return textToCircleDist;
+                        })
+                        .attr("text-anchor", function(d) {
+                            return "end";
+                        })
+                        .text(function() {
+                            var ind = ageBinNames.indexOf(ageBin);
+                            if (ind == 0) {
+                                return `0 to ${ageBinSize}`;
+                            } else {
+                                return `${ageBinSize * ind} to ${ageBinSize * (ind + 1)}`;
+                            }
+                        });
+            }
+
+            // draw person to ageBin connector lines
+            for (var person in personPos) {
+                person = personPos[person];
+                var ageBin = person.ageBin;
+                var link = d3.linkHorizontal()({
+                    source: [person["x"], person["y"]],
+                    target: ageCirclePos[ageBin]["connector"]
+                });
+                svg
+                    .append('path')
+                    .attr('d', link)
+                    .attr('stroke', palette["ageLink"])
+                    .attr('fill', 'none')
+                    .attr("opacity", "50%")
+                    .attr("class", `link ${ageBin}`)
+            }
+            // draw ageBin to ageBin connector lines
+            for (var ageBin in ageCirclePos) {
+                var link = d3.linkHorizontal()({
+                    source: [ageCirclePos[ageBin]["x"], ageCirclePos[ageBin]["y"]],
+                    target: ageCirclePos[ageBin]["connector"]
+                });
+                svg
+                    .append('path')
+                    .attr('d', link)
+                    .attr('stroke',  palette["ageLink"])
+                    .attr('fill', 'none')
+                    .attr("opacity", "50%")
+                    .attr("class", `link ${ageBin}`)
+            }
+
+            // move age circles to the top
+            var ageBins = document.querySelectorAll(".ageBins");
+            var ageBinContainer = ageBins[0].parentNode;
+            ageBins.forEach(e => {
+                e.remove();
+                ageBinContainer.append(e);
+            });
+
+            // ********************** Code for selecting things ***********************
+            // country
+            function selectThisCode() {
+                var currSelectedCode;
+                document.querySelectorAll(".selected").forEach(e => {
+                    currSelectedCode = e.classList[1]
+                    e.classList.remove("selected");
+                })
+                var code = this.classList[1];
+                if (currSelectedCode != code) {
+                    document.querySelectorAll(`.${code}`).forEach(e => {
+                        e.classList.add("selected");
+                    })
+                }
+            }
+            // age
+            function selectThisAge() {
+                var currSelectedAgeBin;
+                document.querySelectorAll(".selected").forEach(e => {
+                    currSelectedAgeBin = e.classList[1]
+                    e.classList.remove("selected");
+                })
+                var ageBin = this.classList[1];
+                if (currSelectedAgeBin != ageBin) {
+                    document.querySelectorAll(`.${ageBin}`).forEach(e => {
+                        e.classList.add("selected");
+                    })
+                }
             }
         }
     })
-
