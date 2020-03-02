@@ -3,8 +3,8 @@
     text-align: center;
     /* width: 60px;
     height: 50px; */
-    padding: 10px;
-    font: 12px sans-serif;
+    padding: 1%;
+    font: 12pt sans-serif;
     background: lightsteelblue;
     border: 0px;
     border-radius: 8px;
@@ -12,10 +12,13 @@
 }
 
 #best-picture {
+    margin-left: 2%;
     display: flex;
     align-items: center;
+    text-align: center;
+    font-size: 16pt;
 }
 
 #movie-info {
-    width: 33%;
+    width: 20%;
 }
