@@ -3,9 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <title>My Title</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="./top10-bar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+  type="text/css" />
+    <link rel="stylesheet" href = "./style.css" type="text/css">
   </head>
   <body>
-    <h1>My Webpage</h1>
+    <div class="wrapper">
+      <div class="title"><h1>Oscar nominations</h1></div>
+      <div class="paragraph">
+        <p>Suspendisse vel tellus odio. Ut nec venenatis eros, non tempus arcu.
+          Nam in neque tristique sapienaliquet malesuada ut quis urna. Nunc vel bibendum sem,
+          mollis cursus lacus. Phasellus bibendum eros dolor, at facilisis libero ullamcorper sed.
+          In vestibulum eros convallis ipsum mattis semper. Aliquam euismod odio at ligula maximus molestie.
+          Phasellus in nibh eget nunc luctus tristique eu nec nisl. Phasellus semper, ipsum eu pretium porta,
+          nisl tortor accumsan dui, nec facilisis neque mi a diam. Ut id metus ullamcorper, dignissim tellus eget,
+          porta ante.
+        </p>
+      </div>
+      <div class ="top10" id="top10"></div>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>

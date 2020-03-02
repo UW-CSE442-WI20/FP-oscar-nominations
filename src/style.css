@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Antonym-Light";
+  src: url("../font/Antonym-Light.otf");
+}
+
+@font-face {
+  font-family: "Antonym-Regular";
+  src: url("../font/Antonym-Regular.otf");
+}
+
+@font-face {
+  font-family: "Futura-Light";
+  src: url("../font/FTN35.otf");
+}
+
+@font-face {
+  font-family: "Futura-Light-Italic";
+  src: url("../font/FTN36.otf");
+}
+
+@font-face {
+  font-family: "Futura-Regular";
+  src: url("../font/FTN45.otf");
+}
+
+@font-face {
+  font-family: "Futura-Regular-Italic";
+  src: url("../font/FTN46.otf");
+}
+
+@font-face {
+  font-family: "Futura-Demi";
+  src: url("../font/FTN55.otf");
+}
+
+@font-face {
+  font-family: "Futura-Demi-Italic";
+  src: url("../font/FTN56.otf");
+}
+
+@font-face {
+  font-family: "Futura-Bold";
+  src: url("../font/FTN65.otf");
+}
+
+@font-face {
+  font-family: "Futura-Bold-Italic";
+  src: url("../font/FTN66.otf");
+}
+
+body {
+  background-color: #1B1B1B;
+}
+
+p {
+  font-family: "Futura-Light";
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #D8A75E;
+}
+
+h1 {
+  font-family: "Antonym-Regular";
+  font-size: 5rem;
+  letter-spacing: 0.01em;
+  color: #D8A75E;
+  margin-bottom: 10px;
+}
+
+.wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-items: flex-start;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.paragraph {
+  display: flex;
+  width: 30%;
+  align-content: left;
+  margin-top: 60px;
+}
+
+.title {
+  display: flex;
+  width: 50%;
+  flex-flow: row wrap;
+  flex-direction: row;
+  align-content: left;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.my_dataviz {
+  width: 600px;
+  height: 600px;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1px;
+}
+
+.axis-top line{
+  stroke: white;
+}
+.top10 {
+  fill: none;
+  stroke:#ffffff;
+  stroke-width: 1;
+}

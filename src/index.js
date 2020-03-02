@@ -1,10 +1,10 @@
-
-
+import "./top10-bar.js";
+/*
 // You can require libraries
-const d3 = require('d3')
-
+const d3 = require('d3');
+const top10 = require('./top10-bar.js');
 // You can include local JS files:
-const MyClass = require('./my-class');
+
 const myClassInstance = new MyClass();
 myClassInstance.sayHi();
 
@@ -20,5 +20,4 @@ const exampleData = require('./example-data.json');
 d3.csv('carbon-emissions.csv')
   .then((data) => {
     console.log('Dynamically loaded CSV data', data);
-  })
-
+})*/
