@@ -10,3 +10,12 @@
     border-radius: 8px;
     pointer-events: none;
 }
+
+#best-picture {
+    display: flex;
+    align-items: center;
+}
+
+#movie-info {
+    width: 33%;
+}

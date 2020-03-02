@@ -40,7 +40,9 @@ d3.csv(csv)
                                     "name": d["title"],
                                     "class": "title",
                                     "year": d["year"],
-                                    "is_winner": d["is_winner"] == "TRUE"
+                                    "is_winner": d["is_winner"] == "TRUE",
+                                    "oviewview": d["overview"],
+                                    "imdb_id": d["imdb_id"]
                                     }]
                                 }]
                 }
@@ -49,7 +51,7 @@ d3.csv(csv)
 
         // Set the dimensions and margins of the diagram
         var margin = {top: 20, right: 90, bottom: 30, left: 90},
-            width = window.innerWidth - margin.left - margin.right,
+            width = 1200 - margin.left - margin.right,
             height = 1800 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
@@ -308,7 +310,12 @@ d3.csv(csv)
 
             // change info display
             function changeInfoDisplay(d) {
-                console.log(d);
+                var overview = document.getElementById("movie-overview");
+                overview.innerText = d.data.overview;
+                var imdbLink = document.getElementById("imdb-link");
+                imdbLink.href = `https://www.imdb.com/title/${d.data.imdb_id}/`
+                imdbLink.innerText = "Link to IMDB"
+
             }
         }
     })

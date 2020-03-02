@@ -3,6 +3,7 @@ pacman::p_load(dplyr, lubridate, rjson)
 # load data
 nomiees <- read.csv("best-picture-nomiees.csv", stringsAsFactors = FALSE)
 meta <- read.csv(file.path("move-dataset-general", "movies_metadata.csv"), stringsAsFactors = FALSE)
+links <- read.csv(file.path("move-dataset-general", "links.csv"), stringsAsFactors = FALSE)
 
 # trim meta down to improve performance
 meta_trimmed <-
@@ -58,6 +59,13 @@ for (row in 1:nrow(merged)) {
     final <- rbind(final, new_row)
   }
 }
+# 
+# links <-
+#   links %>%
+#   mutate("imdb_id" = paste0("tt", imdbId))
+# 
+# final <-
+#   merge(final, links, by = "imdb_id")
 
 # no data on 1974, 1975, 1990, 2014, and 2017
 write.csv(final, "best-picture.csv")
