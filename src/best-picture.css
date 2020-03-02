@@ -22,3 +22,7 @@
 #movie-info {
     width: 20%;
 }
+
+.none {
+    display: none !important;
+}
