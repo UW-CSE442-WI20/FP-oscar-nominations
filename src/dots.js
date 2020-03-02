@@ -20,7 +20,7 @@ d3.csv(dfe, function(data) {
     // A color scale
     var color = d3.scaleOrdinal()
       .domain(['White', 'Black', 'Asian', 'Hispanic', 'Middle Eastern', 'Multiracial'])
-      .range([ "#F8766D", "#00BA38", "#619CFF", "#d712a3", "#e0cb3f", "#9d34c8"])
+      .range([ "#FFFFFF", "#00BA38", "#619CFF", "#d712a3", "#e0cb3f", "#9d34c8"])
     console.log(data)
 
     // Initialize the circle: all located at the center of the svg area
@@ -34,8 +34,8 @@ d3.csv(dfe, function(data) {
         .attr("cy", height / 3)
         .style("fill", function(d){ return color(d.race_ethnicity)})
         .style("fill-opacity", 0.8)
-        .attr("stroke", "black")
-        .style("stroke-width", 2)
+        .attr("stroke", "#D8A75E")
+        .style("stroke-width", 1)
         .call(d3.drag() // call specific function when circle is dragged
              .on("start", dragstarted)
              .on("drag", dragged)

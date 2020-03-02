@@ -110,6 +110,16 @@ h1 {
 .axis-top line{
   stroke: white;
 }
+
+.best_dots {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
 .top10 {
   fill: none;
   stroke:#ffffff;
