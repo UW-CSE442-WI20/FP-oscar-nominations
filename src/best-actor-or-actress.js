@@ -3,6 +3,7 @@ const csv = require("./oscar_demos_mod.csv")
 const circleColors = {
     "base": "blue"
 }
+var countryCirclePos = {};
 
 // parse csv
 d3.csv(csv)
@@ -176,6 +177,7 @@ d3.csv(csv)
                     .attr("transform", function() {
                         var x = margin.left;
                         var y = margin.top + totalHeight + betweenHeight * j + countryRadius[j];
+                        countryCirclePos[code] = {"x": x, "y": y};
                         return "translate(" + x + "," + y + ")";
                     })
                     .on("click", selectThisCode)
@@ -198,30 +200,28 @@ d3.csv(csv)
                         .text(countryArr[j]);
             }
 
-            var nodeEnter = node.enter().append('g')
-                .attr('class', function(d) {
-                    return `node ${d.data.code}`;
-                })
-                .attr("transform", function(d) {
-                    return "translate(" + source.y0 + "," + source.x0 + ")";
-                })
-                .on("click", selectThisCode);
-
-
             // ****************** links section ***************************
 
             // // Update the links...
             // var link = svg.selectAll('path.link')
             //     .data(links, function(d) { return d.id; });
 
+                
+
             // // Enter any new links at the parent's previous position.
             // var linkEnter = link.enter().insert('path', "g")
             //     .attr("class", function(d) {
-            //         return `link ${d.data.code}`;
+            //         if (d.data.class == "person")
+            //             return `link ${d.data.code}`
+            //         return `link`;
             //     })
             //     .attr('d', function(d){
-            //         var o = {x: source.x0, y: source.y0}
-            //         return diagonal(o, o)
+            //         var o = {x: d.x, y: d.y};
+            //         if (d.data.class == "person") {
+            //             var p = countryCirclePos[d.data.code];
+            //             d3.linkHorizontal()
+            //         }
+            //         return ""
             //     })
             //     .attr("fill", "none")
             //     .attr("stroke", "gray")
@@ -231,12 +231,12 @@ d3.csv(csv)
 
             // // Creates a curved (diagonal) path from parent to the child nodes
             // function diagonal(s, d) {
-            //     debugger;
             //     path = `M ${s.y} ${s.x}
             //             L ${(s.y + d.y) / 2} ${s.x},
             //             L  ${(s.y + d.y) / 2} ${d.x},
             //             L ${d.y} ${d.x}
             //             `
+            //     // debugger;
             //     return path
             // }
 
@@ -245,4 +245,26 @@ d3.csv(csv)
                 console.log(d)
             }
         }
+    
+        for (var code in countryCirclePos) {
+            debugger;
+            var groups = document.querySelectorAll(`.${code}`)
+            for (let k = 0; k < groups.length - 1; k++) {
+                var x, y;
+                [x, y] = groups[k].getAttribute("transform").split(",");
+                x = parseFloat(x.replace(/[^\d]/g, ''));
+                y = parseFloat(y.replace(/[^\d]/g, ''));
+                console.log(`x: ${x}, y: ${y}`)
+                var link = d3.linkHorizontal()({
+                    source: [x, y],
+                    target: [countryCirclePos[code]["x"], countryCirclePos[code]["y"]]
+                });
+                svg
+                    .append('path')
+                    .attr('d', link)
+                    .attr('stroke', 'black')
+                    .attr('fill', 'none');
+            }
+        }
     })
+
