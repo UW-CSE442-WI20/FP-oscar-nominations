@@ -12,12 +12,21 @@
 }
 
 .selected > * {
-    stroke: yellow;
     fill: yellow !important;
 }
 
+.selected.link {
+    stroke: yellow;
+    fill: none !important;
+}
+
 #best-actor-and-actress {
+    color: #D8A75E;
     display: flex;
+}
+
+#best-actor-and-actress text{
+    fill: #D8A75E;
 }
 
 #best-atress-container {

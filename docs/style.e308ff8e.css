@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Antonym-Light";
+  src: url("/Antonym-Light.980ac7d2.otf");
+}
+
+@font-face {
+  font-family: "Antonym-Regular";
+  src: url("/Antonym-Regular.341bc388.otf");
+}
+
+@font-face {
+  font-family: "Futura-Light";
+  src: url("/FTN35.e9952d24.otf");
+}
+
+@font-face {
+  font-family: "Futura-Light-Italic";
+  src: url("/FTN36.5a046a74.otf");
+}
+
+@font-face {
+  font-family: "Futura-Regular";
+  src: url("/FTN45.466b2e69.otf");
+}
+
+@font-face {
+  font-family: "Futura-Regular-Italic";
+  src: url("/FTN46.7a4134f8.otf");
+}
+
+@font-face {
+  font-family: "Futura-Demi";
+  src: url("/FTN55.e5dfb7b9.otf");
+}
+
+@font-face {
+  font-family: "Futura-Demi-Italic";
+  src: url("/FTN56.27b59c59.otf");
+}
+
+@font-face {
+  font-family: "Futura-Bold";
+  src: url("/FTN65.5e2884e6.otf");
+}
+
+@font-face {
+  font-family: "Futura-Bold-Italic";
+  src: url("/FTN66.1949968c.otf");
+}
+
+body {
+  background-color: #1B1B1B;
+}
+
+p {
+  font-family: "Futura-Light";
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #D8A75E;
+}
+
+h1 {
+  font-family: "Antonym-Regular";
+  font-size: 5rem;
+  letter-spacing: 0.01em;
+  color: #D8A75E;
+  margin-bottom: 10px;
+}
+
+.wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-items: flex-start;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.paragraph {
+  display: flex;
+  width: 30%;
+  align-content: left;
+  margin-top: 60px;
+}
+
+.title {
+  display: flex;
+  width: 50%;
+  flex-flow: row wrap;
+  flex-direction: row;
+  align-content: left;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.my_dataviz {
+  width: 600px;
+  height: 600px;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1px;
+}
+
+.axis-top line{
+  stroke: white;
+}
+
+.best_dots {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.top10 {
+  fill: none;
+  stroke:#ffffff;
+  stroke-width: 1;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

@@ -1,0 +1,19 @@
+#best-actress-tooltip {
+    position: absolute;
+    text-align: center;
+    /* width: 60px;
+    height: 50px; */
+    padding: 1%;
+    font: 12pt sans-serif;
+    border: 2px black;
+    border-radius: 8px;
+    background: white;
+    pointer-events: none;
+}
+
+.selected > * {
+    stroke: yellow;
+    fill: yellow !important;
+}
+
+/*# sourceMappingURL=/best-actor-or-actress.692fd57c.css.map */
