@@ -122,7 +122,11 @@ d3.csv(csv)
 
             // Add Circle for the nodes
             nodeEnter.append('circle')
-                .attr('class', 'node')
+                .attr('class', function(d) {
+                    if (d.data.class == "title" || d.data.class == "root" )
+                        return `node ${d.data.class} none`;
+                    return `node ${d.data.class}`
+                })
                 .attr('r', 1e-6)
                 .style("fill", function(d) {
                     return d._children ? "lightsteelblue" : "#fff";
