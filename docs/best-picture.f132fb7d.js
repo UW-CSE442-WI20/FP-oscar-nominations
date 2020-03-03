@@ -29003,7 +29003,10 @@ d3.csv(csv).then(function (data) {
       if (d.data.class == "genre") click(d);
     }); // Add Circle for the nodes
 
-    nodeEnter.append('circle').attr('class', 'node').attr('r', 1e-6).style("fill", function (d) {
+    nodeEnter.append('circle').attr('class', function (d) {
+      if (d.data.class == "title" || d.data.class == "root") return "node ".concat(d.data.class, " none");
+      return "node ".concat(d.data.class);
+    }).attr('r', 1e-6).style("fill", function (d) {
       return d._children ? "lightsteelblue" : "#fff";
     }); // Add labels for the nodes
 
@@ -29178,7 +29181,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52184" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52644" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

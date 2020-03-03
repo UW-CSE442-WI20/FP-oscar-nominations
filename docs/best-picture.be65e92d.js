@@ -28749,7 +28749,10 @@ d3.csv(csv).then(function (data) {
       if (d.data.class == "genre") click(d);
     }); // Add Circle for the nodes
 
-    nodeEnter.append('circle').attr('class', 'node').attr('r', 1e-6).style("fill", function (d) {
+    nodeEnter.append('circle').attr('class', function (d) {
+      if (d.data.class == "title" || d.data.class == "root") return "node ".concat(d.data.class, " none");
+      return "node ".concat(d.data.class);
+    }).attr('r', 1e-6).style("fill", function (d) {
       return d._children ? "lightsteelblue" : "#fff";
     }); // Add labels for the nodes
 
@@ -28897,4 +28900,4 @@ d3.csv(csv).then(function (data) {
   }
 });
 },{"d3":"UzF0","./best-picture.csv":"CaOD"}]},{},["sDwv"], null)
-//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.6418179a.js.map
+//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.be65e92d.js.map
