@@ -15,3 +15,12 @@
     stroke: yellow;
     fill: yellow !important;
 }
+
+#best-actor-and-actress {
+    display: flex;
+}
+
+#best-atress-container {
+    text-align: center;
+    width: 40%;
+}
