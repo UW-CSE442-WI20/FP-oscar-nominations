@@ -1,0 +1,368 @@
+﻿oscar_num,year,producer,is_winner,movie title
+35,1962,"Sam Spiegel, Producer",TRUE,Lawrence of Arabia
+35,1962,"Darryl F. Zanuck, Producer",FALSE,The Longest Day
+35,1962,"Morton Da Costa, Producer",FALSE,Meredith Willson's The Music Man
+35,1962,"Aaron Rosenberg, Producer",FALSE,Mutiny on the Bounty
+35,1962,"Alan J. Pakula, Producer",FALSE,To Kill a Mockingbird
+36,1963,"Elia Kazan, Producer",FALSE,America America
+36,1963,"Walter Wanger, Producer",FALSE,Cleopatra
+36,1963,"Bernard Smith, Producer",FALSE,How the West Was Won
+36,1963,"Ralph Nelson, Producer",FALSE,Lilies of the Field
+36,1963,"Tony Richardson, Producer",TRUE,Tom Jones
+37,1964,"Hal B. Wallis, Producer",FALSE,Becket
+37,1964,"Stanley Kubrick, Producer",FALSE,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb
+37,1964,"Walt Disney and Bill Walsh, Producers",FALSE,Mary Poppins
+37,1964,"Jack L. Warner, Producer",TRUE,My Fair Lady
+37,1964,"Michael Cacoyannis, Producer",FALSE,Zorba the Greek
+38,1965,"Joseph Janni, Producer",FALSE,Darling
+38,1965,"Carlo Ponti, Producer",FALSE,Doctor Zhivago
+38,1965,"Stanley Kramer, Producer",FALSE,Ship of Fools
+38,1965,"Robert Wise, Producer",TRUE,The Sound of Music
+38,1965,"Fred Coe, Producer",FALSE,A Thousand Clowns
+39,1966,"Lewis Gilbert, Producer",FALSE,Alfie
+39,1966,"Fred Zinnemann, Producer",TRUE,A Man for All Seasons
+39,1966,"Norman Jewison, Producer",FALSE,The Russians Are Coming The Russians Are Coming
+39,1966,"Robert Wise, Producer",FALSE,The Sand Pebbles
+39,1966,"Ernest Lehman, Producer",FALSE,Who's Afraid of Virginia Woolf?
+40,1967,"Warren Beatty, Producer",FALSE,Bonnie and Clyde
+40,1967,"Arthur P. Jacobs, Producer",FALSE,Doctor Dolittle
+40,1967,"Lawrence Turman, Producer",FALSE,The Graduate
+40,1967,"Stanley Kramer, Producer",FALSE,Guess Who's Coming to Dinner
+40,1967,"Walter Mirisch, Producer",TRUE,In the Heat of the Night
+41,1968,"Ray Stark, Producer",FALSE,Funny Girl
+41,1968,"Martin Poll, Producer",FALSE,The Lion in Winter
+41,1968,"John Woolf, Producer",TRUE,Oliver!
+41,1968,"Paul Newman, Producer",FALSE,"Rachel, Rachel"
+41,1968,"Anthony Havelock-Allan and John Brabourne, Producers",FALSE,Romeo and Juliet
+42,1969,"Hal B. Wallis, Producer",FALSE,Anne of the Thousand Days
+42,1969,"John Foreman, Producer",FALSE,Butch Cassidy and the Sundance Kid
+42,1969,"Ernest Lehman, Producer",FALSE,"Hello, Dolly!"
+42,1969,"Jerome Hellman, Producer",TRUE,Midnight Cowboy
+42,1969,"Jacques Perrin and Hamed Rachedi, Producers",FALSE,Z
+43,1970,"Ross Hunter, Producer",FALSE,Airport
+43,1970,"Bob Rafelson and Richard Wechsler, Producers",FALSE,Five Easy Pieces
+43,1970,"Howard G. Minsky, Producer",FALSE,Love Story
+43,1970,"Ingo Preminger, Producer",FALSE,M*A*S*H
+43,1970,"Frank McCarthy, Producer",TRUE,Patton
+44,1971,"Stanley Kubrick, Producer",FALSE,A Clockwork Orange
+44,1971,"Norman Jewison, Producer",FALSE,Fiddler on the Roof
+44,1971,"Philip D'Antoni, Producer",TRUE,The French Connection
+44,1971,"Stephen J. Friedman, Producer",FALSE,The Last Picture Show
+44,1971,"Sam Spiegel, Producer",FALSE,Nicholas and Alexandra
+45,1972,"Cy Feuer, Producer",FALSE,Cabaret
+45,1972,"John Boorman, Producer",FALSE,Deliverance
+45,1972,"Bengt Forslund, Producer",FALSE,The Emigrants
+45,1972,"Albert S. Ruddy, Producer",TRUE,The Godfather
+45,1972,"Robert B. Radnitz, Producer",FALSE,Sounder
+46,1973,"Francis Ford Coppola, Producer; Gary Kurtz, Co-Producer",FALSE,American Graffiti
+46,1973,"Ingmar Bergman, Producer",FALSE,Cries and Whispers
+46,1973,"William Peter Blatty, Producer",FALSE,The Exorcist
+46,1973,"Tony Bill, Michael Phillips and Julia Phillips, Producers",TRUE,The Sting
+46,1973,"Melvin Frank, Producer",FALSE,A Touch of Class
+47,1974,"Robert Evans, Producer",FALSE,Chinatown
+47,1974,"Francis Ford Coppola, Producer; Fred Roos, Co-Producer",FALSE,The Conversation
+47,1974,"Francis Ford Coppola, Producer; Gray Frederickson and Fred Roos, Co-Producers",TRUE,The Godfather Part II
+47,1974,"Marvin Worth, Producer",FALSE,Lenny
+47,1974,"Irwin Allen, Producer",FALSE,The Towering Inferno
+48,1975,"Stanley Kubrick, Producer",FALSE,Barry Lyndon
+48,1975,"Martin Bregman and Martin Elfand, Producers",FALSE,Dog Day Afternoon
+48,1975,"Richard D. Zanuck and David Brown, Producers",FALSE,Jaws
+48,1975,"Robert Altman, Producer",FALSE,Nashville
+48,1975,"Saul Zaentz and Michael Douglas, Producers",TRUE,One Flew over the Cuckoo's Nest
+49,1976,"Walter Coblenz, Producer",FALSE,All the President's Men
+49,1976,"Robert F. Blumofe and Harold Leventhal, Producers",FALSE,Bound for Glory
+49,1976,"Howard Gottfried, Producer",FALSE,Network
+49,1976,"Irwin Winkler and Robert Chartoff, Producers",TRUE,Rocky
+49,1976,"Michael Phillips and Julia Phillips, Producers",FALSE,Taxi Driver
+50,1977,"Charles H. Joffe, Producer",TRUE,Annie Hall
+50,1977,"Ray Stark, Producer",FALSE,The Goodbye Girl
+50,1977,"Richard Roth, Producer",FALSE,Julia
+50,1977,"Gary Kurtz, Producer",FALSE,Star Wars
+50,1977,"Herbert Ross and Arthur Laurents, Producers",FALSE,The Turning Point
+51,1978,"Jerome Hellman, Producer",FALSE,Coming Home
+51,1978,"Barry Spikings, Michael Deeley, Michael Cimino and John Peverall, Producers",TRUE,The Deer Hunter
+51,1978,"Warren Beatty, Producer",FALSE,Heaven Can Wait
+51,1978,"Alan Marshall and David Puttnam, Producers",FALSE,Midnight Express
+51,1978,"Paul Mazursky and Tony Ray, Producers",FALSE,An Unmarried Woman
+52,1979,"Robert Alan Aurthur, Producer",FALSE,All That Jazz
+52,1979,"Francis Coppola, Producer; Fred Roos, Gray Frederickson and Tom Sternberg, Co-Producers",FALSE,Apocalypse Now
+52,1979,"Peter Yates, Producer",FALSE,Breaking Away
+52,1979,"Stanley R. Jaffe, Producer",TRUE,Kramer vs. Kramer
+52,1979,"Tamara Asseyev and Alex Rose, Producers",FALSE,Norma Rae
+53,1980,"Bernard Schwartz, Producer",FALSE,Coal Miner's Daughter
+53,1980,"Jonathan Sanger, Producer",FALSE,The Elephant Man
+53,1980,"Ronald L. Schwary, Producer",TRUE,Ordinary People
+53,1980,"Irwin Winkler and Robert Chartoff, Producers",FALSE,Raging Bull
+53,1980,"Claude Berri, Producer; Timothy Burrill, Co-Producer",FALSE,Tess
+54,1981,"Denis Heroux and John Kemeny, Producers",FALSE,Atlantic City
+54,1981,"David Puttnam, Producer",TRUE,Chariots of Fire
+54,1981,"Bruce Gilbert, Producer",FALSE,On Golden Pond
+54,1981,"Frank Marshall, Producer",FALSE,Raiders of the Lost Ark
+54,1981,"Warren Beatty, Producer",FALSE,Reds
+55,1982,"Steven Spielberg and Kathleen Kennedy, Producers",FALSE,E.T. The Extra-Terrestrial
+55,1982,"Richard Attenborough, Producer",TRUE,Gandhi
+55,1982,"Edward Lewis and Mildred Lewis, Producers",FALSE,Missing
+55,1982,"Sydney Pollack and Dick Richards, Producers",FALSE,Tootsie
+55,1982,"Richard D. Zanuck and David Brown, Producers",FALSE,The Verdict
+56,1983,"Michael Shamberg, Producer",FALSE,The Big Chill
+56,1983,"Peter Yates, Producer",FALSE,The Dresser
+56,1983,"Irwin Winkler and Robert Chartoff, Producers",FALSE,The Right Stuff
+56,1983,"Philip S. Hobel, Producer",FALSE,Tender Mercies
+56,1983,"James L. Brooks, Producer",TRUE,Terms of Endearment
+57,1984,"Saul Zaentz, Producer",TRUE,Amadeus
+57,1984,"David Puttnam, Producer",FALSE,The Killing Fields
+57,1984,"John Brabourne and Richard Goodwin, Producers",FALSE,A Passage to India
+57,1984,"Arlene Donovan, Producer",FALSE,Places in the Heart
+57,1984,"Norman Jewison, Ronald L. Schwary and Patrick Palmer, Producers",FALSE,A Soldier's Story
+58,1985,"Steven Spielberg, Kathleen Kennedy, Frank Marshall and Quincy Jones, Producers",FALSE,The Color Purple
+58,1985,"David Weisman, Producer",FALSE,Kiss of the Spider Woman
+58,1985,"Sydney Pollack, Producer",TRUE,Out of Africa
+58,1985,"John Foreman, Producer",FALSE,Prizzi's Honor
+58,1985,"Edward S. Feldman, Producer",FALSE,Witness
+59,1986,"Burt Sugarman and Patrick Palmer, Producers",FALSE,Children of a Lesser God
+59,1986,"Robert Greenhut, Producer",FALSE,Hannah and Her Sisters
+59,1986,"Fernando Ghia and David Puttnam, Producers",FALSE,The Mission
+59,1986,"Arnold Kopelson, Producer",TRUE,Platoon
+59,1986,"Ismail Merchant, Producer",FALSE,A Room with a View
+60,1987,"James L. Brooks, Producer",FALSE,Broadcast News
+60,1987,"Stanley R. Jaffe and Sherry Lansing, Producers",FALSE,Fatal Attraction
+60,1987,"John Boorman, Producer",FALSE,Hope and Glory
+60,1987,"Jeremy Thomas, Producer",TRUE,The Last Emperor
+60,1987,"Patrick Palmer and Norman Jewison, Producers",FALSE,Moonstruck
+61,1988,"Lawrence Kasdan, Charles Okun and Michael Grillo, Producers",FALSE,The Accidental Tourist
+61,1988,"Norma Heyman and Hank Moonjean, Producers",FALSE,Dangerous Liaisons
+61,1988,"Frederick Zollo and Robert F. Colesberry, Producers",FALSE,Mississippi Burning
+61,1988,"Mark Johnson, Producer",TRUE,Rain Man
+61,1988,"Douglas Wick, Producer",FALSE,Working Girl
+62,1989,"A. Kitman Ho and Oliver Stone, Producers",FALSE,Born on the Fourth of July
+62,1989,"Steven Haft, Paul Junger Witt and Tony Thomas, Producers",FALSE,Dead Poets Society
+62,1989,"Richard D. Zanuck and Lili Fini Zanuck, Producers",TRUE,Driving Miss Daisy
+62,1989,"Lawrence Gordon and Charles Gordon, Producers",FALSE,Field of Dreams
+62,1989,"Noel Pearson, Producer",FALSE,My Left Foot
+63,1990,"Walter F. Parkes and Lawrence Lasker, Producers",FALSE,Awakenings
+63,1990,"Jim Wilson and Kevin Costner, Producers",TRUE,Dances With Wolves
+63,1990,"Lisa Weinstein, Producer",FALSE,Ghost
+63,1990,"Francis Ford Coppola, Producer",FALSE,"The Godfather, Part III"
+63,1990,"Irwin Winkler, Producer",FALSE,Good Fellas
+64,1991,"Don Hahn, Producer",FALSE,Beauty and the Beast
+64,1991,"Mark Johnson, Barry Levinson and Warren Beatty, Producers",FALSE,Bugsy
+64,1991,"A. Kitman Ho and Oliver Stone, Producers",FALSE,JFK
+64,1991,"Barbra Streisand and Andrew Karsch, Producers",FALSE,The Prince of Tides
+64,1991,"Edward Saxon, Kenneth Utt and Ron Bozman, Producers",TRUE,The Silence of the Lambs
+65,1992,"Stephen Woolley, Producer",FALSE,The Crying Game
+65,1992,"David Brown, Rob Reiner and Andrew Scheinman, Producers",FALSE,A Few Good Men
+65,1992,"Ismail Merchant, Producer",FALSE,Howards End
+65,1992,"Martin Brest, Producer",FALSE,Scent of a Woman
+65,1992,"Clint Eastwood, Producer",TRUE,Unforgiven
+66,1993,"Arnold Kopelson, Producer",FALSE,The Fugitive
+66,1993,"Jim Sheridan, Producer",FALSE,In the Name of the Father
+66,1993,"Jan Chapman, Producer",FALSE,The Piano
+66,1993,"Mike Nichols, John Calley and Ismail Merchant, Producers",FALSE,The Remains of the Day
+66,1993,"Steven Spielberg, Gerald R. Molen and Branko Lustig, Producers",TRUE,Schindler's List
+67,1994,"Wendy Finerman, Steve Tisch and Steve Starkey, Producers",TRUE,Forrest Gump
+67,1994,"Duncan Kenworthy, Producer",FALSE,Four Weddings and a Funeral
+67,1994,"Lawrence Bender, Producer",FALSE,Pulp Fiction
+67,1994,"Robert Redford, Michael Jacobs, Julian Krainin and Michael Nozik, Producers",FALSE,Quiz Show
+67,1994,"Niki Marvin, Producer",FALSE,The Shawshank Redemption
+68,1995,"Brian Grazer, Producer",FALSE,Apollo 13
+68,1995,"George Miller, Doug Mitchell and Bill Miller, Producers",FALSE,Babe
+68,1995,"Mel Gibson, Alan Ladd, Jr. and Bruce Davey, Producers",TRUE,Braveheart
+68,1995,"Mario Cecchi Gori, Vittorio Cecchi Gori and Gaetano Daniele, Producers",FALSE,The Postman (Il Postino)
+68,1995,"Lindsay Doran, Producer",FALSE,Sense and Sensibility
+69,1996,"Saul Zaentz, Producer",TRUE,The English Patient
+69,1996,"Ethan Coen, Producer",FALSE,Fargo
+69,1996,"James L. Brooks, Laurence Mark, Richard Sakai and Cameron Crowe, Producers",FALSE,Jerry Maguire
+69,1996,"Simon Channing-Williams, Producer",FALSE,Secrets & Lies
+69,1996,"Jane Scott, Producer",FALSE,Shine
+70,1997,"James L. Brooks, Bridget Johnson and Kristi Zea, Producers",FALSE,As Good as It Gets
+70,1997,"Uberto Pasolini, Producer",FALSE,The Full Monty
+70,1997,"Lawrence Bender, Producer",FALSE,Good Will Hunting
+70,1997,"Arnon Milchan, Curtis Hanson and Michael Nathanson, Producers",FALSE,L.A. Confidential
+70,1997,"James Cameron and Jon Landau, Producers",TRUE,Titanic
+71,1998,"Alison Owen, Eric Fellner and Tim Bevan, Producers",FALSE,Elizabeth
+71,1998,"Elda Ferri and Gianluigi Braschi, Producers",FALSE,Life Is Beautiful
+71,1998,"Steven Spielberg, Ian Bryce, Mark Gordon and Gary Levinsohn, Producers",FALSE,Saving Private Ryan
+71,1998,"David Parfitt, Donna Gigliotti, Harvey Weinstein, Edward Zwick and Marc Norman, Producers",TRUE,Shakespeare in Love
+71,1998,"Robert Michael Geisler, John Roberdeau and Grant Hill, Producers",FALSE,The Thin Red Line
+72,1999,"Bruce Cohen and Dan Jinks, Producers",TRUE,American Beauty
+72,1999,"Richard N. Gladstein, Producer",FALSE,The Cider House Rules
+72,1999,"David Valdes and Frank Darabont, Producers",FALSE,The Green Mile
+72,1999,"Michael Mann and Pieter Jan Brugge, Producers",FALSE,The Insider
+72,1999,"Frank Marshall, Kathleen Kennedy and Barry Mendel, Producers",FALSE,The Sixth Sense
+73,2000,"David Brown, Kit Golden and Leslie Holleran, Producers",FALSE,Chocolat
+73,2000,"Bill Kong, Hsu Li Kong and Ang Lee, Producers",FALSE,"Crouching Tiger, Hidden Dragon"
+73,2000,"Danny DeVito, Michael Shamberg and Stacey Sher, Producers",FALSE,Erin Brockovich
+73,2000,"Douglas Wick, David Franzoni and Branko Lustig, Producers",TRUE,Gladiator
+73,2000,"Edward Zwick, Marshall Herskovitz and Laura Bickford, Producers",FALSE,Traffic
+74,2001,"Brian Grazer and Ron Howard, Producers",TRUE,A Beautiful Mind
+74,2001,"Robert Altman, Bob Balaban and David Levy, Producers",FALSE,Gosford Park
+74,2001,"Graham Leader, Ross Katz and Todd Field, Producers",FALSE,In the Bedroom
+74,2001,"Peter Jackson, Fran Walsh and Barrie M. Osborne, Producers",FALSE,The Lord of the Rings: The Fellowship of the Ring
+74,2001,"Martin Brown, Baz Luhrmann and Fred Baron, Producers",FALSE,Moulin Rouge
+75,2002,"Martin Richards, Producer",TRUE,Chicago
+75,2002,"Alberto Grimaldi and Harvey Weinstein, Producers",FALSE,Gangs of New York
+75,2002,"Scott Rudin and Robert Fox, Producers",FALSE,The Hours
+75,2002,"Barrie M. Osborne, Fran Walsh and Peter Jackson, Producers",FALSE,The Lord of the Rings: The Two Towers
+75,2002,"Roman Polanski, Robert Benmussa and Alain Sarde, Producers",FALSE,The Pianist
+76,2003,"Barrie M. Osborne, Peter Jackson and Fran Walsh, Producers",TRUE,The Lord of the Rings: The Return of the King
+76,2003,"Ross Katz and Sofia Coppola, Producers",FALSE,Lost in Translation
+76,2003,"Samuel Goldwyn, Jr., Peter Weir and Duncan Henderson, Producers",FALSE,Master and Commander: The Far Side of the World
+76,2003,"Robert Lorenz, Judie G. Hoyt and Clint Eastwood, Producers",FALSE,Mystic River
+76,2003,"Kathleen Kennedy, Frank Marshall and Gary Ross, Producers",FALSE,Seabiscuit
+77,2004,"Michael Mann and Graham King, Producers",FALSE,The Aviator
+77,2004,"Richard N. Gladstein and Nellie Bellflower, Producers",FALSE,Finding Neverland
+77,2004,"Clint Eastwood, Albert S. Ruddy and Tom Rosenberg, Producers",TRUE,Million Dollar Baby
+77,2004,"Taylor Hackford, Stuart Benjamin and Howard Baldwin, Producers",FALSE,Ray
+77,2004,"Michael London, Producer",FALSE,Sideways
+78,2005,"Diana Ossana and James Schamus, Producers",FALSE,Brokeback Mountain
+78,2005,"Caroline Baron, William Vince and Michael Ohoven, Producers",FALSE,Capote
+78,2005,"Paul Haggis and Cathy Schulman, Producers",TRUE,Crash
+78,2005,"Grant Heslov, Producer",FALSE,"Good Night, and Good Luck."
+78,2005,"Kathleen Kennedy, Steven Spielberg and Barry Mendel, Producers",FALSE,Munich
+79,2006,"Alejandro González Iñárritu, Jon Kilik and Steve Golin, Producers",FALSE,Babel
+79,2006,"Graham King, Producer",TRUE,The Departed
+79,2006,"Clint Eastwood, Steven Spielberg and Robert Lorenz, Producers",FALSE,Letters from Iwo Jima
+79,2006,"David T. Friendly, Peter Saraf and Marc Turtletaub, Producers",FALSE,Little Miss Sunshine
+79,2006,"Andy Harries, Christine Langan and Tracey Seaward, Producers",FALSE,The Queen
+80,2007,"Tim Bevan, Eric Fellner and Paul Webster, Producers",FALSE,Atonement
+80,2007,"Lianne Halfon, Mason Novick and Russell Smith, Producers",FALSE,Juno
+80,2007,"Sydney Pollack, Jennifer Fox and Kerry Orent, Producers",FALSE,Michael Clayton
+80,2007,"Scott Rudin, Ethan Coen and Joel Coen, Producers",TRUE,No Country for Old Men
+80,2007,"JoAnne Sellar, Paul Thomas Anderson and Daniel Lupi, Producers",FALSE,There Will Be Blood
+81,2008,"Kathleen Kennedy, Frank Marshall and Ceán Chaffin, Producers",FALSE,The Curious Case of Benjamin Button
+81,2008,"Brian Grazer, Ron Howard and Eric Fellner, Producers",FALSE,Frost/Nixon
+81,2008,"Dan Jinks and Bruce Cohen, Producers",FALSE,Milk
+81,2008,"Anthony Minghella, Sydney Pollack, Donna Gigliotti and Redmond Morris, Producers",FALSE,The Reader
+81,2008,"Christian Colson, Producer",TRUE,Slumdog Millionaire
+82,2009,"James Cameron and Jon Landau, Producers",FALSE,Avatar
+82,2009,"Gil Netter, Andrew A. Kosove and Broderick Johnson, Producers",FALSE,The Blind Side
+82,2009,"Peter Jackson and Carolynne Cunningham, Producers",FALSE,District 9
+82,2009,"Finola Dwyer and Amanda Posey, Producers",FALSE,An Education
+82,2009,"Kathryn Bigelow, Mark Boal, Nicolas Chartier and Greg Shapiro, Producers",TRUE,The Hurt Locker
+82,2009,"Lawrence Bender, Producer",FALSE,Inglourious Basterds
+82,2009,"Lee Daniels, Sarah Siegel-Magness and Gary Magness, Producers",FALSE,Precious: Based on the Novel 'Push' by Sapphire
+82,2009,"Joel Coen and Ethan Coen, Producers",FALSE,A Serious Man
+82,2009,"Jonas Rivera, Producer",FALSE,Up
+82,2009,"Daniel Dubiecki, Ivan Reitman and Jason Reitman, Producers",FALSE,Up in the Air
+83,2010,"Mike Medavoy, Brian Oliver and Scott Franklin, Producers",FALSE,Black Swan
+83,2010,"David Hoberman, Todd Lieberman and Mark Wahlberg, Producers",FALSE,The Fighter
+83,2010,"Emma Thomas and Christopher Nolan, Producers",FALSE,Inception
+83,2010,"Gary Gilbert, Jeffrey Levy-Hinte and Celine Rattray, Producers",FALSE,The Kids Are All Right
+83,2010,"Iain Canning, Emile Sherman and Gareth Unwin, Producers",TRUE,The King's Speech
+83,2010,"Christian Colson, Danny Boyle and John Smithson, Producers",FALSE,127 Hours
+83,2010,"Scott Rudin, Dana Brunetti, Michael De Luca and Ceán Chaffin, Producers",FALSE,The Social Network
+83,2010,"Darla K. Anderson, Producer",FALSE,Toy Story 3
+83,2010,"Scott Rudin, Ethan Coen and Joel Coen, Producers",FALSE,True Grit
+83,2010,"Anne Rosellini and Alix Madigan-Yorkin, Producers",FALSE,Winter's Bone
+84,2011,"Thomas Langmann, Producer",TRUE,The Artist
+84,2011,"Jim Burke, Alexander Payne and Jim Taylor, Producers",FALSE,The Descendants
+84,2011,"Scott Rudin, Producer",FALSE,Extremely Loud & Incredibly Close
+84,2011,"Brunson Green, Chris Columbus and Michael Barnathan, Producers",FALSE,The Help
+84,2011,"Graham King and Martin Scorsese, Producers",FALSE,Hugo
+84,2011,"Letty Aronson and Stephen Tenenbaum, Producers",FALSE,Midnight in Paris
+84,2011,"Michael De Luca, Rachael Horovitz and Brad Pitt, Producers",FALSE,Moneyball
+84,2011,"Sarah Green, Bill Pohlad, Dede Gardner and Grant Hill, Producers",FALSE,The Tree of Life
+84,2011,"Steven Spielberg and Kathleen Kennedy, Producers",FALSE,War Horse
+85,2012,"Margaret Menegoz, Stefan Arndt, Veit Heiduschka and Michael Katz, Producers",FALSE,Amour
+85,2012,"Grant Heslov, Ben Affleck and George Clooney, Producers",TRUE,Argo
+85,2012,"Dan Janvey, Josh Penn and Michael Gottwald, Producers",FALSE,Beasts of the Southern Wild
+85,2012,"Stacey Sher, Reginald Hudlin and Pilar Savone, Producers",FALSE,Django Unchained
+85,2012,"Tim Bevan, Eric Fellner, Debra Hayward and Cameron Mackintosh, Producers",FALSE,Les Misérables
+85,2012,"Gil Netter, Ang Lee and David Womark, Producers",FALSE,Life of Pi
+85,2012,"Steven Spielberg and Kathleen Kennedy, Producers",FALSE,Lincoln
+85,2012,"Donna Gigliotti, Bruce Cohen and Jonathan Gordon, Producers",FALSE,Silver Linings Playbook
+85,2012,"Mark Boal, Kathryn Bigelow and Megan Ellison, Producers",FALSE,Zero Dark Thirty
+86,2013,"Charles Roven, Richard Suckle, Megan Ellison and Jonathan Gordon, Producers",FALSE,American Hustle
+86,2013,"Scott Rudin, Dana Brunetti and Michael De Luca, Producers",FALSE,Captain Phillips
+86,2013,"Robbie Brenner and Rachel Winter, Producers",FALSE,Dallas Buyers Club
+86,2013,"Alfonso Cuarón and David Heyman, Producers",FALSE,Gravity
+86,2013,"Megan Ellison, Spike Jonze and Vincent Landay, Producers",FALSE,Her
+86,2013,"Albert Berger and Ron Yerxa, Producers",FALSE,Nebraska
+86,2013,"Gabrielle Tana, Steve Coogan and Tracey Seaward, Producers",FALSE,Philomena
+86,2013,"Brad Pitt, Dede Gardner, Jeremy Kleiner, Steve McQueen and Anthony Katagas, Producers",TRUE,12 Years a Slave
+86,2013,"Martin Scorsese, Leonardo DiCaprio, Joey McFarland and Emma Tillinger Koskoff, Producers",FALSE,The Wolf of Wall Street
+87,2014,"Clint Eastwood, Robert Lorenz, Andrew Lazar, Bradley Cooper and Peter Morgan, Producers",FALSE,American Sniper
+87,2014,"Alejandro G. Iñárritu, John Lesher and James W. Skotchdopole, Producers",TRUE,Birdman or (The Unexpected Virtue of Ignorance)
+87,2014,"Richard Linklater and Cathleen Sutherland, Producers",FALSE,Boyhood
+87,2014,"Wes Anderson, Scott Rudin, Steven Rales and Jeremy Dawson, Producers",FALSE,The Grand Budapest Hotel
+87,2014,"Nora Grossman, Ido Ostrowsky and Teddy Schwarzman, Producers",FALSE,The Imitation Game
+87,2014,"Christian Colson, Oprah Winfrey, Dede Gardner and Jeremy Kleiner, Producers",FALSE,Selma
+87,2014,"Tim Bevan, Eric Fellner, Lisa Bruce and Anthony McCarten, Producers",FALSE,The Theory of Everything
+87,2014,"Jason Blum, Helen Estabrook and David Lancaster, Producers",FALSE,Whiplash
+88,2015,"Brad Pitt, Dede Gardner and Jeremy Kleiner, Producers",FALSE,The Big Short
+88,2015,"Steven Spielberg, Marc Platt and Kristie Macosko Krieger, Producers",FALSE,Bridge of Spies
+88,2015,"Finola Dwyer and Amanda Posey, Producers",FALSE,Brooklyn
+88,2015,"Doug Mitchell and George Miller, Producers",FALSE,Mad Max: Fury Road
+88,2015,"Simon Kinberg, Ridley Scott, Michael Schaefer and Mark Huffam, Producers",FALSE,The Martian
+88,2015,"Arnon Milchan, Steve Golin, Alejandro G. Iñárritu, Mary Parent and Keith Redmon, Producers",FALSE,The Revenant
+88,2015,"Ed Guiney, Producer",FALSE,Room
+88,2015,"Michael Sugar, Steve Golin, Nicole Rocklin and Blye Pagon Faust, Producers",TRUE,Spotlight
+89,2016,"Shawn Levy, Dan Levine, Aaron Ryder and David Linde, Producers",FALSE,Arrival
+89,2016,"Scott Rudin, Denzel Washington and Todd Black, Producers",FALSE,Fences
+89,2016,"Bill Mechanic and David Permut, Producers",FALSE,Hacksaw Ridge
+89,2016,"Carla Hacken and Julie Yorn, Producers",FALSE,Hell or High Water
+89,2016,"Donna Gigliotti, Peter Chernin, Jenno Topping, Pharrell Williams and Theodore Melfi, Producers",FALSE,Hidden Figures
+89,2016,"Fred Berger, Jordan Horowitz and Marc Platt, Producers",FALSE,La La Land
+89,2016,"Emile Sherman, Iain Canning and Angie Fielder, Producers",FALSE,Lion
+89,2016,"Matt Damon, Kimberly Steward, Chris Moore, Lauren Beck and Kevin J. Walsh, Producers",FALSE,Manchester by the Sea
+89,2016,"Adele Romanski, Dede Gardner and Jeremy Kleiner, Producers",TRUE,Moonlight
+90,2017,"Peter Spears, Luca Guadagnino, Emilie Georges and Marco Morabito, Producers",FALSE,Call Me by Your Name
+90,2017,"Tim Bevan, Eric Fellner, Lisa Bruce, Anthony McCarten and Douglas Urbanski, Producers",FALSE,Darkest Hour
+90,2017,"Emma Thomas and Christopher Nolan, Producers",FALSE,Dunkirk
+90,2017,"Sean McKittrick, Jason Blum, Edward H. Hamm Jr. and Jordan Peele, Producers",FALSE,Get Out
+90,2017,"Scott Rudin, Eli Bush and Evelyn O'Neill, Producers",FALSE,Lady Bird
+90,2017,"JoAnne Sellar, Paul Thomas Anderson, Megan Ellison and Daniel Lupi, Producers",FALSE,Phantom Thread
+90,2017,"Amy Pascal, Steven Spielberg and Kristie Macosko Krieger, Producers",FALSE,The Post
+90,2017,"Guillermo del Toro and J. Miles Dale, Producers",TRUE,The Shape of Water
+90,2017,"Graham Broadbent, Pete Czernin and Martin McDonagh, Producers",FALSE,"Three Billboards outside Ebbing, Missouri"
+91,2018,"Kevin Feige, Producer",FALSE,Black Panther
+91,2018,"Sean McKittrick, Jason Blum, Raymond Mansfield, Jordan Peele and Spike Lee, Producers",FALSE,BlacKkKlansman
+91,2018,"Graham King, Producer",FALSE,Bohemian Rhapsody
+91,2018,"Ceci Dempsey, Ed Guiney, Lee Magiday and Yorgos Lanthimos, Producers",FALSE,The Favourite
+91,2018,"Jim Burke, Charles B. Wessler, Brian Currie, Peter Farrelly and Nick Vallelonga, Producers",TRUE,Green Book
+91,2018,"Gabriela Rodríguez and Alfonso Cuarón, Producers",FALSE,Roma
+91,2018,"Bill Gerber, Bradley Cooper and Lynette Howell Taylor, Producers",FALSE,A Star Is Born
+91,2018,"Dede Gardner, Jeremy Kleiner, Adam McKay and Kevin Messick, Producers",FALSE,Vice
+92,2019,"Peter Chernin, Jenno Topping and James Mangold, Producers",FALSE,Ford v Ferrari
+92,2019,"Martin Scorsese, Robert De Niro, Jane Rosenthal and Emma Tillinger Koskoff, Producers",FALSE,The Irishman
+92,2019,"Carthew Neal, Taika Waititi and Chelsea Winstanley, Producers",FALSE,Jojo Rabbit
+92,2019,"Todd Phillips, Bradley Cooper and Emma Tillinger Koskoff, Producers",FALSE,Joker
+92,2019,"Amy Pascal, Producer",FALSE,Little Women
+92,2019,"Noah Baumbach and David Heyman, Producers",FALSE,Marriage Story
+92,2019,"Sam Mendes, Pippa Harris, Jayne-Ann Tenggren and Callum McDougall, Producers",FALSE,1917
+92,2019,"David Heyman, Shannon McIntosh and Quentin Tarantino, Producers",FALSE,Once upon a Time...in Hollywood
+92,2019,"Kwak Sin Ae and Bong Joon Ho, Producers",TRUE,Parasite
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,
+92,2019,,,

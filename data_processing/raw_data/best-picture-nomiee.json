@@ -1,0 +1,3588 @@
+{
+  "1": {
+    "year": 1927,
+    "outstanding picture": {
+      "The Caddo Company": {
+        "isWinner": false,
+        "films": [
+          "The Racket"
+        ]
+      },
+      "Fox": {
+        "isWinner": false,
+        "films": [
+          "7th Heaven"
+        ]
+      },
+      "Paramount Famous Lasky": {
+        "isWinner": true,
+        "films": [
+          "Wings"
+        ]
+      }
+    }
+  },
+  "2": {
+    "year": 1928,
+    "outstanding picture": {
+      "Feature Productions": {
+        "isWinner": true,
+        "films": [
+          "Alibi"
+        ]
+      },
+      "Fox": {
+        "isWinner": true,
+        "films": [
+          "In Old Arizona"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": true,
+        "films": [
+          "Hollywood Revue"
+        ]
+      },
+      "Paramount Famous Lasky": {
+        "isWinner": true,
+        "films": [
+          "The Patriot"
+        ]
+      }
+    }
+  },
+  "3": {
+    "year": 1929,
+    "outstanding production": {
+      "Universal": {
+        "isWinner": true,
+        "films": [
+          "All Quiet on the Western Front"
+        ]
+      },
+      "Cosmopolitan": {
+        "isWinner": false,
+        "films": [
+          "The Big House"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Disraeli"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "The Divorcee"
+        ]
+      },
+      "Paramount Famous Lasky": {
+        "isWinner": false,
+        "films": [
+          "The Love Parade"
+        ]
+      }
+    }
+  },
+  "4": {
+    "year": 1930,
+    "outstanding production": {
+      "RKO Radio": {
+        "isWinner": true,
+        "films": [
+          "Cimarron"
+        ]
+      },
+      "Fox": {
+        "isWinner": false,
+        "films": [
+          "East Lynne"
+        ]
+      },
+      "The Caddo Company": {
+        "isWinner": false,
+        "films": [
+          "The Front Page"
+        ]
+      },
+      "Paramount Publix": {
+        "isWinner": false,
+        "films": [
+          "Skippy"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Trader Horn"
+        ]
+      }
+    }
+  },
+  "5": {
+    "year": 1931,
+    "outstanding production": {
+      "Samuel Goldwyn Productions": {
+        "isWinner": false,
+        "films": [
+          "Arrowsmith"
+        ]
+      },
+      "Fox": {
+        "isWinner": false,
+        "films": [
+          "Bad Girl"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": true,
+        "films": [
+          "Grand Hotel"
+        ]
+      },
+      "First National": {
+        "isWinner": false,
+        "films": [
+          "Five Star Final"
+        ]
+      },
+      "Paramount Publix": {
+        "isWinner": false,
+        "films": [
+          "The Smiling Lieutenant"
+        ]
+      }
+    }
+  },
+  "6": {
+    "year": 1932,
+    "outstanding production": {
+      "Fox": {
+        "isWinner": false,
+        "films": [
+          "State Fair"
+        ]
+      },
+      "Paramount": {
+        "isWinner": false,
+        "films": [
+          "She Done Him Wrong"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "I Am a Fugitive from a Chain Gang"
+        ]
+      },
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "Lady for a Day"
+        ]
+      },
+      "RKO Radio": {
+        "isWinner": false,
+        "films": [
+          "Little Women"
+        ]
+      },
+      "London Films": {
+        "isWinner": false,
+        "films": [
+          "The Private Life of Henry VIII"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Smilin' Through"
+        ]
+      }
+    }
+  },
+  "7": {
+    "year": 1934,
+    "outstanding production": {
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Viva Villa!"
+        ]
+      },
+      "Paramount": {
+        "isWinner": false,
+        "films": [
+          "Cleopatra"
+        ]
+      },
+      "First National": {
+        "isWinner": false,
+        "films": [
+          "Flirtation Walk"
+        ]
+      },
+      "RKO Radio": {
+        "isWinner": false,
+        "films": [
+          "The Gay Divorcee"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Here Comes the Navy"
+        ]
+      },
+      "20th Century": {
+        "isWinner": false,
+        "films": [
+          "The House of Rothschild"
+        ]
+      },
+      "Universal": {
+        "isWinner": false,
+        "films": [
+          "Imitation of Life"
+        ]
+      },
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "One Night of Love"
+        ]
+      },
+      "Jesse L. Lasky (production company)": {
+        "isWinner": false,
+        "films": [
+          "The White Parade"
+        ]
+      }
+    }
+  },
+  "8": {
+    "year": 1935,
+    "outstanding production": {
+      "RKO Radio": {
+        "isWinner": false,
+        "films": [
+          "Top Hat"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Naughty Marietta"
+        ]
+      },
+      "Cosmopolitan": {
+        "isWinner": false,
+        "films": [
+          "Captain Blood"
+        ]
+      },
+      "20th Century": {
+        "isWinner": false,
+        "films": [
+          "Les Miserables"
+        ]
+      },
+      "Paramount": {
+        "isWinner": false,
+        "films": [
+          "Ruggles of Red Gap"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "A Midsummer Night's Dream"
+        ]
+      }
+    }
+  },
+  "9": {
+    "year": 1936,
+    "outstanding production": {
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Anthony Adverse"
+        ]
+      },
+      "Samuel Goldwyn Productions": {
+        "isWinner": false,
+        "films": [
+          "Dodsworth"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "A Tale of Two Cities"
+        ]
+      },
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "Mr. Deeds Goes to Town"
+        ]
+      },
+      "Cosmopolitan": {
+        "isWinner": false,
+        "films": [
+          "The Story of Louis Pasteur"
+        ]
+      },
+      "Universal": {
+        "isWinner": false,
+        "films": [
+          "Three Smart Girls"
+        ]
+      }
+    }
+  },
+  "10": {
+    "year": 1937,
+    "outstanding production": {
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "Lost Horizon"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "The Good Earth"
+        ]
+      },
+      "Samuel Goldwyn Productions": {
+        "isWinner": false,
+        "films": [
+          "Dead End"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "In Old Chicago"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": true,
+        "films": [
+          "The Life of Emile Zola"
+        ]
+      },
+      "Universal": {
+        "isWinner": false,
+        "films": [
+          "One Hundred Men and a Girl"
+        ]
+      },
+      "RKO Radio": {
+        "isWinner": false,
+        "films": [
+          "Stage Door"
+        ]
+      },
+      "Selznick International Pictures": {
+        "isWinner": false,
+        "films": [
+          "A Star Is Born"
+        ]
+      }
+    }
+  },
+  "11": {
+    "year": 1938,
+    "outstanding production": {
+      "Warner Bros.-First National": {
+        "isWinner": false,
+        "films": [
+          "Four Daughters"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "Alexander's Ragtime Band"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Test Pilot"
+        ]
+      },
+      "Realization D'Art Cinematographique": {
+        "isWinner": false,
+        "films": [
+          "Grand Illusion"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Jezebel"
+        ]
+      },
+      "Columbia": {
+        "isWinner": true,
+        "films": [
+          "You Can't Take It with You"
+        ]
+      }
+    }
+  },
+  "12": {
+    "year": 1939,
+    "outstanding production": {
+      "Warner Bros.-First National": {
+        "isWinner": false,
+        "films": [
+          "Dark Victory"
+        ]
+      },
+      "Selznick International Pictures": {
+        "isWinner": true,
+        "films": [
+          "Gone with the Wind"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "The Wizard of Oz"
+        ]
+      },
+      "RKO Radio": {
+        "isWinner": false,
+        "films": [
+          "Love Affair"
+        ]
+      },
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "Mr. Smith Goes to Washington"
+        ]
+      },
+      "Hal Roach (production company)": {
+        "isWinner": false,
+        "films": [
+          "Of Mice and Men"
+        ]
+      },
+      "Walter Wanger (production company)": {
+        "isWinner": false,
+        "films": [
+          "Stagecoach"
+        ]
+      },
+      "Samuel Goldwyn Productions": {
+        "isWinner": false,
+        "films": [
+          "Wuthering Heights"
+        ]
+      }
+    }
+  },
+  "13": {
+    "year": 1940,
+    "outstanding production": {
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "The Letter"
+        ]
+      },
+      "Walter Wanger (production company)": {
+        "isWinner": false,
+        "films": [
+          "Foreign Correspondent"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "The Grapes of Wrath"
+        ]
+      },
+      "Charles Chaplin Productions": {
+        "isWinner": false,
+        "films": [
+          "The Great Dictator"
+        ]
+      },
+      "RKO Radio": {
+        "isWinner": false,
+        "films": [
+          "Kitty Foyle"
+        ]
+      },
+      "Argosy-Wanger": {
+        "isWinner": false,
+        "films": [
+          "The Long Voyage Home"
+        ]
+      },
+      "Sol Lesser (production company)": {
+        "isWinner": false,
+        "films": [
+          "Our Town"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "The Philadelphia Story"
+        ]
+      },
+      "Selznick International Pictures": {
+        "isWinner": true,
+        "films": [
+          "Rebecca"
+        ]
+      }
+    }
+  },
+  "14": {
+    "year": 1941,
+    "outstanding motion picture": {
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Blossoms in the Dust"
+        ]
+      },
+      "Mercury": {
+        "isWinner": false,
+        "films": [
+          "Citizen Kane"
+        ]
+      },
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "Here Comes Mr. Jordan"
+        ]
+      },
+      "Paramount": {
+        "isWinner": false,
+        "films": [
+          "Hold Back the Dawn"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": true,
+        "films": [
+          "How Green Was My Valley"
+        ]
+      },
+      "Samuel Goldwyn Productions": {
+        "isWinner": false,
+        "films": [
+          "The Little Foxes"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Sergeant York"
+        ]
+      },
+      "RKO Radio": {
+        "isWinner": false,
+        "films": [
+          "Suspicion"
+        ]
+      }
+    }
+  },
+  "15": {
+    "year": 1942,
+    "outstanding motion picture": {
+      "Ortus": {
+        "isWinner": false,
+        "films": [
+          "The Invaders"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Yankee Doodle Dandy"
+        ]
+      },
+      "Mercury": {
+        "isWinner": false,
+        "films": [
+          "The Magnificent Ambersons"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Random Harvest"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "The Pied Piper"
+        ]
+      },
+      "Samuel Goldwyn Productions": {
+        "isWinner": false,
+        "films": [
+          "The Pride of the Yankees"
+        ]
+      },
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "The Talk of the Town"
+        ]
+      },
+      "Paramount": {
+        "isWinner": false,
+        "films": [
+          "Wake Island"
+        ]
+      }
+    }
+  },
+  "16": {
+    "year": 1943,
+    "outstanding motion picture": {
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Watch on the Rhine"
+        ]
+      },
+      "Paramount": {
+        "isWinner": false,
+        "films": [
+          "For Whom the Bell Tolls"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "The Song of Bernadette"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Madame Curie"
+        ]
+      },
+      "Two Cities": {
+        "isWinner": false,
+        "films": [
+          "In Which We Serve"
+        ]
+      },
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "The More the Merrier"
+        ]
+      }
+    }
+  },
+  "17": {
+    "year": 1944,
+    "best motion picture": {
+      "Paramount": {
+        "isWinner": true,
+        "films": [
+          "Going My Way"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Gaslight"
+        ]
+      },
+      "Selznick International Pictures": {
+        "isWinner": false,
+        "films": [
+          "Since You Went Away"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "Wilson"
+        ]
+      }
+    }
+  },
+  "18": {
+    "year": 1945,
+    "best motion picture": {
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Anchors Aweigh"
+        ]
+      },
+      "Rainbow Productions": {
+        "isWinner": false,
+        "films": [
+          "The Bells of St. Mary's"
+        ]
+      },
+      "Paramount": {
+        "isWinner": true,
+        "films": [
+          "The Lost Weekend"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Mildred Pierce"
+        ]
+      },
+      "Selznick International Pictures": {
+        "isWinner": false,
+        "films": [
+          "Spellbound"
+        ]
+      }
+    }
+  },
+  "19": {
+    "year": 1946,
+    "best motion picture": {
+      "Samuel Goldwyn Productions": {
+        "isWinner": true,
+        "films": [
+          "The Best Years of Our Lives"
+        ]
+      },
+      "J. Arthur Rank-Two Cities Films": {
+        "isWinner": false,
+        "films": [
+          "Henry V"
+        ]
+      },
+      "Liberty Films": {
+        "isWinner": false,
+        "films": [
+          "It's a Wonderful Life"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "The Razor's Edge"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "The Yearling"
+        ]
+      }
+    }
+  },
+  "20": {
+    "year": 1947,
+    "best motion picture": {
+      "Samuel Goldwyn Productions": {
+        "isWinner": false,
+        "films": [
+          "The Bishop's Wife"
+        ]
+      },
+      "RKO Radio": {
+        "isWinner": false,
+        "films": [
+          "Crossfire"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "Miracle on 34th Street"
+        ]
+      },
+      "J. Arthur Rank-Cineguild": {
+        "isWinner": false,
+        "films": [
+          "Great Expectations"
+        ]
+      }
+    }
+  },
+  "21": {
+    "year": 1948,
+    "best motion picture": {
+      "J. Arthur Rank-Two Cities Films": {
+        "isWinner": true,
+        "films": [
+          "Hamlet"
+        ]
+      },
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "The Treasure of the Sierra Madre"
+        ]
+      },
+      "J. Arthur Rank-Archers": {
+        "isWinner": false,
+        "films": [
+          "The Red Shoes"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "The Snake Pit"
+        ]
+      }
+    }
+  },
+  "22": {
+    "year": 1949,
+    "best motion picture": {
+      "Robert Rossen Productions": {
+        "isWinner": true,
+        "films": [
+          "All the King's Men"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "Battleground"
+        ]
+      },
+      "Paramount": {
+        "isWinner": false,
+        "films": [
+          "The Heiress"
+        ]
+      },
+      "20th Century-Fox": {
+        "isWinner": false,
+        "films": [
+          "Twelve O'Clock High"
+        ]
+      }
+    }
+  },
+  "23": {
+    "year": 1950,
+    "best motion picture": {
+      "20th Century-Fox": {
+        "isWinner": true,
+        "films": [
+          "All about Eve"
+        ]
+      },
+      "Columbia": {
+        "isWinner": false,
+        "films": [
+          "Born Yesterday"
+        ]
+      },
+      "Metro-Goldwyn-Mayer": {
+        "isWinner": false,
+        "films": [
+          "King Solomon's Mines"
+        ]
+      },
+      "Paramount": {
+        "isWinner": false,
+        "films": [
+          "Sunset Blvd."
+        ]
+      }
+    }
+  },
+  "24": {
+    "year": 1951,
+    "best motion picture": {
+      "Arthur Freed, Producer": {
+        "isWinner": true,
+        "films": [
+          "An American in Paris"
+        ]
+      },
+      "Anatole Litvak and Frank McCarthy, Producers": {
+        "isWinner": false,
+        "films": [
+          "Decision before Dawn"
+        ]
+      },
+      "George Stevens, Producer": {
+        "isWinner": false,
+        "films": [
+          "A Place in the Sun"
+        ]
+      },
+      "Sam Zimbalist, Producer": {
+        "isWinner": false,
+        "films": [
+          "Quo Vadis"
+        ]
+      },
+      "Charles K. Feldman, Producer": {
+        "isWinner": false,
+        "films": [
+          "A Streetcar Named Desire"
+        ]
+      }
+    }
+  },
+  "25": {
+    "year": 1952,
+    "best motion picture": {
+      "Cecil B. DeMille, Producer": {
+        "isWinner": true,
+        "films": [
+          "The Greatest Show on Earth"
+        ]
+      },
+      "Stanley Kramer, Producer": {
+        "isWinner": false,
+        "films": [
+          "High Noon"
+        ]
+      },
+      "Pandro S. Berman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Ivanhoe"
+        ]
+      },
+      "Romulus Films": {
+        "isWinner": false,
+        "films": [
+          "Moulin Rouge"
+        ]
+      },
+      "John Ford and Merian C. Cooper, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Quiet Man"
+        ]
+      }
+    }
+  },
+  "26": {
+    "year": 1953,
+    "best motion picture": {
+      "Buddy Adler, Producer": {
+        "isWinner": true,
+        "films": [
+          "From Here to Eternity"
+        ]
+      },
+      "John Houseman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Julius Caesar"
+        ]
+      },
+      "Frank Ross, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Robe"
+        ]
+      },
+      "William Wyler, Producer": {
+        "isWinner": false,
+        "films": [
+          "Roman Holiday"
+        ]
+      },
+      "George Stevens, Producer": {
+        "isWinner": false,
+        "films": [
+          "Shane"
+        ]
+      }
+    }
+  },
+  "27": {
+    "year": 1954,
+    "best motion picture": {
+      "Stanley Kramer, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Caine Mutiny"
+        ]
+      },
+      "William Perlberg, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Country Girl"
+        ]
+      },
+      "Sam Spiegel, Producer": {
+        "isWinner": true,
+        "films": [
+          "On the Waterfront"
+        ]
+      },
+      "Jack Cummings, Producer": {
+        "isWinner": false,
+        "films": [
+          "Seven Brides for Seven Brothers"
+        ]
+      },
+      "Sol C. Siegel, Producer": {
+        "isWinner": false,
+        "films": [
+          "Three Coins in the Fountain"
+        ]
+      }
+    }
+  },
+  "28": {
+    "year": 1955,
+    "best motion picture": {
+      "Buddy Adler, Producer": {
+        "isWinner": false,
+        "films": [
+          "Love Is a Many-Splendored Thing"
+        ]
+      },
+      "Harold Hecht, Producer": {
+        "isWinner": true,
+        "films": [
+          "Marty"
+        ]
+      },
+      "Leland Hayward, Producer": {
+        "isWinner": false,
+        "films": [
+          "Mister Roberts"
+        ]
+      },
+      "Fred Kohlmar, Producer": {
+        "isWinner": false,
+        "films": [
+          "Picnic"
+        ]
+      },
+      "Hal B. Wallis, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Rose Tattoo"
+        ]
+      }
+    }
+  },
+  "29": {
+    "year": 1956,
+    "best motion picture": {
+      "Michael Todd, Producer": {
+        "isWinner": true,
+        "films": [
+          "Around the World in 80 Days"
+        ]
+      },
+      "William Wyler, Producer": {
+        "isWinner": false,
+        "films": [
+          "Friendly Persuasion"
+        ]
+      },
+      "George Stevens and Henry Ginsberg, Producers": {
+        "isWinner": false,
+        "films": [
+          "Giant"
+        ]
+      },
+      "Charles Brackett, Producer": {
+        "isWinner": false,
+        "films": [
+          "The King and I"
+        ]
+      },
+      "Cecil B. DeMille, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Ten Commandments"
+        ]
+      }
+    }
+  },
+  "30": {
+    "year": 1957,
+    "best motion picture": {
+      "Sam Spiegel, Producer": {
+        "isWinner": true,
+        "films": [
+          "The Bridge on the River Kwai"
+        ]
+      },
+      "Jerry Wald, Producer": {
+        "isWinner": false,
+        "films": [
+          "Peyton Place"
+        ]
+      },
+      "William Goetz, Producer": {
+        "isWinner": false,
+        "films": [
+          "Sayonara"
+        ]
+      },
+      "Henry Fonda and Reginald Rose, Producers": {
+        "isWinner": false,
+        "films": [
+          "12 Angry Men"
+        ]
+      },
+      "Arthur Hornblow, Jr., Producer": {
+        "isWinner": false,
+        "films": [
+          "Witness for the Prosecution"
+        ]
+      }
+    }
+  },
+  "31": {
+    "year": 1958,
+    "best motion picture": {
+      "Warner Bros.": {
+        "isWinner": false,
+        "films": [
+          "Auntie Mame"
+        ]
+      },
+      "Lawrence Weingarten, Producer": {
+        "isWinner": false,
+        "films": [
+          "Cat on a Hot Tin Roof"
+        ]
+      },
+      "Stanley Kramer, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Defiant Ones"
+        ]
+      },
+      "Arthur Freed, Producer": {
+        "isWinner": true,
+        "films": [
+          "Gigi"
+        ]
+      },
+      "Harold Hecht, Producer": {
+        "isWinner": false,
+        "films": [
+          "Separate Tables"
+        ]
+      }
+    }
+  },
+  "32": {
+    "year": 1959,
+    "best motion picture": {
+      "Otto Preminger, Producer": {
+        "isWinner": false,
+        "films": [
+          "Anatomy of a Murder"
+        ]
+      },
+      "Sam Zimbalist, Producer": {
+        "isWinner": true,
+        "films": [
+          "Ben-Hur"
+        ]
+      },
+      "George Stevens, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Diary of Anne Frank"
+        ]
+      },
+      "Henry Blanke, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Nun's Story"
+        ]
+      },
+      "John Woolf and James Woolf, Producers": {
+        "isWinner": false,
+        "films": [
+          "Room at the Top"
+        ]
+      }
+    }
+  },
+  "33": {
+    "year": 1960,
+    "best motion picture": {
+      "John Wayne, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Alamo"
+        ]
+      },
+      "Billy Wilder, Producer": {
+        "isWinner": true,
+        "films": [
+          "The Apartment"
+        ]
+      },
+      "Bernard Smith, Producer": {
+        "isWinner": false,
+        "films": [
+          "Elmer Gantry"
+        ]
+      },
+      "Jerry Wald, Producer": {
+        "isWinner": false,
+        "films": [
+          "Sons and Lovers"
+        ]
+      },
+      "Fred Zinnemann, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Sundowners"
+        ]
+      }
+    }
+  },
+  "34": {
+    "year": 1961,
+    "best motion picture": {
+      "Joshua Logan, Producer": {
+        "isWinner": false,
+        "films": [
+          "Fanny"
+        ]
+      },
+      "Carl Foreman, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Guns of Navarone"
+        ]
+      },
+      "Robert Rossen, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Hustler"
+        ]
+      },
+      "Stanley Kramer, Producer": {
+        "isWinner": false,
+        "films": [
+          "Judgment at Nuremberg"
+        ]
+      },
+      "Robert Wise, Producer": {
+        "isWinner": true,
+        "films": [
+          "West Side Story"
+        ]
+      }
+    }
+  },
+  "35": {
+    "year": 1962,
+    "best picture": {
+      "Sam Spiegel, Producer": {
+        "isWinner": true,
+        "films": [
+          "Lawrence of Arabia"
+        ]
+      },
+      "Darryl F. Zanuck, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Longest Day"
+        ]
+      },
+      "Morton Da Costa, Producer": {
+        "isWinner": false,
+        "films": [
+          "Meredith Willson's The Music Man"
+        ]
+      },
+      "Aaron Rosenberg, Producer": {
+        "isWinner": false,
+        "films": [
+          "Mutiny on the Bounty"
+        ]
+      },
+      "Alan J. Pakula, Producer": {
+        "isWinner": false,
+        "films": [
+          "To Kill a Mockingbird"
+        ]
+      }
+    }
+  },
+  "36": {
+    "year": 1963,
+    "best picture": {
+      "Elia Kazan, Producer": {
+        "isWinner": false,
+        "films": [
+          "America America"
+        ]
+      },
+      "Walter Wanger, Producer": {
+        "isWinner": false,
+        "films": [
+          "Cleopatra"
+        ]
+      },
+      "Bernard Smith, Producer": {
+        "isWinner": false,
+        "films": [
+          "How the West Was Won"
+        ]
+      },
+      "Ralph Nelson, Producer": {
+        "isWinner": false,
+        "films": [
+          "Lilies of the Field"
+        ]
+      },
+      "Tony Richardson, Producer": {
+        "isWinner": true,
+        "films": [
+          "Tom Jones"
+        ]
+      }
+    }
+  },
+  "37": {
+    "year": 1964,
+    "best picture": {
+      "Hal B. Wallis, Producer": {
+        "isWinner": false,
+        "films": [
+          "Becket"
+        ]
+      },
+      "Stanley Kubrick, Producer": {
+        "isWinner": false,
+        "films": [
+          "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
+        ]
+      },
+      "Walt Disney and Bill Walsh, Producers": {
+        "isWinner": false,
+        "films": [
+          "Mary Poppins"
+        ]
+      },
+      "Jack L. Warner, Producer": {
+        "isWinner": true,
+        "films": [
+          "My Fair Lady"
+        ]
+      },
+      "Michael Cacoyannis, Producer": {
+        "isWinner": false,
+        "films": [
+          "Zorba the Greek"
+        ]
+      }
+    }
+  },
+  "38": {
+    "year": 1965,
+    "best picture": {
+      "Joseph Janni, Producer": {
+        "isWinner": false,
+        "films": [
+          "Darling"
+        ]
+      },
+      "Carlo Ponti, Producer": {
+        "isWinner": false,
+        "films": [
+          "Doctor Zhivago"
+        ]
+      },
+      "Stanley Kramer, Producer": {
+        "isWinner": false,
+        "films": [
+          "Ship of Fools"
+        ]
+      },
+      "Robert Wise, Producer": {
+        "isWinner": true,
+        "films": [
+          "The Sound of Music"
+        ]
+      },
+      "Fred Coe, Producer": {
+        "isWinner": false,
+        "films": [
+          "A Thousand Clowns"
+        ]
+      }
+    }
+  },
+  "39": {
+    "year": 1966,
+    "best picture": {
+      "Lewis Gilbert, Producer": {
+        "isWinner": false,
+        "films": [
+          "Alfie"
+        ]
+      },
+      "Fred Zinnemann, Producer": {
+        "isWinner": true,
+        "films": [
+          "A Man for All Seasons"
+        ]
+      },
+      "Norman Jewison, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Russians Are Coming The Russians Are Coming"
+        ]
+      },
+      "Robert Wise, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Sand Pebbles"
+        ]
+      },
+      "Ernest Lehman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Who's Afraid of Virginia Woolf?"
+        ]
+      }
+    }
+  },
+  "40": {
+    "year": 1967,
+    "best picture": {
+      "Warren Beatty, Producer": {
+        "isWinner": false,
+        "films": [
+          "Bonnie and Clyde"
+        ]
+      },
+      "Arthur P. Jacobs, Producer": {
+        "isWinner": false,
+        "films": [
+          "Doctor Dolittle"
+        ]
+      },
+      "Lawrence Turman, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Graduate"
+        ]
+      },
+      "Stanley Kramer, Producer": {
+        "isWinner": false,
+        "films": [
+          "Guess Who's Coming to Dinner"
+        ]
+      },
+      "Walter Mirisch, Producer": {
+        "isWinner": true,
+        "films": [
+          "In the Heat of the Night"
+        ]
+      }
+    }
+  },
+  "41": {
+    "year": 1968,
+    "best picture": {
+      "Ray Stark, Producer": {
+        "isWinner": false,
+        "films": [
+          "Funny Girl"
+        ]
+      },
+      "Martin Poll, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Lion in Winter"
+        ]
+      },
+      "John Woolf, Producer": {
+        "isWinner": true,
+        "films": [
+          "Oliver!"
+        ]
+      },
+      "Paul Newman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Rachel, Rachel"
+        ]
+      },
+      "Anthony Havelock-Allan and John Brabourne, Producers": {
+        "isWinner": false,
+        "films": [
+          "Romeo and Juliet"
+        ]
+      }
+    }
+  },
+  "42": {
+    "year": 1969,
+    "best picture": {
+      "Hal B. Wallis, Producer": {
+        "isWinner": false,
+        "films": [
+          "Anne of the Thousand Days"
+        ]
+      },
+      "John Foreman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Butch Cassidy and the Sundance Kid"
+        ]
+      },
+      "Ernest Lehman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Hello, Dolly!"
+        ]
+      },
+      "Jerome Hellman, Producer": {
+        "isWinner": true,
+        "films": [
+          "Midnight Cowboy"
+        ]
+      },
+      "Jacques Perrin and Hamed Rachedi, Producers": {
+        "isWinner": false,
+        "films": [
+          "Z"
+        ]
+      }
+    }
+  },
+  "43": {
+    "year": 1970,
+    "best picture": {
+      "Ross Hunter, Producer": {
+        "isWinner": false,
+        "films": [
+          "Airport"
+        ]
+      },
+      "Bob Rafelson and Richard Wechsler, Producers": {
+        "isWinner": false,
+        "films": [
+          "Five Easy Pieces"
+        ]
+      },
+      "Howard G. Minsky, Producer": {
+        "isWinner": false,
+        "films": [
+          "Love Story"
+        ]
+      },
+      "Ingo Preminger, Producer": {
+        "isWinner": false,
+        "films": [
+          "M*A*S*H"
+        ]
+      },
+      "Frank McCarthy, Producer": {
+        "isWinner": true,
+        "films": [
+          "Patton"
+        ]
+      }
+    }
+  },
+  "44": {
+    "year": 1971,
+    "best picture": {
+      "Stanley Kubrick, Producer": {
+        "isWinner": false,
+        "films": [
+          "A Clockwork Orange"
+        ]
+      },
+      "Norman Jewison, Producer": {
+        "isWinner": false,
+        "films": [
+          "Fiddler on the Roof"
+        ]
+      },
+      "Philip D'Antoni, Producer": {
+        "isWinner": true,
+        "films": [
+          "The French Connection"
+        ]
+      },
+      "Stephen J. Friedman, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Last Picture Show"
+        ]
+      },
+      "Sam Spiegel, Producer": {
+        "isWinner": false,
+        "films": [
+          "Nicholas and Alexandra"
+        ]
+      }
+    }
+  },
+  "45": {
+    "year": 1972,
+    "best picture": {
+      "Cy Feuer, Producer": {
+        "isWinner": false,
+        "films": [
+          "Cabaret"
+        ]
+      },
+      "John Boorman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Deliverance"
+        ]
+      },
+      "Bengt Forslund, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Emigrants"
+        ]
+      },
+      "Albert S. Ruddy, Producer": {
+        "isWinner": true,
+        "films": [
+          "The Godfather"
+        ]
+      },
+      "Robert B. Radnitz, Producer": {
+        "isWinner": false,
+        "films": [
+          "Sounder"
+        ]
+      }
+    }
+  },
+  "46": {
+    "year": 1973,
+    "best picture": {
+      "Francis Ford Coppola, Producer; Gary Kurtz, Co-Producer": {
+        "isWinner": false,
+        "films": [
+          "American Graffiti"
+        ]
+      },
+      "Ingmar Bergman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Cries and Whispers"
+        ]
+      },
+      "William Peter Blatty, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Exorcist"
+        ]
+      },
+      "Tony Bill, Michael Phillips and Julia Phillips, Producers": {
+        "isWinner": true,
+        "films": [
+          "The Sting"
+        ]
+      },
+      "Melvin Frank, Producer": {
+        "isWinner": false,
+        "films": [
+          "A Touch of Class"
+        ]
+      }
+    }
+  },
+  "47": {
+    "year": 1974,
+    "best picture": {
+      "Robert Evans, Producer": {
+        "isWinner": false,
+        "films": [
+          "Chinatown"
+        ]
+      },
+      "Francis Ford Coppola, Producer; Fred Roos, Co-Producer": {
+        "isWinner": false,
+        "films": [
+          "The Conversation"
+        ]
+      },
+      "Francis Ford Coppola, Producer; Gray Frederickson and Fred Roos, Co-Producers": {
+        "isWinner": true,
+        "films": [
+          "The Godfather Part II"
+        ]
+      },
+      "Marvin Worth, Producer": {
+        "isWinner": false,
+        "films": [
+          "Lenny"
+        ]
+      },
+      "Irwin Allen, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Towering Inferno"
+        ]
+      }
+    }
+  },
+  "48": {
+    "year": 1975,
+    "best picture": {
+      "Stanley Kubrick, Producer": {
+        "isWinner": false,
+        "films": [
+          "Barry Lyndon"
+        ]
+      },
+      "Martin Bregman and Martin Elfand, Producers": {
+        "isWinner": false,
+        "films": [
+          "Dog Day Afternoon"
+        ]
+      },
+      "Richard D. Zanuck and David Brown, Producers": {
+        "isWinner": false,
+        "films": [
+          "Jaws"
+        ]
+      },
+      "Robert Altman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Nashville"
+        ]
+      },
+      "Saul Zaentz and Michael Douglas, Producers": {
+        "isWinner": true,
+        "films": [
+          "One Flew over the Cuckoo's Nest"
+        ]
+      }
+    }
+  },
+  "49": {
+    "year": 1976,
+    "best picture": {
+      "Walter Coblenz, Producer": {
+        "isWinner": false,
+        "films": [
+          "All the President's Men"
+        ]
+      },
+      "Robert F. Blumofe and Harold Leventhal, Producers": {
+        "isWinner": false,
+        "films": [
+          "Bound for Glory"
+        ]
+      },
+      "Howard Gottfried, Producer": {
+        "isWinner": false,
+        "films": [
+          "Network"
+        ]
+      },
+      "Irwin Winkler and Robert Chartoff, Producers": {
+        "isWinner": true,
+        "films": [
+          "Rocky"
+        ]
+      },
+      "Michael Phillips and Julia Phillips, Producers": {
+        "isWinner": false,
+        "films": [
+          "Taxi Driver"
+        ]
+      }
+    }
+  },
+  "50": {
+    "year": 1977,
+    "best picture": {
+      "Charles H. Joffe, Producer": {
+        "isWinner": true,
+        "films": [
+          "Annie Hall"
+        ]
+      },
+      "Ray Stark, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Goodbye Girl"
+        ]
+      },
+      "Richard Roth, Producer": {
+        "isWinner": false,
+        "films": [
+          "Julia"
+        ]
+      },
+      "Gary Kurtz, Producer": {
+        "isWinner": false,
+        "films": [
+          "Star Wars"
+        ]
+      },
+      "Herbert Ross and Arthur Laurents, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Turning Point"
+        ]
+      }
+    }
+  },
+  "51": {
+    "year": 1978,
+    "best picture": {
+      "Jerome Hellman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Coming Home"
+        ]
+      },
+      "Barry Spikings, Michael Deeley, Michael Cimino and John Peverall, Producers": {
+        "isWinner": true,
+        "films": [
+          "The Deer Hunter"
+        ]
+      },
+      "Warren Beatty, Producer": {
+        "isWinner": false,
+        "films": [
+          "Heaven Can Wait"
+        ]
+      },
+      "Alan Marshall and David Puttnam, Producers": {
+        "isWinner": false,
+        "films": [
+          "Midnight Express"
+        ]
+      },
+      "Paul Mazursky and Tony Ray, Producers": {
+        "isWinner": false,
+        "films": [
+          "An Unmarried Woman"
+        ]
+      }
+    }
+  },
+  "52": {
+    "year": 1979,
+    "best picture": {
+      "Robert Alan Aurthur, Producer": {
+        "isWinner": false,
+        "films": [
+          "All That Jazz"
+        ]
+      },
+      "Francis Coppola, Producer; Fred Roos, Gray Frederickson and Tom Sternberg, Co-Producers": {
+        "isWinner": false,
+        "films": [
+          "Apocalypse Now"
+        ]
+      },
+      "Peter Yates, Producer": {
+        "isWinner": false,
+        "films": [
+          "Breaking Away"
+        ]
+      },
+      "Stanley R. Jaffe, Producer": {
+        "isWinner": true,
+        "films": [
+          "Kramer vs. Kramer"
+        ]
+      },
+      "Tamara Asseyev and Alex Rose, Producers": {
+        "isWinner": false,
+        "films": [
+          "Norma Rae"
+        ]
+      }
+    }
+  },
+  "53": {
+    "year": 1980,
+    "best picture": {
+      "Bernard Schwartz, Producer": {
+        "isWinner": false,
+        "films": [
+          "Coal Miner's Daughter"
+        ]
+      },
+      "Jonathan Sanger, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Elephant Man"
+        ]
+      },
+      "Ronald L. Schwary, Producer": {
+        "isWinner": true,
+        "films": [
+          "Ordinary People"
+        ]
+      },
+      "Irwin Winkler and Robert Chartoff, Producers": {
+        "isWinner": false,
+        "films": [
+          "Raging Bull"
+        ]
+      },
+      "Claude Berri, Producer; Timothy Burrill, Co-Producer": {
+        "isWinner": false,
+        "films": [
+          "Tess"
+        ]
+      }
+    }
+  },
+  "54": {
+    "year": 1981,
+    "best picture": {
+      "Denis Heroux and John Kemeny, Producers": {
+        "isWinner": false,
+        "films": [
+          "Atlantic City"
+        ]
+      },
+      "David Puttnam, Producer": {
+        "isWinner": true,
+        "films": [
+          "Chariots of Fire"
+        ]
+      },
+      "Bruce Gilbert, Producer": {
+        "isWinner": false,
+        "films": [
+          "On Golden Pond"
+        ]
+      },
+      "Frank Marshall, Producer": {
+        "isWinner": false,
+        "films": [
+          "Raiders of the Lost Ark"
+        ]
+      },
+      "Warren Beatty, Producer": {
+        "isWinner": false,
+        "films": [
+          "Reds"
+        ]
+      }
+    }
+  },
+  "55": {
+    "year": 1982,
+    "best picture": {
+      "Steven Spielberg and Kathleen Kennedy, Producers": {
+        "isWinner": false,
+        "films": [
+          "E.T. The Extra-Terrestrial"
+        ]
+      },
+      "Richard Attenborough, Producer": {
+        "isWinner": true,
+        "films": [
+          "Gandhi"
+        ]
+      },
+      "Edward Lewis and Mildred Lewis, Producers": {
+        "isWinner": false,
+        "films": [
+          "Missing"
+        ]
+      },
+      "Sydney Pollack and Dick Richards, Producers": {
+        "isWinner": false,
+        "films": [
+          "Tootsie"
+        ]
+      },
+      "Richard D. Zanuck and David Brown, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Verdict"
+        ]
+      }
+    }
+  },
+  "56": {
+    "year": 1983,
+    "best picture": {
+      "Michael Shamberg, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Big Chill"
+        ]
+      },
+      "Peter Yates, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Dresser"
+        ]
+      },
+      "Irwin Winkler and Robert Chartoff, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Right Stuff"
+        ]
+      },
+      "Philip S. Hobel, Producer": {
+        "isWinner": false,
+        "films": [
+          "Tender Mercies"
+        ]
+      },
+      "James L. Brooks, Producer": {
+        "isWinner": true,
+        "films": [
+          "Terms of Endearment"
+        ]
+      }
+    }
+  },
+  "57": {
+    "year": 1984,
+    "best picture": {
+      "Saul Zaentz, Producer": {
+        "isWinner": true,
+        "films": [
+          "Amadeus"
+        ]
+      },
+      "David Puttnam, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Killing Fields"
+        ]
+      },
+      "John Brabourne and Richard Goodwin, Producers": {
+        "isWinner": false,
+        "films": [
+          "A Passage to India"
+        ]
+      },
+      "Arlene Donovan, Producer": {
+        "isWinner": false,
+        "films": [
+          "Places in the Heart"
+        ]
+      },
+      "Norman Jewison, Ronald L. Schwary and Patrick Palmer, Producers": {
+        "isWinner": false,
+        "films": [
+          "A Soldier's Story"
+        ]
+      }
+    }
+  },
+  "58": {
+    "year": 1985,
+    "best picture": {
+      "Steven Spielberg, Kathleen Kennedy, Frank Marshall and Quincy Jones, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Color Purple"
+        ]
+      },
+      "David Weisman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Kiss of the Spider Woman"
+        ]
+      },
+      "Sydney Pollack, Producer": {
+        "isWinner": true,
+        "films": [
+          "Out of Africa"
+        ]
+      },
+      "John Foreman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Prizzi's Honor"
+        ]
+      },
+      "Edward S. Feldman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Witness"
+        ]
+      }
+    }
+  },
+  "59": {
+    "year": 1986,
+    "best picture": {
+      "Burt Sugarman and Patrick Palmer, Producers": {
+        "isWinner": false,
+        "films": [
+          "Children of a Lesser God"
+        ]
+      },
+      "Robert Greenhut, Producer": {
+        "isWinner": false,
+        "films": [
+          "Hannah and Her Sisters"
+        ]
+      },
+      "Fernando Ghia and David Puttnam, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Mission"
+        ]
+      },
+      "Arnold Kopelson, Producer": {
+        "isWinner": true,
+        "films": [
+          "Platoon"
+        ]
+      },
+      "Ismail Merchant, Producer": {
+        "isWinner": false,
+        "films": [
+          "A Room with a View"
+        ]
+      }
+    }
+  },
+  "60": {
+    "year": 1987,
+    "best picture": {
+      "James L. Brooks, Producer": {
+        "isWinner": false,
+        "films": [
+          "Broadcast News"
+        ]
+      },
+      "Stanley R. Jaffe and Sherry Lansing, Producers": {
+        "isWinner": false,
+        "films": [
+          "Fatal Attraction"
+        ]
+      },
+      "John Boorman, Producer": {
+        "isWinner": false,
+        "films": [
+          "Hope and Glory"
+        ]
+      },
+      "Jeremy Thomas, Producer": {
+        "isWinner": true,
+        "films": [
+          "The Last Emperor"
+        ]
+      },
+      "Patrick Palmer and Norman Jewison, Producers": {
+        "isWinner": false,
+        "films": [
+          "Moonstruck"
+        ]
+      }
+    }
+  },
+  "61": {
+    "year": 1988,
+    "best picture": {
+      "Lawrence Kasdan, Charles Okun and Michael Grillo, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Accidental Tourist"
+        ]
+      },
+      "Norma Heyman and Hank Moonjean, Producers": {
+        "isWinner": false,
+        "films": [
+          "Dangerous Liaisons"
+        ]
+      },
+      "Frederick Zollo and Robert F. Colesberry, Producers": {
+        "isWinner": false,
+        "films": [
+          "Mississippi Burning"
+        ]
+      },
+      "Mark Johnson, Producer": {
+        "isWinner": true,
+        "films": [
+          "Rain Man"
+        ]
+      },
+      "Douglas Wick, Producer": {
+        "isWinner": false,
+        "films": [
+          "Working Girl"
+        ]
+      }
+    }
+  },
+  "62": {
+    "year": 1989,
+    "best picture": {
+      "A. Kitman Ho and Oliver Stone, Producers": {
+        "isWinner": false,
+        "films": [
+          "Born on the Fourth of July"
+        ]
+      },
+      "Steven Haft, Paul Junger Witt and Tony Thomas, Producers": {
+        "isWinner": false,
+        "films": [
+          "Dead Poets Society"
+        ]
+      },
+      "Richard D. Zanuck and Lili Fini Zanuck, Producers": {
+        "isWinner": true,
+        "films": [
+          "Driving Miss Daisy"
+        ]
+      },
+      "Lawrence Gordon and Charles Gordon, Producers": {
+        "isWinner": false,
+        "films": [
+          "Field of Dreams"
+        ]
+      },
+      "Noel Pearson, Producer": {
+        "isWinner": false,
+        "films": [
+          "My Left Foot"
+        ]
+      }
+    }
+  },
+  "63": {
+    "year": 1990,
+    "best picture": {
+      "Walter F. Parkes and Lawrence Lasker, Producers": {
+        "isWinner": false,
+        "films": [
+          "Awakenings"
+        ]
+      },
+      "Jim Wilson and Kevin Costner, Producers": {
+        "isWinner": true,
+        "films": [
+          "Dances With Wolves"
+        ]
+      },
+      "Lisa Weinstein, Producer": {
+        "isWinner": false,
+        "films": [
+          "Ghost"
+        ]
+      },
+      "Francis Ford Coppola, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Godfather, Part III"
+        ]
+      },
+      "Irwin Winkler, Producer": {
+        "isWinner": false,
+        "films": [
+          "Good Fellas"
+        ]
+      }
+    }
+  },
+  "64": {
+    "year": 1991,
+    "best picture": {
+      "Don Hahn, Producer": {
+        "isWinner": false,
+        "films": [
+          "Beauty and the Beast"
+        ]
+      },
+      "Mark Johnson, Barry Levinson and Warren Beatty, Producers": {
+        "isWinner": false,
+        "films": [
+          "Bugsy"
+        ]
+      },
+      "A. Kitman Ho and Oliver Stone, Producers": {
+        "isWinner": false,
+        "films": [
+          "JFK"
+        ]
+      },
+      "Barbra Streisand and Andrew Karsch, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Prince of Tides"
+        ]
+      },
+      "Edward Saxon, Kenneth Utt and Ron Bozman, Producers": {
+        "isWinner": true,
+        "films": [
+          "The Silence of the Lambs"
+        ]
+      }
+    }
+  },
+  "65": {
+    "year": 1992,
+    "best picture": {
+      "Stephen Woolley, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Crying Game"
+        ]
+      },
+      "David Brown, Rob Reiner and Andrew Scheinman, Producers": {
+        "isWinner": false,
+        "films": [
+          "A Few Good Men"
+        ]
+      },
+      "Ismail Merchant, Producer": {
+        "isWinner": false,
+        "films": [
+          "Howards End"
+        ]
+      },
+      "Martin Brest, Producer": {
+        "isWinner": false,
+        "films": [
+          "Scent of a Woman"
+        ]
+      },
+      "Clint Eastwood, Producer": {
+        "isWinner": true,
+        "films": [
+          "Unforgiven"
+        ]
+      }
+    }
+  },
+  "66": {
+    "year": 1993,
+    "best picture": {
+      "Arnold Kopelson, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Fugitive"
+        ]
+      },
+      "Jim Sheridan, Producer": {
+        "isWinner": false,
+        "films": [
+          "In the Name of the Father"
+        ]
+      },
+      "Jan Chapman, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Piano"
+        ]
+      },
+      "Mike Nichols, John Calley and Ismail Merchant, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Remains of the Day"
+        ]
+      },
+      "Steven Spielberg, Gerald R. Molen and Branko Lustig, Producers": {
+        "isWinner": true,
+        "films": [
+          "Schindler's List"
+        ]
+      }
+    }
+  },
+  "67": {
+    "year": 1994,
+    "best picture": {
+      "Wendy Finerman, Steve Tisch and Steve Starkey, Producers": {
+        "isWinner": true,
+        "films": [
+          "Forrest Gump"
+        ]
+      },
+      "Duncan Kenworthy, Producer": {
+        "isWinner": false,
+        "films": [
+          "Four Weddings and a Funeral"
+        ]
+      },
+      "Lawrence Bender, Producer": {
+        "isWinner": false,
+        "films": [
+          "Pulp Fiction"
+        ]
+      },
+      "Robert Redford, Michael Jacobs, Julian Krainin and Michael Nozik, Producers": {
+        "isWinner": false,
+        "films": [
+          "Quiz Show"
+        ]
+      },
+      "Niki Marvin, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Shawshank Redemption"
+        ]
+      }
+    }
+  },
+  "68": {
+    "year": 1995,
+    "best picture": {
+      "Brian Grazer, Producer": {
+        "isWinner": false,
+        "films": [
+          "Apollo 13"
+        ]
+      },
+      "George Miller, Doug Mitchell and Bill Miller, Producers": {
+        "isWinner": false,
+        "films": [
+          "Babe"
+        ]
+      },
+      "Mel Gibson, Alan Ladd, Jr. and Bruce Davey, Producers": {
+        "isWinner": true,
+        "films": [
+          "Braveheart"
+        ]
+      },
+      "Mario Cecchi Gori, Vittorio Cecchi Gori and Gaetano Daniele, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Postman (Il Postino)"
+        ]
+      },
+      "Lindsay Doran, Producer": {
+        "isWinner": false,
+        "films": [
+          "Sense and Sensibility"
+        ]
+      }
+    }
+  },
+  "69": {
+    "year": 1996,
+    "best picture": {
+      "Saul Zaentz, Producer": {
+        "isWinner": true,
+        "films": [
+          "The English Patient"
+        ]
+      },
+      "Ethan Coen, Producer": {
+        "isWinner": false,
+        "films": [
+          "Fargo"
+        ]
+      },
+      "James L. Brooks, Laurence Mark, Richard Sakai and Cameron Crowe, Producers": {
+        "isWinner": false,
+        "films": [
+          "Jerry Maguire"
+        ]
+      },
+      "Simon Channing-Williams, Producer": {
+        "isWinner": false,
+        "films": [
+          "Secrets & Lies"
+        ]
+      },
+      "Jane Scott, Producer": {
+        "isWinner": false,
+        "films": [
+          "Shine"
+        ]
+      }
+    }
+  },
+  "70": {
+    "year": 1997,
+    "best picture": {
+      "James L. Brooks, Bridget Johnson and Kristi Zea, Producers": {
+        "isWinner": false,
+        "films": [
+          "As Good as It Gets"
+        ]
+      },
+      "Uberto Pasolini, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Full Monty"
+        ]
+      },
+      "Lawrence Bender, Producer": {
+        "isWinner": false,
+        "films": [
+          "Good Will Hunting"
+        ]
+      },
+      "Arnon Milchan, Curtis Hanson and Michael Nathanson, Producers": {
+        "isWinner": false,
+        "films": [
+          "L.A. Confidential"
+        ]
+      },
+      "James Cameron and Jon Landau, Producers": {
+        "isWinner": true,
+        "films": [
+          "Titanic"
+        ]
+      }
+    }
+  },
+  "71": {
+    "year": 1998,
+    "best picture": {
+      "Alison Owen, Eric Fellner and Tim Bevan, Producers": {
+        "isWinner": false,
+        "films": [
+          "Elizabeth"
+        ]
+      },
+      "Elda Ferri and Gianluigi Braschi, Producers": {
+        "isWinner": false,
+        "films": [
+          "Life Is Beautiful"
+        ]
+      },
+      "Steven Spielberg, Ian Bryce, Mark Gordon and Gary Levinsohn, Producers": {
+        "isWinner": false,
+        "films": [
+          "Saving Private Ryan"
+        ]
+      },
+      "David Parfitt, Donna Gigliotti, Harvey Weinstein, Edward Zwick and Marc Norman, Producers": {
+        "isWinner": true,
+        "films": [
+          "Shakespeare in Love"
+        ]
+      },
+      "Robert Michael Geisler, John Roberdeau and Grant Hill, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Thin Red Line"
+        ]
+      }
+    }
+  },
+  "72": {
+    "year": 1999,
+    "best picture": {
+      "Bruce Cohen and Dan Jinks, Producers": {
+        "isWinner": true,
+        "films": [
+          "American Beauty"
+        ]
+      },
+      "Richard N. Gladstein, Producer": {
+        "isWinner": false,
+        "films": [
+          "The Cider House Rules"
+        ]
+      },
+      "David Valdes and Frank Darabont, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Green Mile"
+        ]
+      },
+      "Michael Mann and Pieter Jan Brugge, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Insider"
+        ]
+      },
+      "Frank Marshall, Kathleen Kennedy and Barry Mendel, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Sixth Sense"
+        ]
+      }
+    }
+  },
+  "73": {
+    "year": 2000,
+    "best picture": {
+      "David Brown, Kit Golden and Leslie Holleran, Producers": {
+        "isWinner": false,
+        "films": [
+          "Chocolat"
+        ]
+      },
+      "Bill Kong, Hsu Li Kong and Ang Lee, Producers": {
+        "isWinner": false,
+        "films": [
+          "Crouching Tiger, Hidden Dragon"
+        ]
+      },
+      "Danny DeVito, Michael Shamberg and Stacey Sher, Producers": {
+        "isWinner": false,
+        "films": [
+          "Erin Brockovich"
+        ]
+      },
+      "Douglas Wick, David Franzoni and Branko Lustig, Producers": {
+        "isWinner": true,
+        "films": [
+          "Gladiator"
+        ]
+      },
+      "Edward Zwick, Marshall Herskovitz and Laura Bickford, Producers": {
+        "isWinner": false,
+        "films": [
+          "Traffic"
+        ]
+      }
+    }
+  },
+  "74": {
+    "year": 2001,
+    "best picture": {
+      "Brian Grazer and Ron Howard, Producers": {
+        "isWinner": true,
+        "films": [
+          "A Beautiful Mind"
+        ]
+      },
+      "Robert Altman, Bob Balaban and David Levy, Producers": {
+        "isWinner": false,
+        "films": [
+          "Gosford Park"
+        ]
+      },
+      "Graham Leader, Ross Katz and Todd Field, Producers": {
+        "isWinner": false,
+        "films": [
+          "In the Bedroom"
+        ]
+      },
+      "Peter Jackson, Fran Walsh and Barrie M. Osborne, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Lord of the Rings: The Fellowship of the Ring"
+        ]
+      },
+      "Martin Brown, Baz Luhrmann and Fred Baron, Producers": {
+        "isWinner": false,
+        "films": [
+          "Moulin Rouge"
+        ]
+      }
+    }
+  },
+  "75": {
+    "year": 2002,
+    "best picture": {
+      "Martin Richards, Producer": {
+        "isWinner": true,
+        "films": [
+          "Chicago"
+        ]
+      },
+      "Alberto Grimaldi and Harvey Weinstein, Producers": {
+        "isWinner": false,
+        "films": [
+          "Gangs of New York"
+        ]
+      },
+      "Scott Rudin and Robert Fox, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Hours"
+        ]
+      },
+      "Barrie M. Osborne, Fran Walsh and Peter Jackson, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Lord of the Rings: The Two Towers"
+        ]
+      },
+      "Roman Polanski, Robert Benmussa and Alain Sarde, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Pianist"
+        ]
+      }
+    }
+  },
+  "76": {
+    "year": 2003,
+    "best picture": {
+      "Barrie M. Osborne, Peter Jackson and Fran Walsh, Producers": {
+        "isWinner": true,
+        "films": [
+          "The Lord of the Rings: The Return of the King"
+        ]
+      },
+      "Ross Katz and Sofia Coppola, Producers": {
+        "isWinner": false,
+        "films": [
+          "Lost in Translation"
+        ]
+      },
+      "Samuel Goldwyn, Jr., Peter Weir and Duncan Henderson, Producers": {
+        "isWinner": false,
+        "films": [
+          "Master and Commander: The Far Side of the World"
+        ]
+      },
+      "Robert Lorenz, Judie G. Hoyt and Clint Eastwood, Producers": {
+        "isWinner": false,
+        "films": [
+          "Mystic River"
+        ]
+      },
+      "Kathleen Kennedy, Frank Marshall and Gary Ross, Producers": {
+        "isWinner": false,
+        "films": [
+          "Seabiscuit"
+        ]
+      }
+    }
+  },
+  "77": {
+    "year": 2004,
+    "best picture": {
+      "Michael Mann and Graham King, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Aviator"
+        ]
+      },
+      "Richard N. Gladstein and Nellie Bellflower, Producers": {
+        "isWinner": false,
+        "films": [
+          "Finding Neverland"
+        ]
+      },
+      "Clint Eastwood, Albert S. Ruddy and Tom Rosenberg, Producers": {
+        "isWinner": true,
+        "films": [
+          "Million Dollar Baby"
+        ]
+      },
+      "Taylor Hackford, Stuart Benjamin and Howard Baldwin, Producers": {
+        "isWinner": false,
+        "films": [
+          "Ray"
+        ]
+      },
+      "Michael London, Producer": {
+        "isWinner": false,
+        "films": [
+          "Sideways"
+        ]
+      }
+    }
+  },
+  "78": {
+    "year": 2005,
+    "best picture": {
+      "Diana Ossana and James Schamus, Producers": {
+        "isWinner": false,
+        "films": [
+          "Brokeback Mountain"
+        ]
+      },
+      "Caroline Baron, William Vince and Michael Ohoven, Producers": {
+        "isWinner": false,
+        "films": [
+          "Capote"
+        ]
+      },
+      "Paul Haggis and Cathy Schulman, Producers": {
+        "isWinner": true,
+        "films": [
+          "Crash"
+        ]
+      },
+      "Grant Heslov, Producer": {
+        "isWinner": false,
+        "films": [
+          "Good Night, and Good Luck."
+        ]
+      },
+      "Kathleen Kennedy, Steven Spielberg and Barry Mendel, Producers": {
+        "isWinner": false,
+        "films": [
+          "Munich"
+        ]
+      }
+    }
+  },
+  "79": {
+    "year": 2006,
+    "best picture": {
+      "Alejandro González Iñárritu, Jon Kilik and Steve Golin, Producers": {
+        "isWinner": false,
+        "films": [
+          "Babel"
+        ]
+      },
+      "Graham King, Producer": {
+        "isWinner": true,
+        "films": [
+          "The Departed"
+        ]
+      },
+      "Clint Eastwood, Steven Spielberg and Robert Lorenz, Producers": {
+        "isWinner": false,
+        "films": [
+          "Letters from Iwo Jima"
+        ]
+      },
+      "David T. Friendly, Peter Saraf and Marc Turtletaub, Producers": {
+        "isWinner": false,
+        "films": [
+          "Little Miss Sunshine"
+        ]
+      },
+      "Andy Harries, Christine Langan and Tracey Seaward, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Queen"
+        ]
+      }
+    }
+  },
+  "80": {
+    "year": 2007,
+    "best picture": {
+      "Tim Bevan, Eric Fellner and Paul Webster, Producers": {
+        "isWinner": false,
+        "films": [
+          "Atonement"
+        ]
+      },
+      "Lianne Halfon, Mason Novick and Russell Smith, Producers": {
+        "isWinner": false,
+        "films": [
+          "Juno"
+        ]
+      },
+      "Sydney Pollack, Jennifer Fox and Kerry Orent, Producers": {
+        "isWinner": false,
+        "films": [
+          "Michael Clayton"
+        ]
+      },
+      "Scott Rudin, Ethan Coen and Joel Coen, Producers": {
+        "isWinner": true,
+        "films": [
+          "No Country for Old Men"
+        ]
+      },
+      "JoAnne Sellar, Paul Thomas Anderson and Daniel Lupi, Producers": {
+        "isWinner": false,
+        "films": [
+          "There Will Be Blood"
+        ]
+      }
+    }
+  },
+  "81": {
+    "year": 2008,
+    "best picture": {
+      "Kathleen Kennedy, Frank Marshall and Ceán Chaffin, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Curious Case of Benjamin Button"
+        ]
+      },
+      "Brian Grazer, Ron Howard and Eric Fellner, Producers": {
+        "isWinner": false,
+        "films": [
+          "Frost/Nixon"
+        ]
+      },
+      "Dan Jinks and Bruce Cohen, Producers": {
+        "isWinner": false,
+        "films": [
+          "Milk"
+        ]
+      },
+      "Anthony Minghella, Sydney Pollack, Donna Gigliotti and Redmond Morris, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Reader"
+        ]
+      },
+      "Christian Colson, Producer": {
+        "isWinner": true,
+        "films": [
+          "Slumdog Millionaire"
+        ]
+      }
+    }
+  },
+  "82": {
+    "year": 2009,
+    "best picture": {
+      "James Cameron and Jon Landau, Producers": {
+        "isWinner": false,
+        "films": [
+          "Avatar"
+        ]
+      },
+      "Gil Netter, Andrew A. Kosove and Broderick Johnson, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Blind Side"
+        ]
+      },
+      "Peter Jackson and Carolynne Cunningham, Producers": {
+        "isWinner": false,
+        "films": [
+          "District 9"
+        ]
+      },
+      "Finola Dwyer and Amanda Posey, Producers": {
+        "isWinner": false,
+        "films": [
+          "An Education"
+        ]
+      },
+      "Kathryn Bigelow, Mark Boal, Nicolas Chartier and Greg Shapiro, Producers": {
+        "isWinner": true,
+        "films": [
+          "The Hurt Locker"
+        ]
+      },
+      "Lawrence Bender, Producer": {
+        "isWinner": false,
+        "films": [
+          "Inglourious Basterds"
+        ]
+      },
+      "Lee Daniels, Sarah Siegel-Magness and Gary Magness, Producers": {
+        "isWinner": false,
+        "films": [
+          "Precious: Based on the Novel 'Push' by Sapphire"
+        ]
+      },
+      "Joel Coen and Ethan Coen, Producers": {
+        "isWinner": false,
+        "films": [
+          "A Serious Man"
+        ]
+      },
+      "Jonas Rivera, Producer": {
+        "isWinner": false,
+        "films": [
+          "Up"
+        ]
+      },
+      "Daniel Dubiecki, Ivan Reitman and Jason Reitman, Producers": {
+        "isWinner": false,
+        "films": [
+          "Up in the Air"
+        ]
+      }
+    }
+  },
+  "83": {
+    "year": 2010,
+    "best picture": {
+      "Mike Medavoy, Brian Oliver and Scott Franklin, Producers": {
+        "isWinner": false,
+        "films": [
+          "Black Swan"
+        ]
+      },
+      "David Hoberman, Todd Lieberman and Mark Wahlberg, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Fighter"
+        ]
+      },
+      "Emma Thomas and Christopher Nolan, Producers": {
+        "isWinner": false,
+        "films": [
+          "Inception"
+        ]
+      },
+      "Gary Gilbert, Jeffrey Levy-Hinte and Celine Rattray, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Kids Are All Right"
+        ]
+      },
+      "Iain Canning, Emile Sherman and Gareth Unwin, Producers": {
+        "isWinner": true,
+        "films": [
+          "The King's Speech"
+        ]
+      },
+      "Christian Colson, Danny Boyle and John Smithson, Producers": {
+        "isWinner": false,
+        "films": [
+          "127 Hours"
+        ]
+      },
+      "Scott Rudin, Dana Brunetti, Michael De Luca and Ceán Chaffin, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Social Network"
+        ]
+      },
+      "Darla K. Anderson, Producer": {
+        "isWinner": false,
+        "films": [
+          "Toy Story 3"
+        ]
+      },
+      "Scott Rudin, Ethan Coen and Joel Coen, Producers": {
+        "isWinner": false,
+        "films": [
+          "True Grit"
+        ]
+      },
+      "Anne Rosellini and Alix Madigan-Yorkin, Producers": {
+        "isWinner": false,
+        "films": [
+          "Winter's Bone"
+        ]
+      }
+    }
+  },
+  "84": {
+    "year": 2011,
+    "best picture": {
+      "Thomas Langmann, Producer": {
+        "isWinner": true,
+        "films": [
+          "The Artist"
+        ]
+      },
+      "Jim Burke, Alexander Payne and Jim Taylor, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Descendants"
+        ]
+      },
+      "Scott Rudin, Producer": {
+        "isWinner": false,
+        "films": [
+          "Extremely Loud & Incredibly Close"
+        ]
+      },
+      "Brunson Green, Chris Columbus and Michael Barnathan, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Help"
+        ]
+      },
+      "Graham King and Martin Scorsese, Producers": {
+        "isWinner": false,
+        "films": [
+          "Hugo"
+        ]
+      },
+      "Letty Aronson and Stephen Tenenbaum, Producers": {
+        "isWinner": false,
+        "films": [
+          "Midnight in Paris"
+        ]
+      },
+      "Michael De Luca, Rachael Horovitz and Brad Pitt, Producers": {
+        "isWinner": false,
+        "films": [
+          "Moneyball"
+        ]
+      },
+      "Sarah Green, Bill Pohlad, Dede Gardner and Grant Hill, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Tree of Life"
+        ]
+      },
+      "Steven Spielberg and Kathleen Kennedy, Producers": {
+        "isWinner": false,
+        "films": [
+          "War Horse"
+        ]
+      }
+    }
+  },
+  "85": {
+    "year": 2012,
+    "best picture": {
+      "Margaret Menegoz, Stefan Arndt, Veit Heiduschka and Michael Katz, Producers": {
+        "isWinner": false,
+        "films": [
+          "Amour"
+        ]
+      },
+      "Grant Heslov, Ben Affleck and George Clooney, Producers": {
+        "isWinner": true,
+        "films": [
+          "Argo"
+        ]
+      },
+      "Dan Janvey, Josh Penn and Michael Gottwald, Producers": {
+        "isWinner": false,
+        "films": [
+          "Beasts of the Southern Wild"
+        ]
+      },
+      "Stacey Sher, Reginald Hudlin and Pilar Savone, Producers": {
+        "isWinner": false,
+        "films": [
+          "Django Unchained"
+        ]
+      },
+      "Tim Bevan, Eric Fellner, Debra Hayward and Cameron Mackintosh, Producers": {
+        "isWinner": false,
+        "films": [
+          "Les Misérables"
+        ]
+      },
+      "Gil Netter, Ang Lee and David Womark, Producers": {
+        "isWinner": false,
+        "films": [
+          "Life of Pi"
+        ]
+      },
+      "Steven Spielberg and Kathleen Kennedy, Producers": {
+        "isWinner": false,
+        "films": [
+          "Lincoln"
+        ]
+      },
+      "Donna Gigliotti, Bruce Cohen and Jonathan Gordon, Producers": {
+        "isWinner": false,
+        "films": [
+          "Silver Linings Playbook"
+        ]
+      },
+      "Mark Boal, Kathryn Bigelow and Megan Ellison, Producers": {
+        "isWinner": false,
+        "films": [
+          "Zero Dark Thirty"
+        ]
+      }
+    }
+  },
+  "86": {
+    "year": 2013,
+    "best picture": {
+      "Charles Roven, Richard Suckle, Megan Ellison and Jonathan Gordon, Producers": {
+        "isWinner": false,
+        "films": [
+          "American Hustle"
+        ]
+      },
+      "Scott Rudin, Dana Brunetti and Michael De Luca, Producers": {
+        "isWinner": false,
+        "films": [
+          "Captain Phillips"
+        ]
+      },
+      "Robbie Brenner and Rachel Winter, Producers": {
+        "isWinner": false,
+        "films": [
+          "Dallas Buyers Club"
+        ]
+      },
+      "Alfonso Cuarón and David Heyman, Producers": {
+        "isWinner": false,
+        "films": [
+          "Gravity"
+        ]
+      },
+      "Megan Ellison, Spike Jonze and Vincent Landay, Producers": {
+        "isWinner": false,
+        "films": [
+          "Her"
+        ]
+      },
+      "Albert Berger and Ron Yerxa, Producers": {
+        "isWinner": false,
+        "films": [
+          "Nebraska"
+        ]
+      },
+      "Gabrielle Tana, Steve Coogan and Tracey Seaward, Producers": {
+        "isWinner": false,
+        "films": [
+          "Philomena"
+        ]
+      },
+      "Brad Pitt, Dede Gardner, Jeremy Kleiner, Steve McQueen and Anthony Katagas, Producers": {
+        "isWinner": true,
+        "films": [
+          "12 Years a Slave"
+        ]
+      },
+      "Martin Scorsese, Leonardo DiCaprio, Joey McFarland and Emma Tillinger Koskoff, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Wolf of Wall Street"
+        ]
+      }
+    }
+  },
+  "87": {
+    "year": 2014,
+    "best picture": {
+      "Clint Eastwood, Robert Lorenz, Andrew Lazar, Bradley Cooper and Peter Morgan, Producers": {
+        "isWinner": false,
+        "films": [
+          "American Sniper"
+        ]
+      },
+      "Alejandro G. Iñárritu, John Lesher and James W. Skotchdopole, Producers": {
+        "isWinner": true,
+        "films": [
+          "Birdman or (The Unexpected Virtue of Ignorance)"
+        ]
+      },
+      "Richard Linklater and Cathleen Sutherland, Producers": {
+        "isWinner": false,
+        "films": [
+          "Boyhood"
+        ]
+      },
+      "Wes Anderson, Scott Rudin, Steven Rales and Jeremy Dawson, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Grand Budapest Hotel"
+        ]
+      },
+      "Nora Grossman, Ido Ostrowsky and Teddy Schwarzman, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Imitation Game"
+        ]
+      },
+      "Christian Colson, Oprah Winfrey, Dede Gardner and Jeremy Kleiner, Producers": {
+        "isWinner": false,
+        "films": [
+          "Selma"
+        ]
+      },
+      "Tim Bevan, Eric Fellner, Lisa Bruce and Anthony McCarten, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Theory of Everything"
+        ]
+      },
+      "Jason Blum, Helen Estabrook and David Lancaster, Producers": {
+        "isWinner": false,
+        "films": [
+          "Whiplash"
+        ]
+      }
+    }
+  },
+  "88": {
+    "year": 2015,
+    "best picture": {
+      "Brad Pitt, Dede Gardner and Jeremy Kleiner, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Big Short"
+        ]
+      },
+      "Steven Spielberg, Marc Platt and Kristie Macosko Krieger, Producers": {
+        "isWinner": false,
+        "films": [
+          "Bridge of Spies"
+        ]
+      },
+      "Finola Dwyer and Amanda Posey, Producers": {
+        "isWinner": false,
+        "films": [
+          "Brooklyn"
+        ]
+      },
+      "Doug Mitchell and George Miller, Producers": {
+        "isWinner": false,
+        "films": [
+          "Mad Max: Fury Road"
+        ]
+      },
+      "Simon Kinberg, Ridley Scott, Michael Schaefer and Mark Huffam, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Martian"
+        ]
+      },
+      "Arnon Milchan, Steve Golin, Alejandro G. Iñárritu, Mary Parent and Keith Redmon, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Revenant"
+        ]
+      },
+      "Ed Guiney, Producer": {
+        "isWinner": false,
+        "films": [
+          "Room"
+        ]
+      },
+      "Michael Sugar, Steve Golin, Nicole Rocklin and Blye Pagon Faust, Producers": {
+        "isWinner": true,
+        "films": [
+          "Spotlight"
+        ]
+      }
+    }
+  },
+  "89": {
+    "year": 2016,
+    "best picture": {
+      "Shawn Levy, Dan Levine, Aaron Ryder and David Linde, Producers": {
+        "isWinner": false,
+        "films": [
+          "Arrival"
+        ]
+      },
+      "Scott Rudin, Denzel Washington and Todd Black, Producers": {
+        "isWinner": false,
+        "films": [
+          "Fences"
+        ]
+      },
+      "Bill Mechanic and David Permut, Producers": {
+        "isWinner": false,
+        "films": [
+          "Hacksaw Ridge"
+        ]
+      },
+      "Carla Hacken and Julie Yorn, Producers": {
+        "isWinner": false,
+        "films": [
+          "Hell or High Water"
+        ]
+      },
+      "Donna Gigliotti, Peter Chernin, Jenno Topping, Pharrell Williams and Theodore Melfi, Producers": {
+        "isWinner": false,
+        "films": [
+          "Hidden Figures"
+        ]
+      },
+      "Fred Berger, Jordan Horowitz and Marc Platt, Producers": {
+        "isWinner": false,
+        "films": [
+          "La La Land"
+        ]
+      },
+      "Emile Sherman, Iain Canning and Angie Fielder, Producers": {
+        "isWinner": false,
+        "films": [
+          "Lion"
+        ]
+      },
+      "Matt Damon, Kimberly Steward, Chris Moore, Lauren Beck and Kevin J. Walsh, Producers": {
+        "isWinner": false,
+        "films": [
+          "Manchester by the Sea"
+        ]
+      },
+      "Adele Romanski, Dede Gardner and Jeremy Kleiner, Producers": {
+        "isWinner": true,
+        "films": [
+          "Moonlight"
+        ]
+      }
+    }
+  },
+  "90": {
+    "year": 2017,
+    "best picture": {
+      "Peter Spears, Luca Guadagnino, Emilie Georges and Marco Morabito, Producers": {
+        "isWinner": false,
+        "films": [
+          "Call Me by Your Name"
+        ]
+      },
+      "Tim Bevan, Eric Fellner, Lisa Bruce, Anthony McCarten and Douglas Urbanski, Producers": {
+        "isWinner": false,
+        "films": [
+          "Darkest Hour"
+        ]
+      },
+      "Emma Thomas and Christopher Nolan, Producers": {
+        "isWinner": false,
+        "films": [
+          "Dunkirk"
+        ]
+      },
+      "Sean McKittrick, Jason Blum, Edward H. Hamm Jr. and Jordan Peele, Producers": {
+        "isWinner": false,
+        "films": [
+          "Get Out"
+        ]
+      },
+      "Scott Rudin, Eli Bush and Evelyn O'Neill, Producers": {
+        "isWinner": false,
+        "films": [
+          "Lady Bird"
+        ]
+      },
+      "JoAnne Sellar, Paul Thomas Anderson, Megan Ellison and Daniel Lupi, Producers": {
+        "isWinner": false,
+        "films": [
+          "Phantom Thread"
+        ]
+      },
+      "Amy Pascal, Steven Spielberg and Kristie Macosko Krieger, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Post"
+        ]
+      },
+      "Guillermo del Toro and J. Miles Dale, Producers": {
+        "isWinner": true,
+        "films": [
+          "The Shape of Water"
+        ]
+      },
+      "Graham Broadbent, Pete Czernin and Martin McDonagh, Producers": {
+        "isWinner": false,
+        "films": [
+          "Three Billboards outside Ebbing, Missouri"
+        ]
+      }
+    }
+  },
+  "91": {
+    "year": 2018,
+    "best picture": {
+      "Kevin Feige, Producer": {
+        "isWinner": false,
+        "films": [
+          "Black Panther"
+        ]
+      },
+      "Sean McKittrick, Jason Blum, Raymond Mansfield, Jordan Peele and Spike Lee, Producers": {
+        "isWinner": false,
+        "films": [
+          "BlacKkKlansman"
+        ]
+      },
+      "Graham King, Producer": {
+        "isWinner": false,
+        "films": [
+          "Bohemian Rhapsody"
+        ]
+      },
+      "Ceci Dempsey, Ed Guiney, Lee Magiday and Yorgos Lanthimos, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Favourite"
+        ]
+      },
+      "Jim Burke, Charles B. Wessler, Brian Currie, Peter Farrelly and Nick Vallelonga, Producers": {
+        "isWinner": true,
+        "films": [
+          "Green Book"
+        ]
+      },
+      "Gabriela Rodríguez and Alfonso Cuarón, Producers": {
+        "isWinner": false,
+        "films": [
+          "Roma"
+        ]
+      },
+      "Bill Gerber, Bradley Cooper and Lynette Howell Taylor, Producers": {
+        "isWinner": false,
+        "films": [
+          "A Star Is Born"
+        ]
+      },
+      "Dede Gardner, Jeremy Kleiner, Adam McKay and Kevin Messick, Producers": {
+        "isWinner": false,
+        "films": [
+          "Vice"
+        ]
+      }
+    }
+  },
+  "92": {
+    "year": 2019,
+    "best picture": {
+      "Peter Chernin, Jenno Topping and James Mangold, Producers": {
+        "isWinner": false,
+        "films": [
+          "Ford v Ferrari"
+        ]
+      },
+      "Martin Scorsese, Robert De Niro, Jane Rosenthal and Emma Tillinger Koskoff, Producers": {
+        "isWinner": false,
+        "films": [
+          "The Irishman"
+        ]
+      },
+      "Carthew Neal, Taika Waititi and Chelsea Winstanley, Producers": {
+        "isWinner": false,
+        "films": [
+          "Jojo Rabbit"
+        ]
+      },
+      "Todd Phillips, Bradley Cooper and Emma Tillinger Koskoff, Producers": {
+        "isWinner": false,
+        "films": [
+          "Joker"
+        ]
+      },
+      "Amy Pascal, Producer": {
+        "isWinner": false,
+        "films": [
+          "Little Women"
+        ]
+      },
+      "Noah Baumbach and David Heyman, Producers": {
+        "isWinner": false,
+        "films": [
+          "Marriage Story"
+        ]
+      },
+      "Sam Mendes, Pippa Harris, Jayne-Ann Tenggren and Callum McDougall, Producers": {
+        "isWinner": false,
+        "films": [
+          "1917"
+        ]
+      },
+      "David Heyman, Shannon McIntosh and Quentin Tarantino, Producers": {
+        "isWinner": false,
+        "films": [
+          "Once upon a Time...in Hollywood"
+        ]
+      },
+      "Kwak Sin Ae and Bong Joon Ho, Producers": {
+        "isWinner": true,
+        "films": [
+          "Parasite"
+        ]
+      }
+    }
+  }
+}
