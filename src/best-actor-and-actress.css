@@ -1,4 +1,4 @@
-#best-actress-tooltip {
+#best-actress-tooltip, #best-actor-tooltip {
     position: absolute;
     text-align: center;
     /* width: 60px;
@@ -23,13 +23,26 @@
 #best-actor-and-actress {
     color: #D8A75E;
     display: flex;
+    justify-content: space-between;
 }
 
 #best-actor-and-actress text{
     fill: #D8A75E;
 }
 
-#best-atress-container {
+#best-atress-container, #best-actor-container {
     text-align: center;
-    width: 40%;
+}
+
+#best-atress-container {
+    width: 35%;
+}
+
+#best-actor-container {
+    width: 30%;
+}
+
+#best-actor-and-actress-analysis-container {
+    padding-left: 5%;
+    width: 25%;
 }

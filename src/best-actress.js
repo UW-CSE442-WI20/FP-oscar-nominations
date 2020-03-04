@@ -6,7 +6,7 @@ const palette = {
     "ageLink": "gray",
     "ageCircle": "orange"
 }
-const textToCircleDist = -40; // for the ageBin and Country need to be < 0
+const textToCircleDist = -53; // for the ageBin and Country need to be < 0
 const ageBinBase = 20
 const ageBinSize = 20;
 const minCircleSize = 10;
@@ -60,7 +60,7 @@ d3.csv(csv)
 
         // Set the dimensions and margins of the diagram
         var margin = {top: 20, right: 90, bottom: 30, left: 200},
-            width = 1300 - margin.left - margin.right,
+            width = 650 - margin.left - margin.right,
             height = 900 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
@@ -216,6 +216,7 @@ d3.csv(csv)
                         return r;
                     })
                     .style("fill", palette["countryCircle"])
+                    .attr("cursor", "pointer");
                 d3.select(`g.countries.${code}`)
                     .append('text')
                         .attr("dy", ".35em")
@@ -261,7 +262,7 @@ d3.csv(csv)
             }
 
             // move country circles to the top
-            var countries = document.querySelectorAll(".countries");
+            var countries = document.querySelectorAll("#best-actress .countries");
             var countryContainer = countries[0].parentNode;
             countries.forEach(e => {
                 e.remove();
@@ -294,6 +295,7 @@ d3.csv(csv)
                         return r;
                     })
                     .style("fill", palette["ageCircle"])
+                    .attr("cursor", "pointer");
                 d3.select(`g.ageBins.${ageBin}`)
                     .append('text')
                         .attr("dy", ".35em")
@@ -345,7 +347,7 @@ d3.csv(csv)
             }
 
             // move age circles to the top
-            var ageBins = document.querySelectorAll(".ageBins");
+            var ageBins = document.querySelectorAll("#best-actress .ageBins");
             var ageBinContainer = ageBins[0].parentNode;
             ageBins.forEach(e => {
                 e.remove();
@@ -356,13 +358,13 @@ d3.csv(csv)
             // country
             function selectThisCode() {
                 var currSelectedCode;
-                document.querySelectorAll(".selected").forEach(e => {
+                document.querySelectorAll("#best-actress .selected").forEach(e => {
                     currSelectedCode = e.classList[1]
                     e.classList.remove("selected");
                 })
                 var code = this.classList[1];
                 if (currSelectedCode != code) {
-                    document.querySelectorAll(`.${code}`).forEach(e => {
+                    document.querySelectorAll(`#best-actress .${code}`).forEach(e => {
                         e.classList.add("selected");
                     })
                 }
@@ -370,13 +372,13 @@ d3.csv(csv)
             // age
             function selectThisAge() {
                 var currSelectedAgeBin;
-                document.querySelectorAll(".selected").forEach(e => {
+                document.querySelectorAll("#best-actress .selected").forEach(e => {
                     currSelectedAgeBin = e.classList[1]
                     e.classList.remove("selected");
                 })
                 var ageBin = this.classList[1];
                 if (currSelectedAgeBin != ageBin) {
-                    document.querySelectorAll(`.${ageBin}`).forEach(e => {
+                    document.querySelectorAll(`#best-actress .${ageBin}`).forEach(e => {
                         e.classList.add("selected");
                     })
                 }
