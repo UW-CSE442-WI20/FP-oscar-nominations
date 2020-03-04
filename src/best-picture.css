@@ -16,17 +16,25 @@
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 16pt;
+    font-size: 12pt;
 }
 
 #movie-info {
     width: 20%;
 }
 
-#best-picture text{
+.best-picture-text {
     fill: #D8A75E;
+}
+
+.best-picture-winner {
+    fill: red;
 }
 
 .none {
     display: none !important;
+}
+
+#best-picture circle {
+    opacity: 80%;
 }
