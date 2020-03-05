@@ -1,26 +1,8 @@
-// set the dimensions and margins of the graph
-/*var margin = {top: 10, right: 30, bottom: 30, left: 40},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
-
-// append the svg object to the body of the page
-var svg = d3.select("#top10")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
-const test = require('./test.csv')
-// get the data
-d3.csv(test, function(data) {
-
-});*/
-
 var margin = {top: 10, right: 30, bottom: 30, left: 150},
     width = 900 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
 
+var year = 1928;
 // append the svg object to the body of the page
 var svg = d3.select("#top10")
   .append("svg")
@@ -31,14 +13,11 @@ var svg = d3.select("#top10")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-const test = require('./test.csv')
+const test = require('./imdb_rated_nominees.csv')
 d3.csv(test, function(data) {
   var y = d3.scaleBand()
             .range([height, 0])
             .padding(0.1);
-
-  var x = d3.scaleLinear()
-            .range([0, width]);
 
   var x = d3.scaleLinear()
     .domain([0, 10])
@@ -52,22 +31,40 @@ d3.csv(test, function(data) {
   // Y axis
   var y = d3.scaleBand()
     .range([ 0, height ])
-    .domain(data.map(function(d) { return d.name; }))
+    .domain(data.map(function(d) {
+      return d.Name; }))
     .padding(.1);
   svg.append("g")
     .call(d3.axisLeft(y))
     .selectAll("text")
       .style("fill", "ffffff");
 
-  //Bars
-  svg.selectAll("myRect")
-    .data(data)
-    .enter()
-    .append("rect")
-    .attr("x", x(0) )
-    .attr("y", function(d) { return y(d.name); })
-    .attr("width", function(d) { return x(d.averageRating); })
-    .attr("height", y.bandwidth() )
-    .attr("fill", "#D8A75E")
+  function update(yr){
+    svg.selectAll("myRect")
+      .data(data.filter(function(d){return d.Year == yr;}))
+      .enter()
+      .append("rect")
+      .attr("x", x(0) )
+      .attr("y", function(d) { return y(d.Name); })
+      .attr("width", function(d) { return x(d.averageRating); })
+      .attr("height", y.bandwidth() )
+      .attr("fill", "#D8A75E")
 
+    y = d3.scaleBand()
+      .range([ 0, height ])
+      .domain(data.map(function(d) {
+        data.filter(function(d){return d.Year == yr;})
+        return d.Name; }))
+      .padding(.1);
+    svg.append("g")
+      .call(d3.axisLeft(y))
+      .selectAll("text")
+        .style("fill", "ffffff");
+  }
+
+  d3.select("#mySlider").on("change", function(d){
+    year = this.value
+    console.log(year);
+    update(year);
+  })
 });

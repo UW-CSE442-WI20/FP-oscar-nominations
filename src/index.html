@@ -28,11 +28,21 @@
       </div>
       <!--<div class ="top10" id="top10"></div>-->
       <!-- best actor/actress -->
-      <div id ="best-actor-and-actress">
-        <div id="best-atress-container">
-          <h3>Best Actress</h3>
-          <div id="best-actress"></div>
+      <div class="wrapper-actors">
+        <div class="graph" id ="best-actor-and-actress">
+          <div id="best-atress-container">
+            <h3>Best Actress</h3>
+            <div id="best-actress"></div>
+          </div>
         </div>
+
+        <div class="graph" id ="best-actor-and-actress">
+          <div id="best-atress-container">
+            <h3>Best Actress</h3>
+            <div id="best-actress"></div>
+          </div>
+        </div>
+
       </div>
       <!-- Best Directors Demography -->
       <div class="best_dots" id="best_dots"></div>
@@ -49,7 +59,10 @@
           <p><a id="imdb-link"></a></p>
         </div>
       </div>
-      <div id="top10"></div>
+      <div class="graph">
+        <input type="range" id="mySlider" min="1928" max="2020" value="1928">
+        <div class="top10" id="top10"></div>
+      </div>
     </div>
 
     <script src="./index.js"></script>
