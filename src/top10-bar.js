@@ -16,7 +16,8 @@ var svg = d3.select("#top10")
 const test = require('./imdb_rated_nominees.csv')
 d3.csv(test, function(data) {
 function update(yr) {
-  // filter earlier
+  // filter earlier; not quite sure if this is correct, but
+  // at least bar chart is not crowded anymore
   data = data.filter(function(d) {
     return parseInt(d.Year) == yr;
   })
