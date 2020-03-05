@@ -335,7 +335,6 @@ d3.csv(csv)
     })
 
 // code for moving info window
-var initialTop = $("#movie-info").css("top");
 function get(){
     var bpTop = $('#best-picture').offset().top;
     var dist =  bpTop - $(window).scrollTop();
@@ -352,6 +351,4 @@ function get(){
         });
     }
 }
-
-get();
 $(window).scroll(get);
