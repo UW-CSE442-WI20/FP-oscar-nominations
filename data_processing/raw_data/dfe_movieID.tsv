@@ -1,0 +1,442 @@
+	year_of_award	movie	movieID
+0	1927	Two Arabian Knights	https://www.imdb.com/title/tt0018515/
+1	1930	The Divine Lady	https://www.imdb.com/title/tt0019824/
+2	1931	All Quiet on the Western Front	https://www.imdb.com/title/tt0020629/
+3	1932	Skippy	https://www.imdb.com/title/tt0022397/
+4	1933	Bad Girl	https://www.imdb.com/title/tt0021635/
+5	1934	Cavalcade	https://www.imdb.com/title/tt0023876/
+6	1935	It Happened One Night	https://www.imdb.com/title/tt0025316/
+7	1936	The Informer	https://www.imdb.com/title/tt0026529/
+8	1937	Mr. Deeds Goes to Town	https://www.imdb.com/title/tt0027996/
+9	1938	The Awful Truth	https://www.imdb.com/title/tt0028597/
+10	1939	You Can't Take It with You	https://www.imdb.com/title/tt0030993/
+11	1940	Gone with the Wind	https://www.imdb.com/title/tt0031381/
+12	1941	The Grapes of Wrath	https://www.imdb.com/title/tt0032551/
+13	1942	How Green Was My Valley	https://www.imdb.com/title/tt0033729/
+14	1943	Mrs. Miniver	https://www.imdb.com/title/tt0035093/
+15	1944	Casablanca	https://www.imdb.com/title/tt0034583/
+16	1945	Going My Way	https://www.imdb.com/title/tt0036872/
+17	1962	West Side Story	https://www.imdb.com/title/tt0055614/
+18	1946	The Lost Weekend	https://www.imdb.com/title/tt0037884/
+19	1947	The Best Years of Our Lives	https://www.imdb.com/title/tt0036868/
+20	1948	Gentleman's Agreement	https://www.imdb.com/title/tt0039416/
+21	1949	The Treasure of the Sierra Madre	https://www.imdb.com/title/tt0040897/
+22	1950	A Letter to Three Wives	https://www.imdb.com/title/tt0041587/
+23	1951	All About Eve	https://www.imdb.com/title/tt0042192/
+24	1952	A Place in the Sun	https://www.imdb.com/title/tt0043924/
+25	1953	The Quiet Man	https://www.imdb.com/title/tt0045061/
+26	1954	From Here to Eternity	https://www.imdb.com/title/tt0045793/
+27	1955	On the Waterfront	https://www.imdb.com/title/tt0047296/
+28	1956	Marty	https://www.imdb.com/title/tt0048356/
+29	1957	Giant	https://www.imdb.com/title/tt0049261/
+30	1958	The Bridge on the River Kwai	https://www.imdb.com/title/tt0050212/
+31	1959	Gigi	https://www.imdb.com/title/tt0051658/
+32	1960	Ben-Hur	https://www.imdb.com/title/tt0052618/
+33	1961	The Apartment	https://www.imdb.com/title/tt0053604/
+34	1961	West Side Story	https://www.imdb.com/title/tt0055614/
+35	1963	Lawrence of Arabia	https://www.imdb.com/title/tt0056172/
+36	1964	Tom Jones	https://www.imdb.com/title/tt0057590/
+37	1965	My Fair Lady	https://www.imdb.com/title/tt0058385/
+38	1966	The Sound of Music	https://www.imdb.com/title/tt0059742/
+39	1967	A Man for All Seasons	https://www.imdb.com/title/tt0060665/
+40	1968	The Graduate	https://www.imdb.com/title/tt0061722/
+41	2008	No Country for Old Men	https://www.imdb.com/title/tt0477348/
+42	1969	Oliver!	https://www.imdb.com/title/tt0063385/
+43	1969	Midnight Cowboy	https://www.imdb.com/title/tt0064665/
+44	1970	Patton	https://www.imdb.com/title/tt0066206/
+45	1972	The French Connection	https://www.imdb.com/title/tt0067116/
+46	1973	Cabaret	https://www.imdb.com/title/tt0068327/
+47	1973	The Sting	https://www.imdb.com/title/tt0070735/
+48	1975	The Godfather Part II	https://www.imdb.com/title/tt0071562/
+49	1976	One Flew over the Cuckoo's Nest	https://www.imdb.com/title/tt0073486/
+50	1976	Rocky	https://www.imdb.com/title/tt0073629/
+51	1978	Annie Hall	https://www.imdb.com/title/tt0075686/
+52	1979	The Deer Hunter	https://www.imdb.com/title/tt0077416/
+53	1980	Kramer vs. Kramer	https://www.imdb.com/title/tt0079417/
+54	1980	Ordinary People	https://www.imdb.com/title/tt0081283/
+55	1981	Reds	https://www.imdb.com/title/tt0082979/
+56	1982	Gandhi	https://www.imdb.com/title/tt0083987/
+57	1983	Terms of Endearment	https://www.imdb.com/title/tt0086425/
+58	1985	Amadeus	https://www.imdb.com/title/tt0086879/
+59	1986	Out of Africa	https://www.imdb.com/title/tt0089755/
+60	1990	Platoon	https://www.imdb.com/title/tt0091763/
+61	1988	The Last Emperor	https://www.imdb.com/title/tt0093389/
+62	1989	Rain Man	https://www.imdb.com/title/tt0095953/
+63	1990	Born on the Fourth of July	https://www.imdb.com/title/tt0096969/
+64	1991	Dances with Wolves	https://www.imdb.com/title/tt0099348/
+65	1992	The Silence of the Lambs	https://www.imdb.com/title/tt0102926/
+66	1993	Unforgiven	https://www.imdb.com/title/tt0105695/
+67	1994	Schindler's List	https://www.imdb.com/title/tt0108052/
+68	1995	Forrest Gump	https://www.imdb.com/title/tt0109830/
+69	1996	Braveheart	https://www.imdb.com/title/tt00112573/
+70	1997	The English Patient	https://www.imdb.com/title/tt0116209/
+71	1998	Titanic	https://www.imdb.com/title/tt0120338/
+72	1999	Saving Private Ryan	https://www.imdb.com/title/tt0120815/
+73	2000	American Beauty	https://www.imdb.com/title/tt0169547/
+74	2001	Traffic	https://www.imdb.com/title/tt0181865/
+75	2002	A Beautiful Mind	https://www.imdb.com/title/tt0268978/
+76	2003	The Pianist	https://www.imdb.com/title/tt0253474/
+77	2004	The Lord of the Rings: Return of the King	https://www.imdb.com/title/tt0167260/
+78	2005	Million Dollar Baby	https://www.imdb.com/title/tt0405159/
+79	2006	Brokeback Mountain	https://www.imdb.com/title/tt0388795/
+80	2007	The Departed	https://www.imdb.com/title/tt0407887/
+81	2008	No Country for Old Men	https://www.imdb.com/title/tt0477348/
+82	2009	Slumdog Millionaire	https://www.imdb.com/title/tt1010048/
+83	2009	The Hurt Locker	https://www.imdb.com/title/tt0887912/
+84	2011	The King's Speech	https://www.imdb.com/title/tt1504320/
+85	2012	The Artist	https://www.imdb.com/title/tt1655442/
+86	2013	Life of Pi	https://www.imdb.com/title/tt0454876/
+87	1929	The Last Command	https://www.imdb.com/title/tt0019071/
+88	1930	In Old Arizona	https://www.imdb.com/title/tt0020018/
+89	1930	Desraeli	https://www.imdb.com/title/tt0019823/
+90	1931	A Free Soul	https://www.imdb.com/title/tt0021885/
+91	1932	The Champ	https://www.imdb.com/title/tt0021730/
+92	1934	The Private Life of Henry VIII	https://www.imdb.com/title/tt0024473/
+93	1935	It Happened One Night	https://www.imdb.com/title/tt0025316/
+94	1936	The Informer	https://www.imdb.com/title/tt0026529/
+95	1937	The Story of Louis Pasteur	https://www.imdb.com/title/tt0028313/
+96	1938	Captains Courageous	https://www.imdb.com/title/tt0028691/
+97	1939	Boys Town	https://www.imdb.com/title/tt0029942/
+98	1940	Goodbye Mr. Chips	https://www.imdb.com/title/tt0031385/
+99	1941	The Philadelphia Story	https://www.imdb.com/title/tt0032904/
+100	1942	Sergeant York	https://www.imdb.com/title/tt0034167/
+101	1943	Yankee Doodle Dandy	https://www.imdb.com/title/tt0035575/
+102	1944	Watch on the Rhine	https://www.imdb.com/title/tt0036515/
+103	1945	Going My Way	https://www.imdb.com/title/tt0036872/
+104	1946	The Lost Weekend	https://www.imdb.com/title/tt0037884/
+105	1947	The Best Years of Our Lives	https://www.imdb.com/title/tt0036868/
+106	1948	A Double Life	https://www.imdb.com/title/tt0039335/
+107	1949	Hamlet	https://www.imdb.com/title/tt0040416/
+108	1950	All The King's Men	https://www.imdb.com/title/tt0041113/
+109	1951	Cyrano de Bergerac	https://www.imdb.com/title/tt0042367/
+110	1952	The Africa Queen	https://www.imdb.com/title/tt0043265/
+111	1953	High Noon	https://www.imdb.com/title/tt0044706/
+112	1954	Stalag 17	https://www.imdb.com/title/tt0046359/
+113	1955	On the Waterfront	https://www.imdb.com/title/tt0047296/
+114	1956	Marty	https://www.imdb.com/title/tt0048356/
+115	1957	The King and I	https://www.imdb.com/title/tt0049408/
+116	1958	The Bridge on the River Kwai	https://www.imdb.com/title/tt0050212/
+117	1959	Separate Tables	https://www.imdb.com/title/tt0052182/
+118	1960	Ben-hur	https://www.imdb.com/title/tt0052618/
+119	1961	Elmer Gantry	https://www.imdb.com/title/tt0053793/
+120	1962	Judgement at Nuremberg	https://www.imdb.com/title/tt0055031/
+121	1963	To Kill a Mockingbird	https://www.imdb.com/title/tt0056592/
+122	1964	Lilies of the Field	https://www.imdb.com/title/tt0057251/
+123	1965	My Fair Lady	https://www.imdb.com/title/tt0058385/
+124	1966	Cat Ballou	https://www.imdb.com/title/tt0059017/
+125	1967	A Man For All Seasons	https://www.imdb.com/title/tt0060665/
+126	1968	In the Heat of the Night	https://www.imdb.com/title/tt0061811/
+127	1969	Charly	https://www.imdb.com/title/tt0062794/
+128	1970	True Grit	https://www.imdb.com/title/tt0065126/
+129	1971	Patton	https://www.imdb.com/title/tt0066206/
+130	1972	The French Connection	https://www.imdb.com/title/tt0067116/
+131	1973	The Godfather	https://www.imdb.com/title/tt0068646/
+132	1974	Save the Tiger	https://www.imdb.com/title/tt0070640/
+133	1975	Harry and Tonto	https://www.imdb.com/title/tt0071598/
+134	1976	One Flew Over the Cuckoo's Nest	https://www.imdb.com/title/tt0073486/
+135	1977	Network	https://www.imdb.com/title/tt0074958/
+136	1978	The Goodbye Girl	https://www.imdb.com/title/tt0076095/
+137	1979	Coming Home	https://www.imdb.com/title/tt0077362/
+138	1980	Kramer vs. Kramer	https://www.imdb.com/title/tt0079417/
+139	1981	Raging Bull	https://www.imdb.com/title/tt0081398/
+140	1982	On Golden Pond	https://www.imdb.com/title/tt0082846/
+141	1983	Gandhi	https://www.imdb.com/title/tt0083987/
+142	1984	Tender Mercies	https://www.imdb.com/title/tt0086423/
+143	1985	Amadeus	https://www.imdb.com/title/tt0086879/
+144	1986	Kiss of the Spider Woman	https://www.imdb.com/title/tt0089424/
+145	1987	The Color of Money	https://www.imdb.com/title/tt0090863/
+146	1988	Wall Street	https://www.imdb.com/title/tt0094291/
+147	1989	Rainman	https://www.imdb.com/title/tt0095953/
+148	1990	My Left Foot	https://www.imdb.com/title/tt0097937/
+149	1991	Reversal of Fortune	https://www.imdb.com/title/tt0100486/
+150	1992	Silence of the Lambs	https://www.imdb.com/title/tt0102926/
+151	1993	Scent of a Woman	https://www.imdb.com/title/tt0105323/
+152	1994	Philadelphia	https://www.imdb.com/title/tt0107818/
+153	1995	Forrest Gump	https://www.imdb.com/title/tt0109830/
+154	1996	Leaving Las Vegas	https://www.imdb.com/title/tt0113627/
+155	1997	Shine	https://www.imdb.com/title/tt0117631/
+156	1997	As Good as It Gets	https://www.imdb.com/title/tt0119822/
+157	1999	Life is Beautiful	https://www.imdb.com/title/tt0118799/
+158	2000	American Beauty	https://www.imdb.com/title/tt0169547/
+159	2001	Gladiator	https://www.imdb.com/title/tt0172495/
+160	2002	Training Day	https://www.imdb.com/title/tt0139654/
+161	2003	The Pianist	https://www.imdb.com/title/tt0253474/
+162	2003	Mystic River	https://www.imdb.com/title/tt0327056/
+163	2005	Ray	https://www.imdb.com/title/tt0350258/
+164	2006	Capote	https://www.imdb.com/title/tt0379725/
+165	2007	The Last King of Scotland	https://www.imdb.com/title/tt0455590/
+166	2008	There Will Be Blood	https://www.imdb.com/title/tt0469494/
+167	2009	Milk	https://www.imdb.com/title/tt1013753/
+168	2010	Crazy Heart	https://www.imdb.com/title/tt1263670/
+169	2011	The King's Speech	https://www.imdb.com/title/tt1504320/
+170	2012	The Artist	https://www.imdb.com/title/tt1655442/
+171	2013	Lincoln	https://www.imdb.com/title/tt0443272/
+172	2014	Dallas Buyers Club	https://www.imdb.com/title/tt0790636/
+173	1938	Come and Get It	https://www.imdb.com/title/tt0027459/
+174	1938	The Life of Emile Zola	https://www.imdb.com/title/tt0029146/
+175	1939	Kentucky	https://www.imdb.com/title/tt0030317/
+176	1940	Stagecoach	https://www.imdb.com/title/tt0031971/
+177	1941	The Westerner	https://www.imdb.com/title/tt0033253/
+178	1942	How Green Was My Valley	https://www.imdb.com/title/tt0033729/
+179	1943	Johnny Eager	https://www.imdb.com/title/tt0033774/
+180	1944	The More the Merrier	https://www.imdb.com/title/tt0036172/
+181	1945	Going My Way	https://www.imdb.com/title/tt0036872/
+182	1946	A Tree Grows in Brooklyn	https://www.imdb.com/title/tt0038190/
+183	1947	The Best Years of Our Lives	https://www.imdb.com/title/tt0036868/
+184	1948	Miracle on 34th Street	https://www.imdb.com/title/tt0039628/
+185	1949	The Treasure of the Sierra Madre	https://www.imdb.com/title/tt0040897/
+186	1950	Twelve O'Clock High	https://www.imdb.com/title/tt0041996/
+187	1951	All About Eve	https://www.imdb.com/title/tt0042192/
+188	1952	A Streetcar Named Desire	https://www.imdb.com/title/tt0044081/
+189	1953	Viva Zapata!	https://www.imdb.com/title/tt0045296/
+190	1954	From Here to Eternity	https://www.imdb.com/title/tt0045793/
+191	1955	The Barefoot Contessa	https://www.imdb.com/title/tt0046754/
+192	1956	Mister Roberts	https://www.imdb.com/title/tt0048380/
+193	1957	Lust for Life	https://www.imdb.com/title/tt0049456/
+194	1958	Sayonara	https://www.imdb.com/title/tt0050933/
+195	1959	The Big Country	https://www.imdb.com/title/tt0051411/
+196	1960	Ben-Hur	https://www.imdb.com/title/tt0052618/
+197	1961	Spartacus	https://www.imdb.com/title/tt0054331/
+198	1962	West Side Story	https://www.imdb.com/title/tt0055614/
+199	1963	Sweet Bird of Youth	https://www.imdb.com/title/tt0056541/
+200	1964	Hud	https://www.imdb.com/title/tt0057163/
+201	1965	Topkapi	https://www.imdb.com/title/tt0058672/
+202	1966	A Thousand Clowns	https://www.imdb.com/title/tt0059798/
+203	1967	The Fortune Cookie	https://www.imdb.com/title/tt0060424/
+204	1968	Cool Hand Luke	https://www.imdb.com/title/tt0061512/
+205	1969	The Subject Was Roses	https://www.imdb.com/title/tt0063654/
+206	1970	They Shoot Horses, Don't They?	https://www.imdb.com/title/tt0065088/
+207	1971	Ryan's Daughter	https://www.imdb.com/title/tt0066319/
+208	1972	The Last Picture Show	https://www.imdb.com/title/tt0067328/
+209	1973	Cabaret	https://www.imdb.com/title/tt0068327/
+210	1974	The Paper Chase	https://www.imdb.com/title/tt0070509/
+211	1975	The Godfather Part II	https://www.imdb.com/title/tt0071562/
+212	1976	The Sunshine Boys	https://www.imdb.com/title/tt0073766/
+213	1977	All the President's Men	https://www.imdb.com/title/tt0074119/
+214	1978	Julia	https://www.imdb.com/title/tt0076245/
+215	1979	The Deer Hunter	https://www.imdb.com/title/tt0077416/
+216	1980	Being There	https://www.imdb.com/title/tt0078841/
+217	1981	Oridnary People	https://www.imdb.com/title/tt0081283/
+218	1982	Arthur	https://www.imdb.com/title/tt0082031/
+219	1983	An Officer and a Gentleman	https://www.imdb.com/title/tt0084434/
+220	1984	Terms of Endearment	https://www.imdb.com/title/tt0086425/
+221	1985	The Killing Fields	https://www.imdb.com/title/tt0087553/
+222	1986	Cocoon	https://www.imdb.com/title/tt0088933/
+223	1987	Hannah and Her Sisters	https://www.imdb.com/title/tt0091167/
+224	1988	The Untouchables	https://www.imdb.com/title/tt0094226/
+225	1989	A Fish Called Wanda	https://www.imdb.com/title/tt0095159/
+226	1990	Glory	https://www.imdb.com/title/tt0097441/
+227	1991	Good Fellas	https://www.imdb.com/title/tt0099685/
+228	1992	City Slickers	https://www.imdb.com/title/tt0101587/
+229	1993	Unforgiven	https://www.imdb.com/title/tt0105695/
+230	1994	The Fugitive	https://www.imdb.com/title/tt0106977/
+231	1995	Ed Wood	https://www.imdb.com/title/tt0109707/
+232	1996	The Usual Suspects	https://www.imdb.com/title/tt0114814/
+233	1997	Jerry Maguire	https://www.imdb.com/title/tt0116695/
+234	1998	Good Will Hunting	https://www.imdb.com/title/tt0119217/
+235	1999	Affliction	https://www.imdb.com/title/tt0118564/
+236	2000	The Cider House Rules	https://www.imdb.com/title/tt0124315/
+237	2001	Traffic	https://www.imdb.com/title/tt0181865/
+238	2002	Iris	https://www.imdb.com/title/tt0280778/
+239	2003	Adaptation	https://www.imdb.com/title/tt0268126/
+240	2004	Mystic River	https://www.imdb.com/title/tt0327056/
+241	2005	Million Dollar Baby	https://www.imdb.com/title/tt0405159/
+242	2006	Syriana	https://www.imdb.com/title/tt0365737/
+243	2007	Little Miss Sunshine	https://www.imdb.com/title/tt0449059/
+244	2008	No Country for Old Men	https://www.imdb.com/title/tt0477348/
+245	2009	The Dark Knight	https://www.imdb.com/title/tt0468569/
+246	2010	Inglourious Basterds	https://www.imdb.com/title/tt0361748/
+247	2011	The Fighter	https://www.imdb.com/title/tt0964517/
+248	2012	Beginning	https://www.imdb.com/title/tt1991203/
+249	2013	Django Unchained	https://www.imdb.com/title/tt1853728/
+250	2014	Dallas Buyers Club	https://www.imdb.com/title/tt0790636/
+251	1929	7th Heaven	https://www.imdb.com/title/tt0018379/
+252	1930	Coquette	https://www.imdb.com/title/tt0019788/
+253	1930	The Divorcee	https://www.imdb.com/title/tt0020827/
+254	1931	Min and Bill	https://www.imdb.com/title/tt0021148/
+255	1932	The Sin of Madelon Claudet	https://www.imdb.com/title/tt0022386/
+256	1934	Morning Glory	https://www.imdb.com/title/tt0024353/
+257	1935	It Happened One Night	https://www.imdb.com/title/tt0025316/
+258	1936	Dangerous	https://www.imdb.com/title/tt0026261/
+259	1937	The Great Ziegfeld	https://www.imdb.com/title/tt0027698/
+260	1938	The Good Earth	https://www.imdb.com/title/tt0028944/
+261	1939	Jezebel	https://www.imdb.com/title/tt0030287/
+262	1940	Gone with the Wind	https://www.imdb.com/title/tt0031381/
+263	1941	Kitty Foyle	https://www.imdb.com/title/tt0032671/
+264	1940	Suspicion	https://www.imdb.com/title/tt0035605/
+265	1942	Mrs. Miniver	https://www.imdb.com/title/tt0035093/
+266	1944	The Song of Bernadette	https://www.imdb.com/title/tt0036377/
+267	1945	Gaslight	https://www.imdb.com/title/tt0036855/
+268	1946	Mildred Pierce	https://www.imdb.com/title/tt0037913/
+269	1947	To Each His Own	https://www.imdb.com/title/tt0039040/
+270	1948	The Farmer's Daughter	https://www.imdb.com/title/tt0039370/
+271	1949	Johnny Belinda	https://www.imdb.com/title/tt0040495/
+272	1950	The Heiress	https://www.imdb.com/title/tt0041452/
+273	1951	Born Yesterday	https://www.imdb.com/title/tt0042276/
+274	1952	A Streetcar Named Desire	https://www.imdb.com/title/tt0044081/
+275	1953	Come Back, Little Sheba	https://www.imdb.com/title/tt0044509/
+276	1954	Roman Holiday	https://www.imdb.com/title/tt0046250/
+277	1955	The Country Girl	https://www.imdb.com/title/tt0046874/
+278	1956	The Rose Tattoo	https://www.imdb.com/title/tt0048563/
+279	1957	Anastasia	https://www.imdb.com/title/tt0048947/
+280	1958	The Three Faces of Eve	https://www.imdb.com/title/tt0051077/
+281	1959	I Want To Live!	https://www.imdb.com/title/tt0051758/
+282	1960	Room at the Top	https://www.imdb.com/title/tt0053226/
+283	1961	Butterfield 8	https://www.imdb.com/title/tt0053622/
+284	1962	Two Women	https://www.imdb.com/title/tt0054749/
+285	1963	The Miracle Worker	https://www.imdb.com/title/tt0056241/
+286	1964	Hud	https://www.imdb.com/title/tt0057163/
+287	1965	Mary Poppins	https://www.imdb.com/title/tt0058331/
+288	1966	Darling	https://www.imdb.com/title/tt0059084/
+289	1967	Who's Afraid of Virginia Woolf?	https://www.imdb.com/title/tt0061184/
+290	1968	Guess Who's Coming to Dinner	https://www.imdb.com/title/tt0061735/
+291	1969	Funny Girl	https://www.imdb.com/title/tt0062994/
+292	1969	The Lion in Winter	https://www.imdb.com/title/tt0063227/
+293	1970	The Prime of Miss Jean Brodie	https://www.imdb.com/title/tt0064840/
+294	1971	Women in Love	https://www.imdb.com/title/tt0066579/
+295	1972	Klute	https://www.imdb.com/title/tt0067309/
+296	1973	Cabaret	https://www.imdb.com/title/tt0068327/
+297	1974	A Touch of Class	https://www.imdb.com/title/tt0070819/
+298	1975	Alice Doesn't Live Here Anymore	https://www.imdb.com/title/tt0071115/
+299	1976	One Flew Over the Cuckoo's Nest	https://www.imdb.com/title/tt0073486/
+300	1977	Network	https://www.imdb.com/title/tt0074958/
+301	1978	Annie Hall	https://www.imdb.com/title/tt0075686/
+302	1979	Coming Home	https://www.imdb.com/title/tt0077362/
+303	1980	Norma Rae	https://www.imdb.com/title/tt0079638/
+304	1981	Coal Miner's Daughter	https://www.imdb.com/title/tt0080549/
+305	1982	On Golden Pond	https://www.imdb.com/title/tt0082846/
+306	1983	Sophie's Choice	https://www.imdb.com/title/tt0084707/
+307	1984	Terms of Endearment	https://www.imdb.com/title/tt0086425/
+308	1985	Places in the Heart	https://www.imdb.com/title/tt0087921/
+309	1986	The Trip to Bountiful	https://www.imdb.com/title/tt0090203/
+310	1987	Children of a Lesser God	https://www.imdb.com/title/tt0090830/
+311	1988	Moonstruck	https://www.imdb.com/title/tt0093565/
+312	1989	The Accused	https://www.imdb.com/title/tt0094608/
+313	1990	Driving Miss Daisy	https://www.imdb.com/title/tt0097239/
+314	1991	Misery	https://www.imdb.com/title/tt0100157/
+315	1992	The Silence of the Lambs	https://www.imdb.com/title/tt0102926/
+316	1993	Howards End	https://www.imdb.com/title/tt0104454/
+317	1994	The Piano	https://www.imdb.com/title/tt0107822/
+318	1995	Blue Sky	https://www.imdb.com/title/tt0109306/
+319	1996	Dead Man Walking	https://www.imdb.com/title/tt0112818/
+320	1997	Fargo	https://www.imdb.com/title/tt0116282/
+321	1998	As Good As It Gets	https://www.imdb.com/title/tt0119822/
+322	1999	Shakespeare in Love	https://www.imdb.com/title/tt0138097/
+323	2000	Boys Don't Cry	https://www.imdb.com/title/tt0171804/
+324	2001	Erin Brockovich	https://www.imdb.com/title/tt0195685/
+325	2002	Monster's Ball	https://www.imdb.com/title/tt0285742/
+326	2003	The Hours	https://www.imdb.com/title/tt0274558/
+327	2004	Monster	https://www.imdb.com/title/tt0340855/
+328	2005	Million Dollar Baby	https://www.imdb.com/title/tt0405159/
+329	2006	Walk the Line	https://www.imdb.com/title/tt0358273/
+330	2007	The Queen	https://www.imdb.com/title/tt0436697/
+331	2008	The Passionate Life of Edith Piaf	https://www.imdb.com/title/tt0450188/
+332	2009	The Reader	https://www.imdb.com/title/tt0976051/
+333	2010	The Blind Side	https://www.imdb.com/title/tt0878804/
+334	2011	Black Swan	https://www.imdb.com/title/tt0947798/
+335	2012	The Iron Lady	https://www.imdb.com/title/tt1007029/
+336	2013	Silver Linings Playbook	https://www.imdb.com/title/tt1045658/
+337	2014	Blue Jasmine	https://www.imdb.com/title/tt2334873/
+338	1937	Anthony Adverse	https://www.imdb.com/title/tt0027300/
+339	1938	In Old Chicago	https://www.imdb.com/title/tt0029047/
+340	1939	Jezebel	https://www.imdb.com/title/tt0030287/
+341	1940	Gone with the Wind	https://www.imdb.com/title/tt0031381/
+342	1941	The Grapes of Wrath	https://www.imdb.com/title/tt0032551/
+343	1942	The Great Lie	https://www.imdb.com/title/tt0033677/
+344	1943	Mrs. Miniver	https://www.imdb.com/title/tt0035093/
+345	1944	For Whom the Bell Tolls	https://www.imdb.com/title/tt0035896/
+346	1945	None but the Lonely Heart	https://www.imdb.com/title/tt0037135/
+347	1946	National Velvet	https://www.imdb.com/title/tt0037120/
+348	1947	The Razor's Edge	https://www.imdb.com/title/tt0038873/
+349	1948	Gentleman's Agreement	https://www.imdb.com/title/tt0039416/
+350	1949	Key Largo	https://www.imdb.com/title/tt0040506/
+351	1950	All the King's Men	https://www.imdb.com/title/tt0041113/
+352	1951	Harvey	https://www.imdb.com/title/tt0042546/
+353	1952	A Streetcar Named Desire	https://www.imdb.com/title/tt0044081/
+354	1953	The Bad and the Beautiful	https://www.imdb.com/title/tt0044391/
+355	1954	From Here to Eternity	https://www.imdb.com/title/tt0045793/
+356	1955	On the Waterfront	https://www.imdb.com/title/tt0047296/
+357	1956	East of Eden	https://www.imdb.com/title/tt0048028/
+358	1957	Written on the Wind	https://www.imdb.com/title/tt0049966/
+359	1958	Sayonara	https://www.imdb.com/title/tt0050933/
+360	1959	Separate Tables	https://www.imdb.com/title/tt0052182/
+361	1960	The Diary of Anne Frank	https://www.imdb.com/title/tt0052738/
+362	1961	Elmer Gantry	https://www.imdb.com/title/tt0053793/
+363	1962	West Side Story	https://www.imdb.com/title/tt0055614/
+364	1963	The Miracle Worker	https://www.imdb.com/title/tt0056241/
+365	1964	the V.I.P.s	https://www.imdb.com/title/tt0057634/
+366	1965	Zorba the Greek	https://www.imdb.com/title/tt0057831/
+367	1966	A Patch of Blue	https://www.imdb.com/title/tt0059573/
+368	1967	Who's Afraid of Virginia Woolf?	https://www.imdb.com/title/tt0061184/
+369	1968	Bonnie and Clyde	https://www.imdb.com/title/tt0061418/
+370	1969	Rosemary's Baby	https://www.imdb.com/title/tt0063522/
+371	1970	Cactus Flower	https://www.imdb.com/title/tt0064117/
+372	1971	Airport	https://www.imdb.com/title/tt0065377/
+373	1972	The Last Picture Show	https://www.imdb.com/title/tt0067328/
+374	1973	Butterflies Are Free	https://www.imdb.com/title/tt0068326/
+375	1974	Paper Moon	https://www.imdb.com/title/tt0070510/
+376	1975	Murder on the Orient Express	https://www.imdb.com/title/tt0071877/
+377	1976	Shampoo	https://www.imdb.com/title/tt0073692/
+378	1977	Network	https://www.imdb.com/title/tt0074958/
+379	1978	Julia	https://www.imdb.com/title/tt0076245/
+380	1979	California Suite	https://www.imdb.com/title/tt0077289/
+381	1980	Kramer vs. Kramer	https://www.imdb.com/title/tt0079417/
+382	1981	Melvin and Howard	https://www.imdb.com/title/tt0081150/
+383	1982	Reds	https://www.imdb.com/title/tt0082979/
+384	1983	Tootsie	https://www.imdb.com/title/tt0084805/
+385	1984	The Year of Living Dangerously	https://www.imdb.com/title/tt0086617/
+386	1985	A Passage to India	https://www.imdb.com/title/tt0087892/
+387	1986	Prizzi's Honor	https://www.imdb.com/title/tt0089841/
+388	1987	Hannah and Her Sisters	https://www.imdb.com/title/tt0091167/
+389	1988	Moonstruck	https://www.imdb.com/title/tt0093565/
+390	1989	The Accidental Tourist	https://www.imdb.com/title/tt0094606/
+391	1990	My Left Foot	https://www.imdb.com/title/tt0097937/
+392	1991	Ghost	https://www.imdb.com/title/tt0099653/
+393	1992	The Fisher King	https://www.imdb.com/title/tt0101889/
+394	1993	My Cousin Vinny	https://www.imdb.com/title/tt0104952/
+395	1994	The Piano	https://www.imdb.com/title/tt0107822/
+396	1995	Bullets Over Broadway	https://www.imdb.com/title/tt0109348/
+397	1996	Mighty Aphrodite	https://www.imdb.com/title/tt0113819/
+398	1997	The English Patient	https://www.imdb.com/title/tt0116209/
+399	1998	L.A. Confidential	https://www.imdb.com/title/tt0119488/
+400	1999	Shakespeare in Love	https://www.imdb.com/title/tt0138097/
+401	2000	Girl, Interrupted	https://www.imdb.com/title/tt0172493/
+402	2001	Pollock	https://www.imdb.com/title/tt0183659/
+403	2002	A Beautiful Mind	https://www.imdb.com/title/tt0268978/
+404	2003	Chicago	https://www.imdb.com/title/tt0299658/
+405	2004	Cold Mountain	https://www.imdb.com/title/tt0159365/
+406	2005	The Aviator	https://www.imdb.com/title/tt0338751/
+407	2006	The Constant Gardener	https://www.imdb.com/title/tt0387131/
+408	2007	Dreamgirls	https://www.imdb.com/title/tt0443489/
+409	2007	Michael Clayton	https://www.imdb.com/title/tt0465538/
+410	2009	Vicky Cristina Barcelona	https://www.imdb.com/title/tt0497465/
+411	2010	Precious	https://www.imdb.com/title/tt0929632/
+412	2011	The Fighter	https://www.imdb.com/title/tt0964517/
+413	2012	The Help	https://www.imdb.com/title/tt1454029/
+414	2013	Les MisÌ©rables	https://www.imdb.com/title/tt1707386/
+415	2014	12 Years a Slave	https://www.imdb.com/title/tt2024544/
+416	1961	The Apartment	https://www.imdb.com/title/tt0053604/
+417	1941	Kitty Foyle	https://www.imdb.com/title/tt0032671/
+418	1994	Philadelphia	https://www.imdb.com/title/tt0107818/
+419	1979	The Deer Hunter	https://www.imdb.com/title/tt0077416/
+420	1942	The Great Lie	https://www.imdb.com/title/tt0033677/
+421	2000	Girl, Interrupted	https://www.imdb.com/title/tt0172493/
+422	1976	Shampoo	https://www.imdb.com/title/tt0073692/
+423	1946	National Velvet	https://www.imdb.com/title/tt0037120/
+424	1977	Network	https://www.imdb.com/title/tt0074958/
+425	1943	Johnny Eager	https://www.imdb.com/title/tt0033774/
+426	1958	The Three Faces of Eve	https://www.imdb.com/title/tt0051077/
+427	1953	High Noon	https://www.imdb.com/title/tt0044706/
+428	1967	Who's Afraid of Virginia Woolf?	https://www.imdb.com/title/tt0061184/
+429	2005	Million Dollar Baby	https://www.imdb.com/title/tt0405159/
+430	2005	Million Dollar Baby	https://www.imdb.com/title/tt0405159/
+431	1999	Shakespeare in Love	https://www.imdb.com/title/tt0138097/
+432	1969	The Subject Was Roses	https://www.imdb.com/title/tt0063654/
+433	2010	Precious	https://www.imdb.com/title/tt0929632/
+434	2001	Pollock	https://www.imdb.com/title/tt0183659/
+435	1970	The Prime of Miss Jean Brodie	https://www.imdb.com/title/tt0064840/
+436	2006	The Constant Gardener	https://www.imdb.com/title/tt0387131/
+437	2009	Slumdog Millionaire	https://www.imdb.com/title/tt1010048/
+438	1977	All the President's Men	https://www.imdb.com/title/tt0074119/
+439	1999	Affliction	https://www.imdb.com/title/tt0118564/
+440	1949	The Treasure of the Sierra Madre	https://www.imdb.com/title/tt0040897/
