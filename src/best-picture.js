@@ -158,7 +158,7 @@ d3.csv(csv)
                  })
                  .attr("class", function(d) {
                     if (d.data.class == "title" && d.data["is_winner"]) {
-                        return "best-picture-winner"
+                        return "best-picture-winner best-picture-text"
                     }
                     return "best-picture-text";
                  })
@@ -312,14 +312,12 @@ d3.csv(csv)
             function click(d) {
                 if (d.children) {
                     // close
-                    opened -= d.children.length;
                     d._children = d.children;
                     d.children = null;
                 } else {
                     // open
                     d.children = d._children;
                     d._children = null;
-                    opened += d.children.length;
                 }
                 update(d);
             }
