@@ -1,4 +1,4 @@
-import "./top10-bar.js";
+
 /*
 // You can require libraries
 const d3 = require('d3');
