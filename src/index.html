@@ -29,6 +29,24 @@
       <!--<div class ="top10" id="top10"></div>-->
       <!-- best actor/actress -->
       <div id ="best-actor-and-actress">
+        <div id="best-actor-container">
+          <h3>Best Actor</h3>
+          <div id="best-actor"></div>
+        </div>
+        <div id="best-actor-and-actress-analysis-container">
+          <div id="country-of-birth">
+            <h4>Country of Birth</h4>
+            <p>
+              Suspendisse vel tellus odio. Ut nec venenatis eros, non tempus arcu. Nam in neque tristique sapienaliquet malesuada ut quis urna. Nunc vel bibendum sem, mollis cursus lacus. Phasellus bibendum eros dolor, at facilisis libero ullamcorper sed. In vestibulum eros convallis ipsum mattis semper. Aliquam euismod odio at ligula maximus molestie. Phasellus in nibh eget nunc luctus tristique eu nec nisl. Phasellus semper, ipsum eu pretium porta, nisl tortor accumsan dui, nec facilisis neque mi a diam. Ut id metus ullamcorper, dignissim tellus eget, porta ante.
+            </p>
+          </div>
+          <div id="age-range">
+            <h4>Age Range</h4>
+            <p>
+              Suspendisse vel tellus odio. Ut nec venenatis eros, non tempus arcu. Nam in neque tristique sapienaliquet malesuada ut quis urna. Nunc vel bibendum sem, mollis cursus lacus. Phasellus bibendum eros dolor, at facilisis libero ullamcorper sed. In vestibulum eros convallis ipsum mattis semper. Aliquam euismod odio at ligula maximus molestie. Phasellus in nibh eget nunc luctus tristique eu nec nisl. Phasellus semper, ipsum eu pretium porta, nisl tortor accumsan dui, nec facilisis neque mi a diam. Ut id metus ullamcorper, dignissim tellus eget, porta ante.
+            </p>
+          </div>
+        </div>
         <div id="best-atress-container">
           <h3>Best Actress</h3>
           <div id="best-actress"></div>
@@ -53,12 +71,19 @@
           <p><a id="imdb-link"></a></p>
         </div>
       </div>
+      <div class="graph">
+        <input type="range" id="mySlider" min="1928" max="2020" value="1928">
+        <div class="top10" id="top10"></div>
+      </div>
     </div>
 
     <script src="./index.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="./best-picture.js"></script>
     <script src="./best-actress.js"></script>
+    <script src="./best-actor.js"></script>
     <script src="./dots.js"></script>
+    <script src="./top10-bar.js"></script>
   </body>
 </html>

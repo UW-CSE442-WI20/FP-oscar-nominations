@@ -3,7 +3,7 @@ const csv = require("./best-picture.csv")
 const circleColors = {
     "base": "lightblue",
     "budget": "orange",
-    "revenue": "pink"
+    "revenue": "pink",
 }
 
 // parse csv
@@ -18,12 +18,15 @@ d3.csv(csv)
         // convert data to JSON...
         var treeData = {"name": "Genres", "children": [], "class": "root"};
         var genreArr = [];
+        var genreCounter = [];
         data.filter(function(d) {
             var genre = d["genre"];
             if (!genreArr.includes(genre)) {
                 treeData["children"].push({"class": "genre", "name": genre, "children": []})
                 genreArr.push(genre);
             }
+            var genreChildren = treeData["children"][genreArr.indexOf(genre)]["children"];
+            genreCounter[genreArr.indexOf(genre)] += 1;
             treeData["children"][genreArr.indexOf(genre)]["children"].push(
                 {
                     "name": "",
@@ -31,10 +34,10 @@ d3.csv(csv)
                     "class": "revenue",
                     "always_show_circle": true,
                     "children": [{"name": "",
-                                  "number": d["budget"],
-                                  "always_show_circle": true,
-                                  "class": "budget",
-                                  "children": [{
+                                "number": d["budget"],
+                                "always_show_circle": true,
+                                "class": "budget",
+                                "children": [{
                                     "name": d["title"],
                                     "class": "title",
                                     "year": d["year"],
@@ -47,11 +50,16 @@ d3.csv(csv)
             )
         });
 
+        // checks if the movie already appeared in the genre
+        function checkIfMovieInfcluded(movieName, genreChildren) {
+            return true;
+        }
 
         // Set the dimensions and margins of the diagram
-        var margin = {top: 20, right: 90, bottom: 30, left: 90},
+        var margin = {top: 20, right: 90, bottom: 30, left: 300},
             width = 1300 - margin.left - margin.right,
-            height = 1800 - margin.top - margin.bottom;
+            height = 1800 - margin.top - margin.bottom,
+            defaultHeight = height;
 
         // append the svg object to the body of the page
         // appends a 'group' element to 'svg'
@@ -148,11 +156,11 @@ d3.csv(csv)
                         return `${d.data.name} (${d.data.year})`
                     return d.data.name;
                  })
-                 .attr("fill", function(d) {
+                 .attr("class", function(d) {
                     if (d.data.class == "title" && d.data["is_winner"]) {
-                        return "red"
+                        return "best-picture-winner best-picture-text"
                     }
-                    return "black";
+                    return "best-picture-text";
                  })
                  .attr("cursor", function(d) {
                      if (d.data.class == "title")
@@ -226,7 +234,8 @@ d3.csv(csv)
                     tooltip.transition()
                         .duration(500)
                         .style("opacity", 0);
-                });
+                })
+                .attr("opacitiy", "80%");
 
 
             // Remove any exiting nodes
@@ -302,9 +311,11 @@ d3.csv(csv)
             // Toggle children on click.
             function click(d) {
                 if (d.children) {
+                    // close
                     d._children = d.children;
                     d.children = null;
                 } else {
+                    // open
                     d.children = d._children;
                     d._children = null;
                 }
@@ -322,3 +333,22 @@ d3.csv(csv)
             }
         }
     })
+
+// code for moving info window
+function get(){
+    var bpTop = $('#best-picture').offset().top;
+    var dist =  bpTop - $(window).scrollTop();
+    if (dist < 5) {
+        $('#movie-info').css({
+            "position": "fixed",
+            "top": 5
+        });
+    }
+    if (dist >= 5) {
+        $('#movie-info').css({
+            "position": "absolute",
+            "top": bpTop
+        });
+    }
+}
+$(window).scroll(get);
