@@ -56,7 +56,7 @@ d3.csv(csv)
         }
 
         // Set the dimensions and margins of the diagram
-        var margin = {top: 20, right: 90, bottom: 30, left: 90},
+        var margin = {top: 20, right: 90, bottom: 30, left: 300},
             width = 1300 - margin.left - margin.right,
             height = 1800 - margin.top - margin.bottom,
             defaultHeight = height;
@@ -333,3 +333,25 @@ d3.csv(csv)
             }
         }
     })
+
+// code for moving info window
+var initialTop = $("#movie-info").css("top");
+function get(){
+    var bpTop = $('#best-picture').offset().top;
+    var dist =  bpTop - $(window).scrollTop();
+    if (dist < 5) {
+        $('#movie-info').css({
+            "position": "fixed",
+            "top": 5
+        });
+    }
+    if (dist >= 5) {
+        $('#movie-info').css({
+            "position": "absolute",
+            "top": bpTop
+        });
+    }
+}
+
+get();
+$(window).scroll(get);
