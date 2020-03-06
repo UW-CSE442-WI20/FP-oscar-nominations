@@ -34,15 +34,10 @@
     text-align: center;
 }
 
-#best-atress-container {
-    width: 35%;
-}
-
-#best-actor-container {
-    width: 30%;
+#best-actor-container, #best-atress-container {
+    width: 650px;
 }
 
 #best-actor-and-actress-analysis-container {
-    padding-left: 5%;
     width: 25%;
 }
