@@ -1,32 +1,33 @@
 // set the dimensions and margins of the graph
-var width =  $(window).width() * 0.7
+var width =  $(window).width() * 0.6
 var height = 550
-
+var char_generated = document.getElementById("best_dots").childElementCount > 0;
 // append the svg object to the body of the page
 var svg = d3.select("#best_dots")
   .append("svg")
     .attr("width", width)
     .attr("height", 550)
     .attr("align", 'center')
-// create dummy data -> just one element per circle
-
+var lsvg = d3.select("#dots_legend").attr("width", width * 0.2).attr("height", height)
 var award = 'st'
 
 const dfe = require('./oscar_demos_def.csv');
 d3.csv(dfe, function(data) {
+
+    var awards = d3.map(data, function(d){return d.award;}).keys();
+    console.log(awards)
+
 
     data = data.filter(function(d){
       var cond = d['award'].includes(award);
       return cond;
     })
 
-    var unique = d3.set(data, function(d) {return d.race_ethnicity});
+    var unique = d3.map(data, function(d){return d.race_ethnicity;}).keys();
     var x_range = [];
-    var incrementor =  width / unique.size()
-    for (var i = 1; i <= unique.size(); i++) {
-        x_range.push(i);
+    for (var i = 1; i <= unique.length; i++) {
+        x_range.push(width * 0.95 * i / unique.length);
     }
-    console.log(x_range)
 
     // A scale that gives a X target position for each group
     var x = d3.scaleOrdinal()
@@ -36,16 +37,31 @@ d3.csv(dfe, function(data) {
     // A color scale
     var color = d3.scaleOrdinal()
       .domain(unique)
-      .range([ "#FFFFFF", "#00BA38", "#619CFF", "#d712a3", "#e0cb3f", "#9d34c8"])
+      .range(d3.schemeSet1)
+    lsvg.selectAll("dots")
+      .data(unique)
+      .enter()
+      .append("circle")
+        .attr("cx", 80)
+        .attr("cy", function(d,i){ return ((height / 2 ) - (unique.length * 15) + 25) + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+        .attr("r", 7)
+        .style("fill", function(d){return color(d)})
 
-      // create a tooltip
+    lsvg.selectAll("mylabels")
+      .data(unique)
+      .enter()
+      .append("text")
+        .attr("x", 120)
+        .attr("y", function(d,i){ return ((height / 2 ) - (unique.length * 15) + 25) + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+        .style("fill", function(d){ return color(d)})
+        .text(function(d){ return d})
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle")
     var Tooltip = d3.select("#best_dots")
       .append("div")
       .style("opacity", 1)
-      .html("[INSTRUCTIONS FOR VISUALIZATION GOES HERE]")
+      .html("Hover over a dot for the oscar winner's name and movie!")
       .attr("class", "tooltip")
-      // .style("background-color", "white")
-      // .style("border", "solid")
       .style("color", 'white')
       .style("border-width", "2px")
       .style("border-radius", "5px")
@@ -57,8 +73,6 @@ d3.csv(dfe, function(data) {
       .style("opacity", 1)
       .html("Double Click a dot for more information")
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
       .style("border-width", "2px")
       .style("border-radius", "5px")
       .style("padding", "5px")
@@ -68,12 +82,15 @@ d3.csv(dfe, function(data) {
     var mouseover = function(d) {
       Tooltip
         .transition()
-        .duration(100)
+        .duration(200)
         .style("opacity", 1)
       d3.select(this)
         .transition()
-        .duration(100)
-        .attr("r", 10)
+        .duration(200)
+        .attr("r", 8)
+        // .attr("stroke", "#eca233")
+        .attr("stroke", "#ffffff")
+        .style("stroke-width", 2)
     }
     var mousemove = function(d) {
       Tooltip
@@ -84,14 +101,15 @@ d3.csv(dfe, function(data) {
     var mouseleave = function(d) {
       Tooltip
         .transition()
-        .duration(100)
+        .duration(200)
         .style("opacity", 1)
         .style("left", (d3.mouse(this)[0]+30) + "px")
       .style("top", (d3.mouse(this)[1]+30) + "px")
       d3.select(this)
         .transition()
-        .duration(100)
-        .attr("r", 5)
+        .duration(200)
+        .attr("r", 4)
+        .style("stroke-width", 0)
     }
 
 
@@ -101,13 +119,14 @@ d3.csv(dfe, function(data) {
       .data(data)
       .enter()
       .append("circle")
-        .attr("r", 5)
-        .attr("cx", $(window).width() * 0.66 / unique.size())
+        .attr("r", 4)
+        // .attr("cx", $(window).width() * 0.66 / unique.length)
+        .attr("cx", width / 2)
         .attr("cy", height / 2)
         .style("fill", function(d){ return color(d.race_ethnicity)})
         .style("fill-opacity", 0.9)
         .attr("stroke", "#D8A75E")
-        .style("stroke-width", 1)
+        .style("stroke-width", 0)
         .call(d3.drag() // call specific function when circle is dragged
              .on("start", dragstarted)
              .on("drag", dragged)
@@ -118,13 +137,16 @@ d3.csv(dfe, function(data) {
          .on("mouseleave", mouseleave)
          .on("dblclick", doubleclick);;
 
+
+
+
     // Features of the forces applied to the nodes:
     var simulation = d3.forceSimulation()
-        .force("x", d3.forceX().strength(0.2).x( function(d){ return $(window).width() * x(d.race_ethnicity) * 0.7 / (unique.size()) } ))
-        .force("y", d3.forceY().strength(0.04).y( height/2 ))
-        .force("center", d3.forceCenter().x($(window).width() * 0.66 / unique.size()).y(height / 2)) // Attraction to the center of the svg area
-        .force("charge", d3.forceManyBody().strength(1)) // Nodes are attracted one each other of value is > 0
-        .force("collide", d3.forceCollide().strength(.4).radius(11).iterations(1)) // Force that avoids circle overlapping
+        .force("x", d3.forceX().strength(0.3).x( function(d){ return x(d.race_ethnicity) } ))
+        .force("y", d3.forceY().strength(0.2).y( height/2 ))
+        .force("center", d3.forceCenter().x($(window).width() * 0.6 / unique.length).y(height / 2)) // Attraction to the center of the svg area
+        .force("charge", d3.forceManyBody().strength(-10)) // Nodes are attracted one each other of value is > 0
+        .force("collide", d3.forceCollide().strength(.3).radius(9).iterations(1)) // Force that avoids circle overlapping
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
