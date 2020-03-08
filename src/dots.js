@@ -2,6 +2,7 @@
 var width =  $(window).width() * 0.6
 var height = 550
 var char_generated = document.getElementById("best_dots").childElementCount > 0;
+var radius = 4
 // append the svg object to the body of the page
 var svg = d3.select("#best_dots")
   .append("svg")
@@ -12,13 +13,11 @@ var lsvg = d3.select("#dots_legend").attr("width", width * 0.2).attr("height", h
 var award = 'st'
 
 const dfe = require('./oscar_demos_def.csv');
-d3.csv(dfe, function(data) {
+d3.csv(dfe, function(raw_data) {
 
-    var awards = d3.map(data, function(d){return d.award;}).keys();
-    console.log(awards)
+    var awards = d3.map(raw_data, function(d){return d.award;}).keys();
 
-
-    data = data.filter(function(d){
+    data = raw_data.filter(function(d){
       var cond = d['award'].includes(award);
       return cond;
     })
@@ -44,7 +43,7 @@ d3.csv(dfe, function(data) {
       .append("circle")
         .attr("cx", 80)
         .attr("cy", function(d,i){ return ((height / 2 ) - (unique.length * 15) + 25) + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
-        .attr("r", 7)
+        .attr("r", radius)
         .style("fill", function(d){return color(d)})
 
     lsvg.selectAll("mylabels")
@@ -87,7 +86,7 @@ d3.csv(dfe, function(data) {
       d3.select(this)
         .transition()
         .duration(200)
-        .attr("r", 8)
+        .attr("r", 2 * radius)
         // .attr("stroke", "#eca233")
         .attr("stroke", "#ffffff")
         .style("stroke-width", 2)
@@ -108,7 +107,7 @@ d3.csv(dfe, function(data) {
       d3.select(this)
         .transition()
         .duration(200)
-        .attr("r", 4)
+        .attr("r", radius)
         .style("stroke-width", 0)
     }
 
@@ -119,7 +118,7 @@ d3.csv(dfe, function(data) {
       .data(data)
       .enter()
       .append("circle")
-        .attr("r", 4)
+        .attr("r", radius)
         // .attr("cx", $(window).width() * 0.66 / unique.length)
         .attr("cx", width / 2)
         .attr("cy", height / 2)
@@ -137,8 +136,13 @@ d3.csv(dfe, function(data) {
          .on("mouseleave", mouseleave)
          .on("dblclick", doubleclick);;
 
-
-
+    var coll_rad = new Map()
+    coll_rad.set("Best Director", 1.5 * radius);
+    coll_rad.set("Best Actor", 1.5 * radius);
+    coll_rad.set("Best Supporting Actor", 1.5 * radius);
+    coll_rad.set("Best Actress", 1.5 * radius);
+    coll_rad.set("Best Supporting Actress", 1.5 * radius);
+    console.log(coll_rad)
 
     // Features of the forces applied to the nodes:
     var simulation = d3.forceSimulation()
@@ -146,7 +150,7 @@ d3.csv(dfe, function(data) {
         .force("y", d3.forceY().strength(0.2).y( height/2 ))
         .force("center", d3.forceCenter().x($(window).width() * 0.6 / unique.length).y(height / 2)) // Attraction to the center of the svg area
         .force("charge", d3.forceManyBody().strength(-10)) // Nodes are attracted one each other of value is > 0
-        .force("collide", d3.forceCollide().strength(.3).radius(9).iterations(1)) // Force that avoids circle overlapping
+        .force("collide", d3.forceCollide().strength(1).radius(function(d){return coll_rad.get(d.award)} ).iterations(1)) // Force that avoids circle overlapping
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
@@ -159,7 +163,7 @@ d3.csv(dfe, function(data) {
         });
     function doubleclick(d) {
       Info_box
-      .html("Name: " + d.person + "<br>Movie: " + d.movie + "<br><a href =\"" + d.movie_IMDB_Link + "\" target = _blank> IMDb</a>")
+      .html("Name: " + d.person + "<br>Movie: <a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + "</a>")
       .transition()
       .duration(100)
     }
@@ -178,4 +182,39 @@ d3.csv(dfe, function(data) {
       d.fx = null;
       d.fy = null;
     }
+
+    d3.selectAll(".checkbox").on("change",update);
+      update();
+
+
+      function update(){
+        var choices = [];
+                d3.selectAll(".checkbox").each(function(d){
+                  cb = d3.select(this);
+                  if(cb.property("checked")){
+                    choices.push(cb.property("value"));
+                  }
+                });
+        data = raw_data.filter(function(d){return !choices.includes(d.award);});
+        svg.selectAll("circle")
+        .filter(function(d){return !choices.includes(d.award);})
+        .transition()
+        .duration(1000)
+        .style("opacity", 0).attr("r", 0)
+        svg.selectAll("circle")
+        .filter(function(d){return choices.includes(d.award);})
+        .transition()
+        .duration(1000)
+        .style("opacity", 0.9).attr("r", radius)
+
+        for (var i = 0; i < awards.length; i++) {
+            if (choices.includes(awards[i])) {
+              coll_rad.set(awards[i], 1.5 * radius);
+            } else {
+                coll_rad.set(awards[i], 0);
+            }
+        }
+
+
+      }
   })
