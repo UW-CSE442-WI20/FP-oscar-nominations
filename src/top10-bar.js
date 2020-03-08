@@ -15,16 +15,16 @@ var svg = d3.select("#top10")
 // get the data
 const test = require('./imdb_rated_nominees.csv')
 d3.csv(test, function(data) {
+
 function update(yr) {
   // filter earlier; not quite sure if this is correct, but
   // at least bar chart is not crowded anymore
-  data = data.filter(function(d) {
-    return parseInt(d.Year) == yr;
-  })
 
-  // var y = d3.scaleBand()
-  //           .range([height, 0])
-  //           .padding(0.1);
+  data = data.filter(function(d) {
+    return parseInt(d.Year) === 2000;
+  });
+
+  console.log(data);
 
   // X axis
   var x = d3.scaleLinear()
@@ -60,23 +60,14 @@ function update(yr) {
         .attr("height", y.bandwidth() )
         .attr("fill", "#D8A75E")
 
-    // y = d3.scaleBand()
-    //   .range([ 0, height ])
-    //   .domain(data.map(function(d) {
-    //     // data.filter(function(d){return d.Year == yr;})
-    //     return d.Name; }))
-    //   .padding(.1);
-    // svg.append("g")
-    //   .call(d3.axisLeft(y))
-    //   .selectAll("text")
-    //     .style("fill", "ffffff");
+    d3.select("#mySlider").on("change", function(d){
+      update(parseInt(this.value));
+    });
+
   }
 
-  update(1931); // call update once so bars will be generated on load
 
-  d3.select("#mySlider").on("change", function(d){
-    year = parseInt(this.value); // need to parse string to int
-    console.log(year);
-    update(year);
-  })
+
+  update(year); // call update once so bars will be generated on load
+
 });
