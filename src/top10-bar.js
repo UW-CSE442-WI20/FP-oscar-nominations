@@ -22,16 +22,18 @@ d3.csv(test, function(data) {
       if (parseInt(d.Year) == yr)
       return d.Year;
     });
-
+    var duration = 1000;
   // X axis
   var x = d3.scaleLinear()
     .domain([0, 10])
     .range([ 0, width]);
-  svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x))
-    .selectAll("text")
-    .style("fill", "ffffff");
+
+    svg.append('g')
+        .attr('transform', 'translate(0, ' + (height) + ')')
+        .attr('class', 'x axis');
+
+    svg.append('g')
+        .attr('class', 'y axis');
 
   // Y axis
   var y = d3.scaleBand()
@@ -39,12 +41,6 @@ d3.csv(test, function(data) {
     .domain(dataNew.map(function(d) {
       return d.Name; }))
     .padding(.1);
-
-  svg.append("g")
-    .attr("id", "bar-chart-y-axis")
-    .call(d3.axisLeft(y))
-    .selectAll("text")
-      .style("fill", "ffffff");
 
     var bars = svg.selectAll(".bar")
         .remove()
@@ -58,32 +54,52 @@ d3.csv(test, function(data) {
         .attr("fill", "#D8A75E")
         .attr("width", function(d) { return x(d.averageRating); })
         .attr("height", y.bandwidth() )
-        .attr('y', height)
         .attr("x", x(0) )
         .attr("y", function(d) { return y(d.Name); })
         .merge(bars)
         .transition()
         .duration(1000)
 
-    // svg.selectAll("myRect")
-    //   .data(dataNew)
-    //   .enter()
-    //   .append("rect")
-    //     .attr("x", x(0) )
-    //     .attr("y", function(d) { return y(d.Name); })
-    //     .attr("width", function(d) { return x(d.averageRating); })
-    //     .attr("height", y.bandwidth() )
-    //     .attr("fill", "#D8A75E")
-    //     .transition()
-    //     .duration(1000)
-    //
-    // svg.selectAll("myRect")
-    //   .exit()
-    //   .transition()
-    //   .duration(1000)
-    //   .attr("x", x(0) )
-    //   .attr("y", function(d) { return y(d.Name); })
-    //   .remove();
+    var labels = svg.selectAll('.label')
+        .data(dataNew);
+
+    /*var new_labels = labels
+          .enter()
+          .append('text')
+          .attr('class', 'label')
+          .attr('opacity', 0)
+          .attr('y', height)
+          .attr('fill', 'white')
+          .attr('text-anchor', 'middle')
+
+      new_labels.merge(labels)
+          .transition()
+          .duration(duration)
+          .attr('opacity', 1)
+          .attr("x", x(0) )
+          .attr("y", function(d) { return y(d.Name); })
+          .text(function(d) {
+              return d;
+          });
+
+      labels
+          .exit()
+          .transition()
+          .duration(duration)
+          .attr("y", function(d) { return y(d.Name); })
+          .attr('opacity', 0)
+          .remove();
+
+*/
+      svg.select('.y.axis')
+          .transition()
+          .duration(duration)
+          .call(d3.axisLeft(y))
+
+      svg.select('.x.axis')
+          .transition()
+          .duration(duration)
+          .call(d3.axisBottom(x));
 });
 
 }
