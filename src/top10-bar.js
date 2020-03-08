@@ -2,7 +2,7 @@ var margin = {top: 10, right: 30, bottom: 30, left: 150},
     width = 900 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var year = 1928;
+var year = 2000;
 // append the svg object to the body of the page
 var svg = d3.select("#top10")
   .append("svg")
@@ -14,16 +14,14 @@ var svg = d3.select("#top10")
 
 // get the data
 const test = require('./imdb_rated_nominees.csv')
-d3.csv(test, function(data) {
-
 function update(yr) {
-  // filter earlier; not quite sure if this is correct, but
-  // at least bar chart is not crowded anymore
-  var dataNew = data.filter(function(d) {
-    if (parseInt(d.Year) == yr)
-    return d.Year;
-  });
-
+d3.csv(test, function(data) {
+    // filter earlier; not quite sure if this is correct, but
+    // at least bar chart is not crowded anymore
+    var dataNew = data.filter(function(d) {
+      if (parseInt(d.Year) == yr)
+      return d.Year;
+    });
 
   // X axis
   var x = d3.scaleLinear()
@@ -33,7 +31,7 @@ function update(yr) {
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x))
     .selectAll("text")
-      .style("fill", "ffffff");
+    .style("fill", "ffffff");
 
   // Y axis
   var y = d3.scaleBand()
@@ -48,25 +46,52 @@ function update(yr) {
     .selectAll("text")
       .style("fill", "ffffff");
 
-    svg.selectAll("myRect")
-      // .data(data.filter(function(d){return d.Year == yr;}))
-      .data(dataNew)
-      .enter()
-      .append("rect")
-        .attr("x", x(0) )
-        .attr("y", function(d) { return y(d.Name); })
+    var bars = svg.selectAll(".bar")
+        .remove()
+        .exit()
+        .data(dataNew);
+
+    bars
+        .enter()
+        .append('rect')
+        .attr('class', 'bar')
+        .attr("fill", "#D8A75E")
         .attr("width", function(d) { return x(d.averageRating); })
         .attr("height", y.bandwidth() )
-        .attr("fill", "#D8A75E")
+        .attr('y', height)
+        .attr("x", x(0) )
+        .attr("y", function(d) { return y(d.Name); })
+        .merge(bars)
+        .transition()
+        .duration(1000)
 
+    // svg.selectAll("myRect")
+    //   .data(dataNew)
+    //   .enter()
+    //   .append("rect")
+    //     .attr("x", x(0) )
+    //     .attr("y", function(d) { return y(d.Name); })
+    //     .attr("width", function(d) { return x(d.averageRating); })
+    //     .attr("height", y.bandwidth() )
+    //     .attr("fill", "#D8A75E")
+    //     .transition()
+    //     .duration(1000)
+    //
+    // svg.selectAll("myRect")
+    //   .exit()
+    //   .transition()
+    //   .duration(1000)
+    //   .attr("x", x(0) )
+    //   .attr("y", function(d) { return y(d.Name); })
+    //   .remove();
+});
 
-  }
-
-  d3.select("#mySlider").on("input", function(d){
-    year = parseInt(this.value);
-    update(year);
-  });
+}
 
   update(year); // call update once so bars will be generated on load
 
+
+d3.select("#mySlider").on("input", function(d){
+  year = parseInt(this.value);
+  update(year);
 });
