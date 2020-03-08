@@ -19,12 +19,11 @@ d3.csv(test, function(data) {
 function update(yr) {
   // filter earlier; not quite sure if this is correct, but
   // at least bar chart is not crowded anymore
-
-  data = data.filter(function(d) {
-    return parseInt(d.Year) === 2000;
+  var dataNew = data.filter(function(d) {
+    if (parseInt(d.Year) == yr)
+    return d.Year;
   });
 
-  console.log(data);
 
   // X axis
   var x = d3.scaleLinear()
@@ -39,7 +38,7 @@ function update(yr) {
   // Y axis
   var y = d3.scaleBand()
     .range([ 0, height ])
-    .domain(data.map(function(d) {
+    .domain(dataNew.map(function(d) {
       return d.Name; }))
     .padding(.1);
 
@@ -51,7 +50,7 @@ function update(yr) {
 
     svg.selectAll("myRect")
       // .data(data.filter(function(d){return d.Year == yr;}))
-      .data(data)
+      .data(dataNew)
       .enter()
       .append("rect")
         .attr("x", x(0) )
@@ -60,13 +59,13 @@ function update(yr) {
         .attr("height", y.bandwidth() )
         .attr("fill", "#D8A75E")
 
-    d3.select("#mySlider").on("change", function(d){
-      update(parseInt(this.value));
-    });
 
   }
 
-
+  d3.select("#mySlider").on("input", function(d){
+    year = parseInt(this.value);
+    update(year);
+  });
 
   update(year); // call update once so bars will be generated on load
 
