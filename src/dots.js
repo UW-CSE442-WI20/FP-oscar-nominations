@@ -10,9 +10,9 @@ var svg = d3.select("#best_dots")
     .attr("width", width)
     .attr("height", 550)
     .attr("align", 'center')
-var lsvg = d3.select("#dots_legend").attr("width", width * 0.2).attr("height", height)
+var lsvg = d3.select("#dots_legend").attr("width", width * 0.125).attr("height", height)
 var award = 'st'
-var duration_sec = 700
+var duration_sec = 1000
 
 const dfe = require('./oscar_demos_def.csv');
 d3.csv(dfe, function(raw_data) {
@@ -57,7 +57,7 @@ d3.csv(dfe, function(raw_data) {
         .text(function(d){ return d})
         .attr("text-anchor", "left")
         .style("alignment-baseline", "middle")
-    var Tooltip = d3.select("#best_dots")
+    var Tooltip = d3.select("#info_box")
       .append("div")
       .style("opacity", 1)
       .html("Hover over a dot for the oscar winner's name and movie!")
@@ -66,12 +66,12 @@ d3.csv(dfe, function(raw_data) {
       .style("border-width", "2px")
       .style("border-radius", "5px")
       .style("padding", "5px")
+      .style("padding-left", "5px")
       .attr('align', 'left')
-
     var Info_box = d3.select("#info_box")
       .append("div")
       .style("opacity", 1)
-      .html("Click a dot for more information")
+      .html("Click a dot for more information   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;")
       .attr("class", "tooltip")
       .style("border-width", "2px")
       .style("border-radius", "5px")
@@ -79,11 +79,13 @@ d3.csv(dfe, function(raw_data) {
       .style("padding", "15px")
       .attr('align', 'left')
 
+
+
     // Three function that change the tooltip when user hover / move / leave a cell
     var mouseover = function(d) {
       Tooltip
         .transition()
-        .duration(200)
+        .duration(100)
         .style("opacity", 1)
       d3.select(this)
         .transition()
@@ -95,17 +97,14 @@ d3.csv(dfe, function(raw_data) {
     }
     var mousemove = function(d) {
       Tooltip
-        .html("Name: " + d.person +"<br>Movie: "+d.movie)
-        .style("left", (d3.mouse(this)[0]+30) + "px")
-        .style("top", (d3.mouse(this)[1]+30) + "px")
+        .html("<strong>You're hovering over</strong><br><br>Name: " + d.person +"<br>Movie: "+d.movie+"<br>")
     }
     var mouseleave = function(d) {
       Tooltip
         .transition()
-        .duration(200)
-        .style("opacity", 1)
-        .style("left", (d3.mouse(this)[0]+30) + "px")
-      .style("top", (d3.mouse(this)[1]+30) + "px")
+        .duration(300)
+        .style("opacity", 0)
+      // .html("")
       d3.select(this)
         .transition()
         .duration(200)
@@ -140,11 +139,11 @@ d3.csv(dfe, function(raw_data) {
 
     // Features of the forces applied to the nodes:
     var   simulation = d3.forceSimulation()
-          .force("x", d3.forceX().strength(0.054).x( function(d){ return x(d[selected]) } ))
-          .force("y", d3.forceY().strength(0.036).y( height/2 ))
-          .force("charge", d3.forceManyBody().strength(-3)) // Nodes are attracted one each other of value is > 0
+          .force("x", d3.forceX().strength(0.03).x( function(d){ return x(d[selected]) } ))
+          .force("y", d3.forceY().strength(0.02).y( height/2 ))
+          .force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
           .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
-          .velocityDecay(0.2)
+          .velocityDecay(0.25)
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
@@ -173,7 +172,7 @@ d3.csv(dfe, function(raw_data) {
         .text(function(d){return d[1];})
     function doubleclick(d) {
       Info_box
-      .html(
+      .html("<strong>You've clicked on</strong><br><br>"+
         "<strong>Name</strong>: <a href = \"" + d.bioLink +  "\" target = _blank> " + d.person + "</a><br>" +
         "<strong>Movie</strong>: <a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
         "<strong>Year Awarded</strong>: " + d.year_of_award + "<br>" +
@@ -221,11 +220,11 @@ d3.csv(dfe, function(raw_data) {
           .range(d3.schemeSet1)
 
           simulation = d3.forceSimulation()
-              .force("x", d3.forceX().strength(0.054).x( function(d){ return x(d[selected]) } ))
-              .force("y", d3.forceY().strength(0.036).y( height/2 ))
-              .force("charge", d3.forceManyBody().strength(-3)) // Nodes are attracted one each other of value is > 0
+              .force("x", d3.forceX().strength(0.03).x( function(d){ return x(d[selected]) } ))
+              .force("y", d3.forceY().strength(0.02).y( height/2 ))
+              .force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
               .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
-              .velocityDecay(0.2)
+              .velocityDecay(0.25)
 
         // A color scale
         color = d3.scaleOrdinal()
@@ -293,11 +292,11 @@ d3.csv(dfe, function(raw_data) {
           .range(d3.schemeSet1)
 
           simulation = d3.forceSimulation()
-              .force("x", d3.forceX().strength(0.054).x( function(d){ return x(d[selected]) } ))
-              .force("y", d3.forceY().strength(0.036).y( height/2 ))
-              .force("charge", d3.forceManyBody().strength(-3)) // Nodes are attracted one each other of value is > 0
+              .force("x", d3.forceX().strength(0.03).x( function(d){ return x(d[selected]) } ))
+              .force("y", d3.forceY().strength(0.02).y( height/2 ))
+              .force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
               .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
-              .velocityDecay(0.2)
+              .velocityDecay(0.25)
 
           // Apply these forces to the nodes and update their positions.
           // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
