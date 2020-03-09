@@ -356,18 +356,31 @@ d3.csv(csv)
 // code for moving info window
 function get(){
     var bpTop = $('#best-picture').offset().top;
-    var dist =  bpTop - $(window).scrollTop();
-    if (dist < 5) {
-        $('#movie-info').css({
-            "position": "fixed",
-            "top": 5
-        });
-    }
-    if (dist >= 5) {
+    var bpBottom = bpTop + $('#best-picture').height();
+    var windowTop = $(window).scrollTop();
+    var dist =  bpTop - windowTop;
+    if (windowTop + $('#movie-overview').height() >= bpBottom - 100) {
         $('#movie-info').css({
             "position": "absolute",
-            "top": bpTop
+            "bottom": 5,
+            "top": null
         });
+    } else {
+        if (dist < 5) {
+            $('#movie-info').css({
+                "position": "fixed",
+                "top": 5,
+                "bottom": null
+            });
+        }
+        if (dist >= 5) {
+            $('#movie-info').css({
+                "position": "absolute",
+                "top": bpTop
+            });
+        }
     }
 }
 $(window).scroll(get);
+// incase TA likes to do random refresh
+setTimeout(get, 500);
