@@ -12,6 +12,7 @@ var svg = d3.select("#best_dots")
     .attr("align", 'center')
 var lsvg = d3.select("#dots_legend").attr("width", width * 0.2).attr("height", height)
 var award = 'st'
+var duration_sec = 700
 
 const dfe = require('./oscar_demos_def.csv');
 d3.csv(dfe, function(raw_data) {
@@ -20,14 +21,16 @@ d3.csv(dfe, function(raw_data) {
 
     data = raw_data
 
-    var unique = d3.map(data, function(d){return d[selected];}).keys();
+    var unique = d3.map(raw_data, function(d){return d[selected];}).keys().sort(function(x, y){
+       return d3.ascending(x[0], y[0]);
+    });
     var x_range = [];
     for (var i = 1; i <= unique.length; i++) {
-        x_range.push((width * 0.25) + width * 0.7 * i / unique.length);
+        x_range.push( width * 0.8 * i / unique.length);
     }
 
     // A scale that gives a X target position for each group
-    var x = d3.scaleOrdinal()
+    x = d3.scaleOrdinal()
       .domain(unique)
       .range(x_range)
 
@@ -125,6 +128,10 @@ d3.csv(dfe, function(raw_data) {
         .style("fill-opacity", 0.9)
         .attr("stroke", "#D8A75E")
         .style("stroke-width", 0)
+        .call(d3.drag() // call specific function when circle is dragged
+             .on("start", dragstarted)
+             .on("drag", dragged)
+             .on("end", dragended))
 
          .on("mouseover", mouseover)
          .on("mousemove", mousemove)
@@ -132,12 +139,12 @@ d3.csv(dfe, function(raw_data) {
          .on("click", doubleclick);;
 
     // Features of the forces applied to the nodes:
-    var simulation = d3.forceSimulation()
-        .force("x", d3.forceX().strength(0.6).x( function(d){ return x(d[selected]) } ))
-        .force("y", d3.forceY().strength(0.4).y( height/2 ))
-        .force("center", d3.forceCenter().x($(window).width() * 0.7 / unique.length).y(height / 2)) // Attraction to the center of the svg area
-        .force("charge", d3.forceManyBody().strength(-25)) // Nodes are attracted one each other of value is > 0
-        .force("collide", d3.forceCollide().strength(1).radius(1.5 * radius).iterations(1)) // Force that avoids circle overlapping
+    var   simulation = d3.forceSimulation()
+          .force("x", d3.forceX().strength(0.054).x( function(d){ return x(d[selected]) } ))
+          .force("y", d3.forceY().strength(0.036).y( height/2 ))
+          .force("charge", d3.forceManyBody().strength(-3)) // Nodes are attracted one each other of value is > 0
+          .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
+          .velocityDecay(0.2)
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
@@ -168,7 +175,7 @@ d3.csv(dfe, function(raw_data) {
       Info_box
       .html(
         "<strong>Name</strong>: <a href = \"" + d.bioLink +  "\" target = _blank> " + d.person + "</a><br>" +
-        "<strong>Movie</strong>: <a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + " ( " + (d.year_of_award - 1) + ")</a><br><br>" +
+        "<strong>Movie</strong>: <a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
         "<strong>Year Awarded</strong>: " + d.year_of_award + "<br>" +
         "<strong>Birthplace</strong>: " + d.birthplace + "<br>" +
         "<strong>DOB</strong>: " + d.date_of_birth + "<br>" +
@@ -179,11 +186,12 @@ d3.csv(dfe, function(raw_data) {
         "<strong>Movie Runtime</strong>: " + d.runtime_bin + " Hours<br>"
       )
       .transition()
-      .duration(100)
+      .duration(duration_sec)
     }
 
     d3.selectAll(".checkbox").on("change",update);
       function update(){
+        simulation.stop()
 
         var choices = [];
                 d3.selectAll(".checkbox").each(function(d){
@@ -194,63 +202,12 @@ d3.csv(dfe, function(raw_data) {
                 });
         data = raw_data.filter(function(d){return choices.includes(d.award);});
 
-        svg.selectAll("circle").transition()
-        // .filter(function(d){return !choices.includes(d.award);})
-        .duration(1000)
-        .style("opacity", 0).attr("r", 0).remove()
-
-        // Initialize the circle: all located at the center of the svg area
-        var node = svg.append("g")
-          .selectAll("circle")
-          .data(data)
-          .enter()
-          .append("circle")
-            .attr("r", radius)
-            // .attr("cx", $(window).width() * 0.66 / unique.length)
-            .attr("cx", width / 2)
-            .attr("cy", height / 2)
-            .style("fill", function(d){ return color(d[selected])})
-            .style("fill-opacity", 0.9)
-            .attr("stroke", "#D8A75E")
-            .style("stroke-width", 0)
-            // .call(d3.drag() // call specific function when circle is dragged
-            //      .on("start", dragstarted)
-            //      .on("drag", dragged)
-            //      .on("end", dragended))
-             .on("mouseover", mouseover)
-             .on("mousemove", mousemove)
-             .on("mouseleave", mouseleave)
-             .on("click", doubleclick);;
-
-        // svg.selectAll("circle").transition().duration(1000).attr("r", radius)
-        // Features of the forces applied to the nodes:
-        simulation = d3.forceSimulation()
-            .force("x", d3.forceX().strength(0.6).x( function(d){ return x(d[selected]) } ))
-            .force("y", d3.forceY().strength(0.4).y( height/2 ))
-            .force("center", d3.forceCenter().x($(window).width() / unique.length).y(height / 2)) // Attraction to the center of the svg area
-            .force("charge", d3.forceManyBody().strength(-25)) // Nodes are attracted one each other of value is > 0
-            .force("collide", d3.forceCollide().strength(1).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
-
-        // Apply these forces to the nodes and update their positions.
-        // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
-        simulation
-            .nodes(data)
-            .on("tick", function(d){
-              node
-                  .attr("cx", function(d){ return d.x; })
-                  .attr("cy", function(d){ return d.y; })
-            });
-      }
-
-      d3.selectAll(".demographyDropdown").on("change", update_demos)
-      function update_demos(){
-        selected = d3.select(this)
-          .select("select")
-          .property("value")
-        unique = d3.map(raw_data, function(d){return d[selected];}).keys();
+        unique = d3.map(raw_data, function(d){return d[selected];}).keys().sort(function(x, y){
+           return d3.ascending(x[0], y[0]);
+        });
         x_range = [];
         for (var i = 1; i <= unique.length; i++) {
-            x_range.push((width * 0.25) + width * 0.7 * i / unique.length);
+            x_range.push( (width *0.8*i / (unique.length)));
         }
 
         // A scale that gives a X target position for each group
@@ -264,21 +221,87 @@ d3.csv(dfe, function(raw_data) {
           .range(d3.schemeSet1)
 
           simulation = d3.forceSimulation()
-              .force("x", d3.forceX().strength(0.6).x( function(d){ return x(d[selected]) } ))
-              .force("y", d3.forceY().strength(0.4).y( height/2 ))
-              .force("center", d3.forceCenter().x($(window).width() / unique.length).y(height / 2)) // Attraction to the center of the svg area
-              .force("charge", d3.forceManyBody().strength(-25)) // Nodes are attracted one each other of value is > 0
-              .force("collide", d3.forceCollide().strength(1).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
+              .force("x", d3.forceX().strength(0.054).x( function(d){ return x(d[selected]) } ))
+              .force("y", d3.forceY().strength(0.036).y( height/2 ))
+              .force("charge", d3.forceManyBody().strength(-3)) // Nodes are attracted one each other of value is > 0
+              .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
+              .velocityDecay(0.2)
+
+        // A color scale
+        color = d3.scaleOrdinal()
+          .domain(unique)
+          .range(d3.schemeSet1)
+
+        svg.selectAll("circle")
+        // .filter(function(d){return !choices.includes(d.award);})
+        .transition()
+        .duration(duration_sec)
+        .style("opacity", 0).attr("r", 0).remove()
+
+        // Initialize the circle: all located at the center of the svg area
+        node = svg.append("g")
+          .selectAll("circle")
+          .data(data)
+          .enter()
+          .append("circle")
+            .attr("r", radius)
+            // .attr("cx", $(window).width() * 0.66 / unique.length)
+            .attr("cx", width / 2)
+            .attr("cy", height / 2)
+            .style("fill", function(d){ return color(d[selected])})
+            .style("fill-opacity", 0.9)
+            .call(d3.drag() // call specific function when circle is dragged
+                 .on("start", dragstarted)
+                 .on("drag", dragged)
+                 .on("end", dragended))
+             .on("mouseover", mouseover)
+             .on("mousemove", mousemove)
+             .on("mouseleave", mouseleave)
+             .on("click", doubleclick);;
+       simulation
+           .nodes(data)
+           .on("tick", function(d){
+             node
+                 .attr("cx", function(d){ return d.x; })
+                 .attr("cy", function(d){ return d.y; })
+           });
+        simulation.restart()
+      }
+
+      d3.selectAll(".demographyDropdown").on("change", update_demos)
+      function update_demos(){
+        simulation.stop()
+        selected = d3.select(this)
+          .select("select")
+          .property("value")
+        unique = d3.map(raw_data, function(d){return d[selected];}).keys().sort(function(x, y){
+           return d3.ascending(x[0], y[0]);
+        });
+        x_range = [];
+        for (var i = 1; i <= unique.length; i++) {
+            x_range.push( (width *0.8*i / (unique.length)));
+        }
+
+        // A scale that gives a X target position for each group
+        x = d3.scaleOrdinal()
+          .domain(unique)
+          .range(x_range)
+
+        // A color scale
+        color = d3.scaleOrdinal()
+          .domain(unique)
+          .range(d3.schemeSet1)
+
+          simulation = d3.forceSimulation()
+              .force("x", d3.forceX().strength(0.054).x( function(d){ return x(d[selected]) } ))
+              .force("y", d3.forceY().strength(0.036).y( height/2 ))
+              .force("charge", d3.forceManyBody().strength(-3)) // Nodes are attracted one each other of value is > 0
+              .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
+              .velocityDecay(0.2)
 
           // Apply these forces to the nodes and update their positions.
           // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
-          simulation
-              .nodes(data)
-              .on("tick", function(d){
-                node
-                    .attr("cx", function(d){ return d.x; })
-                    .attr("cy", function(d){ return d.y; })
-              });
+
         lsvg.selectAll("circle").remove()
         lsvg.selectAll("circle")
           .data(unique)
@@ -301,11 +324,32 @@ d3.csv(dfe, function(raw_data) {
             .attr("text-anchor", "left")
             .style("alignment-baseline", "middle")
 
-        svg.selectAll('circle').transition().duration(1000)
+        svg.selectAll('circle').transition().duration(duration_sec)
         .style("fill", function(d){ return color(d[selected])})
         .attr("x", function(d){ return x(d[selected])})
+        simulation
+            .nodes(data)
+            .on("tick", function(d){
+              node
+                  .attr("cx", function(d){ return d.x; })
+                  .attr("cy", function(d){ return d.y; })
+            });
+        simulation.restart()
       }
 
-
+      function dragstarted(d) {
+        if (!d3.event.active) simulation.alphaTarget(.03).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      }
+      function dragged(d) {
+        d.fx = d3.event.x;
+        d.fy = d3.event.y;
+      }
+      function dragended(d) {
+        if (!d3.event.active) simulation.alphaTarget(.03);
+        d.fx = null;
+        d.fy = null;
+      }
 
   })
