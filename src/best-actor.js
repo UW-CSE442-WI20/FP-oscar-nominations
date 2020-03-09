@@ -62,7 +62,7 @@ d3.csv(csv)
         // Set the dimensions and margins of the diagram
         var margin = {top: 20, right: 90, bottom: 30, left: 200},
             width = 700 - margin.left - margin.right,
-            height = 900 - margin.top - margin.bottom;
+            height = 1200 - margin.top - margin.bottom;
 
         function invertX(X) {
             return width - X;
