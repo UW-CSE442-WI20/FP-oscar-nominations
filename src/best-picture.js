@@ -3,7 +3,8 @@ const csv = require("./best-picture.csv")
 const circleColors = {
     "base": "lightblue",
     "profit": "pink",
-    "profit-no-data": "orange"
+    "profit-no-data": "orange",
+    "opened": "rgb(255, 255, 255)"
 }
 const cicrleMinSize = 10;
 const profitSacleUnit = 10000000;
@@ -65,7 +66,7 @@ d3.csv(csv)
         // Set the dimensions and margins of the diagram
         var margin = {top: 20, right: 90, bottom: 30, left: 300},
             width = 1300 - margin.left - margin.right,
-            height = 2500 - margin.top - margin.bottom,
+            height = 1750 - margin.top - margin.bottom,
             defaultHeight = height;
 
         // append the svg object to the body of the page
@@ -144,7 +145,7 @@ d3.csv(csv)
                 })
                 .attr('r', 1e-6)
                 .style("fill", function(d) {
-                    return d._children ? "lightsteelblue" : "#fff";
+                    return d._children ? "lightsteelblue" : circleColors["opened"];
                 });
 
             // Add labels for the nodes
@@ -210,7 +211,7 @@ d3.csv(csv)
                     if (d.data.always_show_circle) {
                         return circleColors[d.data.class]
                     }
-                    return d._children ? circleColors["base"] : "#fff";
+                    return d._children ? circleColors["base"] : circleColors["opened"];
                 })
                 .style("stroke", function(d) {
                     if (d.data.class == "root" || d.data.class == "title") {
@@ -329,7 +330,19 @@ d3.csv(csv)
             }
 
             // Toggle children on click.
+            var avoidStackExplosion = true;
             function click(d) {
+                // if (avoidStackExplosion) {
+                //     document.querySelectorAll("g.genre").forEach(e => {
+                //         avoidStackExplosion = false;
+                //         var fillColor = e.querySelector("circle").style["fill"];
+                //         var clickEvent = new CustomEvent("click");
+                //             if (fillColor == circleColors["opened"])
+                //                 e.dispatchEvent(clickEvent);
+                //     });
+                //     avoidStackExplosion = true;
+                //     // setTimeout(10000, function(){});
+                // }
                 if (d.children) {
                     // close
                     d._children = d.children;
