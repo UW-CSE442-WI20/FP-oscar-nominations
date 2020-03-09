@@ -61,7 +61,7 @@ d3.csv(csv)
 
         // Set the dimensions and margins of the diagram
         var margin = {top: 20, right: 90, bottom: 30, left: 200},
-            width = 650 - margin.left - margin.right,
+            width = 700 - margin.left - margin.right,
             height = 900 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
@@ -153,8 +153,9 @@ d3.csv(csv)
                         .duration(200)
                         .style("opacity", .9);
                         tooltip.html(`Name: ${d.data.name}<br>
-                                      Age When Recieved Award: ${d.data.age_when_award}<br>
+                                      Year Awarded: ${d.data.award_year}<br>
                                       Country of Birth: ${d.data.country_of_birth}<br>
+                                      Age When Awarded: ${d.data.age_when_award}<br>
                                       An Award Movie: ${d.data.movie}`)
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");

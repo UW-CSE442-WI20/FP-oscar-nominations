@@ -36,9 +36,10 @@
 }
 
 #best-actor-container, #best-atress-container {
-    width: 650px;
+    width: 700px;
 }
 
 #best-actor-and-actress-analysis-container {
     width: 25%;
+    min-width: 300px;
 }

@@ -55,7 +55,8 @@ d3.csv(csv)
                                     "year": d["year"],
                                     "is_winner": d["is_winner"] == "TRUE",
                                     "overview": d.overview.replace(/[^\x00-\x7F]/g, "").replace(/[?]/g, ""),
-                                    "imdb_id": d["imdb_id"]
+                                    "imdb_id": d["imdb_id"],
+                                    "number":  profit
                                 }]
                 }
             )
@@ -358,13 +359,22 @@ d3.csv(csv)
             // change info display
             function changeInfoDisplay(d) {
                 var overview = document.getElementById("movie-overview");
-                overview.innerText = d.data.overview;
+                overview.innerHTML = `Movie Overview:<br>${d.data.overview}`;
                 var imdbLink = document.getElementById("imdb-link");
                 imdbLink.href = `https://www.imdb.com/title/${d.data.imdb_id}/`
                 imdbLink.innerText = "Link to IMDB"
                 var movieTitle = document.getElementById("movie-title");
-                movieTitle.innerText = d.data.name;
-
+                movieTitle.innerText = `Title: ${d.data.name}`;
+                var movieAwardYear = document.getElementById("movie-award-year");
+                movieAwardYear.innerText = `Year Awarded: ${d.data.year}`
+                var movieProfit = document.getElementById("movie-profit");
+                var num = d.data.number;
+                if (typeof(num) == "string") {
+                    num = "Data Unavaliable"
+                } else {
+                    num = "$" + num
+                }
+                movieProfit.innerText = `Profit: ${num}`;
             }
         }
     })
