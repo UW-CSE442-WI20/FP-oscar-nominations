@@ -1,4 +1,4 @@
-,Name,Movie,Edition,Year,Award,Win?,bioID,movieID,movieLink,bioLink,tconst,averageRating,numVotes
+,Name,Movie,Edition,Year,Award,Win,bioID,movieID,movieLink,bioLink,tconst,averageRating,numVotes
 0,Richard Barthelmess,The Noose,1,1928,LeadingActor,False,nm0001932,tt0019217,https://www.imdb.com/title/tt0019217/,https://www.imdb.com/name/nm0001932/,tt0019217,7.1,44
 1,Richard Barthelmess,The Patent Leather Kid,1,1928,LeadingActor,False,nm0001932,tt0018253,https://www.imdb.com/title/tt0018253/,https://www.imdb.com/name/nm0001932/,tt0018253,5.8,444
 2,Emil Jannings,The Last Command,1,1928,LeadingActor,True,nm0417837,tt0019071,https://www.imdb.com/title/tt0019071/,https://www.imdb.com/name/nm0417837/,tt0019071,8.0,3108

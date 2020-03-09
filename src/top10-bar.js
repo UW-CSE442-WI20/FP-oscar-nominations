@@ -1,8 +1,8 @@
 var margin = {top: 10, right: 30, bottom: 30, left: 150},
-    width = 900 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 750,
+    height = 470 - margin.top - margin.bottom;
 
-var year = 2000;
+var year = 1928;
 // append the svg object to the body of the page
 var svg = d3.select("#top10")
   .append("svg")
@@ -75,7 +75,14 @@ d3.csv(test, function(data) {
         .enter()
         .append('rect')
         .attr('class', 'bar')
-        .attr("fill", "#D8A75E")
+        .attr("fill", function(d) {
+          if (d.Win == 'True'){
+            return "#D7A764";
+          }
+          else {
+            return "#595959";
+          }
+        })
         .attr("width", function(d) { return x(d.averageRating); })
         .attr("height", y.bandwidth() )
         .attr("x", x(0) )
@@ -114,6 +121,8 @@ d3.csv(test, function(data) {
 
 
 d3.select("#mySlider").on("input", function(d){
+  let yearLabel = document.getElementById("yearTitle");
   year = parseInt(this.value);
+  yearLabel.innerText = year;
   update(year);
 });
