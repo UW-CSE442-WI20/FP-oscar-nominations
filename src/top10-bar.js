@@ -12,9 +12,33 @@ var svg = d3.select("#top10")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
+let label = document.getElementById("time-slider-label");
+let labels = [];
+labels[0] = 1928;
+
+for (let i = 1; i <= 92; i++){
+  labels[i] = labels[i-1]+1;
+}
+      for (let i = 0; i <= 92; i++) {
+        if (i % 4 == 0){
+          div = document.createElement("div");
+          div.innerText = labels[i]
+          label.appendChild(div);
+        }
+
+      }
+  // create the tick mark
+  let list = document.getElementById("steplist");
+  for (let i = 0; i < 92; i++) {
+      opt = document.createElement("option");
+      opt.innerText = i;
+      list.appendChild(opt);
+}
+
 // get the data
 const test = require('./imdb_rated_nominees.csv')
 function update(yr) {
+  if (yr == 1934) {yr = 1935;}
 d3.csv(test, function(data) {
     // filter earlier; not quite sure if this is correct, but
     // at least bar chart is not crowded anymore
@@ -58,39 +82,21 @@ d3.csv(test, function(data) {
         .attr("y", function(d) { return y(d.Name); })
         .merge(bars)
         .transition()
-        .duration(1000)
+        .duration(1000);
+
+    bars
+        .exit()
+        .remove();
+
+    bars
+        .transition()
+        .duration(duration)
+        .attr("width", function(d) { return x(d.averageRating); })
+        .attr("x", x(0));
 
     var labels = svg.selectAll('.label')
         .data(dataNew);
 
-    /*var new_labels = labels
-          .enter()
-          .append('text')
-          .attr('class', 'label')
-          .attr('opacity', 0)
-          .attr('y', height)
-          .attr('fill', 'white')
-          .attr('text-anchor', 'middle')
-
-      new_labels.merge(labels)
-          .transition()
-          .duration(duration)
-          .attr('opacity', 1)
-          .attr("x", x(0) )
-          .attr("y", function(d) { return y(d.Name); })
-          .text(function(d) {
-              return d;
-          });
-
-      labels
-          .exit()
-          .transition()
-          .duration(duration)
-          .attr("y", function(d) { return y(d.Name); })
-          .attr('opacity', 0)
-          .remove();
-
-*/
       svg.select('.y.axis')
           .transition()
           .duration(duration)

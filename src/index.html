@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
   type="text/css" />
     <link rel="stylesheet" href = "./style.css" type="text/css">
-        <link rel="stylesheet" href="best-picture.css">
+    <link rel="stylesheet" href="best-picture.css">
     <link rel="stylesheet" href="best-actor-and-actress.css">
   </head>
   <body>
@@ -86,8 +86,13 @@
         </div>
       </div>
       <div class="graph">
-        <input type="range" id="mySlider" min="1928" max="2020" value="1928">
+        <input type="range" id="mySlider" min="1928" max="2020" value="1928" list="steplist">
+        <div id="time-slider-label"></div>
+        <datalist id="steplist"></datalist>
         <div class="top10" id="top10"></div>
+      </div>
+      <div class="short-speech">
+
       </div>
     </div>
 
