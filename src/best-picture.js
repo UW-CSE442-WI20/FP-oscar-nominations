@@ -2,9 +2,13 @@ const d3 = require("d3");
 const csv = require("./best-picture.csv")
 const circleColors = {
     "base": "lightblue",
-    "budget": "orange",
-    "revenue": "pink",
+    "profit": "pink",
+    "profit-no-data": "orange",
+    "opened": "rgb(255, 255, 255)"
 }
+const cicrleMinSize = 10;
+const profitSacleUnit = 10000000;
+const profitDataUnAvaliableOffset = -50;
 
 // parse csv
 d3.csv(csv)
@@ -14,6 +18,9 @@ d3.csv(csv)
              .attr("id", "best-picture-tooltip")
             .style("opacity", 0);
 
+
+        var max = 0;
+        var min = 10000000000000000000000000000;
         // tree diagram: modified from https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
         // convert data to JSON...
         var treeData = {"name": "Genres", "children": [], "class": "root"};
@@ -25,40 +32,41 @@ d3.csv(csv)
                 treeData["children"].push({"class": "genre", "name": genre, "children": []})
                 genreArr.push(genre);
             }
-            var genreChildren = treeData["children"][genreArr.indexOf(genre)]["children"];
+            var profit = 0;
+            if (d["revenue"] == 0 ||  d["budget"] == 0) {
+                profit = "No Data Avaliable";
+            } else {
+                profit = d["revenue"] - d["budget"];
+            }
+            if (typeof(profit) != "string") {
+                max = Math.max(profit, max);
+                min = Math.min(profit, min);
+            }
             genreCounter[genreArr.indexOf(genre)] += 1;
             treeData["children"][genreArr.indexOf(genre)]["children"].push(
                 {
                     "name": "",
-                    "number":  d["revenue"],
-                    "class": "revenue",
+                    "number":  profit,
+                    "class": "profit",
                     "always_show_circle": true,
-                    "children": [{"name": "",
-                                "number": d["budget"],
-                                "always_show_circle": true,
-                                "class": "budget",
-                                "children": [{
+                    "children": [{
                                     "name": d["title"],
                                     "class": "title",
                                     "year": d["year"],
                                     "is_winner": d["is_winner"] == "TRUE",
-                                    "overview": d.overview,
+                                    "overview": d.overview.replace(/[^\x00-\x7F]/g, "").replace(/[?]/g, ""),
                                     "imdb_id": d["imdb_id"]
-                                    }]
                                 }]
                 }
             )
         });
 
-        // checks if the movie already appeared in the genre
-        function checkIfMovieInfcluded(movieName, genreChildren) {
-            return true;
-        }
-
+        console.log(max);
+        console.log(min);
         // Set the dimensions and margins of the diagram
         var margin = {top: 20, right: 90, bottom: 30, left: 300},
             width = 1300 - margin.left - margin.right,
-            height = 1800 - margin.top - margin.bottom,
+            height = 1750 - margin.top - margin.bottom,
             defaultHeight = height;
 
         // append the svg object to the body of the page
@@ -90,7 +98,7 @@ d3.csv(csv)
 
         // Collapse the node and all it's children
         function collapse(d) {
-            if(d.children && !Array("budget", "revenue").includes(d.data.class)) {
+            if(d.children && !Array("profit").includes(d.data.class)) {
                 d._children = d.children
                 d._children.forEach(collapse)
                 d.children = null
@@ -131,13 +139,13 @@ d3.csv(csv)
             // Add Circle for the nodes
             nodeEnter.append('circle')
                 .attr('class', function(d) {
-                    if (d.data.class == "title" || d.data.class == "root" )
+                    if (d.data.class == "root" || d.data.class == "title")
                         return `node ${d.data.class} none`;
                     return `node ${d.data.class}`
                 })
                 .attr('r', 1e-6)
                 .style("fill", function(d) {
-                    return d._children ? "lightsteelblue" : "#fff";
+                    return d._children ? "lightsteelblue" : circleColors["opened"];
                 });
 
             // Add labels for the nodes
@@ -165,10 +173,11 @@ d3.csv(csv)
                  .attr("cursor", function(d) {
                      if (d.data.class == "title")
                         return "pointer";
-                 }).on("click", function(d) {
+                 })
+                 .on("click", function(d) {
                     if (d.data.class == "title")
                         changeInfoDisplay(d);
-                 });
+                 })
 
             // UPDATE
             var nodeUpdate = nodeEnter.merge(node);
@@ -183,22 +192,34 @@ d3.csv(csv)
             // Update the node attributes and style
             nodeUpdate.select('circle.node')
                 .attr('r', function(d) {
-                    var minSize = 10;
-                    var size = 0;
-                    if (d.data.number) {
-                        size = Math.log2(d.data.number);
+                    return cicrleMinSize
+                })
+                .attr("cx", function(d) {
+                    if(d.data.class == "profit") {
+                        if (typeof(d.data.number) != "string")
+                            return d.data.number / profitSacleUnit;
+                        else {
+                            return profitDataUnAvaliableOffset;
+                        }
                     }
-                    return Math.max(minSize, size)
                 })
                 .style("fill", function(d) {
+                    if(d.data.class == "profit") {
+                        if (typeof(d.data.number) == "string")
+                            return circleColors["profit-no-data"];
+                    }
                     if (d.data.always_show_circle) {
                         return circleColors[d.data.class]
                     }
-                    return d._children ? circleColors["base"] : "#fff";
+                    return d._children ? circleColors["base"] : circleColors["opened"];
                 })
                 .style("stroke", function(d) {
                     if (d.data.class == "root" || d.data.class == "title") {
                         return "#fff"
+                    }
+                    if(d.data.class == "profit") {
+                        if (typeof(d.data.number) == "string")
+                            return circleColors["profit-no-data"];
                     }
                     if (d.data.always_show_circle) {
                         return circleColors[d.data.class]
@@ -211,10 +232,10 @@ d3.csv(csv)
                 })
                 .on("mouseover", function(d) {
                     var className = d.data.class;
-                    if (className != "revenue" && className != "budget")
+                    if (className != "profit")
                         return function() {};
                     var num = d.data.number;
-                    if (num == 0) {
+                    if (typeof(num) == "string") {
                         num = "Data Unavaliable"
                     } else {
                         num = "$" + num
@@ -222,14 +243,14 @@ d3.csv(csv)
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", .9);
-                        tooltip.html(`${className.charAt(0).toUpperCase()}${className.substring(1,)}:
+                        tooltip.html(`Profit:
                                         <br/>${num}`)
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
                     })
                 .on("mouseout", function(d) {
                     var className = d.data.class;
-                    if (className != "revenue" && className != "budget")
+                    if (className != "profit")
                         return function() {};
                     tooltip.transition()
                         .duration(500)
@@ -309,7 +330,19 @@ d3.csv(csv)
             }
 
             // Toggle children on click.
+            var avoidStackExplosion = true;
             function click(d) {
+                // if (avoidStackExplosion) {
+                //     document.querySelectorAll("g.genre").forEach(e => {
+                //         avoidStackExplosion = false;
+                //         var fillColor = e.querySelector("circle").style["fill"];
+                //         var clickEvent = new CustomEvent("click");
+                //             if (fillColor == circleColors["opened"])
+                //                 e.dispatchEvent(clickEvent);
+                //     });
+                //     avoidStackExplosion = true;
+                //     // setTimeout(10000, function(){});
+                // }
                 if (d.children) {
                     // close
                     d._children = d.children;
@@ -329,6 +362,8 @@ d3.csv(csv)
                 var imdbLink = document.getElementById("imdb-link");
                 imdbLink.href = `https://www.imdb.com/title/${d.data.imdb_id}/`
                 imdbLink.innerText = "Link to IMDB"
+                var movieTitle = document.getElementById("movie-title");
+                movieTitle.innerText = d.data.name;
 
             }
         }
@@ -337,18 +372,29 @@ d3.csv(csv)
 // code for moving info window
 function get(){
     var bpTop = $('#best-picture').offset().top;
-    var dist =  bpTop - $(window).scrollTop();
-    if (dist < 5) {
-        $('#movie-info').css({
-            "position": "fixed",
-            "top": 5
-        });
-    }
-    if (dist >= 5) {
+    var bpBottom = bpTop + $('#best-picture').height() - 100;
+    var windowTop = $(window).scrollTop();
+    var dist =  bpTop - windowTop;
+    if (windowTop + $('#movie-overview').height() >= bpBottom ) {
         $('#movie-info').css({
             "position": "absolute",
-            "top": bpTop
+            "top": bpBottom - $('#movie-overview').height()
         });
+    } else {
+        if (dist < 5) {
+            $('#movie-info').css({
+                "position": "fixed",
+                "top": 5,
+            });
+        }
+        if (dist >= 5) {
+            $('#movie-info').css({
+                "position": "absolute",
+                "top": bpTop
+            });
+        }
     }
 }
 $(window).scroll(get);
+// incase TA likes to do random refresh
+setTimeout(get, 500);

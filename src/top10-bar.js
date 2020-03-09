@@ -1,6 +1,6 @@
 var margin = {top: 10, right: 30, bottom: 30, left: 150},
-    width = 900 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 750,
+    height = 470 - margin.top - margin.bottom;
 
 var year = 1928;
 // append the svg object to the body of the page
@@ -12,71 +12,117 @@ var svg = d3.select("#top10")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
+let label = document.getElementById("time-slider-label");
+let labels = [];
+labels[0] = 1928;
+
+for (let i = 1; i <= 92; i++){
+  labels[i] = labels[i-1]+1;
+}
+      for (let i = 0; i <= 92; i++) {
+        if (i % 4 == 0){
+          div = document.createElement("div");
+          div.innerText = labels[i]
+          label.appendChild(div);
+        }
+
+      }
+  // create the tick mark
+  let list = document.getElementById("steplist");
+  for (let i = 0; i < 92; i++) {
+      opt = document.createElement("option");
+      opt.innerText = i;
+      list.appendChild(opt);
+}
+
 // get the data
 const test = require('./imdb_rated_nominees.csv')
-d3.csv(test, function(data) {
 function update(yr) {
-  // filter earlier; not quite sure if this is correct, but
-  // at least bar chart is not crowded anymore
-  data = data.filter(function(d) {
-    return parseInt(d.Year) == yr;
-  })
-
-  // var y = d3.scaleBand()
-  //           .range([height, 0])
-  //           .padding(0.1);
-
+  if (yr == 1934) {yr = 1935;}
+d3.csv(test, function(data) {
+    // filter earlier; not quite sure if this is correct, but
+    // at least bar chart is not crowded anymore
+    var dataNew = data.filter(function(d) {
+      if (parseInt(d.Year) == yr)
+      return d.Year;
+    });
+    var duration = 1000;
   // X axis
   var x = d3.scaleLinear()
     .domain([0, 10])
     .range([ 0, width]);
-  svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x))
-    .selectAll("text")
-      .style("fill", "ffffff");
+
+    svg.append('g')
+        .attr('transform', 'translate(0, ' + (height) + ')')
+        .attr('class', 'x axis');
+
+    svg.append('g')
+        .attr('class', 'y axis');
 
   // Y axis
   var y = d3.scaleBand()
     .range([ 0, height ])
-    .domain(data.map(function(d) {
+    .domain(dataNew.map(function(d) {
       return d.Name; }))
     .padding(.1);
 
-  svg.append("g")
-    .attr("id", "bar-chart-y-axis")
-    .call(d3.axisLeft(y))
-    .selectAll("text")
-      .style("fill", "ffffff");
+    var bars = svg.selectAll(".bar")
+        .remove()
+        .exit()
+        .data(dataNew);
 
-    svg.selectAll("myRect")
-      // .data(data.filter(function(d){return d.Year == yr;}))
-      .data(data)
-      .enter()
-      .append("rect")
-        .attr("x", x(0) )
-        .attr("y", function(d) { return y(d.Name); })
+    bars
+        .enter()
+        .append('rect')
+        .attr('class', 'bar')
+        .attr("fill", function(d) {
+          if (d.Win == 'True'){
+            return "#D7A764";
+          }
+          else {
+            return "#595959";
+          }
+        })
         .attr("width", function(d) { return x(d.averageRating); })
         .attr("height", y.bandwidth() )
-        .attr("fill", "#D8A75E")
+        .attr("x", x(0) )
+        .attr("y", function(d) { return y(d.Name); })
+        .merge(bars)
+        .transition()
+        .duration(1000);
 
-    // y = d3.scaleBand()
-    //   .range([ 0, height ])
-    //   .domain(data.map(function(d) {
-    //     // data.filter(function(d){return d.Year == yr;})
-    //     return d.Name; }))
-    //   .padding(.1);
-    // svg.append("g")
-    //   .call(d3.axisLeft(y))
-    //   .selectAll("text")
-    //     .style("fill", "ffffff");
-  }
+    bars
+        .exit()
+        .remove();
 
-  update(1931); // call update once so bars will be generated on load
+    bars
+        .transition()
+        .duration(duration)
+        .attr("width", function(d) { return x(d.averageRating); })
+        .attr("x", x(0));
 
-  d3.select("#mySlider").on("change", function(d){
-    year = parseInt(this.value); // need to parse string to int
-    console.log(year);
-    update(year);
-  })
+    var labels = svg.selectAll('.label')
+        .data(dataNew);
+
+      svg.select('.y.axis')
+          .transition()
+          .duration(duration)
+          .call(d3.axisLeft(y))
+
+      svg.select('.x.axis')
+          .transition()
+          .duration(duration)
+          .call(d3.axisBottom(x));
+});
+
+}
+
+  update(year); // call update once so bars will be generated on load
+
+
+d3.select("#mySlider").on("input", function(d){
+  let yearLabel = document.getElementById("yearTitle");
+  year = parseInt(this.value);
+  yearLabel.innerText = year;
+  update(year);
 });

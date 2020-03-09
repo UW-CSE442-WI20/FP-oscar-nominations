@@ -56,6 +56,7 @@ body {
 p {
   font-family: "Futura-Light";
   font-size: 16px;
+  line-height: 18px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
@@ -66,6 +67,28 @@ h1 {
   letter-spacing: 0.01em;
   color: #D8A75E;
   margin-bottom: 10px;
+}
+
+h2 {
+  font-family: "Futura-Bold";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  margin-top: 0px;
+  color: #D7A764;
+}
+
+h3 {
+  width: 300px;
+  font-family: "Futura-Bold";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 34px;
+  margin-top: 0px;
+  margin-right: 30px;
+  color: #D7A764;
 }
 
 .wrapper{
@@ -79,6 +102,7 @@ h1 {
   margin-left: 100px;
   margin-right: 100px;
 }
+
 
 .wrapper-actors {
   width: 100%;
@@ -110,15 +134,11 @@ h1 {
   margin-right: 50px;
 }
 
+
+
 .my_dataviz {
   width: 600px;
   height: 600px;
-}
-
-.line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1px;
 }
 
 .axis-top line{
@@ -127,7 +147,6 @@ h1 {
 .best_directors{
   display: flex;
   width: 100%;
-  /* flex-flow: row wrap; */
   flex-direction: row;
   margin-top: 10px;
   margin-right: 30px;
@@ -135,16 +154,16 @@ h1 {
   font-family: "Futura-Light";
   font-size: 16px;
 }
+/* <<<<<<< HEAD */
 
 .best_directors a{
   color: #75edfe;
   text-decoration: none;
  }
-.best_directors a:hover{
-   color: #75edfe;
+.best_directors a: hover{
    text-decoration: underline;
   }
-  
+
 /* .best_dots {
   display: flex;
   width: 70%;
@@ -166,3 +185,132 @@ h1 {
   font-size: 1rem;
   color: black;
 }
+=======
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.x.axis line{
+  stroke: #ffffff;
+}
+
+.x.axis path{
+  stroke: #ffffff;
+}
+
+.x.axis text{
+  font-family: "Futura-Light";
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  fill: #ffffff;
+}
+
+.y.axis line{
+  stroke: #ffffff;
+}
+
+.y.axis path{
+  stroke: #ffffff;
+}
+
+.y.axis text{
+  font-family: "Futura-Light";
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  fill: #ffffff;
+}
+
+.graph {
+  display: flex;
+  width: 100%;
+  margin-left: 30px;
+  margin-right: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+.top10 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: stretch;
+}
+
+.wrapper-content{
+  margin-top: 100px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  margin-bottom: 100px;
+}
+
+.wrapper-title {
+  display: flex;
+  width: 60%;
+  margin-right: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+}
+
+.wrapper-text {
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+}
+
+#mySlider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  margin-left: 60px;
+  width: 80%; /* Full-width */
+  height: 2px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+#mySlider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+#mySlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  border-radius: 50%;
+  background: #D7A764; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+#time-slider-label {
+    margin-left: 60px;
+    width: 80%; /* Full-width */
+    font-family: "Futura-Light";
+    font-size: 0.7rem;
+    padding-top: 1%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+#time-slider-label > div {
+    text-align: center;
+    vertical-align: middle;
+}
+/* >>>>>>> 9483a7faea664837ce0161a34b1fb6ef4938d270 */

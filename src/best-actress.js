@@ -40,6 +40,7 @@ d3.csv(csv)
                         {
                             "name": d["Person"],
                             "award_year": d["Year of award"],
+                            "age_when_award": d["Age When Award"],
                             "movie": d["Movie"],
                             "imdb_bio": d["Bio IMDb"],
                             "date_of_birth": d["Date of birth"],
@@ -151,10 +152,10 @@ d3.csv(csv)
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", .9);
-                        tooltip.html(`${d.data.name}<br>
-                                      ${d.data.date_of_birth}<br>
-                                      ${d.data.country_of_birth}<br>
-                                      ${d.data.movie}`)
+                        tooltip.html(`Name: ${d.data.name}<br>
+                                      Age When Recieved Award: ${d.data.age_when_award}<br>
+                                      Country of Birth: ${d.data.country_of_birth}<br>
+                                      An Award Movie: ${d.data.movie}`)
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
                     })
@@ -165,6 +166,9 @@ d3.csv(csv)
                     tooltip.transition()
                         .duration(500)
                         .style("opacity", 0);
+                })
+                .on("click", function(d) {
+                    window.open(d.data.imdb_bio);
                 });
 
             // UPDATE
