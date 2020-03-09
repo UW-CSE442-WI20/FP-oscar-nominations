@@ -172,10 +172,11 @@ d3.csv(csv)
                  .attr("cursor", function(d) {
                      if (d.data.class == "title")
                         return "pointer";
-                 }).on("click", function(d) {
+                 })
+                 .on("click", function(d) {
                     if (d.data.class == "title")
                         changeInfoDisplay(d);
-                 });
+                 })
 
             // UPDATE
             var nodeUpdate = nodeEnter.merge(node);
@@ -348,6 +349,8 @@ d3.csv(csv)
                 var imdbLink = document.getElementById("imdb-link");
                 imdbLink.href = `https://www.imdb.com/title/${d.data.imdb_id}/`
                 imdbLink.innerText = "Link to IMDB"
+                var movieTitle = document.getElementById("movie-title");
+                movieTitle.innerText = d.data.name;
 
             }
         }
@@ -356,21 +359,19 @@ d3.csv(csv)
 // code for moving info window
 function get(){
     var bpTop = $('#best-picture').offset().top;
-    var bpBottom = bpTop + $('#best-picture').height();
+    var bpBottom = bpTop + $('#best-picture').height() - 100;
     var windowTop = $(window).scrollTop();
     var dist =  bpTop - windowTop;
-    if (windowTop + $('#movie-overview').height() >= bpBottom - 100) {
+    if (windowTop + $('#movie-overview').height() >= bpBottom ) {
         $('#movie-info').css({
             "position": "absolute",
-            "bottom": 5,
-            "top": null
+            "top": bpBottom - $('#movie-overview').height()
         });
     } else {
         if (dist < 5) {
             $('#movie-info').css({
                 "position": "fixed",
                 "top": 5,
-                "bottom": null
             });
         }
         if (dist >= 5) {
