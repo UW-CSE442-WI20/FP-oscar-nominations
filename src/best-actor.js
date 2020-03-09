@@ -318,6 +318,7 @@ d3.csv(csv)
                         })
                         .text(function() {
                             var ind = ageBinNames.indexOf(ageBin);
+                            ind+= 1;
                             if (ind == 0) {
                                 return `0 to ${ageBinSize}`;
                             } else {

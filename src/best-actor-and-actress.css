@@ -43,15 +43,17 @@
     width: 300px;
 }
 
-/* @media (max-width: 1080) {
-    @media (max-height: 1920) {
-        #best-actor-and-actress, #best-actor-and-actress *:not(h3) {
-            /* zoom: 92%; */
-        }
-    }
-} */
-
 #best-actor-and-actress h3 {
     margin-left: auto;
     margin-right: auto;
+}
+
+#best-actor h3 {
+    /* So the "Best Actor" looks symmetirc with Best Actor */
+    padding-right: 20%;
+}
+
+/* Reducing Graphs Size */
+#best-actor > svg, #best-actress > svg {
+    zoom: 80%;
 }
