@@ -25,6 +25,7 @@
     color: #D8A75E;
     display: flex;
     justify-content: space-between;
+    margin: auto;
 }
 
 #best-actor-and-actress text{
@@ -33,10 +34,6 @@
 
 #best-atress-container, #best-actor-container {
     text-align: center;
-}
-
-#best-actor-container, #best-atress-container {
-    width: 700px;
 }
 
 #best-actor-and-actress-analysis-container {
@@ -55,5 +52,5 @@
 
 /* Reducing Graphs Size */
 #best-actor > svg, #best-actress > svg {
-    zoom: 80%;
+    zoom: 78%;
 }
