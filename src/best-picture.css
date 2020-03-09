@@ -17,11 +17,15 @@
     align-items: top;
     text-align: center;
     font-size: 12pt;
+    margin-top: 5%;
 }
 
 #movie-info {
     position: absolute;
     width: 20%;
+    border-radius: 8px;
+    background: #1B1B1B;
+    opacity: 80%;
 }
 
 .best-picture-text {

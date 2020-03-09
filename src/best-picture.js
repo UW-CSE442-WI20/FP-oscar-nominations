@@ -385,6 +385,9 @@ function get(){
     var bpBottom = bpTop + $('#best-picture').height() - 100;
     var windowTop = $(window).scrollTop();
     var dist =  bpTop - windowTop;
+    // var bpLeft = $('#best-picture').offset().left;
+    // var windowLeft = $(window).scrollLeft();
+    // var distH = bpLeft - windowLeft;
     if (windowTop + $('#movie-overview').height() >= bpBottom ) {
         $('#movie-info').css({
             "position": "absolute",

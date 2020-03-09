@@ -43,13 +43,13 @@
     width: 300px;
 }
 
-@media (max-width: 1080) {
+/* @media (max-width: 1080) {
     @media (max-height: 1920) {
         #best-actor-and-actress, #best-actor-and-actress *:not(h3) {
             /* zoom: 92%; */
         }
     }
-}
+} */
 
 #best-actor-and-actress h3 {
     margin-left: auto;
