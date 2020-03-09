@@ -53,7 +53,7 @@ d3.csv(csv)
                                     "class": "title",
                                     "year": d["year"],
                                     "is_winner": d["is_winner"] == "TRUE",
-                                    "overview": d.overview,
+                                    "overview": d.overview.replace(/[^\x00-\x7F]/g, "").replace(/[?]/g, ""),
                                     "imdb_id": d["imdb_id"]
                                 }]
                 }
