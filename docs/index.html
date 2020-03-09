@@ -5,12 +5,12 @@
     <title>My Title</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/top10-bar.dc785559.js"></script>
+    <!-- <script src="./top10-bar.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
-    <link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-oscar-nominations/style.e97cd2a1.css" type="text/css">
-        <link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.964afc44.css">
-    <link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-actor-and-actress.db205955.css">
+    <link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-oscar-nominations/style.28d9270c.css" type="text/css">
+    <link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.e998b128.css">
+    <link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-actor-and-actress.c44973d8.css">
   </head>
   <body>
     <div class="wrapper">
@@ -28,32 +28,120 @@
       <!--<div class ="top10" id="top10"></div>-->
       <!-- best actor/actress -->
       <div id="best-actor-and-actress">
+        <div id="best-actor-container">
+          <h3>Best Actor</h3>
+          <div id="best-actor"></div>
+        </div>
+        <div id="best-actor-and-actress-analysis-container">
+          <div id="country-of-birth">
+            <h4>Instruction</h4>
+            <p>
+              Click on a circle to select the group denoted by the circle. Hovering over
+              an actor or actress' name will show basic information about the individual.
+              Clicking on an actor or actress' name will open the IMDB page.
+            </p>
+            <h4>Country of Birth</h4>
+            <p>
+              Suspendisse vel tellus odio. Ut nec venenatis eros, non tempus
+              arcu. Nam in neque tristique sapienaliquet malesuada ut quis urna.
+              Nunc vel bibendum sem, mollis cursus lacus. Phasellus bibendum
+              eros dolor, at facilisis libero ullamcorper sed. In vestibulum
+              eros convallis ipsum mattis semper. Aliquam euismod odio at ligula
+              maximus molestie. Phasellus in nibh eget nunc luctus tristique eu
+              nec nisl. Phasellus semper, ipsum eu pretium porta, nisl tortor
+              accumsan dui, nec facilisis neque mi a diam. Ut id metus
+              ullamcorper, dignissim tellus eget, porta ante.
+            </p>
+          </div>
+          <div id="age-range">
+            <h4>Age Range</h4>
+            <p>
+              Suspendisse vel tellus odio. Ut nec venenatis eros, non tempus
+              arcu. Nam in neque tristique sapienaliquet malesuada ut quis urna.
+              Nunc vel bibendum sem, mollis cursus lacus. Phasellus bibendum
+              eros dolor, at facilisis libero ullamcorper sed. In vestibulum
+              eros convallis ipsum mattis semper. Aliquam euismod odio at ligula
+              maximus molestie. Phasellus in nibh eget nunc luctus tristique eu
+              nec nisl. Phasellus semper, ipsum eu pretium porta, nisl tortor
+              accumsan dui, nec facilisis neque mi a diam. Ut id metus
+              ullamcorper, dignissim tellus eget, porta ante.
+            </p>
+          </div>
+        </div>
         <div id="best-atress-container">
           <h3>Best Actress</h3>
           <div id="best-actress"></div>
         </div>
       </div>
       <!-- Best Directors Demography -->
+
+
+
+      <div>
+        <div id="demographics_title" class="demographics_title"><h2>Demographics of Oscar Winners</h2></div>
+        <h3>Select the Award</h3>
+        <input type="checkbox" class="checkbox" value="Best Director" checked=""><label>Best Directors </label>
+        <input type="checkbox" class="checkbox" value="Best Actor" checked=""><label>Best Actors </label>
+        <input type="checkbox" class="checkbox" value="Best Actress" checked=""><label>Best Actresses </label>
+        <input type="checkbox" class="checkbox" value="Best Supporting Actor" checked=""><label>Best Supporting Actors </label>
+        <input type="checkbox" class="checkbox" value="Best Supporting Actress" checked=""><label>Best Supporting Actresses  </label>
+      </div>
+    <div class="best_directors" id="best_directors">
+      <!-- <div id = "demographyDropdown"></div> -->
+      <div><div id="demographyDropdown" class="demographyDropdown"></div>
+        <svg id="dots_legend"></svg>
+      </div>
       <div class="best_dots" id="best_dots"></div>
+      <div class="info_box" id="info_box"></div>
+    </div>
       <!-- best picture-->
       <div id="best-picture">
         <div id="movie-info">
-          <img id="movie-img">
+          <p id="movie-title"></p>
+          <p id="movie-award-year"></p>
+          <p id="movie-profit"></p>
           <p id="movie-overview">
             A description of the movie. Please click on the circle next to the
-            genre names to show movies nominated for Oscar Best Picture Award
+            genre names to show movies that won the Oscar Best Picture Award
             for the genre. Clicking on a movie name will show the movie overview
-            here.
+            here. The circle to the left of the movie name denote move profit;
+            the closer to the movie the higher the profit (1px is $10,000,000).
+            Hovering over the circle shows the actual profit amount.
           </p>
           <p><a id="imdb-link"></a></p>
         </div>
       </div>
+      <div class="wrapper-content">
+        <h2 class="wrapper-title">Leading actors and actress nominees over the years</h2>
+        <p class="wrapper-text"> Besides different awards from various cinematogrophy academia, people's
+          opinion is also based on crowdsourcing and critics' ratings. One of the biggest datasource—Internet Movie Database (IMDb), where
+          users streamline content online: everything from tryvia to reviews. So it is interesting to see how high was rating for nominees
+          and winners according to IMDb. Is academia's choices synched with audience's?
+        </p>
+      </div>
+      <div class="graph">
+        <div class="top10">
+          <input type="range" id="mySlider" min="1928" max="2020" value="1928" list="steplist">
+          <div id="time-slider-label"></div>
+          <datalist id="steplist"></datalist>
+          <div id="top10"></div>
+        </div>
+        <div>
+          <h2 id="yearTitle">1928</h2>
+        </div>
+      </div>
+      <div class="short-speech">
+
+      </div>
     </div>
 
-    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/src.7eef6550.js"></script>
+    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/src.356bb68f.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.be65e92d.js"></script>
-    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-actress.90ac0bb7.js"></script>
-    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/dots.eda57fcb.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.b6eb3387.js"></script>
+    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-actress.d3e6e18d.js"></script>
+    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-actor.d9d46d83.js"></script>
+    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/dots.0443d4ea.js"></script>
+    <script src="https://uw-cse442-wi20.github.io/FP-oscar-nominations/top10-bar.5a980bf5.js"></script>
   </body>
 </html>

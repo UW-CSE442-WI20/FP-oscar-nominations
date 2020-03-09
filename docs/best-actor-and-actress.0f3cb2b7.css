@@ -1,14 +1,15 @@
-#best-actress-tooltip {
+#best-actress-tooltip, #best-actor-tooltip {
     position: absolute;
     text-align: center;
     /* width: 60px;
     height: 50px; */
     padding: 1%;
-    font: 12pt sans-serif;
+    font: 10pt sans-serif;
     border: 2px black;
     border-radius: 8px;
     background: white;
     pointer-events: none;
+    color: black;
 }
 
 .selected > * {
@@ -23,16 +24,24 @@
 #best-actor-and-actress {
     color: #D8A75E;
     display: flex;
+    justify-content: space-between;
 }
 
 #best-actor-and-actress text{
     fill: #D8A75E;
 }
 
-#best-atress-container {
+#best-atress-container, #best-actor-container {
     text-align: center;
-    width: 40%;
 }
 
+#best-actor-container, #best-atress-container {
+    width: 700px;
+}
+
+#best-actor-and-actress-analysis-container {
+    width: 25%;
+    min-width: 300px;
+}
 
 /*# sourceMappingURL=/best-actor-and-actress.0f3cb2b7.css.map */

@@ -117,55 +117,30 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"top10-bar.js":[function(require,module,exports) {
-// set the dimensions and margins of the graph
-var margin = {
-  top: 10,
-  right: 30,
-  bottom: 30,
-  left: 40
-},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom; // append the svg object to the body of the page
+})({"index.js":[function(require,module,exports) {
+/*
+// You can require libraries
+const d3 = require('d3');
+const top10 = require('./top10-bar.js');
+// You can include local JS files:
 
-var svg = d3.select("#top10").append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")"); // get the data
+const myClassInstance = new MyClass();
+myClassInstance.sayHi();
 
-d3.csv("test.csv", function (data) {
-  console.log(data); // X axis: scale and draw:
 
-  var x = d3.scaleLinear().domain([0, 10]) // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
-  .range([0, width]);
-  svg.append("g").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(x)); // set the parameters for the histogram
+// You can load JSON files directly via require.
+// Note this does not add a network request, it adds
+// the data directly to your JavaScript bundle.
+const exampleData = require('./example-data.json');
 
-  var histogram = d3.histogram().value(function (d) {
-    return d.averageRating * 100;
-  }) // I need to give the vector of value
-  .domain(x.domain()) // then the domain of the graphic
-  .thresholds(x.ticks(70)); // then the numbers of bins
-  // And apply this function to data to get the bins
 
-  var bins = histogram(data); // Y axis: scale and draw:
-
-  var y = d3.scaleLinear().range([height, 0]);
-  y.domain([0, d3.max(bins, function (d) {
-    return d.length;
-  })]); // d3.hist has to be called before the Y axis obviously
-
-  svg.append("g").call(d3.axisLeft(y)); // append the bar rectangles to the svg element
-
-  svg.selectAll("rect").data(bins).enter().append("rect").attr("x", 1).attr("transform", function (d) {
-    return "translate(" + x(d.x0) + "," + y(d.length) + ")";
-  }).attr("width", function (d) {
-    return 200;
-  }).attr("height", function (d) {
-    return height - y(d.length);
-  }).style("fill", "#69b3a2");
-});
-},{}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./top10-bar.js");
-},{"./top10-bar.js":"top10-bar.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// Anything you put in the static folder will be available
+// over the network, e.g.
+d3.csv('carbon-emissions.csv')
+  .then((data) => {
+    console.log('Dynamically loaded CSV data', data);
+})*/
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -193,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52794" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56629" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

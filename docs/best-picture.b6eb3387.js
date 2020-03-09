@@ -28630,106 +28630,126 @@ Object.keys(_d3Zoom).forEach(function (key) {
     }
   });
 });
-},{"./dist/package.js":"pT13","d3-array":"K0bd","d3-axis":"mp0m","d3-brush":"tkh5","d3-chord":"Iy8J","d3-collection":"S3hn","d3-color":"Peej","d3-contour":"SiBy","d3-dispatch":"D3zY","d3-drag":"kkdU","d3-dsv":"EC2w","d3-ease":"pJ11","d3-fetch":"grWT","d3-force":"oYRE","d3-format":"VuZR","d3-geo":"Ah6W","d3-hierarchy":"Kps6","d3-interpolate":"k9aH","d3-path":"OTyq","d3-polygon":"H15P","d3-quadtree":"lUbg","d3-random":"Gz2j","d3-scale":"zL2z","d3-scale-chromatic":"ado2","d3-selection":"ysDv","d3-shape":"maww","d3-time":"hQYG","d3-time-format":"UYpZ","d3-timer":"rdzS","d3-transition":"UqVV","d3-voronoi":"rLIC","d3-zoom":"MHdZ"}],"uv3R":[function(require,module,exports) {
-module.exports = "https://uw-cse442-wi20.github.io/FP-oscar-nominations/oscar_demos_mod.5f9fb703.csv";
-},{}],"XGgN":[function(require,module,exports) {
+},{"./dist/package.js":"pT13","d3-array":"K0bd","d3-axis":"mp0m","d3-brush":"tkh5","d3-chord":"Iy8J","d3-collection":"S3hn","d3-color":"Peej","d3-contour":"SiBy","d3-dispatch":"D3zY","d3-drag":"kkdU","d3-dsv":"EC2w","d3-ease":"pJ11","d3-fetch":"grWT","d3-force":"oYRE","d3-format":"VuZR","d3-geo":"Ah6W","d3-hierarchy":"Kps6","d3-interpolate":"k9aH","d3-path":"OTyq","d3-polygon":"H15P","d3-quadtree":"lUbg","d3-random":"Gz2j","d3-scale":"zL2z","d3-scale-chromatic":"ado2","d3-selection":"ysDv","d3-shape":"maww","d3-time":"hQYG","d3-time-format":"UYpZ","d3-timer":"rdzS","d3-transition":"UqVV","d3-voronoi":"rLIC","d3-zoom":"MHdZ"}],"CaOD":[function(require,module,exports) {
+module.exports = "https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.7a053528.csv";
+},{}],"sDwv":[function(require,module,exports) {
 var d3 = require("d3");
 
-var csv = require("./oscar_demos_mod.csv");
+var csv = require("./best-picture.csv");
 
-var palette = {
-  "countryLink": "gray",
-  "countryCircle": "lightsteelblue",
-  "ageLink": "gray",
-  "ageCircle": "orange"
+var circleColors = {
+  "base": "lightblue",
+  "profit": "pink",
+  "profit-no-data": "orange",
+  "opened": "rgb(255, 255, 255)"
 };
-var textToCircleDist = -40; // for the ageBin and Country need to be < 0
-
-var ageBinBase = 20;
-var ageBinSize = 20;
-var minCircleSize = 10;
-var ageBinNames = ["one", "two", "three", "four", "five"]; // parse csv
+var cicrleMinSize = 10;
+var profitSacleUnit = 10000000;
+var profitDataUnAvaliableOffset = -50; // parse csv
 
 d3.csv(csv).then(function (data) {
-  var tooltip = d3.select("body").append("div").attr("id", "best-actress-tooltip").style("opacity", 0); // tree diagram: modified from https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
+  // Define the div for the tooltip
+  var tooltip = d3.select("body").append("div").attr("id", "best-picture-tooltip").style("opacity", 0);
+  var max = 0;
+  var min = 10000000000000000000000000000; // tree diagram: modified from https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
   // convert data to JSON...
 
-  var actress = {
-    "name": "persons",
+  var treeData = {
+    "name": "Genres",
     "children": [],
     "class": "root"
   };
-  var actressArr = [];
-  var countryArr = [];
-  var ageBinArr = [];
+  var genreArr = [];
+  var genreCounter = [];
   data.filter(function (d) {
-    if (d["Award"] == "Best Actress" && d["Country of birth"].length > 3) {
-      var country = d["Country of birth"];
+    var genre = d["genre"];
 
-      if (!countryArr.includes(country)) {
-        countryArr.push(country);
-      }
-
-      var code = country.replace(/\s/g, '');
-
-      if (!actressArr.includes(d["Person"])) {
-        var ageBin = ageBinNames[parseInt((d["Age When Award"] - ageBinBase) / ageBinSize)];
-        if (!ageBinArr.includes(ageBin)) ageBinArr.push(ageBin);
-        actressArr.push(d["Person"]);
-        actress["children"].push({
-          "name": d["Person"],
-          "award_year": d["Year of award"],
-          "movie": d["Movie"],
-          "imdb_bio": d["Bio IMDb"],
-          "date_of_birth": d["Date of birth"],
-          "country_of_birth": d["Country of birth"],
-          "class": "person",
-          "code": code,
-          "ageBin": ageBin
-        });
-      }
+    if (!genreArr.includes(genre)) {
+      treeData["children"].push({
+        "class": "genre",
+        "name": genre,
+        "children": []
+      });
+      genreArr.push(genre);
     }
-  }); // sort country names
 
-  countryArr.sort(); // sort ageBin
+    var profit = 0;
 
-  ageBinArr = ageBinNames.filter(function (x) {
-    return ageBinArr.includes(x);
-  }); // Set the dimensions and margins of the diagram
+    if (d["revenue"] == 0 || d["budget"] == 0) {
+      profit = "No Data Avaliable";
+    } else {
+      profit = d["revenue"] - d["budget"];
+    }
+
+    if (typeof profit != "string") {
+      max = Math.max(profit, max);
+      min = Math.min(profit, min);
+    }
+
+    genreCounter[genreArr.indexOf(genre)] += 1;
+    treeData["children"][genreArr.indexOf(genre)]["children"].push({
+      "name": "",
+      "number": profit,
+      "class": "profit",
+      "always_show_circle": true,
+      "children": [{
+        "name": d["title"],
+        "class": "title",
+        "year": d["year"],
+        "is_winner": d["is_winner"] == "TRUE",
+        "overview": d.overview.replace(/[^\x00-\x7F]/g, "").replace(/[?]/g, ""),
+        "imdb_id": d["imdb_id"],
+        "number": profit
+      }]
+    });
+  });
+  console.log(max);
+  console.log(min); // Set the dimensions and margins of the diagram
 
   var margin = {
     top: 20,
     right: 90,
     bottom: 30,
-    left: 200
+    left: 300
   },
       width = 1300 - margin.left - margin.right,
-      height = 900 - margin.top - margin.bottom; // append the svg object to the body of the page
+      height = 1750 - margin.top - margin.bottom,
+      defaultHeight = height; // append the svg object to the body of the page
   // appends a 'group' element to 'svg'
   // moves the 'group' element to the top left margin
 
-  var svg = d3.select("#best-actress").append("svg").attr("width", width + margin.right + margin.left).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  var svg = d3.select("#best-picture").append("svg").attr("width", width + margin.right + margin.left).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   var i = 0,
-      duration = 0,
+      duration = 750,
       root; // declares a tree layout and assigns the size
 
   var treemap = d3.tree().size([height, width]); // Assigns parent, children, height, depth
 
-  root = d3.hierarchy(actress, function (d) {
+  root = d3.hierarchy(treeData, function (d) {
     return d.children;
   });
   root.x0 = height;
-  root.y0 = 0;
+  root.y0 = 0; // Collapse after the second level
+
+  root.children.forEach(collapse);
   update(root); // Collapse the node and all it's children
 
-  function collapse(d) {}
+  function collapse(d) {
+    if (d.children && !Array("profit").includes(d.data.class)) {
+      d._children = d.children;
+
+      d._children.forEach(collapse);
+
+      d.children = null;
+    }
+  }
 
   function update(source) {
     // Assigns the x and y position for the nodes
-    var actress = treemap(root); // Compute the new tree layout.
+    var treeData = treemap(root); // Compute the new tree layout.
 
-    var nodes = actress.descendants(),
-        links = actress.descendants().slice(1); // Normalize for fixed-depth.
+    var nodes = treeData.descendants(),
+        links = treeData.descendants().slice(1); // Normalize for fixed-depth.
 
     nodes.forEach(function (d) {
       d.y = d.depth * 180;
@@ -28741,238 +28761,230 @@ d3.csv(csv).then(function (data) {
     }); // Enter any new modes at the parent's previous position.
 
     var nodeEnter = node.enter().append('g').attr('class', function (d) {
-      return "node ".concat(d.data.code, " ").concat(d.data.ageBin);
+      return "node ".concat(d.data.class);
     }).attr("transform", function (d) {
       return "translate(" + source.y0 + "," + source.x0 + ")";
-    }); // // Add Circle for the nodes
-    // nodeEnter.append('circle')
-    //     .attr('class', 'node')
-    //     .attr('r', 1e-6)
-    //     .style("fill", function(d) {
-    //         return d._children ? "lightsteelblue" : "#fff";
-    //     });
-    // Add labels for the nodes
+    }).on('click', function (d) {
+      if (d.data.class == "genre") click(d);
+    }); // Add Circle for the nodes
+
+    nodeEnter.append('circle').attr('class', function (d) {
+      if (d.data.class == "root" || d.data.class == "title") return "node ".concat(d.data.class, " none");
+      return "node ".concat(d.data.class);
+    }).attr('r', 1e-6).style("fill", function (d) {
+      return d._children ? "lightsteelblue" : circleColors["opened"];
+    }); // Add labels for the nodes
 
     nodeEnter.append('text').attr("dy", ".35em").attr("x", function (d) {
-      return d.children || d._children ? -25 : 13;
+      return d.children || d._children ? -13 : 13;
     }).attr("text-anchor", function (d) {
       return d.children || d._children ? "end" : "start";
     }).text(function (d) {
       if (d.data.class == "root") return "";
-      if (d.data.class == "person") return "".concat(d.data.name, " (").concat(d.data.award_year, ")");
+      if (d.data.class == "title") return "".concat(d.data.name, " (").concat(d.data.year, ")");
       return d.data.name;
+    }).attr("class", function (d) {
+      if (d.data.class == "title" && d.data["is_winner"]) {
+        return "best-picture-winner best-picture-text";
+      }
+
+      return "best-picture-text";
     }).attr("cursor", function (d) {
-      if (d.data.class == "person") return "pointer";
-    }).on("mouseover", function (d) {
-      var className = d.data.class;
-      if (className != "person") return function () {};
-      tooltip.transition().duration(200).style("opacity", .9);
-      tooltip.html("".concat(d.data.name, "<br>\n                                      ").concat(d.data.date_of_birth, "<br>\n                                      ").concat(d.data.country_of_birth, "<br>\n                                      ").concat(d.data.movie)).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px");
-    }).on("mouseout", function (d) {
-      var className = d.data.class;
-      if (className != "person") return function () {};
-      tooltip.transition().duration(500).style("opacity", 0);
+      if (d.data.class == "title") return "pointer";
+    }).on("click", function (d) {
+      if (d.data.class == "title") changeInfoDisplay(d);
     }); // UPDATE
 
-    var nodeUpdate = nodeEnter.merge(node); // store node position for drawing lines
-
-    var personPos = {}; // Transition to the proper position for the node
+    var nodeUpdate = nodeEnter.merge(node); // Transition to the proper position for the node
 
     nodeUpdate.transition().duration(duration).attr("transform", function (d) {
-      if (d.data.class == "person") {
-        personPos[d.data.name] = {
-          "x": d.y,
-          "y": d.x,
-          "code": d.data.code,
-          "ageBin": d.data.ageBin
-        };
-      }
-
       return "translate(" + d.y + "," + d.x + ")";
-    });
-    var totalHeight = 0;
-    var betweenHeight = 5; // *************** Draw in coutry circles *****************
+    }); // Update the node attributes and style
 
-    var countryRadius = [];
-
-    for (var j = 0; j < countryArr.length; j++) {
-      var country = countryArr[j];
-      var code = country.replace(/\s/g, '');
-      countryRadius.push(document.querySelectorAll(".".concat(code)).length + minCircleSize);
-    }
-
-    var countryCirclePos = {};
-
-    var _loop = function _loop(_j) {
-      country = countryArr[_j];
-      code = country.replace(/\s/g, '');
-      node = svg.append("g").attr("class", "node ".concat(code, " countries")).attr("transform", function () {
-        var x = margin.left - 150;
-        var y = margin.top + totalHeight + betweenHeight * _j + countryRadius[_j];
-        countryCirclePos[code] = {
-          "x": x,
-          "y": y,
-          "connector": [x + 80, y]
-        };
-        return "translate(" + x + "," + y + ")";
-      }).on("click", selectThisCode).append('circle').attr("r", function () {
-        var r = countryRadius[_j];
-        totalHeight += 2 * r;
-        return r;
-      }).style("fill", palette["countryCircle"]);
-      d3.select("g.countries.".concat(code)).append('text').attr("dy", ".35em").attr("x", function () {
-        return textToCircleDist;
-      }).attr("text-anchor", function (d) {
-        return "end";
-      }).text(countryArr[_j]);
-    };
-
-    for (var _j = 0; _j < countryArr.length; _j++) {
-      var country;
-      var code;
-      var node;
-
-      _loop(_j);
-    } // draw person to country connector lines
-
-
-    for (var person in personPos) {
-      person = personPos[person];
-      var code = person.code;
-      var link = d3.linkHorizontal()({
-        source: [person["x"], person["y"]],
-        // target: [countryCirclePos[code]["x"], countryCirclePos[code]["y"]]
-        target: countryCirclePos[code]["connector"]
-      });
-      svg.append('path').attr('d', link).attr('stroke', palette["countryLink"]).attr('fill', 'none').attr("opacity", "50%").attr("class", "link ".concat(code));
-    } // draw country to country connector lines
-
-
-    for (var code in countryCirclePos) {
-      var link = d3.linkHorizontal()({
-        source: [countryCirclePos[code]["x"], countryCirclePos[code]["y"]],
-        target: countryCirclePos[code]["connector"]
-      });
-      svg.append('path').attr('d', link).attr('stroke', palette["countryLink"]).attr('fill', 'none').attr("opacity", "50%").attr("class", "link ".concat(code));
-    } // move country circles to the top
-
-
-    var countries = document.querySelectorAll(".countries");
-    var countryContainer = countries[0].parentNode;
-    countries.forEach(function (e) {
-      e.remove();
-      countryContainer.append(e);
-    }); // *************** Draw in age circles *****************
-
-    totalHeight += 100; // Distance between age circles and country circles
-
-    var ageBinRadius = [];
-
-    for (var _j2 = 0; _j2 < ageBinArr.length; _j2++) {
-      var ageBin = ageBinArr[_j2];
-      ageBinRadius.push(document.querySelectorAll(".".concat(ageBin)).length + minCircleSize);
-    }
-
-    var ageCirclePos = {};
-
-    var _loop2 = function _loop2(_j3) {
-      ageBin = ageBinArr[_j3];
-      node = svg.append("g").attr("class", "node ".concat(ageBin, " ageBins")).attr("transform", function () {
-        var x = margin.left - 150;
-        var y = margin.top + totalHeight + betweenHeight * _j3 + ageBinRadius[_j3];
-        ageCirclePos[ageBin] = {
-          "x": x,
-          "y": y,
-          "connector": [x + 80, y]
-        };
-        return "translate(" + x + "," + y + ")";
-      }).on("click", selectThisAge).append('circle').attr("r", function () {
-        var r = ageBinRadius[_j3];
-        totalHeight += 2 * r;
-        return r;
-      }).style("fill", palette["ageCircle"]);
-      d3.select("g.ageBins.".concat(ageBin)).append('text').attr("dy", ".35em").attr("x", function () {
-        return textToCircleDist;
-      }).attr("text-anchor", function (d) {
-        return "end";
-      }).text(function () {
-        var ind = ageBinNames.indexOf(ageBin);
-
-        if (ind == 0) {
-          return "0 to ".concat(ageBinSize);
-        } else {
-          return "".concat(ageBinSize * ind, " to ").concat(ageBinSize * (ind + 1));
+    nodeUpdate.select('circle.node').attr('r', function (d) {
+      return cicrleMinSize;
+    }).attr("cx", function (d) {
+      if (d.data.class == "profit") {
+        if (typeof d.data.number != "string") return d.data.number / profitSacleUnit;else {
+          return profitDataUnAvaliableOffset;
         }
-      });
-    };
-
-    for (var _j3 = 0; _j3 < ageBinArr.length; _j3++) {
-      var ageBin;
-      var node;
-
-      _loop2(_j3);
-    } // draw person to ageBin connector lines
-
-
-    for (var person in personPos) {
-      person = personPos[person];
-      var ageBin = person.ageBin;
-      var link = d3.linkHorizontal()({
-        source: [person["x"], person["y"]],
-        target: ageCirclePos[ageBin]["connector"]
-      });
-      svg.append('path').attr('d', link).attr('stroke', palette["ageLink"]).attr('fill', 'none').attr("opacity", "50%").attr("class", "link ".concat(ageBin));
-    } // draw ageBin to ageBin connector lines
-
-
-    for (var ageBin in ageCirclePos) {
-      var link = d3.linkHorizontal()({
-        source: [ageCirclePos[ageBin]["x"], ageCirclePos[ageBin]["y"]],
-        target: ageCirclePos[ageBin]["connector"]
-      });
-      svg.append('path').attr('d', link).attr('stroke', palette["ageLink"]).attr('fill', 'none').attr("opacity", "50%").attr("class", "link ".concat(ageBin));
-    } // move age circles to the top
-
-
-    var ageBins = document.querySelectorAll(".ageBins");
-    var ageBinContainer = ageBins[0].parentNode;
-    ageBins.forEach(function (e) {
-      e.remove();
-      ageBinContainer.append(e);
-    }); // ********************** Code for selecting things ***********************
-    // country
-
-    function selectThisCode() {
-      var currSelectedCode;
-      document.querySelectorAll(".selected").forEach(function (e) {
-        currSelectedCode = e.classList[1];
-        e.classList.remove("selected");
-      });
-      var code = this.classList[1];
-
-      if (currSelectedCode != code) {
-        document.querySelectorAll(".".concat(code)).forEach(function (e) {
-          e.classList.add("selected");
-        });
       }
-    } // age
-
-
-    function selectThisAge() {
-      var currSelectedAgeBin;
-      document.querySelectorAll(".selected").forEach(function (e) {
-        currSelectedAgeBin = e.classList[1];
-        e.classList.remove("selected");
-      });
-      var ageBin = this.classList[1];
-
-      if (currSelectedAgeBin != ageBin) {
-        document.querySelectorAll(".".concat(ageBin)).forEach(function (e) {
-          e.classList.add("selected");
-        });
+    }).style("fill", function (d) {
+      if (d.data.class == "profit") {
+        if (typeof d.data.number == "string") return circleColors["profit-no-data"];
       }
+
+      if (d.data.always_show_circle) {
+        return circleColors[d.data.class];
+      }
+
+      return d._children ? circleColors["base"] : circleColors["opened"];
+    }).style("stroke", function (d) {
+      if (d.data.class == "root" || d.data.class == "title") {
+        return "#fff";
+      }
+
+      if (d.data.class == "profit") {
+        if (typeof d.data.number == "string") return circleColors["profit-no-data"];
+      }
+
+      if (d.data.always_show_circle) {
+        return circleColors[d.data.class];
+      }
+
+      return circleColors["base"];
+    }).attr('cursor', function (d) {
+      if (d.data.class == "genre") return 'pointer';
+    }).on("mouseover", function (d) {
+      var className = d.data.class;
+      if (className != "profit") return function () {};
+      var num = d.data.number;
+
+      if (typeof num == "string") {
+        num = "Data Unavaliable";
+      } else {
+        num = "$" + num;
+      }
+
+      tooltip.transition().duration(200).style("opacity", .9);
+      tooltip.html("Profit:\n                                        <br/>".concat(num)).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px");
+    }).on("mouseout", function (d) {
+      var className = d.data.class;
+      if (className != "profit") return function () {};
+      tooltip.transition().duration(500).style("opacity", 0);
+    }).attr("opacitiy", "80%"); // Remove any exiting nodes
+
+    var nodeExit = node.exit().transition().duration(duration).attr("transform", function (d) {
+      return "translate(" + source.y + "," + source.x + ")";
+    }).remove(); // On exit reduce the node circles size to 0
+
+    nodeExit.select('circle').attr('r', 1e-6); // On exit reduce the opacity of text labels
+
+    nodeExit.select('text').style('fill-opacity', 1e-6); // ****************** links section ***************************
+    // Update the links...
+
+    var link = svg.selectAll('path.link').data(links, function (d) {
+      return d.id;
+    }); // Enter any new links at the parent's previous position.
+
+    var linkEnter = link.enter().insert('path', "g").attr("class", "link").attr('d', function (d) {
+      var o = {
+        x: source.x0,
+        y: source.y0
+      };
+      return diagonal(o, o);
+    }).attr("fill", "none").attr("stroke", "gray").attr("opacity", function (d) {
+      if (d.data.class == "genre") return "0%";
+      return "50%";
+    }); // UPDATE
+
+    var linkUpdate = linkEnter.merge(link); // Transition back to the parent element position
+
+    linkUpdate.transition().duration(duration).attr('d', function (d) {
+      return diagonal(d, d.parent);
+    }); // Remove any exiting links
+
+    var linkExit = link.exit().transition().duration(duration).attr('d', function (d) {
+      var o = {
+        x: source.x,
+        y: source.y
+      };
+      return diagonal(o, o);
+    }).remove(); // Store the old positions for transition.
+
+    nodes.forEach(function (d) {
+      d.x0 = d.x;
+      d.y0 = d.y;
+    }); // Creates a curved (diagonal) path from parent to the child nodes
+
+    function diagonal(s, d) {
+      path = "M ".concat(s.y, " ").concat(s.x, "\n                        L ").concat((s.y + d.y) / 2, " ").concat(s.x, ",\n                        L  ").concat((s.y + d.y) / 2, " ").concat(d.x, ",\n                        L ").concat(d.y, " ").concat(d.x, "\n                        ");
+      return path;
+    } // Toggle children on click.
+
+
+    var avoidStackExplosion = true;
+
+    function click(d) {
+      // if (avoidStackExplosion) {
+      //     document.querySelectorAll("g.genre").forEach(e => {
+      //         avoidStackExplosion = false;
+      //         var fillColor = e.querySelector("circle").style["fill"];
+      //         var clickEvent = new CustomEvent("click");
+      //             if (fillColor == circleColors["opened"])
+      //                 e.dispatchEvent(clickEvent);
+      //     });
+      //     avoidStackExplosion = true;
+      //     // setTimeout(10000, function(){});
+      // }
+      if (d.children) {
+        // close
+        d._children = d.children;
+        d.children = null;
+      } else {
+        // open
+        d.children = d._children;
+        d._children = null;
+      }
+
+      update(d);
+    } // change info display
+
+
+    function changeInfoDisplay(d) {
+      var overview = document.getElementById("movie-overview");
+      overview.innerHTML = "Movie Overview:<br>".concat(d.data.overview);
+      var imdbLink = document.getElementById("imdb-link");
+      imdbLink.href = "https://www.imdb.com/title/".concat(d.data.imdb_id, "/");
+      imdbLink.innerText = "Link to IMDB";
+      var movieTitle = document.getElementById("movie-title");
+      movieTitle.innerText = "Title: ".concat(d.data.name);
+      var movieAwardYear = document.getElementById("movie-award-year");
+      movieAwardYear.innerText = "Year Awarded: ".concat(d.data.year);
+      var movieProfit = document.getElementById("movie-profit");
+      var num = d.data.number;
+
+      if (typeof num == "string") {
+        num = "Data Unavaliable";
+      } else {
+        num = "$" + num;
+      }
+
+      movieProfit.innerText = "Profit: ".concat(num);
     }
   }
-});
-},{"d3":"UzF0","./oscar_demos_mod.csv":"uv3R"}]},{},["XGgN"], null)
-//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-actress.90ac0bb7.js.map
+}); // code for moving info window
+
+function get() {
+  var bpTop = $('#best-picture').offset().top;
+  var bpBottom = bpTop + $('#best-picture').height() - 100;
+  var windowTop = $(window).scrollTop();
+  var dist = bpTop - windowTop;
+
+  if (windowTop + $('#movie-overview').height() >= bpBottom) {
+    $('#movie-info').css({
+      "position": "absolute",
+      "top": bpBottom - $('#movie-overview').height()
+    });
+  } else {
+    if (dist < 5) {
+      $('#movie-info').css({
+        "position": "fixed",
+        "top": 5
+      });
+    }
+
+    if (dist >= 5) {
+      $('#movie-info').css({
+        "position": "absolute",
+        "top": bpTop
+      });
+    }
+  }
+}
+
+$(window).scroll(get); // incase TA likes to do random refresh
+
+setTimeout(get, 500);
+},{"d3":"UzF0","./best-picture.csv":"CaOD"}]},{},["sDwv"], null)
+//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.b6eb3387.js.map

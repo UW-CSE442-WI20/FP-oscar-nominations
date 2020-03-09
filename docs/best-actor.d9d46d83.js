@@ -28630,107 +28630,112 @@ Object.keys(_d3Zoom).forEach(function (key) {
     }
   });
 });
-},{"./dist/package.js":"pT13","d3-array":"K0bd","d3-axis":"mp0m","d3-brush":"tkh5","d3-chord":"Iy8J","d3-collection":"S3hn","d3-color":"Peej","d3-contour":"SiBy","d3-dispatch":"D3zY","d3-drag":"kkdU","d3-dsv":"EC2w","d3-ease":"pJ11","d3-fetch":"grWT","d3-force":"oYRE","d3-format":"VuZR","d3-geo":"Ah6W","d3-hierarchy":"Kps6","d3-interpolate":"k9aH","d3-path":"OTyq","d3-polygon":"H15P","d3-quadtree":"lUbg","d3-random":"Gz2j","d3-scale":"zL2z","d3-scale-chromatic":"ado2","d3-selection":"ysDv","d3-shape":"maww","d3-time":"hQYG","d3-time-format":"UYpZ","d3-timer":"rdzS","d3-transition":"UqVV","d3-voronoi":"rLIC","d3-zoom":"MHdZ"}],"CaOD":[function(require,module,exports) {
-module.exports = "https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.ead7f288.csv";
-},{}],"sDwv":[function(require,module,exports) {
+},{"./dist/package.js":"pT13","d3-array":"K0bd","d3-axis":"mp0m","d3-brush":"tkh5","d3-chord":"Iy8J","d3-collection":"S3hn","d3-color":"Peej","d3-contour":"SiBy","d3-dispatch":"D3zY","d3-drag":"kkdU","d3-dsv":"EC2w","d3-ease":"pJ11","d3-fetch":"grWT","d3-force":"oYRE","d3-format":"VuZR","d3-geo":"Ah6W","d3-hierarchy":"Kps6","d3-interpolate":"k9aH","d3-path":"OTyq","d3-polygon":"H15P","d3-quadtree":"lUbg","d3-random":"Gz2j","d3-scale":"zL2z","d3-scale-chromatic":"ado2","d3-selection":"ysDv","d3-shape":"maww","d3-time":"hQYG","d3-time-format":"UYpZ","d3-timer":"rdzS","d3-transition":"UqVV","d3-voronoi":"rLIC","d3-zoom":"MHdZ"}],"uv3R":[function(require,module,exports) {
+module.exports = "https://uw-cse442-wi20.github.io/FP-oscar-nominations/oscar_demos_mod.5f9fb703.csv";
+},{}],"cOQd":[function(require,module,exports) {
 var d3 = require("d3");
 
-var csv = require("./best-picture.csv");
+var csv = require("./oscar_demos_mod.csv");
 
-var circleColors = {
-  "base": "lightblue",
-  "budget": "orange",
-  "revenue": "pink"
-}; // parse csv
+var palette = {
+  "countryLink": "gray",
+  "countryCircle": "lightsteelblue",
+  "ageLink": "gray",
+  "ageCircle": "orange"
+};
+var textToCircleDist = -100; // for the ageBin and Country need to be < 0
+
+var ageBinBase = 20;
+var ageBinSize = 20;
+var minCircleSize = 10;
+var ageBinNames = ["one", "two", "three", "four", "five"]; // parse csv
 
 d3.csv(csv).then(function (data) {
-  // Define the div for the tooltip
-  var tooltip = d3.select("body").append("div").attr("id", "best-picture-tooltip").style("opacity", 0); // tree diagram: modified from https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
+  var tooltip = d3.select("body").append("div").attr("id", "best-actor-tooltip").style("opacity", 0); // tree diagram: modified from https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
   // convert data to JSON...
 
-  var treeData = {
-    "name": "Genres",
+  var actor = {
+    "name": "persons",
     "children": [],
     "class": "root"
   };
-  var genreArr = [];
+  var actorArr = [];
+  var countryArr = [];
+  var ageBinArr = [];
   data.filter(function (d) {
-    var genre = d["genre"];
+    if (d["Award"] == "Best Actor" && d["Country of birth"].length > 3) {
+      var country = d["Country of birth"];
 
-    if (!genreArr.includes(genre)) {
-      treeData["children"].push({
-        "class": "genre",
-        "name": genre,
-        "children": []
-      });
-      genreArr.push(genre);
+      if (!countryArr.includes(country)) {
+        countryArr.push(country);
+      }
+
+      var code = country.replace(/\s/g, '');
+
+      if (!actorArr.includes(d["Person"])) {
+        var ageBin = ageBinNames[parseInt((d["Age When Award"] - ageBinBase) / ageBinSize)];
+        if (!ageBinArr.includes(ageBin)) ageBinArr.push(ageBin);
+        actorArr.push(d["Person"]);
+        actor["children"].push({
+          "name": d["Person"],
+          "award_year": d["Year of award"],
+          "movie": d["Movie"],
+          "imdb_bio": d["Bio IMDb"],
+          "age_when_award": d["Age When Award"],
+          "date_of_birth": d["Date of birth"],
+          "country_of_birth": d["Country of birth"],
+          "class": "person",
+          "code": code,
+          "ageBin": ageBin
+        });
+      }
     }
+  }); // sort country names
 
-    treeData["children"][genreArr.indexOf(genre)]["children"].push({
-      "name": "",
-      "number": d["revenue"],
-      "class": "revenue",
-      "always_show_circle": true,
-      "children": [{
-        "name": "",
-        "number": d["budget"],
-        "always_show_circle": true,
-        "class": "budget",
-        "children": [{
-          "name": d["title"],
-          "class": "title",
-          "year": d["year"],
-          "is_winner": d["is_winner"] == "TRUE",
-          "overview": d.overview,
-          "imdb_id": d["imdb_id"]
-        }]
-      }]
-    });
+  countryArr.sort(); // sort ageBin
+
+  ageBinArr = ageBinNames.filter(function (x) {
+    return ageBinArr.includes(x);
   }); // Set the dimensions and margins of the diagram
 
   var margin = {
     top: 20,
     right: 90,
     bottom: 30,
-    left: 90
+    left: 200
   },
-      width = 1300 - margin.left - margin.right,
-      height = 1800 - margin.top - margin.bottom; // append the svg object to the body of the page
+      width = 700 - margin.left - margin.right,
+      height = 900 - margin.top - margin.bottom;
+
+  function invertX(X) {
+    return width - X;
+  } // append the svg object to the body of the page
   // appends a 'group' element to 'svg'
   // moves the 'group' element to the top left margin
 
-  var svg = d3.select("#best-picture").append("svg").attr("width", width + margin.right + margin.left).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  var svg = d3.select("#best-actor").append("svg").attr("width", width + margin.right + margin.left).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + 0 + "," + margin.top + ")");
   var i = 0,
-      duration = 750,
+      duration = 0,
       root; // declares a tree layout and assigns the size
 
   var treemap = d3.tree().size([height, width]); // Assigns parent, children, height, depth
 
-  root = d3.hierarchy(treeData, function (d) {
+  root = d3.hierarchy(actor, function (d) {
     return d.children;
   });
   root.x0 = height;
-  root.y0 = 0; // Collapse after the second level
-
-  root.children.forEach(collapse);
+  root.y0 = invertX(0);
   update(root); // Collapse the node and all it's children
 
-  function collapse(d) {
-    if (d.children && !Array("budget", "revenue").includes(d.data.class)) {
-      d._children = d.children;
-
-      d._children.forEach(collapse);
-
-      d.children = null;
-    }
-  }
+  function collapse(d) {}
 
   function update(source) {
     // Assigns the x and y position for the nodes
-    var treeData = treemap(root); // Compute the new tree layout.
+    var actor = treemap(root); // Compute the new tree layout.
 
-    var nodes = treeData.descendants(),
-        links = treeData.descendants().slice(1); // Normalize for fixed-depth.
+    var nodes = actor.descendants(),
+        links = actor.descendants().slice(1); // Normalize for fixed-depth.
 
     nodes.forEach(function (d) {
       d.y = d.depth * 180;
@@ -28742,162 +28747,242 @@ d3.csv(csv).then(function (data) {
     }); // Enter any new modes at the parent's previous position.
 
     var nodeEnter = node.enter().append('g').attr('class', function (d) {
-      return "node ".concat(d.data.class);
+      return "node ".concat(d.data.code, " ").concat(d.data.ageBin);
     }).attr("transform", function (d) {
-      return "translate(" + source.y0 + "," + source.x0 + ")";
-    }).on('click', function (d) {
-      if (d.data.class == "genre") click(d);
-    }); // Add Circle for the nodes
+      return "translate(" + invertX(source.y0) + "," + source.x0 + ")";
+    }); // // Add Circle for the nodes
+    // nodeEnter.append('circle')
+    //     .attr('class', 'node')
+    //     .attr('r', 1e-6)
+    //     .style("fill", function(d) {
+    //         return d._children ? "lightsteelblue" : "#fff";
+    //     });
+    // Add labels for the nodes
 
-    nodeEnter.append('circle').attr('class', function (d) {
-      if (d.data.class == "title" || d.data.class == "root") return "node ".concat(d.data.class, " none");
-      return "node ".concat(d.data.class);
-    }).attr('r', 1e-6).style("fill", function (d) {
-      return d._children ? "lightsteelblue" : "#fff";
-    }); // Add labels for the nodes
-
-    nodeEnter.append('text').attr("dy", ".35em").attr("x", function (d) {
-      return d.children || d._children ? -13 : 13;
+    nodeEnter.append('text').attr("dy", ".35em").attr("class", function (d) {
+      return d.data.class;
+    }).attr("x", function (d) {
+      return !(d.children || d._children) ? -13 : 25;
     }).attr("text-anchor", function (d) {
-      return d.children || d._children ? "end" : "start";
+      return !(d.children || d._children) ? "end" : "start";
     }).text(function (d) {
       if (d.data.class == "root") return "";
-      if (d.data.class == "title") return "".concat(d.data.name, " (").concat(d.data.year, ")");
+      if (d.data.class == "person") return "".concat(d.data.name, " (").concat(d.data.award_year, ")");
       return d.data.name;
-    }).attr("fill", function (d) {
-      if (d.data.class == "title" && d.data["is_winner"]) {
-        return "red";
-      }
-
-      return "black";
     }).attr("cursor", function (d) {
-      if (d.data.class == "title") return "pointer";
-    }).on("click", function (d) {
-      if (d.data.class == "title") changeInfoDisplay(d);
-    }); // UPDATE
-
-    var nodeUpdate = nodeEnter.merge(node); // Transition to the proper position for the node
-
-    nodeUpdate.transition().duration(duration).attr("transform", function (d) {
-      return "translate(" + d.y + "," + d.x + ")";
-    }); // Update the node attributes and style
-
-    nodeUpdate.select('circle.node').attr('r', function (d) {
-      var minSize = 10;
-      var size = 0;
-
-      if (d.data.number) {
-        size = Math.log2(d.data.number);
-      }
-
-      return Math.max(minSize, size);
-    }).style("fill", function (d) {
-      if (d.data.always_show_circle) {
-        return circleColors[d.data.class];
-      }
-
-      return d._children ? circleColors["base"] : "#fff";
-    }).style("stroke", function (d) {
-      if (d.data.class == "root" || d.data.class == "title") {
-        return "#fff";
-      }
-
-      if (d.data.always_show_circle) {
-        return circleColors[d.data.class];
-      }
-
-      return circleColors["base"];
-    }).attr('cursor', function (d) {
-      if (d.data.class == "genre") return 'pointer';
+      if (d.data.class == "person") return "pointer";
     }).on("mouseover", function (d) {
       var className = d.data.class;
-      if (className != "revenue" && className != "budget") return function () {};
-      var num = d.data.number;
-
-      if (num == 0) {
-        num = "Data Unavaliable";
-      } else {
-        num = "$" + num;
-      }
-
+      if (className != "person") return function () {};
       tooltip.transition().duration(200).style("opacity", .9);
-      tooltip.html("".concat(className.charAt(0).toUpperCase()).concat(className.substring(1), ":\n                                        <br/>").concat(num)).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px");
+      tooltip.html("Name: ".concat(d.data.name, "<br>\n                                      Year Awarded: ").concat(d.data.award_year, "<br>\n                                      Country of Birth: ").concat(d.data.country_of_birth, "<br>\n                                      Age When Awarded: ").concat(d.data.age_when_award, "<br>\n                                      An Award Movie: ").concat(d.data.movie)).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px");
     }).on("mouseout", function (d) {
       var className = d.data.class;
-      if (className != "revenue" && className != "budget") return function () {};
+      if (className != "person") return function () {};
       tooltip.transition().duration(500).style("opacity", 0);
-    }); // Remove any exiting nodes
-
-    var nodeExit = node.exit().transition().duration(duration).attr("transform", function (d) {
-      return "translate(" + source.y + "," + source.x + ")";
-    }).remove(); // On exit reduce the node circles size to 0
-
-    nodeExit.select('circle').attr('r', 1e-6); // On exit reduce the opacity of text labels
-
-    nodeExit.select('text').style('fill-opacity', 1e-6); // ****************** links section ***************************
-    // Update the links...
-
-    var link = svg.selectAll('path.link').data(links, function (d) {
-      return d.id;
-    }); // Enter any new links at the parent's previous position.
-
-    var linkEnter = link.enter().insert('path', "g").attr("class", "link").attr('d', function (d) {
-      var o = {
-        x: source.x0,
-        y: source.y0
-      };
-      return diagonal(o, o);
-    }).attr("fill", "none").attr("stroke", "gray").attr("opacity", function (d) {
-      if (d.data.class == "genre") return "0%";
-      return "50%";
+    }).on("click", function (d) {
+      window.open(d.data.imdb_bio);
     }); // UPDATE
 
-    var linkUpdate = linkEnter.merge(link); // Transition back to the parent element position
+    var nodeUpdate = nodeEnter.merge(node); // store node position for drawing lines
 
-    linkUpdate.transition().duration(duration).attr('d', function (d) {
-      return diagonal(d, d.parent);
-    }); // Remove any exiting links
+    var personPos = {}; // Transition to the proper position for the node
 
-    var linkExit = link.exit().transition().duration(duration).attr('d', function (d) {
-      var o = {
-        x: source.x,
-        y: source.y
-      };
-      return diagonal(o, o);
-    }).remove(); // Store the old positions for transition.
-
-    nodes.forEach(function (d) {
-      d.x0 = d.x;
-      d.y0 = d.y;
-    }); // Creates a curved (diagonal) path from parent to the child nodes
-
-    function diagonal(s, d) {
-      path = "M ".concat(s.y, " ").concat(s.x, "\n                        L ").concat((s.y + d.y) / 2, " ").concat(s.x, ",\n                        L  ").concat((s.y + d.y) / 2, " ").concat(d.x, ",\n                        L ").concat(d.y, " ").concat(d.x, "\n                        ");
-      return path;
-    } // Toggle children on click.
-
-
-    function click(d) {
-      if (d.children) {
-        d._children = d.children;
-        d.children = null;
-      } else {
-        d.children = d._children;
-        d._children = null;
+    nodeUpdate.transition().duration(duration).attr("transform", function (d) {
+      if (d.data.class == "person") {
+        personPos[d.data.name] = {
+          "x": invertX(d.y),
+          "y": d.x,
+          "code": d.data.code,
+          "ageBin": d.data.ageBin
+        };
       }
 
-      update(d);
-    } // change info display
+      return "translate(" + invertX(d.y) + "," + d.x + ")";
+    });
+    var totalHeight = 0;
+    var betweenHeight = 5; // *************** Draw in coutry circles *****************
+
+    var countryRadius = [];
+
+    for (var j = 0; j < countryArr.length; j++) {
+      var country = countryArr[j];
+      var code = country.replace(/\s/g, '');
+      countryRadius.push(document.querySelectorAll(".".concat(code)).length + minCircleSize);
+    }
+
+    var countryCirclePos = {};
+
+    var _loop = function _loop(_j) {
+      country = countryArr[_j];
+      code = country.replace(/\s/g, '');
+      node = svg.append("g").attr("class", "node ".concat(code, " countries")).attr("transform", function () {
+        var x = margin.left - 150;
+        var y = margin.top + totalHeight + betweenHeight * _j + countryRadius[_j];
+        countryCirclePos[code] = {
+          "x": invertX(x),
+          "y": y,
+          "connector": [invertX(x + 80), y]
+        };
+        return "translate(" + invertX(x) + "," + y + ")";
+      }).on("click", selectThisCode).append('circle').attr("r", function () {
+        var r = countryRadius[_j];
+        totalHeight += 2 * r;
+        return r;
+      }).style("fill", palette["countryCircle"]).attr("cursor", "pointer");
+      d3.select("g.countries.".concat(code)).append('text').attr("dy", ".35em").attr("x", function () {
+        return -textToCircleDist;
+      }).attr("text-anchor", function (d) {
+        return "start";
+      }).text(countryArr[_j]);
+    };
+
+    for (var _j = 0; _j < countryArr.length; _j++) {
+      var country;
+      var code;
+      var node;
+
+      _loop(_j);
+    } // draw person to country connector lines
 
 
-    function changeInfoDisplay(d) {
-      var overview = document.getElementById("movie-overview");
-      overview.innerText = d.data.overview;
-      var imdbLink = document.getElementById("imdb-link");
-      imdbLink.href = "https://www.imdb.com/title/".concat(d.data.imdb_id, "/");
-      imdbLink.innerText = "Link to IMDB";
+    for (var person in personPos) {
+      person = personPos[person];
+      var code = person.code;
+      var link = d3.linkHorizontal()({
+        source: [person["x"], person["y"]],
+        // target: [countryCirclePos[code]["x"], countryCirclePos[code]["y"]]
+        target: countryCirclePos[code]["connector"]
+      });
+      svg.append('path').attr('d', link).attr('stroke', palette["countryLink"]).attr('fill', 'none').attr("opacity", "50%").attr("class", "link ".concat(code));
+    } // draw country to country connector lines
+
+
+    for (var code in countryCirclePos) {
+      var link = d3.linkHorizontal()({
+        source: [countryCirclePos[code]["x"], countryCirclePos[code]["y"]],
+        target: countryCirclePos[code]["connector"]
+      });
+      svg.append('path').attr('d', link).attr('stroke', palette["countryLink"]).attr('fill', 'none').attr("opacity", "50%").attr("class", "link ".concat(code));
+    } // move country circles to the top
+
+
+    var countries = document.querySelectorAll("#best-actor .countries");
+    var countryContainer = countries[0].parentNode;
+    countries.forEach(function (e) {
+      e.remove();
+      countryContainer.append(e);
+    }); // *************** Draw in age circles *****************
+
+    totalHeight += 100; // Distance between age circles and country circles
+
+    var ageBinRadius = [];
+
+    for (var _j2 = 0; _j2 < ageBinArr.length; _j2++) {
+      var ageBin = ageBinArr[_j2];
+      ageBinRadius.push(document.querySelectorAll(".".concat(ageBin)).length + minCircleSize);
+    }
+
+    var ageCirclePos = {};
+
+    var _loop2 = function _loop2(_j3) {
+      ageBin = ageBinArr[_j3];
+      node = svg.append("g").attr("class", "node ".concat(ageBin, " ageBins")).attr("transform", function () {
+        var x = margin.left - 150;
+        var y = margin.top + totalHeight + betweenHeight * _j3 + ageBinRadius[_j3];
+        ageCirclePos[ageBin] = {
+          "x": invertX(x),
+          "y": y,
+          "connector": [invertX(x + 80), y]
+        };
+        return "translate(" + invertX(x) + "," + y + ")";
+      }).on("click", selectThisAge).append('circle').attr("r", function () {
+        var r = ageBinRadius[_j3];
+        totalHeight += 2 * r;
+        return r;
+      }).style("fill", palette["ageCircle"]).attr("cursor", "pointer");
+      d3.select("g.ageBins.".concat(ageBin)).append('text').attr("dy", ".35em").attr("x", function () {
+        return -textToCircleDist;
+      }).attr("text-anchor", function (d) {
+        return "start";
+      }).text(function () {
+        var ind = ageBinNames.indexOf(ageBin);
+
+        if (ind == 0) {
+          return "0 to ".concat(ageBinSize);
+        } else {
+          return "".concat(ageBinSize * ind, " to ").concat(ageBinSize * (ind + 1));
+        }
+      });
+    };
+
+    for (var _j3 = 0; _j3 < ageBinArr.length; _j3++) {
+      var ageBin;
+      var node;
+
+      _loop2(_j3);
+    } // draw person to ageBin connector lines
+
+
+    for (var person in personPos) {
+      person = personPos[person];
+      var ageBin = person.ageBin;
+      var link = d3.linkHorizontal()({
+        source: [person["x"], person["y"]],
+        target: ageCirclePos[ageBin]["connector"]
+      });
+      svg.append('path').attr('d', link).attr('stroke', palette["ageLink"]).attr('fill', 'none').attr("opacity", "50%").attr("class", "link ".concat(ageBin));
+    } // draw ageBin to ageBin connector lines
+
+
+    for (var ageBin in ageCirclePos) {
+      var link = d3.linkHorizontal()({
+        source: [ageCirclePos[ageBin]["x"], ageCirclePos[ageBin]["y"]],
+        target: ageCirclePos[ageBin]["connector"]
+      });
+      svg.append('path').attr('d', link).attr('stroke', palette["ageLink"]).attr('fill', 'none').attr("opacity", "50%").attr("class", "link ".concat(ageBin));
+    } // move age circles to the top
+
+
+    var ageBins = document.querySelectorAll("#best-actor .ageBins");
+    var ageBinContainer = ageBins[0].parentNode;
+    ageBins.forEach(function (e) {
+      e.remove();
+      ageBinContainer.append(e);
+    }); // ********************** Code for selecting things ***********************
+    // country
+
+    function selectThisCode() {
+      var currSelectedCode;
+      document.querySelectorAll("#best-actor .selected").forEach(function (e) {
+        currSelectedCode = e.classList[1];
+        e.classList.remove("selected");
+      });
+      var code = this.classList[1];
+
+      if (currSelectedCode != code) {
+        document.querySelectorAll("#best-actor .".concat(code)).forEach(function (e) {
+          e.classList.add("selected");
+        });
+      }
+    } // age
+
+
+    function selectThisAge() {
+      var currSelectedAgeBin;
+      document.querySelectorAll("#best-actor .selected").forEach(function (e) {
+        currSelectedAgeBin = e.classList[1];
+        e.classList.remove("selected");
+      });
+      var ageBin = this.classList[1];
+
+      if (currSelectedAgeBin != ageBin) {
+        document.querySelectorAll("#best-actor .".concat(ageBin)).forEach(function (e) {
+          e.classList.add("selected");
+        });
+      }
     }
   }
 });
-},{"d3":"UzF0","./best-picture.csv":"CaOD"}]},{},["sDwv"], null)
-//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-picture.be65e92d.js.map
+},{"d3":"UzF0","./oscar_demos_mod.csv":"uv3R"}]},{},["cOQd"], null)
+//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-actor.d9d46d83.js.map

@@ -28897,7 +28897,7 @@ var palette = {
   "ageLink": "gray",
   "ageCircle": "orange"
 };
-var textToCircleDist = -40; // for the ageBin and Country need to be < 0
+var textToCircleDist = -53; // for the ageBin and Country need to be < 0
 
 var ageBinBase = 20;
 var ageBinSize = 20;
@@ -28933,6 +28933,7 @@ d3.csv(csv).then(function (data) {
         actress["children"].push({
           "name": d["Person"],
           "award_year": d["Year of award"],
+          "age_when_award": d["Age When Award"],
           "movie": d["Movie"],
           "imdb_bio": d["Bio IMDb"],
           "date_of_birth": d["Date of birth"],
@@ -28957,7 +28958,7 @@ d3.csv(csv).then(function (data) {
     bottom: 30,
     left: 200
   },
-      width = 1300 - margin.left - margin.right,
+      width = 700 - margin.left - margin.right,
       height = 900 - margin.top - margin.bottom; // append the svg object to the body of the page
   // appends a 'group' element to 'svg'
   // moves the 'group' element to the top left margin
@@ -29021,11 +29022,13 @@ d3.csv(csv).then(function (data) {
       var className = d.data.class;
       if (className != "person") return function () {};
       tooltip.transition().duration(200).style("opacity", .9);
-      tooltip.html("".concat(d.data.name, "<br>\n                                      ").concat(d.data.date_of_birth, "<br>\n                                      ").concat(d.data.country_of_birth, "<br>\n                                      ").concat(d.data.movie)).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px");
+      tooltip.html("Name: ".concat(d.data.name, "<br>\n                                      Year Awarded: ").concat(d.data.award_year, "<br>\n                                      Country of Birth: ").concat(d.data.country_of_birth, "<br>\n                                      Age When Awarded: ").concat(d.data.age_when_award, "<br>\n                                      An Award Movie: ").concat(d.data.movie)).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px");
     }).on("mouseout", function (d) {
       var className = d.data.class;
       if (className != "person") return function () {};
       tooltip.transition().duration(500).style("opacity", 0);
+    }).on("click", function (d) {
+      window.open(d.data.imdb_bio);
     }); // UPDATE
 
     var nodeUpdate = nodeEnter.merge(node); // store node position for drawing lines
@@ -29073,7 +29076,7 @@ d3.csv(csv).then(function (data) {
         var r = countryRadius[_j];
         totalHeight += 2 * r;
         return r;
-      }).style("fill", palette["countryCircle"]);
+      }).style("fill", palette["countryCircle"]).attr("cursor", "pointer");
       d3.select("g.countries.".concat(code)).append('text').attr("dy", ".35em").attr("x", function () {
         return textToCircleDist;
       }).attr("text-anchor", function (d) {
@@ -29111,7 +29114,7 @@ d3.csv(csv).then(function (data) {
     } // move country circles to the top
 
 
-    var countries = document.querySelectorAll(".countries");
+    var countries = document.querySelectorAll("#best-actress .countries");
     var countryContainer = countries[0].parentNode;
     countries.forEach(function (e) {
       e.remove();
@@ -29144,7 +29147,7 @@ d3.csv(csv).then(function (data) {
         var r = ageBinRadius[_j3];
         totalHeight += 2 * r;
         return r;
-      }).style("fill", palette["ageCircle"]);
+      }).style("fill", palette["ageCircle"]).attr("cursor", "pointer");
       d3.select("g.ageBins.".concat(ageBin)).append('text').attr("dy", ".35em").attr("x", function () {
         return textToCircleDist;
       }).attr("text-anchor", function (d) {
@@ -29188,7 +29191,7 @@ d3.csv(csv).then(function (data) {
     } // move age circles to the top
 
 
-    var ageBins = document.querySelectorAll(".ageBins");
+    var ageBins = document.querySelectorAll("#best-actress .ageBins");
     var ageBinContainer = ageBins[0].parentNode;
     ageBins.forEach(function (e) {
       e.remove();
@@ -29198,14 +29201,14 @@ d3.csv(csv).then(function (data) {
 
     function selectThisCode() {
       var currSelectedCode;
-      document.querySelectorAll(".selected").forEach(function (e) {
+      document.querySelectorAll("#best-actress .selected").forEach(function (e) {
         currSelectedCode = e.classList[1];
         e.classList.remove("selected");
       });
       var code = this.classList[1];
 
       if (currSelectedCode != code) {
-        document.querySelectorAll(".".concat(code)).forEach(function (e) {
+        document.querySelectorAll("#best-actress .".concat(code)).forEach(function (e) {
           e.classList.add("selected");
         });
       }
@@ -29214,14 +29217,14 @@ d3.csv(csv).then(function (data) {
 
     function selectThisAge() {
       var currSelectedAgeBin;
-      document.querySelectorAll(".selected").forEach(function (e) {
+      document.querySelectorAll("#best-actress .selected").forEach(function (e) {
         currSelectedAgeBin = e.classList[1];
         e.classList.remove("selected");
       });
       var ageBin = this.classList[1];
 
       if (currSelectedAgeBin != ageBin) {
-        document.querySelectorAll(".".concat(ageBin)).forEach(function (e) {
+        document.querySelectorAll("#best-actress .".concat(ageBin)).forEach(function (e) {
           e.classList.add("selected");
         });
       }
@@ -29256,7 +29259,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52794" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56629" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
