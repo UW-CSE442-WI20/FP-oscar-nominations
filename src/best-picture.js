@@ -25,7 +25,6 @@ d3.csv(csv)
                 treeData["children"].push({"class": "genre", "name": genre, "children": []})
                 genreArr.push(genre);
             }
-            var genreChildren = treeData["children"][genreArr.indexOf(genre)]["children"];
             genreCounter[genreArr.indexOf(genre)] += 1;
             treeData["children"][genreArr.indexOf(genre)]["children"].push(
                 {
@@ -49,11 +48,6 @@ d3.csv(csv)
                 }
             )
         });
-
-        // checks if the movie already appeared in the genre
-        function checkIfMovieInfcluded(movieName, genreChildren) {
-            return true;
-        }
 
         // Set the dimensions and margins of the diagram
         var margin = {top: 20, right: 90, bottom: 30, left: 300},

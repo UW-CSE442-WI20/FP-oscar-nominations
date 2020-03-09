@@ -35,3 +35,7 @@
 #best-picture circle {
     opacity: 80%;
 }
+
+#move-overview {
+    position: absolute;
+}
