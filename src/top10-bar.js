@@ -3,7 +3,13 @@ var margin = {top: 10, right: 30, bottom: 30, left: 150},
     height = 470 - margin.top - margin.bottom;
 
 var year = 1928;
-// append the svg object to the body of the page
+var xx;
+const delay = function(d, i) {
+  return i * 40;
+};
+
+var prevWidth;
+
 var svg = d3.select("#top10")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -83,14 +89,25 @@ d3.csv(test, function(data) {
             return "#595959";
           }
         })
-        .attr("width", function(d) { return x(d.averageRating); })
-        .attr("height", y.bandwidth() )
-        .attr("x", x(0) )
+        .attr('width', 0)
+        .attr('height', y.bandwidth())
         .attr("y", function(d) { return y(d.Name); })
         .merge(bars)
         .transition()
+        .duration(1000)
+        .delay(100)
+        .attr("height", y.bandwidth())
+        .attr("width", function(d, i) {
+          return x(d.averageRating);
+        })
+        .attr("x", x(0) )
+        .transition()
         .duration(1000);
-
+        /*
+        .attr("height", function(d, i) {
+            return height - yscale(d);
+        })
+        */
     bars
         .exit()
         .remove();
@@ -99,7 +116,13 @@ d3.csv(test, function(data) {
         .transition()
         .duration(duration)
         .attr("width", function(d) { return x(d.averageRating); })
-        .attr("x", x(0));
+            .transition()
+            .duration(1000)
+            .delay(function (d, i) {
+                return i * 150;
+            })
+        .attr("x", x(0))
+        .delay(delay);
 
     var labels = svg.selectAll('.label')
         .data(dataNew);
@@ -123,6 +146,9 @@ d3.csv(test, function(data) {
 d3.select("#mySlider").on("input", function(d){
   let yearLabel = document.getElementById("yearTitle");
   year = parseInt(this.value);
+  xx = ((year - 1928)/92)*100;
+  let colorS = "linear-gradient(90deg, rgb(215, 167, 100)" + xx +"%" + ", rgb(155, 155, 155)" + xx +"%" + ")";
+  this.style.background = colorS;
   yearLabel.innerText = year;
   update(year);
 });

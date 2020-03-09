@@ -189,8 +189,7 @@ h3 {
 
 .line {
   fill: none;
-  stroke: steelblue;
-  stroke-width: 2px;
+  stroke-width: 1px;
 }
 
 .x.axis line{
@@ -299,6 +298,7 @@ h3 {
 #time-slider-label {
     margin-left: 60px;
     width: 80%; /* Full-width */
+    color: #ffffff;
     font-family: "Futura-Light";
     font-size: 0.7rem;
     padding-top: 1%;
