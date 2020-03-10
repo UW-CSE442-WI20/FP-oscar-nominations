@@ -1,6 +1,6 @@
 var margin = {top: 10, right: 30, bottom: 30, left: 150},
     width = 750,
-    height = 470 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 
 var year = 1928;
 var xx;
