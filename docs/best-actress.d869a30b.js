@@ -28959,7 +28959,7 @@ d3.csv(csv).then(function (data) {
     left: 200
   },
       width = 700 - margin.left - margin.right,
-      height = 900 - margin.top - margin.bottom; // append the svg object to the body of the page
+      height = 1200 - margin.top - margin.bottom; // append the svg object to the body of the page
   // appends a 'group' element to 'svg'
   // moves the 'group' element to the top left margin
 
@@ -29154,6 +29154,7 @@ d3.csv(csv).then(function (data) {
         return "end";
       }).text(function () {
         var ind = ageBinNames.indexOf(ageBin);
+        ind += 1;
 
         if (ind == 0) {
           return "0 to ".concat(ageBinSize);
@@ -29259,7 +29260,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

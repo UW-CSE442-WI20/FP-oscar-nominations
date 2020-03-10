@@ -118,28 +118,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-/*
-// You can require libraries
-const d3 = require('d3');
-const top10 = require('./top10-bar.js');
-// You can include local JS files:
-
-const myClassInstance = new MyClass();
-myClassInstance.sayHi();
-
-
-// You can load JSON files directly via require.
-// Note this does not add a network request, it adds
-// the data directly to your JavaScript bundle.
-const exampleData = require('./example-data.json');
-
-
-// Anything you put in the static folder will be available
-// over the network, e.g.
-d3.csv('carbon-emissions.csv')
-  .then((data) => {
-    console.log('Dynamically loaded CSV data', data);
-})*/
+// check if opened using Chrome
+if (!String(navigator.userAgent).includes("Chrome")) {
+  alert("Please view this page in Chrome!");
+}
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -168,7 +150,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

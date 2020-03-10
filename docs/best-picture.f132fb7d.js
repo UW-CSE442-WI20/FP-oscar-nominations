@@ -29097,7 +29097,7 @@ d3.csv(csv).then(function (data) {
       if (typeof num == "string") {
         num = "Data Unavaliable";
       } else {
-        num = "$" + num;
+        num = "$" + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       }
 
       tooltip.transition().duration(200).style("opacity", .9);
@@ -29201,7 +29201,7 @@ d3.csv(csv).then(function (data) {
       if (typeof num == "string") {
         num = "Data Unavaliable";
       } else {
-        num = "$" + num;
+        num = "$" + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       }
 
       movieProfit.innerText = "Profit: ".concat(num);
@@ -29213,7 +29213,9 @@ function get() {
   var bpTop = $('#best-picture').offset().top;
   var bpBottom = bpTop + $('#best-picture').height() - 100;
   var windowTop = $(window).scrollTop();
-  var dist = bpTop - windowTop;
+  var dist = bpTop - windowTop; // var bpLeft = $('#best-picture').offset().left;
+  // var windowLeft = $(window).scrollLeft();
+  // var distH = bpLeft - windowLeft;
 
   if (windowTop + $('#movie-overview').height() >= bpBottom) {
     $('#movie-info').css({
@@ -29268,7 +29270,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

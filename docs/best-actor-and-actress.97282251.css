@@ -1,0 +1,62 @@
+#best-actress-tooltip, #best-actor-tooltip {
+    position: absolute;
+    text-align: center;
+    /* width: 60px;
+    height: 50px; */
+    padding: 1%;
+    font: 10pt sans-serif;
+    border: 2px black;
+    border-radius: 8px;
+    background: white;
+    pointer-events: none;
+    color: black;
+}
+
+.selected > * {
+    fill: yellow !important;
+}
+
+.selected.link {
+    stroke: yellow;
+    fill: none !important;
+}
+
+#best-actor-and-actress {
+    color: #D8A75E;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#best-actor-and-actress text{
+    fill: #D8A75E;
+}
+
+#best-atress-container, #best-actor-container {
+    text-align: center;
+}
+
+#best-actor-and-actress-analysis-container {
+    width: 300px;
+}
+
+#best-actor-and-actress h3 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#best-actor h3 {
+    /* So the "Best Actor" looks symmetirc with Best Actor */
+    padding-right: 20%;
+}
+
+/* Reducing Graphs Size */
+#best-actor > svg, #best-actress > svg {
+    zoom: 75%;
+}
+
+#best-actor-and-actress-title {
+    margin-top: 100px;
+}
+
+/*# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/best-actor-and-actress.97282251.css.map */

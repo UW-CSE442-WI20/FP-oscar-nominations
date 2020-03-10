@@ -1,0 +1,40 @@
+h2 {
+  font-family: "Futura-Bold";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  margin-top: 0px;
+  color: #D7A764;
+}
+
+p {
+  font-family: "Futura-Light";
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+
+strong {
+  font-family: "Futura-Bold";
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  color: #D7A764;
+}
+
+.flex-container {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap; /* so images won't go off the screen */
+}
+
+a{TEXT-DECORATION:none;color:black}
+
+
+#image1{
+    
+    }
+
+/*# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/style.d215945e.css.map */

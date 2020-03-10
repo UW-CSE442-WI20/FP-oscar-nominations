@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../font/Antonym-Light.otf":[["Antonym-Light.980ac7d2.otf","../font/Antonym-Light.otf"],"../font/Antonym-Light.otf"],"./../font/Antonym-Regular.otf":[["Antonym-Regular.341bc388.otf","../font/Antonym-Regular.otf"],"../font/Antonym-Regular.otf"],"./../font/FTN35.otf":[["FTN35.e9952d24.otf","../font/FTN35.otf"],"../font/FTN35.otf"],"./../font/FTN36.otf":[["FTN36.5a046a74.otf","../font/FTN36.otf"],"../font/FTN36.otf"],"./../font/FTN45.otf":[["FTN45.466b2e69.otf","../font/FTN45.otf"],"../font/FTN45.otf"],"./../font/FTN46.otf":[["FTN46.7a4134f8.otf","../font/FTN46.otf"],"../font/FTN46.otf"],"./../font/FTN55.otf":[["FTN55.e5dfb7b9.otf","../font/FTN55.otf"],"../font/FTN55.otf"],"./../font/FTN56.otf":[["FTN56.27b59c59.otf","../font/FTN56.otf"],"../font/FTN56.otf"],"./../font/FTN65.otf":[["FTN65.5e2884e6.otf","../font/FTN65.otf"],"../font/FTN65.otf"],"./../font/FTN66.otf":[["FTN66.1949968c.otf","../font/FTN66.otf"],"../font/FTN66.otf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../font/Antonym-Light.otf":[["Antonym-Light.980ac7d2.otf","../font/Antonym-Light.otf"],"../font/Antonym-Light.otf"],"./../font/Antonym-Regular.otf":[["Antonym-Regular.341bc388.otf","../font/Antonym-Regular.otf"],"../font/Antonym-Regular.otf"],"./../font/FTN35.otf":[["FTN35.e9952d24.otf","../font/FTN35.otf"],"../font/FTN35.otf"],"./../font/FTN36.otf":[["FTN36.5a046a74.otf","../font/FTN36.otf"],"../font/FTN36.otf"],"./../font/FTN45.otf":[["FTN45.466b2e69.otf","../font/FTN45.otf"],"../font/FTN45.otf"],"./../font/FTN46.otf":[["FTN46.7a4134f8.otf","../font/FTN46.otf"],"../font/FTN46.otf"],"./../font/FTN55.otf":[["FTN55.e5dfb7b9.otf","../font/FTN55.otf"],"../font/FTN55.otf"],"./../font/FTN56.otf":[["FTN56.27b59c59.otf","../font/FTN56.otf"],"../font/FTN56.otf"],"./../font/FTN65.otf":[["FTN65.5e2884e6.otf","../font/FTN65.otf"],"../font/FTN65.otf"],"./../font/FTN66.otf":[["FTN66.1949968c.otf","../font/FTN66.otf"],"../font/FTN66.otf"],"./../img/main.jpg":[["main.a75d08c5.jpg","../img/main.jpg"],"../img/main.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

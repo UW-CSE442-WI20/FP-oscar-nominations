@@ -25,6 +25,7 @@
     color: #D8A75E;
     display: flex;
     justify-content: space-between;
+    margin: auto;
 }
 
 #best-actor-and-actress text{
@@ -35,13 +36,27 @@
     text-align: center;
 }
 
-#best-actor-container, #best-atress-container {
-    width: 700px;
+#best-actor-and-actress-analysis-container {
+    width: 300px;
 }
 
-#best-actor-and-actress-analysis-container {
-    width: 25%;
-    min-width: 300px;
+#best-actor-and-actress h3 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#best-actor h3 {
+    /* So the "Best Actor" looks symmetirc with Best Actor */
+    padding-right: 20%;
+}
+
+/* Reducing Graphs Size */
+#best-actor > svg, #best-actress > svg {
+    zoom: 75%;
+}
+
+#best-actor-and-actress-title {
+    margin-top: 100px;
 }
 
 /*# sourceMappingURL=/best-actor-and-actress.0f3cb2b7.css.map */

@@ -127,7 +127,7 @@ var margin = {
   left: 150
 },
     width = 750,
-    height = 470 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 var year = 1928;
 var xx;
 
@@ -254,7 +254,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
