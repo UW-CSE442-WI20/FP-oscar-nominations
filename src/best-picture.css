@@ -5,7 +5,7 @@
     height: 50px; */
     padding: 1%;
     font: 12pt sans-serif;
-    background: lightsteelblue;
+    background: rgb(47, 47, 47);
     border: 0px;
     border-radius: 8px;
     pointer-events: none;
@@ -17,14 +17,13 @@
     align-items: top;
     text-align: center;
     font-size: 12pt;
-    margin-top: 5%;
 }
 
 #movie-info {
     position: absolute;
     width: 20%;
     border-radius: 8px;
-    background: #1B1B1B;
+    background: rgb(47, 47, 47);
     opacity: 80%;
 }
 
@@ -42,4 +41,12 @@
 
 #move-overview {
     position: absolute;
+}
+
+#best-picture a {
+    color: #75edfe
+}
+
+#best-picture-title {
+    margin-top: 5%;
 }

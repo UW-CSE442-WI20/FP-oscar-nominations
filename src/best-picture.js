@@ -239,7 +239,7 @@ d3.csv(csv)
                     if (typeof(num) == "string") {
                         num = "Data Unavaliable"
                     } else {
-                        num = "$" + num
+                        num = "$" + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                     }
                     tooltip.transition()
                         .duration(200)
@@ -372,7 +372,7 @@ d3.csv(csv)
                 if (typeof(num) == "string") {
                     num = "Data Unavaliable"
                 } else {
-                    num = "$" + num
+                    num = "$" + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 }
                 movieProfit.innerText = `Profit: ${num}`;
             }
