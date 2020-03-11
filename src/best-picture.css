@@ -23,8 +23,7 @@
     position: absolute;
     width: 20%;
     border-radius: 8px;
-    background: rgb(47, 47, 47);
-    opacity: 80%;
+    text-align: left;
 }
 
 .best-picture-text {

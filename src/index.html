@@ -17,11 +17,11 @@
   <body>
     <div class="parallax"></div>
     <div class="wrapper">
-      <!--<div class ="top10" id="top10"></div>-->
-      <!-- best actor/actress -->
-      <h2 id="best-actor-and-actress-title">
-        Country of Birth and Age when Awarded for Best Actor/Actress Winners
-      </h2>
+      <div class="title-container">
+        <h2 id="best-actor-and-actress-title" class="wraper-40">
+          Country of Birth and Age when Awarded for Best Actor/Actress Winners
+        </h2>
+      </div>
       <div id ="best-actor-and-actress">
         <div id="best-actor-container">
           <div id="best-actor">
@@ -57,8 +57,7 @@
       </div>
       <!-- Best Directors Demography -->
 
-
-
+      <div class="title-container">
       <div>
         <div id = "demographics_title" class = "demographics_title"><h2>Demographics of Oscar Winners</h2></div>
         <h3>Select the Award</h3>
@@ -68,6 +67,7 @@
         <input type="checkbox" class="checkbox" value="Best Supporting Actor" checked><label>Best Supporting Actors </label>
         <input type="checkbox" class="checkbox" value="Best Supporting Actress" checked><label>Best Supporting Actresses  </label>
       </div>
+    </div>
     <div class = "best_directors" id = "best_directors">
       <!-- <div id = "demographyDropdown"></div> -->
       <div><div id = "demographyDropdown" class = 'demographyDropdown' ></div>
@@ -76,6 +76,7 @@
       <div class="best_dots" id="best_dots"></div>
       <div class="info_box" id="info_box"></div>
     </div>
+    <div class="title-container">
       <!-- best picture-->
       <h2 id="best-picture-title">Oscar Best Picture Winners</h2>
       <div id="best-picture">
@@ -94,14 +95,15 @@
           <p><a id="imdb-link"></a></p>
         </div>
       </div>
-      <div class="wrapper-content">
-        <h2 class="wrapper-title">Leading actors and actress nominees over the years</h2>
-        <p class="wrapper-text"> Besides different awards from various cinematogrophy academia, people's
+      <div id="barchart">
+        <h2 class="wrapper-40">Leading actors and actress nominees over the years</h2>
+        <p class="wrapper-60"> Besides different awards from various cinematogrophy academia, people's
           opinion is also based on crowdsourcing and critics' ratings. One of the biggest datasource—Internet Movie Database (IMDb), where
           users streamline content online: everything from tryvia to reviews. So it is interesting to see how high was rating for nominees
           and winners according to IMDb. Is academia's choices synched with audience's?
         </p>
       </div>
+    </div>
       <div class="graph">
         <div class="top10">
           <input type="range" id="mySlider" min="1928" max="2020" value="1928" list="steplist">
