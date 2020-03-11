@@ -99,8 +99,6 @@ h3 {
   align-content: stretch;
   align-items: flex-start;
   margin-top: 0px;
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
 
@@ -252,6 +250,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   align-content: stretch;
+  margin-bottom: 100px;
 }
 
 .wrapper-content{
@@ -262,23 +261,45 @@ h3 {
   justify-content: space-around;
   align-content: stretch;
   margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.wrapper-title {
+.wrapper-speech {
   display: flex;
-  width: 60%;
-  margin-right: 10px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: stretch;
+  background: #FFF7EF;
+}
+
+.short-speech{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-content: center;
+  background: #FFF7EF;
+  background-size: cover;
+}
+
+.short-speech p{
+  color: #000000;
+}
+
+.image-style{
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  justify-content: space-around;
   align-content: stretch;
 }
 
-.wrapper-text {
-  display: flex;
-  width: 40%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: stretch;
+.img {
+  width: 200px;
 }
 
 #mySlider {
