@@ -1,301 +1,261 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>My Title</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
     <!-- <script src="./top10-bar.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
-  type="text/css" />
-    <link rel="stylesheet" href = "./style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" />
+    <link rel="stylesheet" href="./style.css" type="text/css">
     <link rel="stylesheet" href="best-picture.css">
     <link rel="stylesheet" href="best-actor-and-actress.css">
     <link rel="stylesheet" href="./Shortest Speech/style.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="parallax"></div>
     <div class="wrapper">
-      <div class="title-container">
-        <h2 id="best-actor-and-actress-title" class="wraper-40">
-          Country of Birth and Age when Awarded for Best Actor/Actress Winners
-        </h2>
-      </div>
-      <div id ="best-actor-and-actress">
-        <div id="best-actor-container">
-          <div id="best-actor">
-            <h3>Best Actor</h3>
-          </div>
+        <div class="title-container">
+            <h2 id="best-actor-and-actress-title" class="wraper-40">
+                Country of Birth and Age when Awarded for Best Actor/Actress Winners
+            </h2>
         </div>
-        <div id="best-actor-and-actress-analysis-container">
-          <div id="country-of-birth">
-            <h4>Instruction</h4>
-            <p>
-              Click on a circle to select the group denoted by the circle. Hovering over
-              an actor or actress' name will show basic information about the individual.
-              Clicking on an actor or actress' name will open the IMDB page.
-            </p>
-            <h4>Country of Birth</h4>
-            <p>
-              Most winners of Best Actor and Best Actress awards were born in the United
-              States of America.
-            </p>
-          </div>
-          <div id="age-range">
-            <h4>Age Range</h4>
-            <p>
-              Most Oscar awars are given to actors and actress that are between 20 and 40.
-            </p>
-          </div>
+        <div id="best-actor-and-actress">
+            <div id="best-actor-container">
+                <div id="best-actor">
+                    <h3>Best Actor</h3>
+                </div>
+            </div>
+            <div id="best-actor-and-actress-analysis-container">
+                <div id="country-of-birth">
+                    <h4>Instruction</h4>
+                    <p>
+                        Click on a circle to select the group denoted by the circle. Hovering over
+                        an actor or actress' name will show basic information about the individual.
+                        Clicking on an actor or actress' name will open the IMDB page.
+                    </p>
+                    <h4>Country of Birth</h4>
+                    <p>
+                        Most winners of Best Actor and Best Actress awards were born in the United
+                        States of America.
+                    </p>
+                </div>
+                <div id="age-range">
+                    <h4>Age Range</h4>
+                    <p>
+                        Most Oscar awars are given to actors and actress that are between 20 and 40.
+                    </p>
+                </div>
+            </div>
+            <div id="best-atress-container">
+                <div id="best-actress">
+                    <h3>Best Actress</h3>
+                </div>
+            </div>
         </div>
-        <div id="best-atress-container">
-          <div id="best-actress">
-            <h3>Best Actress</h3>
-          </div>
+        <!-- Best Directors Demography -->
+
+        <div class="title-container">
+            <div>
+                <div id="demographics_title" class="demographics_title">
+                    <h2>Demographics of Oscar Winners</h2>
+                </div>
+                <h3>Select the Award</h3>
+                <input type="checkbox" class="checkbox" value="Best Director" checked><label>Best Directors </label>
+                <input type="checkbox" class="checkbox" value="Best Actor" checked><label>Best Actors </label>
+                <input type="checkbox" class="checkbox" value="Best Actress" checked><label>Best Actresses </label>
+                <input type="checkbox" class="checkbox" value="Best Supporting Actor" checked><label>Best Supporting Actors </label>
+                <input type="checkbox" class="checkbox" value="Best Supporting Actress" checked><label>Best Supporting Actresses </label>
+            </div>
         </div>
-      </div>
-      <!-- Best Directors Demography -->
-
-      <div class="title-container">
-      <div>
-        <div id = "demographics_title" class = "demographics_title"><h2>Demographics of Oscar Winners</h2></div>
-        <h3>Select the Award</h3>
-        <input type="checkbox" class="checkbox" value="Best Director" checked><label>Best Directors </label>
-        <input type="checkbox" class="checkbox" value="Best Actor" checked><label>Best Actors </label>
-        <input type="checkbox" class="checkbox" value="Best Actress" checked><label>Best Actresses </label>
-        <input type="checkbox" class="checkbox" value="Best Supporting Actor" checked><label>Best Supporting Actors </label>
-        <input type="checkbox" class="checkbox" value="Best Supporting Actress" checked><label>Best Supporting Actresses  </label>
-      </div>
-    </div>
-    <div class = "best_directors" id = "best_directors">
-      <!-- <div id = "demographyDropdown"></div> -->
-      <div><div id = "demographyDropdown" class = 'demographyDropdown' ></div>
-        <svg id="dots_legend"></svg>
-      </div>
-      <div class="best_dots" id="best_dots"></div>
-      <div class="info_box" id="info_box"></div>
-    </div>
-    <div class="title-container">
-      <!-- best picture-->
-      <h2 id="best-picture-title">Oscar Best Picture Winners</h2>
-      <div id="best-picture">
-        <div id="movie-info">
-          <p id="movie-title"></p>
-          <p id="movie-award-year"></p>
-          <p id="movie-profit"></p>
-          <p id="movie-overview">
-            A description of the movie. Please click on the circle next to the
-            genre names to show movies that won the Oscar Best Picture Award
-            for the genre. Clicking on a movie name will show the movie overview
-            here. The circle to the left of the movie name denote move profit;
-            the closer to the movie the higher the profit (1px is $10,000,000).
-            Hovering over the circle shows the actual profit amount.
-          </p>
-          <p><a id="imdb-link"></a></p>
+        <div class="best_directors" id="best_directors">
+            <!-- <div id = "demographyDropdown"></div> -->
+            <div>
+                <div id="demographyDropdown" class='demographyDropdown'></div>
+                <svg id="dots_legend"></svg>
+            </div>
+            <div class="best_dots" id="best_dots"></div>
+            <div class="info_box" id="info_box"></div>
         </div>
-      </div>
-      <div id="barchart">
-        <h2 class="wrapper-40">Leading actors and actress nominees over the years</h2>
-        <p class="wrapper-60"> Besides different awards from various cinematogrophy academia, people's
-          opinion is also based on crowdsourcing and critics' ratings. One of the biggest datasource—Internet Movie Database (IMDb), where
-          users streamline content online: everything from tryvia to reviews. So it is interesting to see how high was rating for nominees
-          and winners according to IMDb. Is academia's choices synched with audience's?
-        </p>
-      </div>
-    </div>
-      <div class="graph">
-        <div class="top10">
-          <input type="range" id="mySlider" min="1928" max="2020" value="1928" list="steplist">
-          <div id="time-slider-label"></div>
-          <datalist id="steplist"></datalist>
-          <div id="top10"></div>
+        <div class="title-container">
+            <!-- best picture-->
+            <h2 id="best-picture-title">Oscar Best Picture Winners</h2>
+            <div id="best-picture">
+                <div id="movie-info">
+                    <p id="movie-title"></p>
+                    <p id="movie-award-year"></p>
+                    <p id="movie-profit"></p>
+                    <p id="movie-overview">
+                        A description of the movie. Please click on the circle next to the
+                        genre names to show movies that won the Oscar Best Picture Award
+                        for the genre. Clicking on a movie name will show the movie overview
+                        here. The circle to the left of the movie name denote move profit;
+                        the closer to the movie the higher the profit (1px is $10,000,000).
+                        Hovering over the circle shows the actual profit amount.
+                    </p>
+                    <p><a id="imdb-link"></a></p>
+                </div>
+            </div>
+            <div id="barchart">
+                <h2 class="wrapper-40">Leading actors and actress nominees over the years</h2>
+                <p class="wrapper-60"> Besides different awards from various cinematogrophy academia, people's
+                    opinion is also based on crowdsourcing and critics' ratings. One of the biggest datasource—Internet Movie Database (IMDb), where
+                    users streamline content online: everything from tryvia to reviews. So it is interesting to see how high was rating for nominees
+                    and winners according to IMDb. Is academia's choices synched with audience's?
+                </p>
+            </div>
         </div>
-        <div>
-          <h2 id="yearTitle">1928</h2>
-        </div>
-      </div>
-      <div class="wrapper-speech">
-      <!--  <h2>Fun Fact: Shortest Acceptance Speech</h2>
-
-        <p>Click the image to watch the video</p>-->
-        <div class="short-speech">
-
-          <div class="image-style">
-              <a href="https://youtu.be/O0Q_nyjuEak" target="_blank">
-                  <img src="../img/Pesci.png" alt="1 Joe Pesci">
-              <p><Strong>Joe Pesci</Strong><br>
-                  1990 (63rd) Academy Awards <br>
-                  Category: Actor in a Supporting Role<br>
-                  Film: Good Fellas<br></p>
-              </a>
-          </div>
-
-
-
-          <div class="image-style">
-              <a href="https://youtu.be/DNdmGqLMqE4" target="_blank">
-              <img src="../img/Grahame.png" alt="3 Gloria Grahame">
-              <p><strong>Gloria Grahame</strong><br>
-                  1952 (25th) Academy Awards<br>
-                  Category: Actress in a Supporting Role<br>
-                  Film: The Bad and the Beautiful<br></p>
-                  </a>
-          </div>
-
-          <div class="image-style">
-              <a href="https://youtu.be/DNdmGqLMqE4" target="_blank">
-              <img src="../img/Grahame.png" alt="3 Gloria Grahame">
-              <p><strong>Gloria Grahame</strong><br>
-                  1952 (25th) Academy Awards<br>
-                  Category: Actress in a Supporting Role<br>
-                  Film: The Bad and the Beautiful<br></p>
-                  </a>
-          </div>
-          <div class="image-style">
-              <a href="https://youtu.be/DNdmGqLMqE4" target="_blank">
-              <img src="../img/Grahame.png" alt="3 Gloria Grahame">
-              <p><strong>Gloria Grahame</strong><br>
-                  1952 (25th) Academy Awards<br>
-                  Category: Actress in a Supporting Role<br>
-                  Film: The Bad and the Beautiful<br></p>
-                  </a>
-          </div>
+        <div class="graph">
+            <div class="top10">
+                <input type="range" id="mySlider" min="1928" max="2020" value="1928" list="steplist">
+                <div id="time-slider-label"></div>
+                <datalist id="steplist"></datalist>
+                <div id="top10"></div>
+            </div>
+            <div>
+                <h2 id="yearTitle">1928</h2>
+            </div>
         </div>
 
-        <div class="short-speech">
-
-          <div class="image-style">
-              <a href="https://youtu.be/O0Q_nyjuEak" target="_blank">
-                  <img src="../img/Pesci.png" alt="1 Joe Pesci">
-              <p><Strong>Joe Pesci</Strong><br>
-                  1990 (63rd) Academy Awards <br>
-                  Category: Actor in a Supporting Role<br>
-                  Film: Good Fellas<br></p>
-              </a>
-          </div>
 
 
 
-          <div class="image-style">
-              <a href="https://youtu.be/DNdmGqLMqE4" target="_blank">
-              <img src="../img/Grahame.png" alt="3 Gloria Grahame">
-              <p><strong>Gloria Grahame</strong><br>
-                  1952 (25th) Academy Awards<br>
-                  Category: Actress in a Supporting Role<br>
-                  Film: The Bad and the Beautiful<br></p>
-                  </a>
-          </div>
+        <div class="wrapper-speech">
+            <h2>Fun Fact: Shortest Acceptance Speech</h2>
 
-          <div class="image-style">
-              <a href="https://youtu.be/DNdmGqLMqE4" target="_blank">
-              <img src="../img/Grahame.png" alt="3 Gloria Grahame">
-              <p><strong>Gloria Grahame</strong><br>
-                  1952 (25th) Academy Awards<br>
-                  Category: Actress in a Supporting Role<br>
-                  Film: The Bad and the Beautiful<br></p>
-                  </a>
-          </div>
+            <h3>Click the image to watch the video</h3>
+
+
+
+            <div class="short-speech">
+
+                <div class="image-style">
+                    <a href="https://youtu.be/O0Q_nyjuEak" target="_blank">
+                        <img src="../img/Pesci.png" alt="1 Joe Pesci">
+                        <p><Strong>Joe Pesci</Strong><br>
+                            1990 (63rd) Academy Awards <br>
+                            Category: Actor in a Supporting Role<br>
+                            Film: Good Fellas<br></p>
+                    </a>
+                </div>
+
+                <div class="image-style">
+                    <a href="https://youtu.be/xOY7OmIPNoA" target="_blank">
+                        <img src="../img/Newman.png" alt="2 Alfred Newman">
+                        <p><Strong>Alfred Newman</Strong><br>
+                            1952 (25th) Academy Awards<br>
+                            Category: Music (Scoring of a Musical Picture)<br>
+                            Film: With a Song in My Heart<br></p>
+                    </a>
+                </div>
+                
+                <div class="image-style">
+                    <a href="https://youtu.be/DNdmGqLMqE4" target="_blank">
+                        <img src="../img/Grahame.png" alt="3 Gloria Grahame">
+                        <p><strong>Gloria Grahame</strong><br>
+                            1952 (25th) Academy Awards<br>
+                            Category: Actress in a Supporting Role<br>
+                            Film: The Bad and the Beautiful<br></p>
+                    </a>
+                </div>
+
+                <div class="image-style">
+                    <a href="https://youtu.be/n2zjm79Esq4" target="_blank">
+                        <img src="../img/Hitchcock.png" alt="4 Alfred Hitchcock">
+                        <p><strong>Alfred Hitchcock</strong><br>
+                            1967 (40th) Academy Awards<br>
+                            Category: Irving G. Thalberg Memorial Award<br></p>
+                    </a>
+                </div>
+
+
+                <div class="image-style">
+                    <a href="https://youtu.be/A49F9e2_AWs" target="_blank">
+                        <img src="../img/Holden.png" alt="5 William Holden">
+                        <p><strong>William Holden</strong><br>
+                            1953 (26th) Academy Awards<br>
+                            Category: Actor<br>
+                            Film: Stalag 17<br></p>
+                    </a>
+                </div>
+
+                <div class="image-style">
+                    <a href="https://youtu.be/lhlxTkTYwvQ" target="_blank">
+                        <img src="../img/Duke.png" alt="6 Patty Duke">
+                        <p><strong>Patty Duke</strong><br>
+                            1962 (35th) Academy Awards<br>
+                            Category: Actress in a Supporting Role<br>
+                            Film: The Miracle Worker<br>
+
+                        </p>
+                    </a>
+                </div>
+
+
+
+                <div class="image-style">
+                    <a href="https://youtu.be/0OKdZaCzvuo" target="_blank">
+                        <img src="../img/Mann.png" alt="7 Delbert Mann">
+                        <p> <strong>Delbert Mann</strong><br>
+                            1955 (28th) Academy Awards<br>
+                            Category: Directing<br>
+                            Film: Marty<br></p>
+                    </a>
+                </div>
+
+
+
+                <div class="image-style">
+                    <a href="https://youtu.be/UQgNYiqjV50" target="_blank">
+                        <img src="../img/Psihoyos.png" alt="8 Louie Psihoyos">
+                        <p> <strong>Louie Psihoyos</strong><br>
+                            2009 (82nd) Academy Awards<br>
+                            Category: Documentary (Feature)<br>
+                            Film:The Cove<br>
+                        </p>
+                    </a>
+                </div>
+
+
+                <div class="image-style">
+                    <a href="https://youtu.be/xOY7OmIPNoA" target="_blank">
+                        <img src="../img/Tiomkin.png" alt="9 Dimitri Tiomkin">
+                        <p> <strong>Dimitri Tiomkin</strong><br>
+                            1952 (25th) Academy Awards<br>
+                            Category: Music (Song)<br>
+                            Film: High Noon<br>
+                        </p>
+                    </a>
+                </div>
+
+
+                <div class="image-style">
+                    <a href="https://youtu.be/S2X_BenTWNA" target="_blank">
+                        <img src="../img/Wilder.png" alt="10 Billy Wilder"></a>
+                    <p> <strong>Billy Wilder</strong><br>
+                        1960 (33rd) Academy Awards<br>
+                        Category: Directing<br>
+                        Film: The Apartment<br>
+                    </p>
+                </div>
+
+
+
+
+            </div>
         </div>
-    </div>
 
-    <script src="./index.js"></script>
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="./best-picture.js"></script>
-    <script src="./best-actress.js"></script>
-    <script src="./best-actor.js"></script>
-    <script src="./dots.js"></script>
-    <script src="./top10-bar.js"></script>
-  </body>
+        <script src="./index.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="./best-picture.js"></script>
+        <script src="./best-actress.js"></script>
+        <script src="./best-actor.js"></script>
+        <script src="./dots.js"></script>
+        <script src="./top10-bar.js"></script>
+</body>
+
 </html>
-
-
-<!--  <div class="image-style">
-      <a href="https://youtu.be/n2zjm79Esq4" target="_blank">
-      <img src="./Shortest Speech/Alfred Hitchcock.png" alt="4 Alfred Hitchcock">
-      <p><strong>Alfred Hitchcock</strong><br>
-          1967 (40th) Academy Awards<br>
-          Category: Irving G. Thalberg Memorial Award<br></p>
-      </a>
-  </div>
-
-
-  <div class="image-style">
-      <a href="https://youtu.be/A49F9e2_AWs" target="_blank">
-      <img src="./Shortest Speech/William Holden.png" alt="5 William Holden">
-      <p><strong>William Holden</strong><br>
-          1953 (26th) Academy Awards<br>
-          Category: Actor<br>
-          Film: Stalag 17<br></p>
-          </a>
-  </div>
-
-  <div class="image-style">
-      <a href="https://youtu.be/lhlxTkTYwvQ" target="_blank">
-      <img src="./Shortest Speech/Patty Duke.png" alt="6 Patty Duke">
-      <p><strong>Patty Duke</strong><br>
-          1962 (35th) Academy Awards<br>
-          Category: Actress in a Supporting Role<br>
-          Film: The Miracle Worker<br>
-
-      </p>
-      </a>
-  </div>
-
-  <div class="image-style">
-      <a href="https://youtu.be/xOY7OmIPNoA" target="_blank">
-      <img src="../img/Newman.png" alt="2 Alfred Newman">
-      <p><Strong>Alfred Newman</Strong><br>
-          1952 (25th) Academy Awards<br>
-          Category: Music (Scoring of a Musical Picture)<br>
-          Film: With a Song in My Heart<br></p>
-      </a>
-  </div>
-
-  <div class="image-style">
-      <a href="https://youtu.be/0OKdZaCzvuo" target="_blank">
-      <img src="./Shortest Speech/Delbert Mann.png" alt="7 Delbert Mann">
-      <p> <strong>Delbert Mann</strong><br>
-          1955 (28th) Academy Awards<br>
-          Category: Directing<br>
-          Film: Marty<br></p>
-          </a>
-  </div>
-
-
-
-  <div class="image-style">
-      <a href="https://youtu.be/UQgNYiqjV50" target="_blank">
-      <img src="./Shortest Speech/Louie Psihoyos.png" alt="8 Louie Psihoyos">
-      <p> <strong>Louie Psihoyos</strong><br>
-          2009 (82nd) Academy Awards<br>
-          Category: Documentary (Feature)<br>
-          Film:The Cove<br>
-      </p>
-          </a>
-  </div>
-
-
-  <div id=image9>
-      <a href="https://youtu.be/xOY7OmIPNoA" target="_blank">
-      <img src="./Shortest Speech/Dimitri Tiomkin.png" alt="9 Dimitri Tiomkin">
-      <p> <strong>Dimitri Tiomkin</strong><br>
-          1952 (25th) Academy Awards<br>
-          Category: Music (Song)<br>
-          Film: High Noon<br>
-      </p>
-  </a>
-  </div>
-
-
-     <div class="image-style">
-      <a href="https://youtu.be/S2X_BenTWNA" target="_blank">
-      <img src="./Shortest Speech/Billy Wilder.png" alt="10 Billy Wilder"></a>
-      <p> <strong>Billy Wilder</strong><br>
-          1960 (33rd) Academy Awards<br>
-          Category: Directing<br>
-          Film: The Apartment<br>
-         </p>
-      </div>
-</div>-->
