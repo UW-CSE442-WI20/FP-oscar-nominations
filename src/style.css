@@ -280,12 +280,13 @@ h3 {
 
 .short-speech{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
   flex-direction: row;
   justify-content: space-evenly;
-  align-content: center;
+  align-items: baseline;
   background: #FFF7EF;
   background-size: cover;
 }
