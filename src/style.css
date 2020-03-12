@@ -315,7 +315,8 @@ h3 {
   width: 20%;
   flex-direction: column;
   justify-content: space-around;
-  align-content: stretch;
+/*  align-content: stretch;*/
+  align-content: center;
 }
 
 .img {
