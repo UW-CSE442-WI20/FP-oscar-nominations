@@ -60,7 +60,7 @@ d3.csv(dfe, function(raw_data) {
     var Tooltip = d3.select("#info_box")
       .append("div")
       .style("opacity", 1)
-      .html("Hover over a dot for the oscar winner's name and movie!")
+      .html("Hover over a dot for the oscar winner's name and movie!<br><br><br>")
       .attr("class", "tooltip")
       .style("color", 'white')
       .style("border-width", "2px")
@@ -71,12 +71,12 @@ d3.csv(dfe, function(raw_data) {
     var Info_box = d3.select("#info_box")
       .append("div")
       .style("opacity", 1)
-      .html("Click a dot for more information   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;")
+      .html("Click a dot for more information ")
       .attr("class", "tooltip")
       .style("border-width", "2px")
       .style("border-radius", "5px")
-      .style("background-color", "#2f2f2f")
-      .style("padding", "15px")
+      // .style("background-color", "#2f2f2f")
+      .style("padding", "5px")
       .attr('align', 'left')
 
 
@@ -97,7 +97,7 @@ d3.csv(dfe, function(raw_data) {
     }
     var mousemove = function(d) {
       Tooltip
-        .html("<strong>You're hovering over</strong><br><br>Name: " + d.person +"<br>Movie: "+d.movie+"<br>")
+        .html("<strong>You're hovering over</strong><br><br>Name: " + d.person +"<br>Movie: "+d.movie+"<br><br><br>")
     }
     var mouseleave = function(d) {
       Tooltip
@@ -159,7 +159,8 @@ d3.csv(dfe, function(raw_data) {
       ['race_ethnicity', 'Race'],
       ['sexual_orientation', 'Sexuality'],
       ['religion', 'Religion'],
-      ['rating_bin', 'Rating'],
+      ['rating_bin', 'IMDb Rating'],
+      ['runtime_bin', 'Runtime (Hours)']
     ]
     var demographyMenu = d3.select("#demographyDropdown")
     demographyMenu
