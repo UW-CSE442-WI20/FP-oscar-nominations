@@ -100,6 +100,24 @@ h4 {
   letter-spacing: 1px;
 }
 
+select {
+  width: 100%;
+  margin: 2px 0;
+  padding-left: 8px;
+  padding-top: 4px;
+  box-sizing: border-box;
+  border: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../img/arrow.svg") no-repeat;
+  background-size: 15px 15px;
+  background-position: 97% 5px;
+  color: #D7A764;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 
 .labelstyle {
   font-family: "Futura-Regular";
@@ -311,9 +329,36 @@ h4 {
   background-size: cover;
 }
 
+.image-style:hover{
+  opacity: 0.6;
+}
+
+
 .short-speech p{
   color: #000000;
 }
+
+img {
+  max-width:100%;
+  max-height:100%;
+  transition: .5s ease;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.image-style{
+  display: flex;
+  width: 15%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: left;
+  margin-right: 30px;
+  overflow: hidden;
+}
+
 
 .wrapper-40 {
   display: flex;
@@ -328,26 +373,6 @@ h4 {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 30px;
-}
-
-.image-style{
-  display: flex;
-  width: 15%;
-  flex-direction: column;
-  justify-content: space-around;
-  align-content: left;
-  margin-right: 30px;
-  overflow: hidden;
-}
-
-img {
-  max-width:100%;
-  max-height:100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
 }
 
 .checkbox-container {
@@ -541,23 +566,6 @@ img {
   margin-bottom: 50px;
 }
 
-select {
-  width: 100%;
-  margin: 2px 0;
-  padding-left: 8px;
-  padding-top: 4px;
-  box-sizing: border-box;
-  border: 0 !important;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url("../img/arrow.svg") no-repeat;
-  background-size: 15px 15px;
-  background-position: 97% 5px;
-  color: #D7A764;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-}
 * {
   /* css rule that changes all the fonts on the page */
   font-family: "Futura-Light";
@@ -578,6 +586,10 @@ select {
   margin-bottom: 10px;
 }
 
+a {
+  color: #70A8A3 !important
+}
+
 .references a{
-    color: #D7A764;
+    color: #D7A764 !important
 }

@@ -5,10 +5,10 @@
     padding: 1%;
     font: 10pt sans-serif;
     border: 2px black;
-    border-radius: 8px;
-    background: white;
+    border-radius: 2px;
+    background: #FFF7EF;
     pointer-events: none;
-    color: black;
+    color: #1B1B1B;
 }
 
 .selected > * {

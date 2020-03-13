@@ -4,9 +4,10 @@
     height: 50px; */
     padding: 1%;
     font: 12pt sans-serif;
-    background: rgb(47, 47, 47);
+    background: #FFF7EF;
     border: 0px;
-    border-radius: 8px;
+    color: #1B1B1B;
+    border-radius: 2px;
     pointer-events: none;
 }
 
@@ -21,7 +22,7 @@
 #movie-info {
     position: absolute;
     width: 20%;
-    border-radius: 8px;
+    border-radius: 2px;
     text-align: left;
 }
 
