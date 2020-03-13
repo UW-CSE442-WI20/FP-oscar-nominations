@@ -5,18 +5,18 @@
     padding: 1%;
     font: 10pt sans-serif;
     border: 2px black;
-    border-radius: 8px;
-    background: white;
+    border-radius: 2px;
+    background: #FFF7EF;
     pointer-events: none;
-    color: black;
+    color: #1B1B1B;
 }
 
 .selected > * {
-    fill: yellow !important;
+    fill: #70A8A3 !important;
 }
 
 .selected.link {
-    stroke: yellow;
+    stroke: #70A8A3;
     fill: none !important;
 }
 
@@ -25,6 +25,7 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
+    margin-bottom: 100px;
 }
 
 #best-actor-and-actress text{
@@ -51,11 +52,12 @@
 
 /* Reducing Graphs Size */
 #best-actor > svg, #best-actress > svg {
-    zoom: 75%;
+    zoom: 80%;
 }
 
 #best-actor-and-actress-title {
     margin-top: 100px;
 }
+
 
 /*# sourceMappingURL=/best-actor-and-actress.0f3cb2b7.css.map */
