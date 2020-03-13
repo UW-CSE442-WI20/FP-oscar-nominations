@@ -200,7 +200,7 @@ d3.csv(dfe, function (raw_data) {
     return x(d[selected]);
   })).force("y", d3.forceY().strength(0.02).y(height / 2)).force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
   .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius).iterations(1)) // Force that avoids circle overlapping
-  .velocityDecay(0.25); // Apply these forces to the nodes and update their positions.
+  .velocityDecay(0.3).alphaDecay(0.01); // Apply these forces to the nodes and update their positions.
   // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
 
   simulation.nodes(data).on("tick", function (d) {
@@ -219,7 +219,7 @@ d3.csv(dfe, function (raw_data) {
   });
 
   function doubleclick(d) {
-    Info_box.html("<label class='tooltipSubtitle'>You've clicked on</label><br>" + "<a href = \"" + d.bioLink + "\" target = _blank> <label class='tooltipTitle'>" + d.person + "</label></a><br>" + "<a href =\"" + d.movie_IMDB_Link + "\" target = _blank> Movie: " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" + "Awarded in <label class='labelstyle'>" + d.year_of_award + "</label><br>" + "Birthplace: <label class='labelstyle'>" + d.birthplace + "</label><br>" + "Date of birth: <label class='labelstyle'>" + d.date_of_birth + "</label><br>" + "Race: <label class='labelstyle'>" + d.race_ethnicity + "</label><br>" + "Religion: <label class='labelstyle'>" + d.religion + "</label><br>" + "Sexuality: <label class='labelstyle'>" + d.sexual_orientation + "</label><br>" + "Movie Rating: <label class='labelstyle'>" + d.rating_bin + "</label><br>" + "Movie Runtime: <label class='labelstyle'>" + d.runtime_bin + " Hours</label><br>").transition().duration(duration_sec);
+    Info_box.html("<label class='tooltipSubtitle'>You've clicked on</label><br>" + "<a href = \"" + d.bioLink + "\" target = _blank> <label class='tooltipTitle'>" + d.person + "</label></a><br>" + "<a href =\"" + d.movie_IMDB_Link + "\" target = _blank> Movie: " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" + "Award <label class='labelstyle'>" + d.award + "</label><br>" + "Awarded in <label class='labelstyle'>" + d.year_of_award + "</label><br>" + "Birthplace: <label class='labelstyle'>" + d.birthplace + "</label><br>" + "Date of birth: <label class='labelstyle'>" + d.date_of_birth + "</label><br>" + "Race: <label class='labelstyle'>" + d.race_ethnicity + "</label><br>" + "Religion: <label class='labelstyle'>" + d.religion + "</label><br>" + "Sexuality: <label class='labelstyle'>" + d.sexual_orientation + "</label><br>" + "Movie Rating: <label class='labelstyle'>" + d.rating_bin + "</label><br>" + "Movie Runtime: <label class='labelstyle'>" + d.runtime_bin + " Hours</label><br>").transition().duration(duration_sec);
   }
 
   d3.selectAll(".checkbox").on("change", update);
@@ -256,7 +256,7 @@ d3.csv(dfe, function (raw_data) {
       return x(d[selected]);
     })).force("y", d3.forceY().strength(0.02).y(height / 2)).force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
     .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius).iterations(1)) // Force that avoids circle overlapping
-    .velocityDecay(0.25); // A color scale
+    .velocityDecay(0.3).alphaDecay(0.01); // A color scale
 
     color = d3.scaleOrdinal().domain(unique).range(d3.schemeTableau10);
     svg.selectAll("circle") // .filter(function(d){return !choices.includes(d.award);})
@@ -302,7 +302,7 @@ d3.csv(dfe, function (raw_data) {
       return x(d[selected]);
     })).force("y", d3.forceY().strength(0.02).y(height / 2)).force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
     .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius).iterations(1)) // Force that avoids circle overlapping
-    .velocityDecay(0.25); // Apply these forces to the nodes and update their positions.
+    .velocityDecay(0.3).alphaDecay(0.01); // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
 
     lsvg.selectAll("circle").remove();
@@ -354,4 +354,4 @@ d3.csv(dfe, function (raw_data) {
   }
 });
 },{"./oscar_demos_def.csv":"xwt8"}]},{},["CPMU"], null)
-//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/dots.411450bc.js.map
+//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/dots.7501d4d1.js.map
