@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Title</title>
+    <title>Oscar nominations</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
     <!-- <script src="./top10-bar.js"></script> -->
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="best-picture.css">
     <link rel="stylesheet" href="best-actor-and-actress.css">
     <link rel="stylesheet" href="./Shortest Speech/style.css">
+
 </head>
 
 <body>
@@ -26,7 +27,7 @@
         <div id="best-actor-and-actress">
             <div id="best-actor-container">
                 <div id="best-actor">
-                    <h3>Best Actor</h3>
+                    <h4><strong>Best Actor</strong></h4>
                 </div>
             </div>
             <div id="best-actor-and-actress-analysis-container">
@@ -46,35 +47,65 @@
                 <div id="age-range">
                     <h4>Age Range</h4>
                     <p>
-                        Most Oscar awars are given to actors and actress that are between 20 and 40.
+                        Most Oscar awards are given to actors and actress that are between 20 and 40.
                     </p>
                 </div>
             </div>
             <div id="best-atress-container">
                 <div id="best-actress">
-                    <h3>Best Actress</h3>
+                    <h4><strong>Best Actress</strong></h4>
                 </div>
             </div>
         </div>
         <!-- Best Directors Demography -->
 
         <div class="title-container">
-            <div>
-                <div id="demographics_title" class="demographics_title">
-                    <h2>Demographics of Oscar Winners from 1927 to 2014</h2>
-                </div>
-                <h3>Select the Award</h3>
-                <input type="checkbox" class="checkbox" value="Best Director" checked><label>Best Directors </label>
-                <input type="checkbox" class="checkbox" value="Best Actor" checked><label>Best Actors </label>
-                <input type="checkbox" class="checkbox" value="Best Actress" checked><label>Best Actresses </label>
-                <input type="checkbox" class="checkbox" value="Best Supporting Actor" checked><label>Best Supporting Actors </label>
-                <input type="checkbox" class="checkbox" value="Best Supporting Actress" checked><label>Best Supporting Actresses </label>
+          <div id="demographics_title" class="wrapper-40">
+              <h2>Demographics of Oscar Winners from 1927 to 2014</h2>
+          </div>
+          <div class="wrapper-60">
+            <div class="checkbox-container">
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox" value="Best Director" checked>
+                <span class="checkbox-custom"></span>
+              </label>
+              <label>Best Director</label>
             </div>
+            <div class="checkbox-container">
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox" value="Best Actor" checked>
+                <span class="checkbox-custom"></span>
+              </label>
+              <label>Best Actors</label>
+            </div>
+            <div class="checkbox-container">
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox" value="Best Actress" checked>
+                <span class="checkbox-custom"></span>
+              </label>
+              <label>Best Actress</label>
+            </div>
+            <div class="checkbox-container">
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox" value="Best Supporting Actor" checked>
+                <span class="checkbox-custom"></span>
+              </label>
+              <label>Best Supporting Actors</label>
+            </div>
+            <div class="checkbox-container">
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox" value="Best Supporting Actress" checked>
+                <span class="checkbox-custom"></span>
+              </label>
+              <label>Best Supporting Actress</label>
+            </div>
+              <div id="demographyDropdown" class='demographyDropdown'></div>
+          </div>
         </div>
+
         <div class="best_directors" id="best_directors">
             <!-- <div id = "demographyDropdown"></div> -->
             <div>
-                <div id="demographyDropdown" class='demographyDropdown'></div>
                 <svg id="dots_legend"></svg>
             </div>
             <div class="best_dots" id="best_dots"></div>
@@ -122,19 +153,18 @@
 
 
         <!-- shortesr speech -->
-
         <div class="wrapper-speech">
-            <div class="title-container">
-                <h2>Fun Fact: Shortest Acceptance Speech</h2>
-
-                <h3>Click the image to watch the video</h3>
-            </div>
+                <label id="shortTitle">Fun Fact: Shortest Acceptance Speech</label>
+                <label id="shortSubtitle">Click the image to watch the video</label>
 
 
             <div class="short-speech">
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> eab0cfe86600e2f02c635c057dabbecb0e120953
                 <div class="image-style">
                     <a href="https://youtu.be/DNdmGqLMqE4" target="_blank">
                         <img src="../img/Grahame.png" alt="3 Gloria Grahame">
@@ -147,7 +177,7 @@
 
                 <div class="image-style">
                     <a href="https://youtu.be/n2zjm79Esq4" target="_blank">
-                        <img src="../img/Hitchcock.png" alt="4 Alfred Hitchcock" style="position: relative; left:-100px">
+                        <img src="../img/Hitchcock.png" alt="4 Alfred Hitchcock">
                         <p><strong>Alfred Hitchcock</strong><br>
                             1967 (40th) Academy Awards<br>
                             Category: Irving G. Thalberg Memorial Award<br></p>
@@ -157,7 +187,7 @@
 
                 <div class="image-style">
                     <a href="https://youtu.be/A49F9e2_AWs" target="_blank">
-                        <img src="../img/Holden.png" alt="5 William Holden"style="position: relative; left:-30px">
+                        <img src="../img/Holden.png" alt="5 William Holden">
                         <p><strong>William Holden</strong><br>
                             1953 (26th) Academy Awards<br>
                             Category: Actor<br>
@@ -181,7 +211,7 @@
 
                 <div class="image-style">
                     <a href="https://youtu.be/0OKdZaCzvuo" target="_blank">
-                        <img src="../img/Mann.png" alt="7 Delbert Mann" style="position: relative; left:-50px">
+                        <img src="../img/Mann.png" alt="7 Delbert Mann">
                         <p> <strong>Delbert Mann</strong><br>
                             1955 (28th) Academy Awards<br>
                             Category: Directing<br>
@@ -205,7 +235,7 @@
 
                 <div class="image-style">
                     <a href="https://youtu.be/xOY7OmIPNoA" target="_blank">
-                        <img src="../img/Tiomkin.png" alt="9 Dimitri Tiomkin" style="position: relative; left:-50px">
+                        <img src="../img/Tiomkin.png" alt="9 Dimitri Tiomkin">
                         <p> <strong>Dimitri Tiomkin</strong><br>
                             1952 (25th) Academy Awards<br>
                             Category: Music (Song)<br>
@@ -217,7 +247,7 @@
 
                 <div class="image-style">
                     <a href="https://youtu.be/S2X_BenTWNA" target="_blank">
-                        <img src="../img/Wilder.png" alt="10 Billy Wilder" style="position: relative; left:-50px"></a>
+                        <img src="../img/Wilder.png" alt="10 Billy Wilder"></a>
                     <p> <strong>Billy Wilder</strong><br>
                         1960 (33rd) Academy Awards<br>
                         Category: Directing<br>
@@ -225,9 +255,9 @@
                     </p>
                 </div>
 
-<div class="image-style">
+                <div class="image-style">
                     <a href="https://youtu.be/O0Q_nyjuEak" target="_blank">
-                        <img src="../img/Pesci.png" alt="1 Joe Pesci" style="position: relative; left:-30px">
+                        <img src="../img/Pesci.png" alt="1 Joe Pesci">
                         <p><Strong>Joe Pesci</Strong><br>
                             1990 (63rd) Academy Awards <br>
                             Category: Actor in a Supporting Role<br>
@@ -237,7 +267,7 @@
 
                 <div class="image-style">
                     <a href="https://youtu.be/xOY7OmIPNoA" target="_blank">
-                        <img src="../img/Newman.png" alt="2 Alfred Newman" style="position: relative; left:-100px">
+                        <img src="../img/Newman.png" alt="2 Alfred Newman">
                         <p><Strong>Alfred Newman</Strong><br>
                             1952 (25th) Academy Awards<br>
                             Category: Music (Scoring of a Musical Picture)<br>
@@ -246,6 +276,14 @@
                 </div>
 
             </div>
+
+        </div>
+        <div class="references">
+          <p>Authors: Anthony Ngo, Daniel Hsu, Olga Khvan, Xioashi Dai</p>
+          <span>Data sources:</span><br>
+          <a href="http://awardsdatabase.oscars.org/">Awards Oscars Database</a><br>
+          <a href="https://www.kaggle.com/rounakbanik/the-movies-dataset#movies_metadata.csv">   The movies dataset, Kaggle</a><br>
+          <a href="https://www.imdb.com/interfaces/">IMDB dataset</a>
         </div>
 
         <script src="./index.js"></script>

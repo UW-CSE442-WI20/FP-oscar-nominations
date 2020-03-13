@@ -55,9 +55,11 @@ body {
 
 p {
   font-family: "Futura-Light";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.1em;
+  margin-top: 4px;
+  margin-bottom: 32px;
   color: #FFFFFF;
 }
 
@@ -91,6 +93,65 @@ h3 {
   color: #D7A764;
 }
 
+h4 {
+  font-family: "Futura-Regular";
+  font-size: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+select {
+  width: 100%;
+  margin: 2px 0;
+  padding-left: 8px;
+  padding-top: 4px;
+  box-sizing: border-box;
+  border: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("/arrow.9eaa6437.svg") no-repeat;
+  background-size: 15px 15px;
+  background-position: 97% 5px;
+  color: #D7A764;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+.labelstyle {
+  font-family: "Futura-Regular";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  color: #D7A764;
+  margin-bottom: 10px;
+}
+
+.tooltipSubtitle {
+  font-family: "Futura-Light";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  color: #787878;
+  margin-bottom: 20px;
+}
+
+.tooltipTitle {
+  font-family: "Antonym-Regular";
+  font-style: normal;
+  font-size: 26px;
+  color: #D7A764;
+  margin-bottom: 20px;
+}
+
+.title-container{
+  margin-right: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+}
 .wrapper{
   display: flex;
   flex-flow: row wrap;
@@ -99,8 +160,6 @@ h3 {
   align-content: stretch;
   align-items: flex-start;
   margin-top: 0px;
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
 
@@ -133,8 +192,6 @@ h3 {
   margin-right: 50px;
 }
 
-
-
 .my_dataviz {
   width: 600px;
   height: 600px;
@@ -149,6 +206,8 @@ h3 {
   flex-direction: row;
   margin-top: 10px;
   margin-right: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
   align-items: center;
   font-family: "Futura-Light";
   font-size: 16px;
@@ -177,16 +236,6 @@ h3 {
 .best_directors a:hover{
    text-decoration: underline;
   }
-
-/* .best_dots {
-  display: flex;
-  width: 70%;
-  flex-flow: row wrap;
-  flex-direction: row;
-  margin-top: 10px;
-  margin-right: 50px;
-} */
-
 
 .top10 {
   fill:#ffffff;
@@ -252,34 +301,181 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   align-content: stretch;
-}
-
-.wrapper-content{
-  margin-top: 100px;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: stretch;
   margin-bottom: 100px;
 }
 
-.wrapper-title {
+.wrapper-speech {
   display: flex;
-  width: 60%;
-  margin-right: 10px;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  padding-top: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-content: stretch;
+  background: #FFF7EF;
 }
 
-.wrapper-text {
+.short-speech{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline; /*    align the image by the name*/
+  background: #FFF7EF;
+  background-size: cover;
+}
+
+.image-style:hover{
+  opacity: 0.6;
+}
+
+
+.short-speech p{
+  color: #000000;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
+  transition: .5s ease;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.image-style{
+  display: flex;
+  width: 15%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: left;
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+
+.wrapper-40 {
   display: flex;
   width: 40%;
   flex-direction: row;
-  justify-content: space-between;
-  align-content: stretch;
+  margin-right: 100px;
 }
+
+.wrapper-60 {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30%;
+  height: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.checkbox-label{
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 23px;
+  width: 23px;
+  background-color: transparent;
+  border: 1px solid #D7A764;
+}
+
+.checkbox-label .checkbox-custom::after {
+  position: absolute;
+  content: "";
+  left: 12px;
+  top: 12px;
+  height: 0px;
+  width: 0px;
+  border: solid #D7A764;
+  background-color: #D7A764;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(0deg) scale(0);
+  -ms-transform: rotate(0deg) scale(0);
+  transform: rotate(0deg) scale(0);
+  opacity:1;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  opacity:1;
+  left: 8px;
+  top: 2px;
+  width: 5px;
+  height: 12px;
+  border: solid #D7A764;
+  border-width: 0 1.5px 1.5px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* For Ripple Effect */
+.checkbox-label .checkbox-custom::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    width: 0px;
+    height: 0px;
+    border: 1px solid #D7A764;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::before {
+    left: -3px;
+    top: -3px;
+    width: 24px;
+    height: 24px;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity:0;
+    z-index: 999;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
 
 #mySlider {
   -webkit-appearance: none;  /* Override default CSS styles */
@@ -326,7 +522,77 @@ h3 {
     text-align: center;
     vertical-align: middle;
 }
-/* >>>>>>> 9483a7faea664837ce0161a34b1fb6ef4938d270 */
+
+#barchart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 200px;
+}
+
+#best-actor-and-actress-title {
+  width: 65%;
+}
+
+#demographyDropdown {
+  width: 20%;
+  outline: 1px solid #D7A764;
+  height: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-family: "Futura-Light";
+
+}
+
+#shortTitle {
+  font-family: "Futura-Bold";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  margin-top: 0px;
+  color: #D7A764;
+  margin-bottom: 10px;
+}
+
+#shortSubtitle {
+  font-family: "Futura-Regular";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 0px;
+  color: #787878;
+  margin-bottom: 50px;
+}
+
+* {
+  /* css rule that changes all the fonts on the page */
+  font-family: "Futura-Light";
+}
+
+.references {
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: #000000;
+  background-color: #FFF7EF;
+}
+.references p{
+  color: #000000;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #70A8A3 !important
+}
+
+.references a{
+    color: #D7A764 !important
+}
 
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

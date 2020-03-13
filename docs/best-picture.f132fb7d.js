@@ -28892,10 +28892,10 @@ var d3 = require("d3");
 var csv = require("./best-picture.csv");
 
 var circleColors = {
-  "base": "lightblue",
-  "profit": "pink",
-  "profit-no-data": "orange",
-  "opened": "rgb(255, 255, 255)"
+  "base": "#D8A75E",
+  "profit": "#70A8A3",
+  "profit-no-data": "#CC5356",
+  "opened": "#FFF7EF"
 };
 var cicrleMinSize = 10;
 var profitSacleUnit = 10000000;
@@ -29187,14 +29187,14 @@ d3.csv(csv).then(function (data) {
 
     function changeInfoDisplay(d) {
       var overview = document.getElementById("movie-overview");
-      overview.innerHTML = "Movie Overview:<br>".concat(d.data.overview);
+      overview.innerHTML = "<span>Overview:</span><br>".concat(d.data.overview);
       var imdbLink = document.getElementById("imdb-link");
       imdbLink.href = "https://www.imdb.com/title/".concat(d.data.imdb_id, "/");
       imdbLink.innerText = "Link to IMDB";
       var movieTitle = document.getElementById("movie-title");
-      movieTitle.innerText = "Title: ".concat(d.data.name);
+      movieTitle.innerText = "".concat(d.data.name);
       var movieAwardYear = document.getElementById("movie-award-year");
-      movieAwardYear.innerText = "Year Awarded: ".concat(d.data.year);
+      movieAwardYear.innerText = "Awarded in ".concat(d.data.year);
       var movieProfit = document.getElementById("movie-profit");
       var num = d.data.number;
 
@@ -29204,7 +29204,7 @@ d3.csv(csv).then(function (data) {
         num = "$" + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       }
 
-      movieProfit.innerText = "Profit: ".concat(num);
+      movieProfit.innerHTML = "Profit<br><span>".concat(num, "</span>");
     }
   }
 }); // code for moving info window
@@ -29242,7 +29242,7 @@ function get() {
 $(window).scroll(get); // incase TA likes to do random refresh
 
 setTimeout(get, 500);
-},{"d3":"../node_modules/d3/index.js","./best-picture.csv":"best-picture.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"d3":"../node_modules/d3/index.js","./best-picture.csv":"best-picture.csv"}],"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29270,7 +29270,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49437" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -29446,5 +29446,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","best-picture.js"], null)
+},{}]},{},["../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","best-picture.js"], null)
 //# sourceMappingURL=/best-picture.f132fb7d.js.map

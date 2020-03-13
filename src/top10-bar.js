@@ -1,5 +1,5 @@
-var margin = {top: 10, right: 30, bottom: 30, left: 150},
-    width = 750,
+var margin = {top: 10, right: 30, bottom: 60, left: 250},
+    width = 850,
     height = 600 - margin.top - margin.bottom;
 
 var year = 1928;
@@ -61,6 +61,14 @@ d3.csv(test, function(data) {
     svg.append('g')
         .attr('transform', 'translate(0, ' + (height) + ')')
         .attr('class', 'x axis');
+
+    svg.append("text")
+        .attr("transform",
+              "translate(" + (width/2) + " ," +
+                             (height + margin.top+30) + ")")
+        .style("text-anchor", "middle")
+        .style("font-size", "12px")
+        .text("IMDb rating");
 
     svg.append('g')
         .attr('class', 'y axis');

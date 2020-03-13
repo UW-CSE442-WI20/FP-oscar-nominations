@@ -1,10 +1,10 @@
 const d3 = require("d3");
 const csv = require("./best-picture.csv")
 const circleColors = {
-    "base": "lightblue",
-    "profit": "pink",
-    "profit-no-data": "orange",
-    "opened": "rgb(255, 255, 255)"
+    "base": "#D8A75E",
+    "profit": "#70A8A3",
+    "profit-no-data": "#CC5356",
+    "opened": "#FFF7EF"
 }
 const cicrleMinSize = 10;
 const profitSacleUnit = 10000000;
@@ -359,14 +359,14 @@ d3.csv(csv)
             // change info display
             function changeInfoDisplay(d) {
                 var overview = document.getElementById("movie-overview");
-                overview.innerHTML = `Movie Overview:<br>${d.data.overview}`;
+                overview.innerHTML = `<span>Overview:</span><br>${d.data.overview}`;
                 var imdbLink = document.getElementById("imdb-link");
                 imdbLink.href = `https://www.imdb.com/title/${d.data.imdb_id}/`
                 imdbLink.innerText = "Link to IMDB"
                 var movieTitle = document.getElementById("movie-title");
-                movieTitle.innerText = `Title: ${d.data.name}`;
+                movieTitle.innerText = `${d.data.name}`;
                 var movieAwardYear = document.getElementById("movie-award-year");
-                movieAwardYear.innerText = `Year Awarded: ${d.data.year}`
+                movieAwardYear.innerText = `Awarded in ${d.data.year}`
                 var movieProfit = document.getElementById("movie-profit");
                 var num = d.data.number;
                 if (typeof(num) == "string") {
@@ -374,7 +374,7 @@ d3.csv(csv)
                 } else {
                     num = "$" + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 }
-                movieProfit.innerText = `Profit: ${num}`;
+                movieProfit.innerHTML = `Profit<br><span>${num}</span>`;
             }
         }
     })

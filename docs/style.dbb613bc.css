@@ -1,51 +1,51 @@
 @font-face {
   font-family: "Antonym-Light";
-  src: url("../font/Antonym-Light.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/Antonym-Light.d94aa3b9.otf");
 }
 
 @font-face {
   font-family: "Antonym-Regular";
-  src: url("../font/Antonym-Regular.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/Antonym-Regular.0486ef04.otf");
 }
 
 @font-face {
   font-family: "Futura-Light";
-  src: url("../font/FTN35.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/FTN35.25197850.otf");
 }
 
 @font-face {
   font-family: "Futura-Light-Italic";
-  src: url("../font/FTN36.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/FTN36.cdd73cd9.otf");
 }
 
 @font-face {
   font-family: "Futura-Regular";
-  src: url("../font/FTN45.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/FTN45.824a220d.otf");
 }
 
 @font-face {
   font-family: "Futura-Regular-Italic";
-  src: url("../font/FTN46.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/FTN46.d489481f.otf");
 }
 
 @font-face {
   font-family: "Futura-Demi";
-  src: url("../font/FTN55.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/FTN55.47659d9c.otf");
 }
 
 @font-face {
   font-family: "Futura-Demi-Italic";
-  src: url("../font/FTN56.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/FTN56.0953f8f9.otf");
 }
 
 @font-face {
   font-family: "Futura-Bold";
-  src: url("../font/FTN65.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/FTN65.32b52008.otf");
 }
 
 @font-face {
   font-family: "Futura-Bold-Italic";
-  src: url("../font/FTN66.otf");
+  src: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/FTN66.8009ad4e.otf");
 }
 
 body {
@@ -109,7 +109,7 @@ select {
   border: 0 !important;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("../img/arrow.svg") no-repeat;
+  background: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/arrow.022b8199.svg") no-repeat;
   background-size: 15px 15px;
   background-position: 97% 5px;
   color: #D7A764;
@@ -215,7 +215,7 @@ select {
 
 .parallax {
   /* The image used */
-  background-image: url("../img/main.jpg");
+  background-image: url("https://uw-cse442-wi20.github.io/FP-oscar-nominations/main.ead3e3d2.jpg");
 
   /* Set a specific height */
   height: 900px;
@@ -593,3 +593,6 @@ a {
 .references a{
     color: #D7A764 !important
 }
+
+
+/*# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-oscar-nominations/style.dbb613bc.css.map */

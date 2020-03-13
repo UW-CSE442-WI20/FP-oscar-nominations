@@ -2,9 +2,9 @@ const d3 = require("d3");
 const csv = require("./oscar_demos_mod.csv")
 const palette = {
     "countryLink": "gray",
-    "countryCircle": "lightsteelblue",
+    "countryCircle": "#AB7868",
     "ageLink": "gray",
-    "ageCircle": "orange"
+    "ageCircle": "#D8B74F"
 }
 const textToCircleDist = -100; // for the ageBin and Country need to be < 0
 const ageBinBase = 20

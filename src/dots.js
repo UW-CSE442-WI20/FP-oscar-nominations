@@ -37,7 +37,7 @@ d3.csv(dfe, function(raw_data) {
     // A color scale
     var color = d3.scaleOrdinal()
       .domain(unique)
-      .range(d3.schemeSet1)
+      .range(d3.schemeTableau10)
     lsvg.selectAll("dots")
       .data(unique)
       .enter()
@@ -97,7 +97,7 @@ d3.csv(dfe, function(raw_data) {
     }
     var mousemove = function(d) {
       Tooltip
-        .html("<strong>You're hovering over</strong><br><br>Name: " + d.person +"<br>Movie: "+d.movie+"<br><br><br>")
+        .html("<label class='tooltipSubtitle'>You're hovering over</label><br><label class='tooltipTitle'>" + d.person +"</label><br>Movie: "+d.movie+"<br><br><br>")
     }
     var mouseleave = function(d) {
       Tooltip
@@ -143,7 +143,8 @@ d3.csv(dfe, function(raw_data) {
           .force("y", d3.forceY().strength(0.02).y( height/2 ))
           .force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
           .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
-          .velocityDecay(0.25)
+          .velocityDecay(0.3)
+          .alphaDecay(0.01)
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
@@ -173,17 +174,17 @@ d3.csv(dfe, function(raw_data) {
         .text(function(d){return d[1];})
     function doubleclick(d) {
       Info_box
-      .html("<strong>You've clicked on</strong><br><br>"+
-        "<strong>Name</strong>: <a href = \"" + d.bioLink +  "\" target = _blank> " + d.person + "</a><br>" +
-        "<strong>Movie</strong>: <a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
-        "<strong>Year Awarded</strong>: " + d.year_of_award + "<br>" +
-        "<strong>Birthplace</strong>: " + d.birthplace + "<br>" +
-        "<strong>DOB</strong>: " + d.date_of_birth + "<br>" +
-        "<strong>Race</strong>: " + d.race_ethnicity + "<br>" +
-        "<strong>Religion</strong>: " + d.religion + "<br>" +
-        "<strong>Sexuality</strong>: " + d.sexual_orientation + "<br>"+
-        "<strong>Movie Rating</strong>: " + d.rating_bin + "<br>"+
-        "<strong>Movie Runtime</strong>: " + d.runtime_bin + " Hours<br>"
+      .html("<label class='tooltipSubtitle'>You've clicked on</label><br>"+
+        "<a href = \"" + d.bioLink +  "\" target = _blank> <label class='tooltipTitle'>" + d.person + "</label></a><br>" +
+        "<a href =\"" + d.movie_IMDB_Link + "\" target = _blank> Movie: " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
+        "Awarded in <label class='labelstyle'>" + d.year_of_award + "</label><br>" +
+        "Birthplace: <label class='labelstyle'>" + d.birthplace + "</label><br>" +
+        "Date of birth: <label class='labelstyle'>" + d.date_of_birth + "</label><br>" +
+        "Race: <label class='labelstyle'>" + d.race_ethnicity + "</label><br>" +
+        "Religion: <label class='labelstyle'>" + d.religion + "</label><br>" +
+        "Sexuality: <label class='labelstyle'>" + d.sexual_orientation + "</label><br>"+
+        "Movie Rating: <label class='labelstyle'>" + d.rating_bin + "</label><br>"+
+        "Movie Runtime: <label class='labelstyle'>" + d.runtime_bin + " Hours</label><br>"
       )
       .transition()
       .duration(duration_sec)
@@ -218,19 +219,20 @@ d3.csv(dfe, function(raw_data) {
         // A color scale
         color = d3.scaleOrdinal()
           .domain(unique)
-          .range(d3.schemeSet1)
+          .range(d3.schemeTableau10)
 
           simulation = d3.forceSimulation()
               .force("x", d3.forceX().strength(0.03).x( function(d){ return x(d[selected]) } ))
               .force("y", d3.forceY().strength(0.02).y( height/2 ))
               .force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
               .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
-              .velocityDecay(0.25)
+              .velocityDecay(0.3)
+              .alphaDecay(0.01)
 
         // A color scale
         color = d3.scaleOrdinal()
           .domain(unique)
-          .range(d3.schemeSet1)
+          .range(d3.schemeTableau10)
 
         svg.selectAll("circle")
         // .filter(function(d){return !choices.includes(d.award);})
@@ -290,14 +292,15 @@ d3.csv(dfe, function(raw_data) {
         // A color scale
         color = d3.scaleOrdinal()
           .domain(unique)
-          .range(d3.schemeSet1)
+          .range(d3.schemeTableau10)
 
           simulation = d3.forceSimulation()
               .force("x", d3.forceX().strength(0.03).x( function(d){ return x(d[selected]) } ))
               .force("y", d3.forceY().strength(0.02).y( height/2 ))
               .force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
               .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius ).iterations(1)) // Force that avoids circle overlapping
-              .velocityDecay(0.25)
+              .velocityDecay(0.3)
+              .alphaDecay(0.01)
 
           // Apply these forces to the nodes and update their positions.
           // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
