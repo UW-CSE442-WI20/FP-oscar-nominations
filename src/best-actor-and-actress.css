@@ -52,7 +52,7 @@
 
 /* Reducing Graphs Size */
 #best-actor > svg, #best-actress > svg {
-    zoom: 75%;
+    zoom: 80%;
 }
 
 #best-actor-and-actress-title {
