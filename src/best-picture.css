@@ -48,3 +48,23 @@
 #best-picture-title {
     margin-top: 5%;
 }
+
+#movie-title {
+    font-family: "Futura-Bold";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 35px;
+    margin-top: 0px;
+    color: #D7A764;
+    margin-bottom: 0;
+}
+
+#movie-award-year{
+    margin-top: 5px;
+}
+
+#movie-profit > span {
+    color: #D7A764;
+    font-family: "Futura-Bold";
+}
