@@ -92,7 +92,6 @@ h3 {
 }
 
 
-
 .labelstyle {
   font-family: "Futura-Regular";
   font-style: normal;
@@ -211,16 +210,6 @@ h3 {
    text-decoration: underline;
   }
 
-/* .best_dots {
-  display: flex;
-  width: 70%;
-  flex-flow: row wrap;
-  flex-direction: row;
-  margin-top: 10px;
-  margin-right: 50px;
-} */
-
-
 .top10 {
   fill:#ffffff;
 }
@@ -328,6 +317,7 @@ h3 {
   width: 50%;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .image-style{
@@ -349,6 +339,9 @@ h3 {
   align-items: center;
   justify-content: flex-start;
   width: 30%;
+  height: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .checkbox-label{
@@ -372,7 +365,7 @@ h3 {
   width: 23px;
   background-color: transparent;
   border-radius: 2px;
-  border: 2px solid #D7A764;
+  border: 1px solid #D7A764;
 }
 
 .checkbox-label .checkbox-custom::after {
@@ -384,7 +377,7 @@ h3 {
   width: 0px;
   border: solid #D7A764;
   background-color: #D7A764;
-  border-width: 0 3px 3px 0;
+  border-width: 0 1px 1px 0;
   -webkit-transform: rotate(0deg) scale(0);
   -ms-transform: rotate(0deg) scale(0);
   transform: rotate(0deg) scale(0);
@@ -406,7 +399,7 @@ h3 {
   width: 5px;
   height: 12px;
   border: solid #D7A764;
-  border-width: 0 2px 2px 0;
+  border-width: 0 1.5px 1.5px 0;
   background-color: transparent;
   border-radius: 0;
 }
@@ -420,7 +413,7 @@ h3 {
     width: 0px;
     height: 0px;
     border-radius: 2px;
-    border: 2px solid #D7A764;
+    border: 1px solid #D7A764;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
@@ -432,9 +425,9 @@ h3 {
     width: 24px;
     height: 24px;
     border-radius: 2px;
-    -webkit-transform: scale(2);
-    -ms-transform: scale(2);
-    transform: scale(2);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     opacity:0;
     z-index: 999;
     transition: all 0.3s ease-out;
@@ -444,41 +437,6 @@ h3 {
     -o-transition: all 0.3s ease-out;
 }
 
-/*.checkbox > span {
-    color: #ffffff;
-    padding: 0.5rem 0.25rem;
-}
-
-.checkbox > input {
-    height: 20px;
-    width: 20px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    border-radius: 1px;
-    outline: none;
-    transition-duration: 0.3s;
-    border: 1px solid;
-    border-color: #ffffff;
-    cursor: pointer;
-  }
-
-.checkbox > input:checked{
-    background-color: #D7A764;
-    border: none;
-}
-
-.checkbox > input:checked + span::before {
-    font-family: 'Antonym-Regular';
-    content: '\2713';
-    display: block;
-    text-align: center;
-    color: #1B1B1B;
-    position: absolute;
-    left: 0.4rem;
-    top: 0.1rem;
-}*/
 
 #mySlider {
   -webkit-appearance: none;  /* Override default CSS styles */
@@ -538,7 +496,31 @@ h3 {
 }
 
 #demographyDropdown {
-  width: 30%;
+  width: 20%;
+  outline: 1px solid #D7A764;
+  height: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-family: "Futura-Light";
+
+}
+
+select {
+  width: 100%;
+  margin: 2px 0;
+  padding-left: 8px;
+  padding-top: 4px;
+  box-sizing: border-box;
+  border: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../img/arrow.svg") no-repeat;
+  background-size: 15px 15px;
+  background-position: 97% 5px;
+  color: #D7A764;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
 }
 * {
   /* css rule that changes all the fonts on the page */
