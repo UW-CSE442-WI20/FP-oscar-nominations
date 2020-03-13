@@ -218,7 +218,7 @@ select {
   background-image: url("../img/main.jpg");
 
   /* Set a specific height */
-  height: 900px;
+  height: 1200px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
