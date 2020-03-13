@@ -123,10 +123,10 @@ module.exports = "/imdb_rated_nominees.f760b25e.csv";
 var margin = {
   top: 10,
   right: 30,
-  bottom: 30,
-  left: 150
+  bottom: 60,
+  left: 250
 },
-    width = 750,
+    width = 850,
     height = 600 - margin.top - margin.bottom;
 var year = 1928;
 var xx;
@@ -180,6 +180,7 @@ function update(yr) {
 
     var x = d3.scaleLinear().domain([0, 10]).range([0, width]);
     svg.append('g').attr('transform', 'translate(0, ' + height + ')').attr('class', 'x axis');
+    svg.append("text").attr("transform", "translate(" + width / 2 + " ," + (height + margin.top + 30) + ")").style("text-anchor", "middle").style("font-size", "12px").text("IMDb rating");
     svg.append('g').attr('class', 'y axis'); // Y axis
 
     var y = d3.scaleBand().range([0, height]).domain(dataNew.map(function (d) {
@@ -254,7 +255,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54842" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

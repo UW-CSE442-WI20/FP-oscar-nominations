@@ -153,7 +153,7 @@ d3.csv(dfe, function (raw_data) {
 
   x = d3.scaleOrdinal().domain(unique).range(x_range); // A color scale
 
-  var color = d3.scaleOrdinal().domain(unique).range(d3.schemeSet1);
+  var color = d3.scaleOrdinal().domain(unique).range(d3.schemeTableau10);
   lsvg.selectAll("dots").data(unique).enter().append("circle").attr("cx", 30).attr("cy", function (d, i) {
     return height / 2 - unique.length * 15 + 25 + i * 25;
   }) // 100 is where the first dot appears. 25 is the distance between dots
@@ -168,8 +168,9 @@ d3.csv(dfe, function (raw_data) {
   }).text(function (d) {
     return d;
   }).attr("text-anchor", "left").style("alignment-baseline", "middle");
-  var Tooltip = d3.select("#info_box").append("div").style("opacity", 1).html("Hover over a dot for the oscar winner's name and movie!").attr("class", "tooltip").style("color", 'white').style("border-width", "2px").style("border-radius", "5px").style("padding", "5px").style("padding-left", "5px").attr('align', 'left');
-  var Info_box = d3.select("#info_box").append("div").style("opacity", 1).html("Click a dot for more information   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;").attr("class", "tooltip").style("border-width", "2px").style("border-radius", "5px").style("background-color", "#2f2f2f").style("padding", "15px").attr('align', 'left'); // Three function that change the tooltip when user hover / move / leave a cell
+  var Tooltip = d3.select("#info_box").append("div").style("opacity", 1).html("Hover over a dot for the oscar winner's name and movie!<br><br><br>").attr("class", "tooltip").style("color", 'white').style("border-width", "2px").style("border-radius", "5px").style("padding", "5px").style("padding-left", "5px").attr('align', 'left');
+  var Info_box = d3.select("#info_box").append("div").style("opacity", 1).html("Click a dot for more information ").attr("class", "tooltip").style("border-width", "2px").style("border-radius", "5px") // .style("background-color", "#2f2f2f")
+  .style("padding", "5px").attr('align', 'left'); // Three function that change the tooltip when user hover / move / leave a cell
 
   var mouseover = function mouseover(d) {
     Tooltip.transition().duration(100).style("opacity", 1);
@@ -178,7 +179,7 @@ d3.csv(dfe, function (raw_data) {
   };
 
   var mousemove = function mousemove(d) {
-    Tooltip.html("<strong>You're hovering over</strong><br><br>Name: " + d.person + "<br>Movie: " + d.movie + "<br>");
+    Tooltip.html("<label class='tooltipSubtitle'>You're hovering over</label><br><label class='tooltipTitle'>" + d.person + "</label><br>Movie: " + d.movie + "<br><br><br>");
   };
 
   var mouseleave = function mouseleave(d) {
@@ -209,7 +210,7 @@ d3.csv(dfe, function (raw_data) {
       return d.y;
     });
   });
-  var demographic_metrics = [['race_ethnicity', 'Race'], ['sexual_orientation', 'Sexuality'], ['religion', 'Religion'], ['rating_bin', 'Rating']];
+  var demographic_metrics = [['race_ethnicity', 'Race'], ['sexual_orientation', 'Sexuality'], ['religion', 'Religion'], ['rating_bin', 'IMDb Rating'], ['runtime_bin', 'Runtime (Hours)']];
   var demographyMenu = d3.select("#demographyDropdown");
   demographyMenu.append("select").selectAll("option").data(demographic_metrics).enter().append("option").attr("value", function (d) {
     return d[0];
@@ -218,7 +219,7 @@ d3.csv(dfe, function (raw_data) {
   });
 
   function doubleclick(d) {
-    Info_box.html("<strong>You've clicked on</strong><br><br>" + "<strong>Name</strong>: <a href = \"" + d.bioLink + "\" target = _blank> " + d.person + "</a><br>" + "<strong>Movie</strong>: <a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" + "<strong>Year Awarded</strong>: " + d.year_of_award + "<br>" + "<strong>Birthplace</strong>: " + d.birthplace + "<br>" + "<strong>DOB</strong>: " + d.date_of_birth + "<br>" + "<strong>Race</strong>: " + d.race_ethnicity + "<br>" + "<strong>Religion</strong>: " + d.religion + "<br>" + "<strong>Sexuality</strong>: " + d.sexual_orientation + "<br>" + "<strong>Movie Rating</strong>: " + d.rating_bin + "<br>" + "<strong>Movie Runtime</strong>: " + d.runtime_bin + " Hours<br>").transition().duration(duration_sec);
+    Info_box.html("<label class='tooltipSubtitle'>You've clicked on</label><br>" + "<a href = \"" + d.bioLink + "\" target = _blank> <label class='tooltipTitle'>" + d.person + "</label></a><br>" + "<a href =\"" + d.movie_IMDB_Link + "\" target = _blank> Movie: " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" + "Awarded in <label class='labelstyle'>" + d.year_of_award + "</label><br>" + "Birthplace: <label class='labelstyle'>" + d.birthplace + "</label><br>" + "Date of birth: <label class='labelstyle'>" + d.date_of_birth + "</label><br>" + "Race: <label class='labelstyle'>" + d.race_ethnicity + "</label><br>" + "Religion: <label class='labelstyle'>" + d.religion + "</label><br>" + "Sexuality: <label class='labelstyle'>" + d.sexual_orientation + "</label><br>" + "Movie Rating: <label class='labelstyle'>" + d.rating_bin + "</label><br>" + "Movie Runtime: <label class='labelstyle'>" + d.runtime_bin + " Hours</label><br>").transition().duration(duration_sec);
   }
 
   d3.selectAll(".checkbox").on("change", update);
@@ -250,14 +251,14 @@ d3.csv(dfe, function (raw_data) {
 
     x = d3.scaleOrdinal().domain(unique).range(x_range); // A color scale
 
-    color = d3.scaleOrdinal().domain(unique).range(d3.schemeSet1);
+    color = d3.scaleOrdinal().domain(unique).range(d3.schemeTableau10);
     simulation = d3.forceSimulation().force("x", d3.forceX().strength(0.03).x(function (d) {
       return x(d[selected]);
     })).force("y", d3.forceY().strength(0.02).y(height / 2)).force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
     .force("collide", d3.forceCollide().strength(0.5).radius(1.5 * radius).iterations(1)) // Force that avoids circle overlapping
     .velocityDecay(0.25); // A color scale
 
-    color = d3.scaleOrdinal().domain(unique).range(d3.schemeSet1);
+    color = d3.scaleOrdinal().domain(unique).range(d3.schemeTableau10);
     svg.selectAll("circle") // .filter(function(d){return !choices.includes(d.award);})
     .transition().duration(duration_sec).style("opacity", 0).attr("r", 0).remove(); // Initialize the circle: all located at the center of the svg area
 
@@ -296,7 +297,7 @@ d3.csv(dfe, function (raw_data) {
 
     x = d3.scaleOrdinal().domain(unique).range(x_range); // A color scale
 
-    color = d3.scaleOrdinal().domain(unique).range(d3.schemeSet1);
+    color = d3.scaleOrdinal().domain(unique).range(d3.schemeTableau10);
     simulation = d3.forceSimulation().force("x", d3.forceX().strength(0.03).x(function (d) {
       return x(d[selected]);
     })).force("y", d3.forceY().strength(0.02).y(height / 2)).force("charge", d3.forceManyBody().strength(-1.5)) // Nodes are attracted one each other of value is > 0
@@ -380,7 +381,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54842" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

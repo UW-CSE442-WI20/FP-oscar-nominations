@@ -1,0 +1,10 @@
+,name,Movie,Edition,Year of award,Award,Win?,bioID,movieID,movieLink,bioLink,tconst,averageRating,numVotes
+2,Emil Jannings,The Last Command,1,1928,LeadingActor,True,nm0417837,tt0019071,https://www.imdb.com/title/tt0019071/,https://www.imdb.com/name/nm0417837/,tt0019071,8.0,3108
+5,Janet Gaynor,7th Heaven,1,1928,LeadingActress,True,nm0310980,tt0018379,https://www.imdb.com/title/tt0018379/,https://www.imdb.com/name/nm0310980/,tt0018379,7.7,2938
+6,Frank Borzage,7th Heaven,1,1928,Director,True,nm0097648,tt0018379,https://www.imdb.com/title/tt0018379/,https://www.imdb.com/name/nm0097648/,tt0018379,7.7,2938
+7,Janet Gaynor,Street Angel,1,1928,LeadingActress,True,nm0310980,tt0019429,https://www.imdb.com/title/tt0019429/,https://www.imdb.com/name/nm0310980/,tt0019429,7.4,2024
+8,Ernest Palmer,Street Angel,2,1929,Cinematography,True,nm0005823,tt0019429,https://www.imdb.com/title/tt0019429/,https://www.imdb.com/name/nm0005823/,tt0019429,7.4,2024
+0,Richard Barthelmess,The Noose,1,1928,LeadingActor,False,nm0001932,tt0019217,https://www.imdb.com/title/tt0019217/,https://www.imdb.com/name/nm0001932/,tt0019217,7.1,44
+3,Emil Jannings,The Way of All Flesh,1,1928,LeadingActor,True,nm0417837,tt0019553,https://www.imdb.com/title/tt0019553/,https://www.imdb.com/name/nm0417837/,tt0019553,6.6,123
+1,Richard Barthelmess,The Patent Leather Kid,1,1928,LeadingActor,False,nm0001932,tt0018253,https://www.imdb.com/title/tt0018253/,https://www.imdb.com/name/nm0001932/,tt0018253,5.8,444
+4,Louise Dresser,A Ship Comes In,1,1928,LeadingActress,False,nm0237571,tt0018389,https://www.imdb.com/title/tt0018389/,https://www.imdb.com/name/nm0237571/,tt0018389,5.6,134

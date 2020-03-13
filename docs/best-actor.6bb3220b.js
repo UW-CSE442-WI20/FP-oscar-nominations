@@ -28893,9 +28893,9 @@ var csv = require("./oscar_demos_mod.csv");
 
 var palette = {
   "countryLink": "gray",
-  "countryCircle": "lightsteelblue",
+  "countryCircle": "#AB7868",
   "ageLink": "gray",
-  "ageCircle": "orange"
+  "ageCircle": "#D8B74F"
 };
 var textToCircleDist = -100; // for the ageBin and Country need to be < 0
 
@@ -29267,7 +29267,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61560" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54842" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
