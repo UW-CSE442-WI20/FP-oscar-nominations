@@ -177,6 +177,7 @@ d3.csv(dfe, function(raw_data) {
       .html("<label class='tooltipSubtitle'>You've clicked on</label><br>"+
         "<a href = \"" + d.bioLink +  "\" target = _blank> <label class='tooltipTitle'>" + d.person + "</label></a><br>" +
         "<a href =\"" + d.movie_IMDB_Link + "\" target = _blank> Movie: " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
+        "Award <label class='labelstyle'>" + d.award + "</label><br>" +
         "Awarded in <label class='labelstyle'>" + d.year_of_award + "</label><br>" +
         "Birthplace: <label class='labelstyle'>" + d.birthplace + "</label><br>" +
         "Date of birth: <label class='labelstyle'>" + d.date_of_birth + "</label><br>" +
