@@ -173,17 +173,17 @@ d3.csv(dfe, function(raw_data) {
         .text(function(d){return d[1];})
     function doubleclick(d) {
       Info_box
-      .html("<strong>You've clicked on</strong><br><br>"+
-        "<strong>Name</strong>: <a href = \"" + d.bioLink +  "\" target = _blank> " + d.person + "</a><br>" +
-        "<strong>Movie</strong>: <a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
-        "<strong>Year Awarded</strong>: " + d.year_of_award + "<br>" +
-        "<strong>Birthplace</strong>: " + d.birthplace + "<br>" +
-        "<strong>DOB</strong>: " + d.date_of_birth + "<br>" +
-        "<strong>Race</strong>: " + d.race_ethnicity + "<br>" +
-        "<strong>Religion</strong>: " + d.religion + "<br>" +
-        "<strong>Sexuality</strong>: " + d.sexual_orientation + "<br>"+
-        "<strong>Movie Rating</strong>: " + d.rating_bin + "<br>"+
-        "<strong>Movie Runtime</strong>: " + d.runtime_bin + " Hours<br>"
+      .html("<strong>You've clicked on</strong><br>"+
+        "<a href = \"" + d.bioLink +  "\" target = _blank> " + d.person + "</a><br>" +
+        "<a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
+        "Awarded in <label class='labelstyle'>" + d.year_of_award + "</label><br>" +
+        "Birthplace: <label class='labelstyle'>" + d.birthplace + "</label><br>" +
+        "Date of birth: <label class='labelstyle'>" + d.date_of_birth + "</label><br>" +
+        "Race: <label class='labelstyle'>" + d.race_ethnicity + "</label><br>" +
+        "Religion: <label class='labelstyle'>" + d.religion + "</label><br>" +
+        "Sexuality: <label class='labelstyle'>" + d.sexual_orientation + "</label><br>"+
+        "Movie Rating: <label class='labelstyle'>" + d.rating_bin + "</label><br>"+
+        "Movie Runtime: <label class='labelstyle'>" + d.runtime_bin + " Hours</label><br>"
       )
       .transition()
       .duration(duration_sec)

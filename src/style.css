@@ -91,6 +91,17 @@ h3 {
   color: #D7A764;
 }
 
+
+
+.labelstyle {
+  font-family: "Futura-Regular";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  color: #D7A764;
+  margin-bottom: 10px;
+}
+
 .title-container{
   margin-right: 50px;
   margin-left: 50px;
@@ -316,7 +327,7 @@ h3 {
   flex-direction: column;
   justify-content: space-around;
   align-content: stretch;
- 
+
 }
 
 .img {
