@@ -97,7 +97,7 @@ d3.csv(dfe, function(raw_data) {
     }
     var mousemove = function(d) {
       Tooltip
-        .html("<strong>You're hovering over</strong><br><br>Name: " + d.person +"<br>Movie: "+d.movie+"<br><br><br>")
+        .html("<label class='tooltipSubtitle'>You're hovering over</label><br><label class='tooltipTitle'>" + d.person +"</label><br>Movie: "+d.movie+"<br><br><br>")
     }
     var mouseleave = function(d) {
       Tooltip
@@ -173,9 +173,9 @@ d3.csv(dfe, function(raw_data) {
         .text(function(d){return d[1];})
     function doubleclick(d) {
       Info_box
-      .html("<strong>You've clicked on</strong><br>"+
-        "<a href = \"" + d.bioLink +  "\" target = _blank> " + d.person + "</a><br>" +
-        "<a href =\"" + d.movie_IMDB_Link + "\" target = _blank> " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
+      .html("<label class='tooltipSubtitle'>You've clicked on</label><br>"+
+        "<a href = \"" + d.bioLink +  "\" target = _blank> <label class='tooltipTitle'>" + d.person + "</label></a><br>" +
+        "<a href =\"" + d.movie_IMDB_Link + "\" target = _blank> Movie: " + d.movie + " (" + (d.year_of_award - 1) + ")</a><br><br>" +
         "Awarded in <label class='labelstyle'>" + d.year_of_award + "</label><br>" +
         "Birthplace: <label class='labelstyle'>" + d.birthplace + "</label><br>" +
         "Date of birth: <label class='labelstyle'>" + d.date_of_birth + "</label><br>" +
