@@ -379,4 +379,8 @@ h3 {
 #best-actor-and-actress-title {
   width: 65%;
 }
-/* >>>>>>> 9483a7faea664837ce0161a34b1fb6ef4938d270 */
+
+* {
+  /* css rule that changes all the fonts on the page */
+  font-family: "Futura-Light";
+}
