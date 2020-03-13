@@ -12,11 +12,11 @@
 }
 
 .selected > * {
-    fill: yellow !important;
+    fill: #70A8A3 !important;
 }
 
 .selected.link {
-    stroke: yellow;
+    stroke: #70A8A3;
     fill: none !important;
 }
 

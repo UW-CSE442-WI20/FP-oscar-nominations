@@ -37,7 +37,7 @@ d3.csv(dfe, function(raw_data) {
     // A color scale
     var color = d3.scaleOrdinal()
       .domain(unique)
-      .range(d3.schemeSet1)
+      .range(d3.schemeTableau10)
     lsvg.selectAll("dots")
       .data(unique)
       .enter()
@@ -218,7 +218,7 @@ d3.csv(dfe, function(raw_data) {
         // A color scale
         color = d3.scaleOrdinal()
           .domain(unique)
-          .range(d3.schemeSet1)
+          .range(d3.schemeTableau10)
 
           simulation = d3.forceSimulation()
               .force("x", d3.forceX().strength(0.03).x( function(d){ return x(d[selected]) } ))
@@ -230,7 +230,7 @@ d3.csv(dfe, function(raw_data) {
         // A color scale
         color = d3.scaleOrdinal()
           .domain(unique)
-          .range(d3.schemeSet1)
+          .range(d3.schemeTableau10)
 
         svg.selectAll("circle")
         // .filter(function(d){return !choices.includes(d.award);})
@@ -290,7 +290,7 @@ d3.csv(dfe, function(raw_data) {
         // A color scale
         color = d3.scaleOrdinal()
           .domain(unique)
-          .range(d3.schemeSet1)
+          .range(d3.schemeTableau10)
 
           simulation = d3.forceSimulation()
               .force("x", d3.forceX().strength(0.03).x( function(d){ return x(d[selected]) } ))

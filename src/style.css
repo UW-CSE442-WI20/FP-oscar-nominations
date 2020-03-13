@@ -381,7 +381,6 @@ img {
   height: 23px;
   width: 23px;
   background-color: transparent;
-  border-radius: 2px;
   border: 1px solid #D7A764;
 }
 
@@ -429,7 +428,6 @@ img {
     top: 10px;
     width: 0px;
     height: 0px;
-    border-radius: 2px;
     border: 1px solid #D7A764;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -441,7 +439,6 @@ img {
     top: -3px;
     width: 24px;
     height: 24px;
-    border-radius: 2px;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -544,7 +541,6 @@ img {
   margin-bottom: 50px;
 }
 
-
 select {
   width: 100%;
   margin: 2px 0;
@@ -565,4 +561,23 @@ select {
 * {
   /* css rule that changes all the fonts on the page */
   font-family: "Futura-Light";
+}
+
+.references {
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: #000000;
+  background-color: #FFF7EF;
+}
+.references p{
+  color: #000000;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+
+.references a{
+    color: #D7A764;
 }

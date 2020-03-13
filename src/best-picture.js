@@ -1,10 +1,10 @@
 const d3 = require("d3");
 const csv = require("./best-picture.csv")
 const circleColors = {
-    "base": "lightblue",
-    "profit": "pink",
-    "profit-no-data": "orange",
-    "opened": "rgb(255, 255, 255)"
+    "base": "#D8A75E",
+    "profit": "#70A8A3",
+    "profit-no-data": "#CC5356",
+    "opened": "#FFF7EF"
 }
 const cicrleMinSize = 10;
 const profitSacleUnit = 10000000;
