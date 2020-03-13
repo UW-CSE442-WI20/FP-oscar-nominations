@@ -59,22 +59,39 @@
         <!-- Best Directors Demography -->
 
         <div class="title-container">
-            <div>
-                <div id="demographics_title" class="demographics_title">
-                    <h2>Demographics of Oscar Winners</h2>
-                </div>
-                <h3>Select the Award</h3>
-                <input type="checkbox" class="checkbox" value="Best Director" checked><label>Best Directors </label>
-                <input type="checkbox" class="checkbox" value="Best Actor" checked><label>Best Actors </label>
-                <input type="checkbox" class="checkbox" value="Best Actress" checked><label>Best Actresses </label>
-                <input type="checkbox" class="checkbox" value="Best Supporting Actor" checked><label>Best Supporting Actors </label>
-                <input type="checkbox" class="checkbox" value="Best Supporting Actress" checked><label>Best Supporting Actresses </label>
+          <div id="demographics_title" class="wrapper-40">
+              <h2>Demographics of Oscar Winners</h2>
+          </div>
+          <div class="wrapper-60">
+            <div class="checkbox-container">
+              <label class="checkbox-label">
+                <input id="best_dir" type="checkbox" value="Best Director" checked>
+                <span class="checkbox-custom"></span>
+              </label>
+              <label>Best Director</label>
             </div>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox" value="Best Actor" checked>
+              <span>Best Actors </span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox" value="Best Actress" checked>
+              <span>Best Actresses </span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox" value="Best Supporting Actor" checked>
+              <span>Best Supporting Actors </span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox" value="Best Supporting Actress" checked>
+              <span>Best Supporting Actresses </span>
+            </label>
+            <div id="demographyDropdown" class='demographyDropdown'></div>
+          </div>
         </div>
         <div class="best_directors" id="best_directors">
             <!-- <div id = "demographyDropdown"></div> -->
             <div>
-                <div id="demographyDropdown" class='demographyDropdown'></div>
                 <svg id="dots_legend"></svg>
             </div>
             <div class="best_dots" id="best_dots"></div>
