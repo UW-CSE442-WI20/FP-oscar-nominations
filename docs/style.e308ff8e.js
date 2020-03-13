@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../font/Antonym-Light.otf":[["Antonym-Light.980ac7d2.otf","../font/Antonym-Light.otf"],"../font/Antonym-Light.otf"],"./../font/Antonym-Regular.otf":[["Antonym-Regular.341bc388.otf","../font/Antonym-Regular.otf"],"../font/Antonym-Regular.otf"],"./../font/FTN35.otf":[["FTN35.e9952d24.otf","../font/FTN35.otf"],"../font/FTN35.otf"],"./../font/FTN36.otf":[["FTN36.5a046a74.otf","../font/FTN36.otf"],"../font/FTN36.otf"],"./../font/FTN45.otf":[["FTN45.466b2e69.otf","../font/FTN45.otf"],"../font/FTN45.otf"],"./../font/FTN46.otf":[["FTN46.7a4134f8.otf","../font/FTN46.otf"],"../font/FTN46.otf"],"./../font/FTN55.otf":[["FTN55.e5dfb7b9.otf","../font/FTN55.otf"],"../font/FTN55.otf"],"./../font/FTN56.otf":[["FTN56.27b59c59.otf","../font/FTN56.otf"],"../font/FTN56.otf"],"./../font/FTN65.otf":[["FTN65.5e2884e6.otf","../font/FTN65.otf"],"../font/FTN65.otf"],"./../font/FTN66.otf":[["FTN66.1949968c.otf","../font/FTN66.otf"],"../font/FTN66.otf"],"./../img/arrow.svg":[["arrow.9eaa6437.svg","../img/arrow.svg"],"../img/arrow.svg"],"./../img/main.jpg":[["main.a75d08c5.jpg","../img/main.jpg"],"../img/main.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../font/Antonym-Light.otf":[["Antonym-Light.980ac7d2.otf","../font/Antonym-Light.otf"],"../font/Antonym-Light.otf"],"./../font/Antonym-Regular.otf":[["Antonym-Regular.341bc388.otf","../font/Antonym-Regular.otf"],"../font/Antonym-Regular.otf"],"./../font/FTN35.otf":[["FTN35.e9952d24.otf","../font/FTN35.otf"],"../font/FTN35.otf"],"./../font/FTN36.otf":[["FTN36.5a046a74.otf","../font/FTN36.otf"],"../font/FTN36.otf"],"./../font/FTN45.otf":[["FTN45.466b2e69.otf","../font/FTN45.otf"],"../font/FTN45.otf"],"./../font/FTN46.otf":[["FTN46.7a4134f8.otf","../font/FTN46.otf"],"../font/FTN46.otf"],"./../font/FTN55.otf":[["FTN55.e5dfb7b9.otf","../font/FTN55.otf"],"../font/FTN55.otf"],"./../font/FTN56.otf":[["FTN56.27b59c59.otf","../font/FTN56.otf"],"../font/FTN56.otf"],"./../font/FTN65.otf":[["FTN65.5e2884e6.otf","../font/FTN65.otf"],"../font/FTN65.otf"],"./../font/FTN66.otf":[["FTN66.1949968c.otf","../font/FTN66.otf"],"../font/FTN66.otf"],"./../img/arrow.svg":[["arrow.9eaa6437.svg","../img/arrow.svg"],"../img/arrow.svg"],"./../img/main.jpg":[["main.a75d08c5.jpg","../img/main.jpg"],"../img/main.jpg"],"_css_loader":"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54842" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49153" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/style.e308ff8e.js.map
