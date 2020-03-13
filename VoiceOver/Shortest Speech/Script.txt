@@ -1,7 +1,0 @@
-This visualization presents data on the shortest Oscar acceptance speeches of all time as of 2019.
-
-It shows pictures and some related information of the winners. The number indicates how many words are in the speech.
-
-According to the source, the record for the shortest speech is held by Patty Duke, who simply said "thank you" when accepting her Best Supporting Actress award of 1962. 
-
-Click on the image or the text, it will jump to the video of the speech.
