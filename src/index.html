@@ -13,11 +13,28 @@
     <link rel="stylesheet" href="best-picture.css">
     <link rel="stylesheet" href="best-actor-and-actress.css">
     <link rel="stylesheet" href="./Shortest Speech/style.css">
-
+    <link rel="stylesheet" href="./animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <div class="parallax"></div>
+    <div id="parallax" class="parallax">
+      <div id="titleContent">
+        <h1 id="LargeTitle">Oscar!</h1>
+        <p id="titleP">The Oscar is one of the most popular and prestigious award in
+          cinematogrophy. Some of the actors were waiting for the desired
+          trophy for years as it is considered as a sign of being recognized
+          and appreciated. Meanwhile, how fair and diverse are Oscar’s results?
+          Did something change over time?</p>
+      </div>
+      <img id='joker' src="../img/joker.png">
+      <img id='bradpitt' src="../img/bradpitt.png">
+      <img id='jojo' src="../img/jojorabbit.png">
+      <img id='oscarCircle' src="../img/oscarcircle.png">
+      <img id='collage3' src="../img/collage3.png">
+      <img id='collage1' src="../img/collage1.png">
+      <img id='collage2' src="../img/collage2.png">
+    </div>
     <div class="wrapper">
         <div class="title-container">
             <h2 id="best-actor-and-actress-title" class="wraper-40">
@@ -289,6 +306,11 @@
         <script src="./best-actor.js"></script>
         <script src="./dots.js"></script>
         <script src="./top10-bar.js"></script>
+        <script src="./collage.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
 </body>
 
 </html>

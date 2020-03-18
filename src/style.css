@@ -213,19 +213,6 @@ select {
   font-size: 16px;
 }
 
-.parallax {
-  /* The image used */
-  background-image: url("../img/main.jpg");
-
-  /* Set a specific height */
-  height: 1200px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /* <<<<<<< HEAD */
 
@@ -592,4 +579,98 @@ a {
 
 .references a{
     color: #D7A764 !important
+}
+
+/*Collage animation*/
+
+.parallax {
+  /* The image used */
+  background-image: url("../img/background.jpg");
+
+  /* Set a specific height */
+  height: 230vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#collage1 {
+  position: fixed;
+  left: 0;
+  top: 400px;
+  opacity: 0;
+}
+
+#collage2 {
+  position: fixed;
+  left: -200;
+  top: 400px;
+  opacity: 0;
+}
+
+#collage3 {
+  position: fixed;
+  left: 0;
+  top: 500px;
+  opacity: 0;
+}
+
+#bradpitt {
+  position: fixed;
+  left: 0;
+  top: 400px;
+  opacity: 0;
+}
+
+#joker {
+  position: fixed;
+  left: 0;
+  top: 115px;
+  opacity: 0;
+}
+
+#jojo {
+  position: fixed;
+  right: 80px;
+  top: 550px;
+  opacity: 0;
+}
+
+#oscarCircle {
+  position: fixed;
+  right: 80px;
+  top: -300px;
+  opacity: 1;
+}
+
+
+#titleContent {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  position: fixed;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  color: #000000;
+}
+
+#titleContent p{
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+#LargeTitle{
+  font-size: 120px;
+  margin-bottom: 30px;
+}
+
+@keyframes fade {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
 }
